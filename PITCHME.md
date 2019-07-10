@@ -305,11 +305,12 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 ---?image=assets/images/slides/Slide6.JPG
 @title[Analysis OpenBoard Reference Platforms]
-<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ><br>- Steps 1 - 3</span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ></span></p>
 @snap[north-west span-90 ]
 <br>
 <br>
 <br>
+<span style="font-size:0.75em;" ><br> Steps 1 - 3</span>
 <br>
 <ul style="list-style-type:disc; line-height:0.9;">
   <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <b>`edk2_platforms`</b> </span> </li>
@@ -339,7 +340,7 @@ This is for steps 1 - 3
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
@@ -352,6 +353,10 @@ Download below repository to this WORKSPACE:
 @snapend
 
 @snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
