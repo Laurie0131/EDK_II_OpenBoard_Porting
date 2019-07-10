@@ -340,14 +340,15 @@ This is for steps 1 - 3
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Follow the Build and Download instructions for building the reference open board<br>
+Follow the Build and Download instructions for building the reference open board<br><br>
 Download below repository to this WORKSPACE:
 </span></p>
 @snapend
@@ -359,8 +360,7 @@ Download below repository to this WORKSPACE:
 <br>
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 <font face="Arial">edk2 repository and Openssl</font><br>
 git clone –recursive https://github.com/tianocore/edk2.git<br>
 <br>
