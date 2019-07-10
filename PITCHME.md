@@ -98,12 +98,12 @@ Note:
 ![Porting_task_list.gif](/assets/images/tenor.gif)
 @snapend
 
-<!---  col of numbers  -->
+<!---  col of numbers Gray -->
 
-@snap[north-west span-10 fragment]
+@snap[north-west span-10 ]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>@color[yellow](&#10106;)</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
 @snapend
 
 <!---  
@@ -114,7 +114,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
 @snapend
 
 
@@ -140,7 +140,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
 @snapend
 
 
@@ -162,7 +162,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
 @snapend
 
 
@@ -186,7 +186,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>&#10106;</font></span></p>
 @snapend
 
 
