@@ -329,8 +329,8 @@ https://classroomaid.files.wordpress.com/2012/05/case-study.jpg
 This is for steps 1 - 3
 
 ---
-@title[Current Issues ]
-<p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Get the Reference OpenBoard Source ]
+<p align="right"><span class="gold" >@size[1.1](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
