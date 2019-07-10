@@ -86,7 +86,7 @@ Note:
 @title[Porting Task List Section]
 <p align="center"><span style="font-size:01.25em"><font color="#e49436"><b>Porting Task List</b></span></p>
 
-@snap[north-east span-92 ]
+@snap[north-east span-95 ]
 <br>
 <br>
 <br>
@@ -119,7 +119,7 @@ Note:
 
 
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-92 fragment]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
@@ -144,7 +144,7 @@ Note:
 @snapend
 
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-92 fragment]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
@@ -166,7 +166,7 @@ Note:
 @snapend
 
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-92 fragment]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
@@ -190,7 +190,7 @@ Note:
 @snapend
 
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-92 fragment]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
@@ -212,7 +212,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
 @snapend
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-92 fragment]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
