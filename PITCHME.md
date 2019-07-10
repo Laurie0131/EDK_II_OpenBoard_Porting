@@ -305,8 +305,9 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 ---?image=assets/images/slides/Slide6.JPG
 @title[Analysis OpenBoard Reference Platforms]
-<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ><br>- Steps 1 - 3</span></p>
 @snap[north-west span-90 ]
+<br>
 <br>
 <br>
 <br>
@@ -324,6 +325,54 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 Note:
 https://classroomaid.files.wordpress.com/2012/05/case-study.jpg
 
+This is for steps 1 - 3
+
+---
+@title[Current Issues ]
+<p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Follow the Build and Download instructions for building the reference open board<br>
+Download below repository to this WORKSPACE:
+</span></p>
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<br>
+<font face="Arial">edk2 repository and Openssl</font><br>
+git clone –recursive https://github.com/tianocore/edk2.git<br>
+<br>
+<font face="Arial">edk2-platforms repository</font><br>
+git clone https://github.com/tianocore/edk2-platforms.git<br>
+<br>
+<font face="Arial">edk2-non-osi repository</font><br>
+git clone https://github.com/tianocore/edk2-non-osi.git -b devel-MinPlatform<br>
+<br>
+<font face="Arial">FSP repository</font><br>
+git clone https://github.com/IntelFsp/FSP.git<br>
+</span></p>
+@snapend
+
+Note:
+
+Get the source from the open source repositories to a local workspace directory
 
 
 ---
