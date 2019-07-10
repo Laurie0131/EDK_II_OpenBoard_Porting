@@ -309,8 +309,8 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 @snap[north-west span-90 ]
 <br>
 <br>
+<span style="font-size:0.8em;" ><br> Steps 1 - 3</span>
 <br>
-<span style="font-size:0.75em;" ><br> Steps 1 - 3</span>
 <br>
 <ul style="list-style-type:disc; line-height:0.9;">
   <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <b>`edk2_platforms`</b> </span> </li>
@@ -341,6 +341,7 @@ This is for steps 1 - 3
 <br>
 <br>
 <br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -348,7 +349,7 @@ This is for steps 1 - 3
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Follow the Build and Download instructions for building the reference open board<br><br>
+Follow the Build and Download instructions for building the reference open board<br><br><br>
 Download below repository to this WORKSPACE:
 </span></p>
 @snapend
