@@ -86,7 +86,7 @@ Note:
 @title[Porting Task List Section]
 <p align="center"><span style="font-size:01.25em"><font color="#e49436"><b>Porting Task List</b></span></p>
 
-@snap[north-east span-90 ]
+@snap[north-east span-92 ]
 <br>
 <br>
 <br>
@@ -120,8 +120,16 @@ Note:
 @snap[north-east span-90 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.85em" ><br>&nbsp;@color[white](Get the EDK II packages to a local workspace)<br><br>&nbsp;<br><br>&nbsp;<br><br>&nbsp;<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:0.85em" >
+<br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
 @snapend
+
+
 <!---  
 2
 -->
@@ -130,16 +138,19 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;)<br><br><br>&#10104;<br<br>><br>&#10105;<br><br><br>&#10106; </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;)<br><br><br>&#10104;<br<br><br>&#10105;<br><br><br>&#10106; </font></span></p>
 @snapend
 
 @snap[north-east span-90 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.85em" ><br>&nbsp;
-@color[white](Get the EDK II packages to a local workspace)<br><br><br>&nbsp;
-@color[white](Select the Ref and correct Intel® FSP Package)<br><br>&nbsp;<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
-@snapend
+<p style="line-height:60%" align="left"><span style="font-size:0.85em" >
+<br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
+<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>@snapend
 
 <!---  
 3
@@ -158,6 +169,8 @@ Note:
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
 <br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
+<br><br><br>&nbsp;
+<br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
 @snapend
 
@@ -180,6 +193,7 @@ Note:
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
 <br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
+<br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
 @snapend
 
