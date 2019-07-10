@@ -309,13 +309,14 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 @snap[north-west span-90 ]
 <br>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
+<br>
+<ul style="list-style-type:disc; line-height:0.9;">
   <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <b>`edk2_platforms`</b> </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference OpenBoardPkg/BoardXXX  to a new name (@size[.8em](i.e @color[#A8ff60](New)OpenBoardPkg/@color[#A8ff60](New)BoardX where string “@color[#A8ff60](New)” is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference OpenBoardPkg/BoardXXX  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string “@color[#A8ff60](`New`)” is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
