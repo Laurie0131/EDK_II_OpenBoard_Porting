@@ -49,7 +49,7 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define the porting task list for porting <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;existing Open platforms in EDK II</span> </li>
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define the porting task list for porting existing <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open platforms in EDK II</span> </li>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Determine the necessary porting for each stage <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; boot phase of a new EDK II open platform Project </span></li>
 </ul>
 
@@ -58,7 +58,7 @@ Note:
 ### <p align="center"><font color="yellow"><b>Approach – Porting EDK II</b></font></p>
 
 
-@snap[west span-60 fragment]
+@snap[west span-90 fragment]
 <br>
 <br>
 <br>
@@ -67,7 +67,7 @@ Note:
 @snapend
 
 
-@snap[south span-60ragment]
+@snap[south span-90 fragment]
 @box[bg-purple-pp text-white my-box-pad2  ](<p style="line-height:40%"><span style="font-size:01.1em" > <b>Staged Approach by features</b><br>&nbsp;</span></p>)
 <br>
 @snapend
@@ -103,7 +103,7 @@ Note:
 @snap[north-west span-10]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>&#10102;<br><br>&#10103;<br><br>&#10104;<br><br>&#10105;<br><br>&#10106;  </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;  </font></span></p>
 @snapend
 <!---  
 1
@@ -113,7 +113,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;)<br><br>&#10103;<br><br>&#10104;<br><br>&#10105;<br><br>&#10106; </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;)<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106; </font></span></p>
 @snapend
 
 
@@ -130,7 +130,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br>&#10103;)<br><br>&#10104;<br><br>&#10105;<br><br>&#10106; </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;)<br><br><br>&#10104;<br<br>><br>&#10105;<br><br><br>&#10106; </font></span></p>
 @snapend
 
 @snap[north-east span-90 fragment]
@@ -148,7 +148,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br>&#10103;<br><br>&#10104;)<br><br>&#10105;<br><br>&#10106;  </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;<br><br><br>&#10104;)<br><br><br>&#10105;<br><br><br>&#10106;  </font></span></p>
 @snapend
 
 @snap[north-east span-90 fragment]
@@ -156,7 +156,7 @@ Note:
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
-<br><br><br>&nbsp;@color[white](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
 <br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
 @snapend
@@ -169,7 +169,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br>&#10103;<br><br>&#10104;<br><br>&#10105;)<br><br>&#10106;</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;)<br><br><br>&#10106;</font></span></p>
 @snapend
 
 @snap[north-east span-90 fragment]
@@ -177,7 +177,7 @@ Note:
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
-<br><br><br>&nbsp;@color[white](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
 <br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -190,7 +190,7 @@ Note:
 @snap[north-west span-10 fragment]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br>&#10103;<br><br>&#10104;<br><br>&#10105;<br><br>&#10106;)  </font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br>@color[yellow](&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;)  </font></span></p>
 @snapend
 
 @snap[north-east span-90 fragment]
@@ -198,10 +198,10 @@ Note:
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
-<br><br><br>&nbsp;@color[white](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
 <br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
-<br><br><br>&nbsp;@color[white](Validate each stage test point results defined w/ each stage)
+<br><br><br>&nbsp;@color[white](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
 @snapend
 
