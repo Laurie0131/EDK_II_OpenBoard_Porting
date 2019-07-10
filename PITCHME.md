@@ -241,6 +241,87 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 
 
+<!---  Section for Porting Task  -->
+
+---?image=assets/images/binary-strings-black2.jpg
+<!-- .slide: data-transition="none" -->
+@title[Porting Task List Section]
+<p align="center"><span style="font-size:01.25em"><font color="#e49436"><b>Porting Task List</b></span></p>
+
+@snap[north-east span-95 ]
+<br>
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" ><span style="font-size:0.9em; font-weight: bold;" > <br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+<!---  col of numbers Gray -->
+
+@snap[north-west span-10 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
+@snapend
+
+
+@snap[north-west span-10 fragment]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
+@snapend
+
+@snap[north-east span-92 fragment]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.85em" >
+<br>&nbsp;        @color[yellow](<b>Get the EDK II packages to a local workspace</b>)
+<br><br><br>&nbsp;@color[yellow](<b>Select the Ref and correct Intel® FSP Package</b>)
+<br><br><br>&nbsp;@color[yellow](<b>Copy a reference OpenBoardPkg/BoardXXX</b> )
+<br><br><br>&nbsp;@color[#808080](Use feature stages to port all required project  modules )
+<br><br><br>&nbsp;@color[#808080](Validate each stage test points defined w/ each stage)
+<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
+@snapend
+
+
+
+Note:
+4 & 5 take the longest
+
+
+Find a similar package or platform from the Open Board edk-platforms  that meets target project needs
+
+
+1. Get the EDK II packages to a local workspace
+2. Select the Ref and correct Intel® FSP Package
+3. Copy a reference OpenBoardPkg/BoardXXX 
+4. Use feature stages to port all required project  modules
+5. Validate each stage test point results defined with each stage 
+
+
+---?image=assets/images/slides/Slide6.JPG
+@title[Analysis OpenBoard Reference Platforms]
+<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ></span></p>
+@snap[north-west span-90 ]
+<br>
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <b>`edk2_platforms`</b> </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference OpenBoardPkg/BoardXXX  to a new name (@size[.8em](i.e @color[#A8ff60](New)OpenBoardPkg/@color[#A8ff60](New)BoardX where string “@color[#A8ff60](New)” is meaningful to the project.)) </span> </li>
+</ul>
+@snapend
+
+
+Note:
+https://classroomaid.files.wordpress.com/2012/05/case-study.jpg
 
 
 
