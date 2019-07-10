@@ -341,7 +341,6 @@ This is for steps 1 - 3
 <br>
 <br>
 <br>
-<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -349,7 +348,7 @@ This is for steps 1 - 3
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Follow the Build and Download instructions for building the reference open board<br><br><br>
+Follow the Build and Download instructions for building the reference open board<br><br>
 Download below repository to this WORKSPACE:
 </span></p>
 @snapend
