@@ -458,7 +458,7 @@ This can serve as a cross reference to determine what sources are used in the ch
 </span></p>
 @snapend
 
-
+Note:
 
 ---
 @title[Study the OpenBoard .DSC and .FDF ]
@@ -480,8 +480,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-<br>
-@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC)<br>DSC will point to the correct Libraries used in the reference platform<br><br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC)<br><br>DSC will point to the correct Libraries used in the reference platform<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -492,8 +491,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-<br>
-@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF)<br>FDF will describe the Flash layout and FVs used for the different stages of the boot flow<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF)<br><br>FDF will describe the Flash layout and FVs used for the different stages of the boot<br> flow<br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -502,6 +500,83 @@ To do the porting of the OpenBoard platform requires becoming familiar with the 
 FDF will describe the Flash layout and FVs used for the different stages of the boot flow
 
 DSC will point to the correct Libraries used in the reference platform
+
+---
+@title[Use the "Build" Directory as a Reference ]
+<p align="right"><span class="gold" >@size[1.1](<b>Use the "Build" Directory as a Reference</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+/edk2-platforms/Platform/ <br>&nbsp;&nbsp;
+  Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      OpenBoardPkgConfig.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      OpenBoardPkgPcd.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      OpenBoardPkgBuildOption.dsc <br>
+/edk2-platforms/Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Intel/MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include/Dsc/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      CoreCommonLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      CorePeiLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      CoreDxeLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      CorePeiInclude.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      CoreDxeInclude.dsc<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+/edk2-platforms/Silicon/ <br>&nbsp;&nbsp;
+  Intel/KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgCommonLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgPeiLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgDxeLib.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgPei.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgDxe.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiPkgBuildOption.dsc
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[sourth-east span-47 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+<font face="Consolas">OpenBoardPkg.dsc</font> – Includes all of the Platform, core  and silicon related .dsc files
+</span></p>
+@snapend
+
+Note:
+
+
+By searching the top level include from /edk2-platforms/Platform \ 
+<pre>
+  Intel/KabylakeOpenBoardPkg \
+   KabylakeRvp3
+    OpenBoardPkg.dsc
+</pre>
+
+We see that it will INCLUDE the other core and silicon .dsc files.  Note the order is important with studying the .DSC files making note of the Sections that the files get included into. 
+
 
 
 ---
