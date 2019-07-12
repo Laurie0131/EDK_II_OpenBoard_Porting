@@ -878,15 +878,13 @@ Click on the link to view the whole .FDF file
 <p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
 
 
-@snap[north-west span-49 ]
+@snap[north-west span-50 ]
 <br>
 <br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-98 ]
-<br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 MyWorkSpace/<br>&nbsp;&nbsp;
@@ -910,24 +908,24 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-47 ]
+@snap[north-east span-46 ]
 <br>
 <br>
-<ol line-height:0.7;">
+<ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
   <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
   <li><span style="font-size:0.65em" > Copy a reference <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory – </span> </li>
-</ol>
+</ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-<font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow]BoardX)</font>
+<font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardX)</font>
 </span></p>
 <br>
 <br>
 @snapend
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewOpenBoardPkg)</font>"<br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewOpenBoardPkg)</font>"<br><br>&nbsp;</span></p>)
 @snapend
 
 
