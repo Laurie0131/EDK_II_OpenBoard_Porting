@@ -480,7 +480,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC)<br><br>DSC will point to the correct Libraries used in the reference platform<br><br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC)<br><br>DSC will point to the correct Libraries used in the reference platform<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -491,7 +491,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF)<br><br>FDF will describe the Flash layout and FVs used for the different stages of the boot<br> flow<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF)<br><br>FDF will describe the Flash layout and FVs used for the different stages of the boot<br> flow<br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -502,11 +502,12 @@ FDF will describe the Flash layout and FVs used for the different stages of the 
 DSC will point to the correct Libraries used in the reference platform
 
 ---
-@title[Use the "Build" Directory as a Reference ]
-<p align="right"><span class="gold" >@size[1.1](<b>Use the "Build" Directory as a Reference</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[DSC Files for KabyLakeRvp3 ]
+<p align="right"><span class="gold" >@size[1.1](<b>DSC Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-49 ]
+<br>
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -515,7 +516,8 @@ DSC will point to the correct Libraries used in the reference platform
 @snap[north-west span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-98 ]
@@ -525,10 +527,10 @@ DSC will point to the correct Libraries used in the reference platform
 /edk2-platforms/Platform/ <br>&nbsp;&nbsp;
   Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
    KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      OpenBoardPkgConfig.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      OpenBoardPkgPcd.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      OpenBoardPkgBuildOption.dsc <br>
+     OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     OpenBoardPkgConfig.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     OpenBoardPkgPcd.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     OpenBoardPkgBuildOption.dsc <br><br>
 /edk2-platforms/Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
   Intel/MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Include/Dsc/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -541,7 +543,7 @@ DSC will point to the correct Libraries used in the reference platform
 @snapend
 
 
-@snap[north-east span-47 ]
+@snap[north-east span-45 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
@@ -557,7 +559,7 @@ DSC will point to the correct Libraries used in the reference platform
 </span></p>
 @snapend
 
-@snap[sourth-east span-47 ]
+@snap[south-east span-47 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
