@@ -381,6 +381,129 @@ Get the source from the open source repositories to a local workspace directory
 
 
 ---
+@title[Get the Reference OpenBoard Source ]
+<p align="right"><span class="gold" >@size[1.1](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Open a Command Window and CD to the workspace directory<br>
+For Linux  - CD  to the edk2 to run the “edksetup.sh” script
+</span></p>
+
+```
+     $> cd edk2
+     $> source edksetup.sh
+     $> cd ../
+```
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+CD  to the Intel directory in edk2-platforms 
+</span></p>
+
+```
+	$> cd edk2-platforms/Platform/Intel
+
+```
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Run the python build script with the OpenBoard Name (Kabylake is used)
+</span></p>
+
+```
+    $> python build_bios.py –p KabyLakeRvp3
+
+```
+
+
+Note:
+
+---
+@title[Use the "Build" Directory as a Reference ]
+<p align="right"><span class="gold" >@size[1.1](<b>Use the "Build" Directory as a Reference</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+After the Build is completed the Build directory will be a mirror of all the sources used to build the reference OpenBoard.<br><br>
+This can serve as a cross reference to determine what sources are used in the chosen reference OpenBoard.
+</span></p>
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+&lt;workspace&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Build /KabylakeOpenBoardPkg /KabylakeRvp3 /DEBUG_&lt;BuildTag&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    FV<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    IA32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;Dirs built for SEC and PEI&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    X64<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &lt;Dirs built for DXE – BDS – Boot&gt;<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+---
+@title[Study the OpenBoard .DSC and .FDF ]
+<p align="right"><span class="gold" >@size[1.1](<b>Study the OpenBoard .DSC and .FDF</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Porting requires becoming familiar with the chosen reference platforms DSC and FDF files. 
+</span></p>
+@snapend
+
+@snap[north-west span-45 fragment ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](DSC)<br>&nbsp;&nbsp;DSC will point to the <br>&nbsp;&nbsp;correct Libraries used in <br>&nbsp;&nbsp;the reference platform<br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-45 fragment ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](FDF)<br>&nbsp;&nbsp;FDF will describe the Flash <br>&nbsp;&nbsp;layout and FVs used for the <br>&nbsp;&nbsp;different stages of the boot <br>&nbsp;&nbsp;flow<br>&nbsp;</span></p>)
+@snapend
+
+Note:
+To do the porting of the OpenBoard platform requires becoming familiar with the ref openboard platform’s .DSC and FDF files.
+
+FDF will describe the Flash layout and FVs used for the different stages of the boot flow
+
+DSC will point to the correct Libraries used in the reference platform
+
+
+---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
