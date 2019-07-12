@@ -449,12 +449,12 @@ This can serve as a cross reference to determine what sources are used in the ch
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 &lt;workspace&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Build /KabylakeOpenBoardPkg /KabylakeRvp3 /DEBUG_&lt;BuildTag&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    FV<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    IA32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &lt;Dirs built for SEC and PEI&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    X64<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  &lt;Dirs built for DXE – BDS – Boot&gt;<br>&nbsp;&nbsp;
+  Build /KabylakeOpenBoardPkg /KabylakeRvp3 /DEBUG_&lt;BuildTag&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    FV /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    IA32 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &lt;Dirs built for SEC and PEI&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    X64 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &lt;Dirs built for DXE – BDS – Boot&gt; / <br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
@@ -563,7 +563,7 @@ DSC will point to the correct Libraries used in the reference platform
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-<font face="Consolas">@color[yellow](OpenBoardPkg.dsc)</font> – Includes all of the Platform, core  and silicon related .dsc files
+<font face="Consolas">@color[yellow](OpenBoardPkg.dsc)</font> – Includes all of the platform, common core,  and silicon related .dsc files
 </span></p>
 <br>
 <br>
@@ -675,7 +675,7 @@ We see that it will INCLUDE the other core and silicon .dsc files.  Note the ord
 
 
 @snap[south-east span-45 ]
-<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+<p style="line-height:40% " align="right"><span style="font-size:0.55em;">
 Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.dsc"> Kabylake .DSC </a>
 file
 </span></p>
@@ -726,7 +726,7 @@ Click on the link to view the whole .DSC file
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 /edk2-platforms/Platform/ <br>&nbsp;&nbsp;
   Intel/MinPlatformPkg/<br>&nbsp;&nbsp;
-  Include/Dsc/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include/Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      CorePreMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
      CorePostMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
      CoreUefiBootInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -743,7 +743,7 @@ Click on the link to view the whole .DSC file
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-<font face="Consolas">@color[yellow](OpenBoardPkg.fdf)</font> – Includes all of the Platform and silicon related .fdf files
+<font face="Consolas">@color[yellow](OpenBoardPkg.fdf)</font> – Includes all of the platform and common core related .fdf files
 </span></p>
 <br>
 <br>
@@ -758,7 +758,7 @@ Similar to the .DSC, by searching the top level include from /edk2-platforms/Pla
     OpenBoardPkg.fdf
 </pre>
 
-We see that it will INCLUDE the other core and silicon .fdf files.  also Note, 
+We see that it will INCLUDE the other common core  files.  also Note, 
 the order is important with studying the .FDF files making note of the Sections that the files get included into. 
 
 This determines where in the flash map FV and Modules will be placed..
@@ -862,7 +862,7 @@ INF  $(PLATFORM_PACKAGE)/Test/TestPointStubDxe/TestPointStubDxe.inf
 
 
 @snap[south-east span-45 ]
-<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+<p style="line-height:40% " align="right"><span style="font-size:0.55em;">
 Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.fdf"> Kabylake .FDF </a>
 file
 </span></p>
