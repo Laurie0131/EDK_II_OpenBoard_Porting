@@ -914,7 +914,7 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > 1. <br><br></span> </li>
-  <li><span style="font-size:0.65em" > 2. <br><br><br> </span> </li>
+  <li><span style="font-size:0.65em" > 2. <br><br> </span> </li>
   <li><span style="font-size:0.65em" > 3. </span> </li>
 </ul>
 @snapend
@@ -924,11 +924,11 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <br>
-<ul style="list-style-type:none; line-height:0.7;">
+<ol style="line-height:0.7;">
   <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
   <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
-  <li><span style="font-size:0.65em" > Copy a reference <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory – </span> </li>
-</ul>
+  <li><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory  </span> </li>
+</ol>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
 <font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardX)</font>
