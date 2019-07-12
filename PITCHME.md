@@ -875,7 +875,7 @@ Click on the link to view the whole .FDF file
 
 ---
 @title[Copy a Similar Reference OpenBoard]
-<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-50 ]
@@ -889,17 +889,17 @@ Click on the link to view the whole .FDF file
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 MyWorkSpace/<br>&nbsp;&nbsp;
 edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
-  - "edk2 Common"<br>&nbsp;&nbsp;
+  - "@color[#FFC000](edk2 Common)"<br>&nbsp;&nbsp;
 edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Platform/ "Platform"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/ "Board common"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ "@color[#FFC000](Board common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       NewOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           BoardXXX/ "Board"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[yellow](NewOpenBoardPkg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           @color[yellow](BoardXXX)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabyLakeSilconPkg/"Silicon"<br>&nbsp;&nbsp;
+       KabyLakeSilconPkg/"@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;
 edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
@@ -908,7 +908,20 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-46 ]
+@snap[north-east span-45 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.65em" > 1. <br></span> </li>
+  <li><span style="font-size:0.65em" > 2. <br><br> </span> </li>
+  <li><span style="font-size:0.65em" > 3. </span> </li>
+</ul>
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
