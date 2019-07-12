@@ -67,7 +67,7 @@ Note:
 @snapend
 
 
-@snap[south span-90 fragment]
+@snap[south-east span-85 fragment]
 @box[bg-purple-pp text-white my-box-pad2  ](<p style="line-height:40%"><span style="font-size:01.1em" > <b>Staged Approach by Features</b><br>&nbsp;</span></p>)
 <br>
 @snapend
@@ -269,13 +269,13 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 @snapend
 
 
-@snap[north-west span-10 fragment]
+@snap[north-west span-10 ]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>@color[yellow](&#10102;)<br><br><br>@color[yellow](&#10103;)<br><br><br>@color[yellow](&#10104;)<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
 @snapend
 
-@snap[north-east span-92 fragment]
+@snap[north-east span-92 ]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
