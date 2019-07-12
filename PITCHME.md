@@ -908,13 +908,13 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north span-5 ]
 <br>
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.65em" > 1. <br></span> </li>
-  <li><span style="font-size:0.65em" > 2. <br><br> </span> </li>
+  <li><span style="font-size:0.65em" > 1. <br><br></span> </li>
+  <li><span style="font-size:0.65em" > 2. <br><br><br> </span> </li>
   <li><span style="font-size:0.65em" > 3. </span> </li>
 </ul>
 @snapend
