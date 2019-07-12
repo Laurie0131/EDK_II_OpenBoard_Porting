@@ -559,7 +559,7 @@ DSC will point to the correct Libraries used in the reference platform
 </span></p>
 @snapend
 
-@snap[south-east span-47 ]
+@snap[south-east span-45 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
@@ -690,14 +690,14 @@ Click on the link to view the whole .DSC file
 <p align="right"><span class="gold" >@size[1.1](<b>FDF Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-49 ]
+@snap[north-west span-47 ]
 <br>
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-49 ]
+@snap[north-east span-52 ]
 <br>
 <br>
 <br>
@@ -710,17 +710,17 @@ Click on the link to view the whole .DSC file
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 /edk2-platforms/Platform/  <br>&nbsp;&nbsp;
   Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Include/Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Include/Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       FlashMapInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
    KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    OpenBoardPkg.fdf<br>&nbsp;&nbsp;
+    @color[yellow](OpenBoardPkg.fdf)<br>&nbsp;&nbsp;
 
 <br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-50 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
@@ -785,7 +785,7 @@ edk2-platforms/Platform/ <br>&nbsp;&nbsp;
    KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      FlashMapInclude.fdf
+      @color[yellow](FlashMapInclude.fdf)
 <br>&nbsp;&nbsp;
 </span></p>
 @snapend
