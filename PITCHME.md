@@ -49,8 +49,8 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define the porting task list for porting existing <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open platforms in EDK II</span> </li>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Determine the necessary porting for each stage <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; boot phase of a new EDK II open platform Project </span></li>
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Define the porting task list for porting existing <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open platforms in EDK II</span> </li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Determine the necessary porting for each stage <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp; boot phase of a new EDK II open platform project </span></li>
 </ul>
 
 ---?image=/assets/images/slides/Slide3.JPG
@@ -68,7 +68,7 @@ Note:
 
 
 @snap[south span-90 fragment]
-@box[bg-purple-pp text-white my-box-pad2  ](<p style="line-height:40%"><span style="font-size:01.1em" > <b>Staged Approach by features</b><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white my-box-pad2  ](<p style="line-height:40%"><span style="font-size:01.1em" > <b>Staged Approach by Features</b><br>&nbsp;</span></p>)
 <br>
 @snapend
 
@@ -172,7 +172,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
+<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -196,7 +196,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
+<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -218,7 +218,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference OpenBoardPkg/BoardXXX )
+<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[white](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -281,7 +281,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[yellow](<b>Get the EDK II packages to a local workspace</b>)
 <br><br><br>&nbsp;@color[yellow](<b>Select the Ref and correct Intel® FSP Package</b>)
-<br><br><br>&nbsp;@color[yellow](<b>Copy a reference OpenBoardPkg/BoardXXX</b> )
+<br><br><br>&nbsp;@color[yellow](<b>Copy a reference `OpenBoardPkg/BoardXXX`</b> )
 <br><br><br>&nbsp;@color[#808080](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[#808080](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -318,7 +318,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference OpenBoardPkg/BoardXXX  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string “@color[#A8ff60](`New`)” is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string “@color[#A8ff60](`New`)” is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
