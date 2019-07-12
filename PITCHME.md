@@ -318,7 +318,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string “@color[#A8ff60](`New`)” is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string "@color[#A8ff60](`New`)" is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
@@ -386,7 +386,7 @@ Get the source from the open source repositories to a local workspace directory
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Open a Command Window and CD to the workspace directory<br><br>
-For Linux  - CD  to the edk2 to run the “<b>`edksetup.sh`</b>” script
+For Linux  - CD  to the edk2 to run the "<b>`edksetup.sh`</b>" script
 </span></p>
 
 ```
@@ -874,6 +874,77 @@ Click on the link to view the whole .FDF file
 
 
 ---
+@title[Copy a Similar Reference OpenBoard]
+<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MyWorkSpace/<br>&nbsp;&nbsp;
+edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
+  - "edk2 Common"<br>&nbsp;&nbsp;
+edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "Platform"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ "Board common"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       NewOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           BoardXXX/ "Board"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabyLakeSilconPkg/"Silicon"<br>&nbsp;&nbsp;
+edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabyLakeFspBinPkg<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<ol line-height:0.7;">
+  <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
+  <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
+  <li><span style="font-size:0.65em" > Copy a reference <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory – </span> </li>
+</ol>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+<font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow]BoardX)</font>
+</span></p>
+<br>
+<br>
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewOpenBoardPkg)</font>"<br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+
+The build process creates this directory - Build/
+
+MyWorkSpace – directory from the “git” of repositories
+
+Build –p .dsc from the BOARD Directory
+
+The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
+  (see https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Development-Process)
+
+
+---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
@@ -900,16 +971,16 @@ This often leads to the request of having a minimal BIOS to boot, and to do so, 
 
 
 2) Developers need a way to get the platform configuration data. 
-For example, one configuration choice can include “is VT enabled by the end user?” Another control can include “is the TSEG SMRAM size 1M, 8M or 16M,” or “is there an Embedded Controller (EC) or DOCK attached on the board?” The EDKII BIOS provides many choices on the source of the configuration data. For example, the UEFI specification defines UEFI Variables; the UEFI PI specification defines PCD; the Intel FSP defines UPD; silicon reference code defines the policy HOB, policy PPI, and policy protocol; silicon specific code has a signed static configuration data blob; and even legacy CMOS region exists. People may ask: which interface should I use in my platform code? 
+For example, one configuration choice can include "is VT enabled by the end user?" Another control can include "is the TSEG SMRAM size 1M, 8M or 16M," or "is there an Embedded Controller (EC) or DOCK attached on the board?" The EDKII BIOS provides many choices on the source of the configuration data. For example, the UEFI specification defines UEFI Variables; the UEFI PI specification defines PCD; the Intel FSP defines UPD; silicon reference code defines the policy HOB, policy PPI, and policy protocol; silicon specific code has a signed static configuration data blob; and even legacy CMOS region exists. People may ask: which interface should I use in my platform code? 
 
 3)
 Developers need to do porting work from an existing board to a new board. 
-There might be GPIO routing differences, or alternate component choices, such as SIO differences. However, some older platform code may use a “switch-case” mechanisms to check the board type, with such “switch-case” usages is scattered across many platform drivers. These platform elements include AcpiPlatform, SmmPlatform, PlatformInit, EC, ASL code, VFR pages, etc. In order to add a new board on update a existing platform, a developer has to find out all the places to make the change. 
+There might be GPIO routing differences, or alternate component choices, such as SIO differences. However, some older platform code may use a "switch-case" mechanisms to check the board type, with such "switch-case" usages is scattered across many platform drivers. These platform elements include AcpiPlatform, SmmPlatform, PlatformInit, EC, ASL code, VFR pages, etc. In order to add a new board on update a existing platform, a developer has to find out all the places to make the change. 
 People may think: How can I know how many modules I need to port, and when have I finished updating all required modules? 
 
 
 4) Developers might need to work on a different board. 
-For example, there might be an ATOM based on a server, a Core-i7 based server, or a XEON based server. However, the BIOS from different segments are different. We once compared an ATOM based firwmare with a Core-i7 based firmware. There are ~20 directories under Platform. Only 2 are same, which are “Include”, and “Library”. People might require significant time to ramp up again to get familiar with the new platform structure. 
+For example, there might be an ATOM based on a server, a Core-i7 based server, or a XEON based server. However, the BIOS from different segments are different. We once compared an ATOM based firwmare with a Core-i7 based firmware. There are ~20 directories under Platform. Only 2 are same, which are "Include", and "Library". People might require significant time to ramp up again to get familiar with the new platform structure. 
 Why can’t the platform tree structures bear more similarity? 
 
 
@@ -1100,7 +1171,7 @@ The architecture makes use of four primary classifications of code that are gene
   Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          BoardX/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ "@color[#FFC000](<font face="Arial">Board</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;
@@ -1116,7 +1187,7 @@ The architecture makes use of four primary classifications of code that are gene
 Note:
 The build process creates
    this directory -> Build/
-MyWorkSpace – directory from the “git” of repositories
+MyWorkSpace – directory from the "git" of repositories
 
 Build –p .dsc from the BOARD Directory
 
@@ -1441,7 +1512,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
 Note:
 
-Use a hierarchical layout - Specifically, only put the basic features into the root directory and put the advanced features into a “Features” directory. 
+Use a hierarchical layout - Specifically, only put the basic features into the root directory and put the advanced features into a "Features" directory. 
 
 Slide shows the KabylakeOpenBoardPkg. 
 The common board related ACPI is in Acpi directory. The common board related FSP policy update is in FspWrapper. The library folder includes the board specific GpioExpanderLib and I2cAccessLib. They might be used for other Kabylake generation board. 
@@ -1790,7 +1861,7 @@ Platform Firmware Boot Stage PCD in: <br><br><br>
 Note:
 
 Features added via table d’hôte  by using a PCD. 
-table d’hôte  Pronounced “Tab la dout”
+table d’hôte  Pronounced "Tab la dout"
 
 Within the DSC and  FDF choose which modules to include based on PCD
 
@@ -1875,7 +1946,7 @@ Example:
 
 Note:
 
-At the same time, a platform firmware may provide an “à la cart” menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
+At the same time, a platform firmware may provide an "à la cart" menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
 
 
 ---
@@ -2195,7 +2266,7 @@ Note:
 Note:
 
 ##### PI PCD – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime. 
-- PcdsFeatureFlag: This type PCD only supports 1/0. Caller uses FeaturePcdGet() to retrieve the value. This type of PCD is mapped to be a MACRO so that a compiler optimization can remove the code scoped by “if(FALSE)”. It is not allowed to set as a PcdsFeatureFlag. 
+- PcdsFeatureFlag: This type PCD only supports 1/0. Caller uses FeaturePcdGet() to retrieve the value. This type of PCD is mapped to be a MACRO so that a compiler optimization can remove the code scoped by "if(FALSE)". It is not allowed to set as a PcdsFeatureFlag. 
 - PcdsFixedAtBuild: This type of PCD can be mapped to a global variable if the caller uses PcdGet(), or a MACRO if the caller uses FixedPcdGet(). As such, this type of PCD can be used in a data structure definition. It is not allowed to be set as PcdsFixedAtBuild. 
 - PcdsPatchableInModule: This type of PCD is mapped to a global variable. It is allowed for use by both PcdGet and PcdSet. If PcdSet is called, it only changes the module-level PCD value instead of a system-level PCD value. Only the current module sees the PCD change. Other modules still see the original value. 
 - PcdsDynamicDefault: PcdsDynamicDefault is mapped to a PPI or protocol. It is allowed for both PcdGet and PcdSet. PcdSet changes the system-level PCD value immediately. This type of PCD value is volatile. The changed value will not be saved in the next boot. 
@@ -2205,7 +2276,7 @@ readiness. If PcdGet is called before UEFI variable services ready, the default 
 - PcdsDynamicVpd: PcdsDynamicVpd is to map configuration data to a static flash region so that a tool can modify the PcdsDynamicVpd after the flash image is generated. This is used by a BIOS that needs to support binary configuration after build. Intel FSP is an example of using PcdsDynamicVpd. 
 - PcdsDynamicEx: PcdsDynamicEx is to support external module for binary build. If an EFI module (DXE Driver or PEIM) is not built with the system firmware, the dynamic PCD must be declared as PcdsDynamicEx. If a platform wants to include this binary EFI module, the binary module INF must be included in DSC file. As such, the PCD database will include the external PCD declared in this binary module. 
 - SkuIds: SkuIds is a special usage of PCD. The use case of Multi-SKU PCD is to build one UEFI firmware boots on multiple board with different configuration in each board. It can support multiple board configurations generated at build time and support runtime selection to make one configuration take effect finally. The good point is that it is very straightforward for each board, if board configuration can be determined. 
-- DefaultStores: DefaultStores is a special usage of PCD (gEfiMdeModulePkgTokenSpaceGuid.PcdSetNvStoreDefaultId). The use case of DefaultStores is to create different default stores in different boot mode, such as standard boot, manufacturing boot mode, or safe boot mode. The configuration data is set to (gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer). All those default stores are configured at build time and selected at runtime according to the boot mode. The default store PCD can be consumed by the HiiDatabase to support BIOS setup “load default” operation. 
+- DefaultStores: DefaultStores is a special usage of PCD (gEfiMdeModulePkgTokenSpaceGuid.PcdSetNvStoreDefaultId). The use case of DefaultStores is to create different default stores in different boot mode, such as standard boot, manufacturing boot mode, or safe boot mode. The configuration data is set to (gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer). All those default stores are configured at build time and selected at runtime according to the boot mode. The default store PCD can be consumed by the HiiDatabase to support BIOS setup "load default" operation. 
 
 
 ##### UEFI Variable – The UEFI Variable can be non-volatile data or volatile data, and it is widely used by VFR. 
@@ -2243,7 +2314,7 @@ Note:
 - Global NVS can be used for turning some feature on/off. An example includes returning different _STA values. 0x0 means the device does not exist. 0xF means the device exists. 
 
 It can be used as the policy data, for example CriticalTemperature value. A platform C code module may convert the configuration from PCD to Global NVS. 
-- Since the name has “global”, we observe that may platform put all different features into one big data structure. It is discouraged. We recommend each separate feature can have its own NVS data structure. It is easy for feature on/off control. 
+- Since the name has "global", we observe that may platform put all different features into one big data structure. It is discouraged. We recommend each separate feature can have its own NVS data structure. It is easy for feature on/off control. 
 
 ##### Platform signed data blob – It is read only signed data at build time. 
 
@@ -2414,11 +2485,11 @@ No examples currently available
 Note:
 
 A PCD driver can provide a callback function on PcdSet(). 
-A platform may introduce a “ConfigConvert” module (GREEN box). The logic runs early and calls PcdSet() to convert other storage data (variable, signed data blob, policy hob) to the PCD database. 
+A platform may introduce a "ConfigConvert" module (GREEN box). The logic runs early and calls PcdSet() to convert other storage data (variable, signed data blob, policy hob) to the PCD database. 
 
 Then the rest of PlatformInit code (YELLOW box) can just call PcdGet() to get the policy data. 
 
-If the Platform driver wants to update a PCD value by calling PcdSet() later, the “ConfigConvert” can register a PCD callback function to redirect setting to other source (for example, variable). 
+If the Platform driver wants to update a PCD value by calling PcdSet() later, the "ConfigConvert" can register a PCD callback function to redirect setting to other source (for example, variable). 
 
 The Key Point is that the purpose of the configuration conversion is that any other platform driver should use PcdGet() to retrieve policy data, and PcdSet() to update policy data. 
 
@@ -2426,8 +2497,8 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 
 
 ---
-@title[“C” Data Structure as PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>“C” Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
+@title["C" Data Structure as PCDs ]
+<p align="right"><span class="gold" >@size[1.1](<b>"C" Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -3024,7 +3095,7 @@ PCD Is tested within .FDF to see which modules to include
 @snapend
 
 Note:
-table d’hôte  Pronounced “Tab la dout”
+table d’hôte  Pronounced "Tab la dout"
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
 
 
@@ -3357,7 +3428,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
      Intel/MinPlatformPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        include/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[#A8ff60](flashmapinclude.fdf) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          BoardXPkg/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardXPkg/ "@color[#FFC000](<font face="Arial">Board</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;
@@ -3401,7 +3472,7 @@ Despite the variability of the FSP binaries, the FSP API caller (aka FSP consume
 5 APIs are:
   TempRamInit, NotifyPhase, FspMemoryInit, TempRamExit, FspSiliconInit 
  
-The flow on this slide describes the FSP, with the FSP binary from the “FSP Producer” in green and the platform code that integrates the binary, or the “FSP Consumer”, in blue 
+The flow on this slide describes the FSP, with the FSP binary from the "FSP Producer" in green and the platform code that integrates the binary, or the "FSP Consumer", in blue 
 
 
 The FSP EAS describes the API interface to the FSP binary that the consumer code will 
