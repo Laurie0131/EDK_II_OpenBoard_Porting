@@ -383,9 +383,10 @@ Get the source from the open source repositories to a local workspace directory
 ---
 @title[Get the Reference OpenBoard Source ]
 <p align="right"><span class="gold" >@size[1.1](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Open a Command Window and CD to the workspace directory<br>
-For Linux  - CD  to the edk2 to run the “edksetup.sh” script
+Open a Command Window and CD to the workspace directory<br><br>
+For Linux  - CD  to the edk2 to run the “<b>`edksetup.sh`</b>” script
 </span></p>
 
 ```
@@ -452,7 +453,7 @@ This can serve as a cross reference to determine what sources are used in the ch
     FV<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     IA32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &lt;Dirs built for SEC and PEI&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    X64<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    X64<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  &lt;Dirs built for DXE – BDS – Boot&gt;<br>&nbsp;&nbsp;
 </span></p>
 @snapend
@@ -467,7 +468,7 @@ This can serve as a cross reference to determine what sources are used in the ch
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+<p style="line-height:850%" align="left" ><span style="font-size:0.9em;">
 Porting requires becoming familiar with the chosen reference platforms DSC and FDF files. 
 </span></p>
 @snapend
@@ -480,7 +481,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](DSC)<br>&nbsp;&nbsp;DSC will point to the <br>&nbsp;&nbsp;correct Libraries used in <br>&nbsp;&nbsp;the reference platform<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved  ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](DSC)<br>&nbsp;&nbsp;DSC will point to the correct Libraries used in the reference platform<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -492,7 +493,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](FDF)<br>&nbsp;&nbsp;FDF will describe the Flash <br>&nbsp;&nbsp;layout and FVs used for the <br>&nbsp;&nbsp;different stages of the boot <br>&nbsp;&nbsp;flow<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved   ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@size[1.3em](FDF)<br>&nbsp;&nbsp;FDF will describe the Flash layout and FVs used for the different stages of the boot flow<br>&nbsp;</span></p>)
 @snapend
 
 Note:
