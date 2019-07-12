@@ -924,11 +924,11 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <br>
-<ol style="line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
   <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
   <li><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory  </span> </li>
-</ol>
+</ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
 <font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardX)</font>
