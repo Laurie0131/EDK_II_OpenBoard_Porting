@@ -527,7 +527,7 @@ DSC will point to the correct Libraries used in the reference platform
 /edk2-platforms/Platform/ <br>&nbsp;&nbsp;
   Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
    KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     @color[yellow](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      OpenBoardPkgConfig.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      OpenBoardPkgPcd.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      OpenBoardPkgBuildOption.dsc <br><br>
@@ -563,8 +563,10 @@ DSC will point to the correct Libraries used in the reference platform
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-<font face="Consolas">OpenBoardPkg.dsc</font> – Includes all of the Platform, core  and silicon related .dsc files
+<font face="Consolas">@color[yellow](OpenBoardPkg.dsc)</font> – Includes all of the Platform, core  and silicon related .dsc files
 </span></p>
+<br>
+<br>
 @snapend
 
 Note:
@@ -579,6 +581,296 @@ By searching the top level include from /edk2-platforms/Platform \
 
 We see that it will INCLUDE the other core and silicon .dsc files.  Note the order is important with studying the .DSC files making note of the Sections that the files get included into. 
 
+
+
+---
+@title[Example: DSC File]
+<p align="right"><span class="gold" >@size[1.1](<b>Example: DSC File</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+```
+[Defines]
+  #
+  # Set platform specific package/folder name, same as passed from PREBUILD script.
+  # PLATFORM_PACKAGE would be the same as PLATFORM_NAME as well as package build folder
+  # DEFINE only takes effect at R9 DSC and FDF.
+  #
+  DEFINE      PLATFORM_PACKAGE                = MinPlatformPkg
+  DEFINE      PLATFORM_SI_PACKAGE             = KabylakeSiliconPkg
+  DEFINE      PLATFORM_SI_BIN_PACKAGE         = KabylakeSiliconBinPkg
+  DEFINE      PLATFORM_FSP_BIN_PACKAGE        = AmberLakeFspBinPkg
+  DEFINE      PLATFORM_BOARD_PACKAGE          = KabylakeOpenBoardPkg
+  DEFINE      BOARD                           = KabylakeRvp3
+  DEFINE      PROJECT                         = $(PLATFORM_BOARD_PACKAGE)/$(BOARD)
+
+  #
+  # Platform On/Off features are defined here
+  #
+  !include OpenBoardPkgConfig.dsc
+  !include OpenBoardPkgPcd.dsc
+
+[Defines]
+!if gIntelFsp2WrapperTokenSpaceGuid.PcdFspModeSelection == 1
+  #
+  # For backward compatibility API mode will use KabylakeFspBinPkg.
+  # KabylakeFspBinPkg only supports API mode.
+  #
+  DEFINE      PLATFORM_FSP_BIN_PACKAGE        = KabylakeFspBinPkg
+!else
+  #
+  # AmberLakeFspBinPkg supports both API and Dispatch modes
+  #
+  DEFINE      PLATFORM_FSP_BIN_PACKAGE        = AmberLakeFspBinPkg
+!endif
+
+################################################################################
+#
+# Defines Section - statements that will be processed to create a Makefile.
+#
+################################################################################
+[Defines]
+  PLATFORM_NAME                       = $(PLATFORM_PACKAGE)
+  PLATFORM_GUID                       = 465B0A0B-7AC1-443b-8F67-7B8DEC145F90
+  PLATFORM_VERSION                    = 0.1
+  DSC_SPECIFICATION                   = 0x00010005
+  OUTPUT_DIRECTORY                    = Build/$(PROJECT)
+  SUPPORTED_ARCHITECTURES             = IA32|X64
+  BUILD_TARGETS                       = DEBUG|RELEASE
+  SKUID_IDENTIFIER                    = ALL
+
+
+  FLASH_DEFINITION                    = $(PROJECT)/OpenBoardPkg.fdf
+
+  FIX_LOAD_TOP_MEMORY_ADDRESS         = 0x0
+  DEFINE   TOP_MEMORY_ADDRESS         = 0x0
+
+  #
+  # Default value for OpenBoardPkg.fdf use
+  #
+  DEFINE BIOS_SIZE_OPTION = SIZE_70
+
+################################################################################
+#
+# SKU Identification section - list of all SKU IDs supported by this
+#                              Platform.
+#
+################################################################################
+[SkuIds]
+  0|DEFAULT              # The entry: 0|DEFAULT is reserved and always required.
+  4|KabylakeRvp3
+  0x60|KabyLakeYLpddr3Rvp3
+
+################################################################################
+#
+# Library Class section - list of all Library Classes needed by this Platform.
+#
+################################################################################
+
+!include $(PLATFORM_PACKAGE)/Include/Dsc/CoreCommonLib.dsc
+!include $(PLATFORM_PACKAGE)/Include/Dsc/CorePeiLib.dsc
+!include $(PLATFORM_PACKAGE)/Include/Dsc/CoreDxeLib.dsc
+ . . ..
+
+
+```
+
+
+@snap[south-east span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.dsc"> Kabylake .DSC </a>
+file
+</span></p>
+@snapend
+
+Note:
+
+Click on the link to view the whole .DSC file
+
+---
+@title[FDF Files for KabyLakeRvp3 ]
+<p align="right"><span class="gold" >@size[1.1](<b>FDF Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+/edk2-platforms/Platform/  <br>&nbsp;&nbsp;
+  Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   Include/Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      FlashMapInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.fdf<br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+/edk2-platforms/Platform/ <br>&nbsp;&nbsp;
+  Intel/MinPlatformPkg/<br>&nbsp;&nbsp;
+  Include/Dsc/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CorePreMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CorePostMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreUefiBootInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreOsBootInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreSecurityPreMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreSecurityPostMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreSecurityLateInclude.fdf\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     RuleInclude.fdf<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[south-west span-47 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+<font face="Consolas">@color[yellow](OpenBoardPkg.fdf)</font> – Includes all of the Platform and silicon related .fdf files
+</span></p>
+<br>
+<br>
+@snapend
+
+Note:
+
+Similar to the .DSC, by searching the top level include from /edk2-platforms/Platform \ 
+<pre>
+  Intel/KabylakeOpenBoardPkg \
+   KabylakeRvp3
+    OpenBoardPkg.fdf
+</pre>
+
+We see that it will INCLUDE the other core and silicon .fdf files.  also Note, 
+the order is important with studying the .FDF files making note of the Sections that the files get included into. 
+
+This determines where in the flash map FV and Modules will be placed..
+
+---?image=assets/images/slides/Slide14.JPG
+@title[Flash Layout for Kabylake ]
+<p align="right"><span class="gold" >@size[1.1](<b>Flash Layout for Kabylake</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+edk2-platforms/Platform/ <br>&nbsp;&nbsp;
+  Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Fdf/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      FlashMapInclude.fdf
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+
+The mapping closely corresponds to the different FV that get created as part of the build process
+
+
+---
+@title[Example: Kabylake  .FDF file ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example: Kabylake .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+```
+[FD.KabylakeRvp3]
+ #
+  . . .
+[FV.FvPreMemory]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+  . . .
+INF  UefiCpuPkg/SecCore/SecCore.inf
+INF  MdeModulePkg/Core/Pei/PeiMain.inf
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CorePreMemoryInclude.fdf
+
+INF $(PLATFORM_PACKAGE)/PlatformInit/ReportFv/ReportFvPei.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitPei/PlatformInitPreMem.inf
+INF IntelFsp2WrapperPkg/FspmWrapperPeim/FspmWrapperPeim.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/SiliconPolicyPei/SiliconPolicyPeiPreMem.inf
+
+. . .
+
+[FV.FvPostMemoryUncompact]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+ERASE_POLARITY     = 1
+ . . .
+
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CorePostMemoryInclude.fdf
+
+# Init Board Config PCD
+INF $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitPei/PlatformInitPostMem.inf
+INF IntelFsp2WrapperPkg/FspsWrapperPeim/FspsWrapperPeim.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/SiliconPolicyPei/SiliconPolicyPeiPostMem.inf
+
+  . . .
+
+[FV.FvUefiBootUncompact]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+ . . .
+
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CoreUefiBootInclude.fdf
+
+INF  UefiCpuPkg/CpuDxe/CpuDxe.inf
+INF  MdeModulePkg/Bus/Pci/PciHostBridgeDxe/PciHostBridgeDxe.inf
+
+INF  MdeModulePkg/Bus/Pci/SataControllerDxe/SataControllerDxe.inf
+INF  MdeModulePkg/Bus/Ata/AtaBusDxe/AtaBusDxe.inf
+INF  MdeModulePkg/Bus/Ata/AtaAtapiPassThru/AtaAtapiPassThru.inf
+INF  MdeModulePkg/Universal/Console/GraphicsOutputDxe/GraphicsOutputDxe.inf
+
+INF  ShellPkg/Application/Shell/Shell.inf
+
+INF  $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitDxe/PlatformInitDxe.inf
+INF  IntelFsp2WrapperPkg/FspWrapperNotifyDxe/FspWrapperNotifyDxe.inf
+
+INF  $(PLATFORM_PACKAGE)/Test/TestPointStubDxe/TestPointStubDxe.inf
+
+
+
+```
+
+
+@snap[south-east span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.fdf"> Kabylake .FDF </a>
+file
+</span></p>
+@snapend
+
+Note:
+
+Click on the link to view the whole .FDF file
 
 
 ---
