@@ -920,11 +920,11 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-47 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
   <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
   <li><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory  </span> </li>
