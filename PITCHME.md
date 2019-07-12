@@ -733,7 +733,7 @@ Click on the link to view the whole .DSC file
      CoreOsBootInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
      CoreSecurityPreMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
      CoreSecurityPostMemoryInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
-     CoreSecurityLateInclude.fdf\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     CoreSecurityLateInclude.fdf<br>&nbsp;&nbsp;&nbsp;&nbsp;
      RuleInclude.fdf<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
