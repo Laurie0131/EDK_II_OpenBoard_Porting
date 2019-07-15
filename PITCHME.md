@@ -1740,23 +1740,24 @@ reg exp to find string1 "Serial" string2 "Hob"
 
 
 @snap[south-west span-49 ]
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[south-east span-49 ]
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSecLib`)</b> is in the Platform-Board Tree<br>
-
+Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSecLib`)</b> is in the Platform-Board Tree
+</span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
 <font face="Consolas">
-@size[.7em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
-  @size[.7em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
+@size[.6em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
+  @size[.6em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
 </font>
 <br>
 @size[.7em](Directory:)
@@ -1771,7 +1772,8 @@ DSC FILE:<br>
 <br>
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
     FsptCoreUpd.c<br>&nbsp;&nbsp;
     FspWrapperPlatformSecLib.c<br>&nbsp;&nbsp;
@@ -1794,7 +1796,8 @@ Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
 <br>
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
+<br>
+<br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
 IA32/<br>&nbsp;&nbsp;
    fsp.h<br>&nbsp;&nbsp;
    PeiCoreEntry.nasm<br>&nbsp;&nbsp;
