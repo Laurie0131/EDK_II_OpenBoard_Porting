@@ -1585,16 +1585,16 @@ As the foundational stage for further functionality, Stage I may include additio
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:70%"><span style="font-size:0.8em; font-family:Consolas;" > 
-<font face="Arial">Producing Package -  </font>UefiCpuPkg<br>
+<p style="line-height:70%"><span style="font-size:0.8em; font-family:Consolas;" ><br> 
+<font face="Arial">Producing Package -  </font>UefiCpuPkg<br><br>
 <font face="Arial">Libraries Consumed -  </font>PlatformSecLib, SerialPortLib
-</span></p>
-
+<br></span></p>
+<br>
 <table id="recTable">
 	<tr>
 		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Library</b></span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>API Definition</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:50%"><span style="font-size:0.65em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:50%"><span style="font-size:0.65em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
 		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Description</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
@@ -1607,7 +1607,7 @@ As the foundational stage for further functionality, Stage I may include additio
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SerialPortLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MdeModulePkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > Board&lt;X&gt;Pkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:010%"><span style="font-size:0.45em" > SIO vendor specific initialization to enable serial port. </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:030%"><span style="font-size:0.45em" > SIO vendor specific initialization to enable serial port. </span></p></td>
 	</tr>
 </table>
 <br>
