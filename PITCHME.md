@@ -975,20 +975,20 @@ The architecture is designed to support a maintainer ownership model. For exampl
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
-  Acpi<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  FspWrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  KabylakeRvp7 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](KabylakeOpenBoardPkg)<br>&nbsp;&nbsp;
+  Acpi<br>&nbsp;&nbsp;
+  FspWrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;
+  @color[yellow](KabylakeRvp3)<br>&nbsp;&nbsp;
+   . . .<br>&nbsp;&nbsp;
+  @color[yellow](KabylakeRvp7 )<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
     OpenBoardPkg.fdf
 <br>&nbsp;&nbsp;
 </span></p>
@@ -997,14 +997,14 @@ KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-KabylakeRvp7 <br>&nbsp;&nbsp;
+@color[yellow](KabylakeRvp7 )<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
     BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPostMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp
   
-    BasePlatformHookLib<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BasePlatformHookLib<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
     BoardAcpiLib<br>&nbsp;&nbsp;
 
@@ -1023,9 +1023,9 @@ KabylakeRvp7 <br>&nbsp;&nbsp;
 <br>
 <br>
 <br>
- Arrow<br>
+ @fa[arrow-alt-left fa-2x gp-bullet-yellow] arrow<br>
 <br>
- Arrow<br>
+ @fa[arrow-alt-left fa-2x gp-bullet-yellow] arrow<br>
 <br>
  <br>
     <br>
