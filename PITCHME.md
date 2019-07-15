@@ -956,8 +956,8 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 
 ---
-@title[Copy a Similar Reference OpenBoard]
-<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[PI Modules – One board, one dir]
+<p align="right"><span class="gold" >@size[1.1](<b>PI Modules – One board, one dir</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -1042,6 +1042,245 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 
 
 
+---
+@title[New OpenBoard Directory]
+<p align="right"><span class="gold" >@size[1.1](<b>New OpenBoard Directory</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+@color[yellow](NwqOpenBoardPkg)<br>&nbsp;&nbsp;
+  Acpi<br>&nbsp;&nbsp;
+  FspWrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;
+   @color[yellow](BoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.fdf
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+@color[yellow](BoardXxx )<br>&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiBoardInitPostMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    BasePlatformHookLib<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    BoardAcpiLib<br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+
+This example we are coping the KabylakeOpenBoardPkg to the NewOpenBoardPkg since the board had many differences
+
+Example the flash layout is too different to use the same platform common board.
+
+Also rename the board to a meaningful name, this case “BoardXxx”
+
+
+
+<!---  Section for Porting Task  -->
+
+---?image=assets/images/binary-strings-black2.jpg
+<!-- .slide: data-transition="none" -->
+@title[Porting Task List Section]
+<p align="center"><span style="font-size:01.25em"><font color="#e49436"><b>Porting Task List</b></span></p>
+
+@snap[north-east span-95 ]
+<br>
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" ><span style="font-size:0.9em; font-weight: bold;" > <br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+<!---  col of numbers Gray -->
+
+@snap[north-west span-10 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>&#10105;<br><br><br>&#10106;</font></span></p>
+@snapend
+
+
+@snap[north-west span-10 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:01.0em" ><font color="#808080"><br><br>&#10102;<br><br><br>&#10103;<br><br><br>&#10104;<br><br><br>@color[yellow](&#10105;)<br><br><br>@color[yellow](&#10106;)</font></span></p>
+@snapend
+
+
+@snap[north-east span-92 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.85em" >
+<br>&nbsp;        @color[#808080](Get the EDK II packages to a local workspace)
+<br><br><br>&nbsp;@color[#808080](Select the Ref and correct Intel® FSP Package)
+<br><br><br>&nbsp;@color[#808080](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>)
+<br><br><br>&nbsp;@color[yellow](<b>Use feature stages to port all required project  modules</b> )
+<br><br><br>&nbsp;@color[yellow](<b>Validate each stage test points defined w/ each stage</b>)
+<br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
+@snapend
+
+
+
+Note:
+4 & 5 take the longest
+
+
+Find a similar package or platform from the Open Board edk-platforms  that meets target project needs
+
+
+1. Get the EDK II packages to a local workspace
+2. Select the Ref and correct Intel® FSP Package
+3. Copy a reference OpenBoardPkg/BoardXXX 
+4. Use feature stages to port all required project  modules
+5. Validate each stage test point results defined with each stage 
+
+---?image=assets/images/binary-strings-black2.jpg
+@title[Port by Stages Section]
+<br><br><br><br><br>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port by Stages</span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the staged architecture as a porting guide</span>
+
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+@snap[north-west span-70 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
+<span style="font-size:0.5em; font-family:Consolas;">
+gPlatformModuleTokenSpaceGuid.PcdBootStage
+</span></p>
+@snapend
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 1&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Enable Debug &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 2&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Memory Initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 3&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Boot to UEFI Shell only &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 4&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Boot ot OS</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 5&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Boot ot OS w/ Security enabled&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 6&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Advanced Feature Selection</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 7&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Performance Opetimizations &nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  Pronounced "Tab la dout"
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+Within the DSC and  FDF choose which modules to include based on PCD
+Example
+<pre>
+DSC:
+[PcdsFeatureFlag]
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdUefiSecureBootEnable|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdTpm2Enable|FALSE
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1
+ gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|TRUE
+!endif
+
+Example FDF
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly == FALSE
+INF  MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteSmm.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmmRuntimeDxe.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
+!endif
+</pre>
 
 
 ---
