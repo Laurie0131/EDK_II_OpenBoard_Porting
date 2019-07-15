@@ -1505,9 +1505,9 @@ A Note that a child FV is a FV embedded within the parent FV. The child FV is id
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvPreMemory&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >@color[yellow](SecCore.efi)&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" >
-			&bull;Reset Vector<br>
-			&bull;asses PEI core the address of FvFspM<br>
-			&bull;Passes PEI core the debug configuration
+			&bull; &nbsp;Reset Vector<br>
+			&bull; &nbsp;Passes PEI core the address of FvFspM<br>
+			&bull; &nbsp;Passes PEI core the debug configuration
 		&nbsp;</span></p></td>
 	</tr>
 	<tr>
@@ -1552,30 +1552,77 @@ Use the Platform .Fdf File to determine which modules map to each FV
 As the foundational stage for further functionality, Stage I may include additional content beyond what is strictly required to meet the stage objective. Typically this will include silicon initialization code that may be packaged in a variety of mechanisms including varying size binary blobs. In the layout shown in this slide, the Intel® FSP solution is shown as an example. In this case, the FSP binary can be rebased and integrated in one step rather than distributing the work for the FSP-M and FSP-S rebase unnecessarily across later stages. Note that a child FV is a FV embedded within the parent FV. The child FV is identified by a file type of EFI_FV_FILETYPE_FIRMWARE_VOLUME_IMAGE.
 | `Binary` | `FV`              | `Components`                  | `Purpose`                                                                                                                      |
 | -------- | ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Stage I  | FvPreMemory.fv    | SecCore.efi                   | <ul><li>Reset Vector</li><li>Passes PEI core the address of FvFspM</li><li>Passes PEI core the debug configuration</li></ul>   |
-|          |                   | ReportFvPei.efi               | <ul><li>Installs firmware volumes</li></ul>                                                                                    |
-|          |                   | SiliconPolicyPeiPreMemory.efi | <ul><li>Publishes silicon initialization configuration</li></ul>                                                               |
-|          |                   | PlatformInitPreMemory.efi     | <ul><li>Performs pre memory initialization   </li></ul>                                                                        |
-|          |                   | Additional Components         | <ul><li>Additional pre-memory components required for Stage I boot</li></ul>                                                   |
-|          | FvBspPreMemory.fv | Additional Components         | <ul><li>Advanced pre-memory board support components</li></ul>                                                                 |
-|          | FvFspT.fv         | PlatformSec.efi               | <ul><li>Initializes T-RAM silicon functionality</li></ul>                                                                      |
-|          |                   |                               | <ul><li>Tests T-RAM functionality</li></ul>                                                                                    |
+| Stage I  | FvPreMemory.fv    | SecCore.efi                   |  - Reset Vector<br> - Passes PEI core the address of FvFspM<br> - Passes PEI core the debug configuration   |
+|          |                   | ReportFvPei.efi               |  Installs firmware volumes                                                                                     |
+|          |                   | SiliconPolicyPeiPreMemory.efi |  Publishes silicon initialization configuration                                                                |
+|          |                   | PlatformInitPreMemory.efi     |  Performs pre memory initialization                                                                            |
+|          |                   | Additional Components         |  Additional pre-memory components required for Stage I boot                                                    |
+|          | FvBspPreMemory.fv | Additional Components         |  Advanced pre-memory board support components                                                                  |
+|          | FvFspT.fv         | PlatformSec.efi               |  Initializes T-RAM silicon functionality                                                                       |
+|          |                   |                               |  Tests T-RAM functionality                                                                                     |
 |          |                   | Additional Components         |                                                                                                                                |
-|          | FvFspM.fv         | PeiCore.efi                   | <ul><li>PEI services and dispatcher</li></ul>                                                                                  |
-|          |                   | PcdPeim.efi                   | <ul><li>PCD service</li></ul>                                                                                                  |
-|          |                   | FspPlatform.efi               | <ul><li>Converts UPD to Policy PPI</li></ul>                                                                                   |
+|          | FvFspM.fv         | PeiCore.efi                   |  PEI services and dispatcher                                                                                   |
+|          |                   | PcdPeim.efi                   |  PCD service                                                                                                   |
+|          |                   | FspPlatform.efi               |  Converts UPD to Policy PPI                                                                                    |
 |          |                   | FvPreMemorySilicon.fv         |                                                                                                                                |
 |          |                   | (child FV)                    |                                                                                                                                |
-|          |                   | Additional Components         | <ul><li>Pre-memory silicon initialization components</li></ul>                                                                 |
-|          |                   | ReportStatusCodeRouterPei.efi | <ul><li>Provide status code infrastructure</li></ul>                                                                           |
-|          |                   | StatusCodeHandlerPei.efi      | <ul><li>Provide status code listeners</li></ul>                                                                                |
+|          |                   | Additional Components         |  Pre-memory silicon initialization components                                                                  |
+|          |                   | ReportStatusCodeRouterPei.efi |  Provide status code infrastructure                                                                            |
+|          |                   | StatusCodeHandlerPei.efi      |  Provide status code listeners                                                                                 |
 |          |                   | Additional Components         |                                                                                                                                |
 |          | FvFspS.fv         | FvPostMemorySilicon.fv        |                                                                                                                                |
 |          |                   | (child FV)                    |                                                                                                                                |
-|          |                   | Additional Components         | <ul><li>Post-memory silicon initialization components</li></ul>                                                                |
+|          |                   | Additional Components         |  Post-memory silicon initialization components                                                                 |
 |          |                   | Additional components         |                                                                                                                                |
 
 
+
+---
+@title[Stage 1 FVs Contents]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%"><span style="font-size:0.8em; font-family:Consolas;" > 
+<font face="Arial">Producing Package -  </font>UefiCpuPkg<br>
+<font face="Arial">Libraries Consumed -  </font>PlatformSecLib, SerialPortLib
+</span></p>
+
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Library</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Description</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > PlatformSecLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > UefiCpuPk&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:010%"><span style="font-size:0.45em" >Reset vector and SEC initialization code.  </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SerialPortLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MdeModulePkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > Board&lt;X&gt;Pkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:010%"><span style="font-size:0.45em" > SIO vendor specific initialization to enable serial port. </span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+
+Note:
+
+
+Only modules found in the BoardPkg should be modified for board porting. MinPlatformPkg and other common package contents must not be directly modified. BoardPkg and SiliconPkg modules will have multiple instances to support different boards and different silicon.
+
+
+Board porting will require creation of libraries identified as produced by the BoardPkg. Depending on the board, there may be existing libraries that are sufficient for a board, so it is important to assess the utility of existing library instances when developing board support.
 
 
 
