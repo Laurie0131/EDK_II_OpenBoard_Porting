@@ -1699,7 +1699,7 @@ Board porting will require creation / porting of libraries identified as produce
 <p align="right"><span class="gold" >@size[1.1](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-45 ]
+@snap[north-west span-50 ]
 <br>
 <br>
 <br>
