@@ -1504,7 +1504,7 @@ A Note that a child FV is a FV embedded within the parent FV. The child FV is id
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvPreMemory&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >@color[yellow](SecCore.efi)&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" >
+		<td bgcolor="#121212" height=".020%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" >
 			&bull; &nbsp;Reset Vector<br>
 			&bull; &nbsp;Passes PEI core the address of FvFspM<br>
 			&bull; &nbsp;Passes PEI core the debug configuration
@@ -1549,10 +1549,14 @@ Note:
 
 Use the Platform .Fdf File to determine which modules map to each FV
 
+
+https://github.com/tianocore-docs/edk2-MinimumPlatformSpecification/blob/master/3_stage_1_minimum_debug/32_firmware_volumes.md#32-firmware-volumes
+
+
 As the foundational stage for further functionality, Stage I may include additional content beyond what is strictly required to meet the stage objective. Typically this will include silicon initialization code that may be packaged in a variety of mechanisms including varying size binary blobs. In the layout shown in this slide, the Intel® FSP solution is shown as an example. In this case, the FSP binary can be rebased and integrated in one step rather than distributing the work for the FSP-M and FSP-S rebase unnecessarily across later stages. Note that a child FV is a FV embedded within the parent FV. The child FV is identified by a file type of EFI_FV_FILETYPE_FIRMWARE_VOLUME_IMAGE.
 | `Binary` | `FV`              | `Components`                  | `Purpose`                                                                                                                      |
-| -------- | ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Stage I  | FvPreMemory.fv    | SecCore.efi                   |  - Reset Vector<br> - Passes PEI core the address of FvFspM<br> - Passes PEI core the debug configuration   |
+| -------- | ----------------- | ----------------------------- | --------------------------------------------------------------------------------------- |
+| Stage I  | FvPreMemory.fv    | SecCore.efi                   |  Reset Vector - Passes PEI core the address of FvFspM - Passes PEI core the debug configuration   |
 |          |                   | ReportFvPei.efi               |  Installs firmware volumes                                                                                     |
 |          |                   | SiliconPolicyPeiPreMemory.efi |  Publishes silicon initialization configuration                                                                |
 |          |                   | PlatformInitPreMemory.efi     |  Performs pre memory initialization                                                                            |
@@ -1686,6 +1690,8 @@ Board porting will require creation of libraries identified as produced by the B
 
 Note:
 
+https://github.com/tianocore-docs/edk2-MinimumPlatformSpecification/blob/master/3_stage_1_minimum_debug/33_modules.md#332-platform-architecture-libraries
+
 To find the Libraries for the Platform specific code
 1 Search the Work space .DSC files for the string of the library
 2 Open the .DSC files associated with the platform
@@ -1725,6 +1731,111 @@ Example, to fine the strings “Hob” and “Serial”
     Serial.*Hob|Hob.*Serial  
 
 reg exp to find string1 "Serial" string2 "Hob"
+
+
+
+---?image=assets/images/slides/Slide31.JPG
+@title[Platform SEC Lib - Kabylake ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform SEC Lib - Kabylake </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[south-west span-49 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[south-east span-49 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSecLib`)</b> is in the Platform-Board Tree<br>
+
+DSC FILE:<br>
+<font face="Consolas">
+@size[.7em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
+  @size[.7em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
+</font>
+<br>
+@size[.7em](Directory:)
+</span></p>
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
+    FsptCoreUpd.c<br>&nbsp;&nbsp;
+    FspWrapperPlatformSecLib.c<br>&nbsp;&nbsp;
+    Platforminint.c<br>&nbsp;&nbsp;
+    SecFspWrapperPlatformSecLib.inf<br>&nbsp;&nbsp;
+    SecGetPerformance.c<br>&nbsp;&nbsp;
+    SecPlatforminformation.c<br>&nbsp;&nbsp;
+    SecRamInitData.c<br>&nbsp;&nbsp;
+    SecTemRamDone.c<br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
+IA32/<br>&nbsp;&nbsp;
+   fsp.h<br>&nbsp;&nbsp;
+   PeiCoreEntry.nasm<br>&nbsp;&nbsp;
+   SecEntry.nasm<br>&nbsp;&nbsp;
+   Stack.nasm<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+
+Since we now know that the SEC code is in the FV –FvPreMemory and the module is SecCore.efi and the Libraries for SecCore.efi are PlatformSecLib and SerialPortLib we can search the board platform .DSC file for where the PlatformSecLib is in the Platform-Board Tree
+
+The ModuleEntryPoint is in SecEntry.nasm
+
+Entry point after reset vector is platform specific
+SecEntry.asm
+ModuleEntryPoint
+
+http://4.bp.blogspot.com/-_yn2oKMT4i4/UUdVkp1rBuI/AAAAAAAAAlw/lGtpuQsmqOk/s1600/icon_detective.png
+
+Of this slide we have what we need to port our new package platform for the SEC  phase.
+We find this code in our new platform package directory under the library directory under the directory called something like new platform SEC lib. Under this directory we see that we have a “C”, “H” and Inf files, And we also see another directory, in our case for our example platform, we have an IA32 directory. This directory would have assembly language source files for our port.
+
+Let’s take a look at the details of these files:
+After the reset vector and after those initial architecture specific instructions, a jump will be made into the platform SEC library code. The Entry point after common reset vector is platform specific in SecEntry.nasm  with the label _ModuleEntryPoint.
+
+The file SecEntry.nasm – calls the entry for setting up our temporary memory and the Application Processors
+We will need to look at the code at the label SecEntry.nasm where we would  make a call to set up our temporary memory and the cache as RAM. 
+
+From reset vector to _ModuleEntryPoint
+;   Transition to non-paged flat-model protected mode from a
+;   hard-coded GDT that provides exactly two descriptors.
+;   This is a bare bones transition to protected mode only
+;   used for a while in PEI and possibly DXE.
+;
+;   After enabling protected mode, a far jump is executed to
+;   transfer to PEI using the newly loaded GDT.
+
+
 
 ---
 @title[Current Issues ]
