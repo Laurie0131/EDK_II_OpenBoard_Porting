@@ -172,7 +172,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
+<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -196,7 +196,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
+<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -218,7 +218,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b> )
+<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[white](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -313,12 +313,12 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 <br>
 <br>
 <ul style="list-style-type:disc; line-height:0.9;">
-  <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <b>`edk2_platforms`</b> </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github `edk2_platforms` </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>  to a new name (@size[.8em](i.e <b>`NewOpenBoardPkg/NewBoardX`</b> where string "@color[#A8ff60](`New`)" is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference `OpenBoardPkg/BoardXXX`  to a new name (@size[.8em](i.e `NewOpenBoardPkg/NewBoardX` where string "@color[#A8ff60](`New`)" is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
@@ -386,7 +386,7 @@ Get the source from the open source repositories to a local workspace directory
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Open a Command Window and CD to the workspace directory<br><br>
-For Linux  - CD  to the edk2 to run the "<b>`edksetup.sh`</b>" script
+For Linux  - CD  to the edk2 to run the "`edksetup.sh`" script
 </span></p>
 
 ```
@@ -1150,7 +1150,7 @@ Also rename the board to a meaningful name, this case “BoardXxx”
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[#808080](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[#808080](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[#808080](Copy a reference <b>`OpenBoardPkg/BoardXXX`</b>)
+<br><br><br>&nbsp;@color[#808080](Copy a reference `OpenBoardPkg/BoardXXX`)
 <br><br><br>&nbsp;@color[yellow](<b>Use feature stages to port all required project  modules</b> )
 <br><br><br>&nbsp;@color[yellow](<b>Validate each stage test points defined w/ each stage</b>)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -1583,7 +1583,7 @@ As the foundational stage for further functionality, Stage I may include additio
 
 ---
 @title[Stage 1 Modules]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example <b>`SecCore.efi`</b></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example `SecCore.efi`</span></p>
 
 
 @snap[north-west span-100 ]
@@ -1751,7 +1751,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Search the board platform .DSC file for where the <b>@color[#A8ff60](`PlatformSecLib`)</b> is in the Platform-Board Tree
+Search the board platform .DSC file for where the @color[#A8ff60](`PlatformSecLib`) is in the Platform-Board Tree
 </span></p>
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
@@ -1927,10 +1927,9 @@ Secmain(
 
 ```
 
-<p style="line-height:80%" align="left" ><span style="font-size:0.8em;"><b>
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
 `PeiCore` is the `PeiCoreEntryPoint` in the FvPreMemory  Firmware Volume<Br>
  `edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c`
-</b>
 </span></p>
 
 ```
@@ -2008,6 +2007,84 @@ Note:
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. 
 
 Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
+
+
+---
+@title[Board Detection ]
+<p align="right"><span class="gold" >@size[1.1](<b>Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MinPlatformPkg<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei -&gt;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 BoardDetect&lpar;&rpar;<br>
+KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      BoardInitLib -&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PeiBoardInitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			BoardDetect&lpar;&rpar;  <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PeiKabylakeRvp3Detect.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			KabylakeRvp3BoardDetect&lpar;&rpar;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em; "><br>
+Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
+   `LibPcdGetSku`&lpar;&rpar; & `LibPcdSetSku`&lpar;&rpar;<br><br>
+
+`KabylakeRvp3BoardDetect`&lpar;&rpar; function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
+`LibPcdSetSku`&lpar;&rpar; stores Board ID
+`LibPcdGetSku`&lpar;&rpar; used from that point on
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+In order to determine which board specific driver needs to run and which does not need to run, there must be some code to detect the board type. 
+The board detection code is board specific. It should be under the board specific directory 
+
+Uses PCD calls to set / get Board Sku for Storing Board ID
+	LibPcdGetSku() & LibPcdSetSku()
+
+For the Kabylake example the lower function KabylakeRvp3BoardDetect() will read the ID from the EC using the LPC bus. 
+Then is updates LibPcdSetSku() with the Board ID
+LibPcdGetSku() can then be used elsewhere
+
+The EC implements an embedded controller interface at ports 0x60/0x64 and a ACPI compliant
+system management controller at ports 0x62/0x66. Port 0x66 is the command and status port,
+port 0x62 is the data port.
+
+Another NOTE: The SKU ID check should only happen in board specific drivers. The SKU ID check is NOT allowed in any common board code or common platform code. 
+
+
+SkuIds is a special usage of PCD. It can support multiple configurations generated at build time, and it supports runtime selection to make one configuration take effect finally. 
+Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku () 
 
 
 
