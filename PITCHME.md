@@ -2235,6 +2235,79 @@ Note:
 - Disable SERR NMI and IOCHK# NMI in port 61
 - Program timer 1 as refresh timer
 
+---?image=assets/images/slides/Slide37.JPG
+@title[Board Init Before Memory Init]
+<p align="right"><span class="gold" >@size[1.1](<b>Board Init Before Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;
+ . . .<br>&nbsp;
+ KabylakeRvp3/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;
+    BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[yellow](KabylakeRvp3BoardInitBeforeMemoryInit&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		 KabylakeRvp3InitPreMem ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		 I2CGpioExpanderInitPreMem()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 		 GpioInitPreMem ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 		 SioInit ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 @color[cyan](SiliconInit&lpar;&rpar;)<br>
+Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      SiliconInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](SiliconInit&lpar;&rpar;) <br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+Board Initialization before Memory Initialization
+ <br><br>
+The board specific initialization may include: 
+</span></p>
+@snapend
+
+
+@snap[south-east span-49 ]
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.65em" >1. </span> </li>
+  <li><span style="font-size:0.65em" >2. </span> </li>
+  <li><span style="font-size:0.65em" >3. </span> </li>
+</ul>
+@snapend
+
+
+@snap[south-east span-46 ]
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.65em" > Invoke a set of PCD for policy initialization later. </span> </li>
+  <li><span style="font-size:0.65em" >Configure the hardware devices (such as GPIO, SIO) </span> </li>
+  <li><span style="font-size:0.65em" > Silicon Initialization – i.e. PCH  </span> </li>
+</ul>
+@snapend
+
+
+
+Note:
+
+Once Board detection is successful, the next step is Board initialization. 
+If the final BIOS image only needs to support one board, the board code can just implement a set of Board initialization API’s directly 
+
 
 
 
