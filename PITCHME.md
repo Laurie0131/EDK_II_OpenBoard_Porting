@@ -2291,9 +2291,9 @@ The board specific initialization may include:
 <br><br><br><br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.65em" >1. </span> </li>
-  <li><span style="font-size:0.65em" >2. </span> </li>
-  <li><span style="font-size:0.65em" >3. </span> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;1. </span><br> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;2. </span><br> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;3. </span> </li>
 </ul>
 @snapend
 
