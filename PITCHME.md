@@ -2284,16 +2284,16 @@ The board specific initialization may include:
 @snapend
 
 
-@snap[north-east span-49 ]
+@snap[north span-5 ]
 <br>
 <br><br>
 <br>
 <br><br><br><br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><p align="left"><span style="font-size:0.65em" >1. </span> </li>
-  <li><p align="left"><span style="font-size:0.65em" >2. </span> </li>
-  <li><p align="left"><span style="font-size:0.65em" >3. </span> </li>
+  <li><span style="font-size:0.65em" >1. </span> </li>
+  <li><span style="font-size:0.65em" >2. </span> </li>
+  <li><span style="font-size:0.65em" >3. </span> </li>
 </ul>
 @snapend
 
@@ -2305,9 +2305,9 @@ The board specific initialization may include:
 <br><br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><p align="left"><span style="font-size:0.65em" >Invoke a set of PCD for policy initialization later. </span> </li>
-  <li><p align="left"><span style="font-size:0.65em" >Configure the hardware devices (such as GPIO, SIO) </span> </li>
-  <li><p align="left"><span style="font-size:0.65em" >Silicon Initialization – i.e. PCH  </span> </li>
+  <li><span style="font-size:0.65em" >Invoke a set of PCD for policy initialization later. </span> </li>
+  <li><span style="font-size:0.65em" >Configure the hardware devices (such as GPIO, SIO) </span> </li>
+  <li><span style="font-size:0.65em" >Silicon Initialization – i.e. PCH  </span> </li>
 </ul>
 @snapend
 
