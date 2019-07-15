@@ -2240,7 +2240,7 @@ Note:
 <p align="right"><span class="gold" >@size[1.1](<b>Board Init Before Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-49 ]
+@snap[north-west span-51 ]
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -2273,7 +2273,7 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-47 ]
+@snap[north-east span-46 ]
 <br>
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
@@ -2284,7 +2284,11 @@ The board specific initialization may include:
 @snapend
 
 
-@snap[south-east span-49 ]
+@snap[north-east span-49 ]
+<br>
+<br><br>
+<br><br>
+<br>
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" >1. </span> </li>
   <li><span style="font-size:0.65em" >2. </span> </li>
@@ -2293,7 +2297,11 @@ The board specific initialization may include:
 @snapend
 
 
-@snap[south-east span-46 ]
+@snap[north-east span-46 ]
+<br>
+<br><br>
+<br><br>
+<br>
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > Invoke a set of PCD for policy initialization later. </span> </li>
   <li><span style="font-size:0.65em" >Configure the hardware devices (such as GPIO, SIO) </span> </li>
