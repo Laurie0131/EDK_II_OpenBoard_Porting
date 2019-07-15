@@ -172,7 +172,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -196,7 +196,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -218,7 +218,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference `OpenBoardPkg/BoardXXX` )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[white](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -281,7 +281,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[yellow](<b>Get the EDK II packages to a local workspace</b>)
 <br><br><br>&nbsp;@color[yellow](<b>Select the Ref and correct Intel® FSP Package</b>)
-<br><br><br>&nbsp;@color[yellow](<b>Copy a reference `OpenBoardPkg/BoardXXX`</b> )
+<br><br><br>&nbsp;@color[yellow](<b>Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font></b> )
 <br><br><br>&nbsp;@color[#808080](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[#808080](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -313,12 +313,12 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 <br>
 <br>
 <ul style="list-style-type:disc; line-height:0.9;">
-  <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github `edk2_platforms` </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <font face="Consolas">edk2_platforms</font> </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference `OpenBoardPkg/BoardXXX`  to a new name (@size[.8em](i.e `NewOpenBoardPkg/NewBoardX` where string "@color[#A8ff60](`New`)" is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font>  to a new name (@size[.8em](i.e <font face="Consolas">NewOpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
@@ -386,7 +386,7 @@ Get the source from the open source repositories to a local workspace directory
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Open a Command Window and CD to the workspace directory<br><br>
-For Linux  - CD  to the edk2 to run the "`edksetup.sh`" script
+For Linux  - CD  to the edk2 to run the "<font face="Consolas">edksetup.sh</font>" script
 </span></p>
 
 ```
@@ -1150,7 +1150,7 @@ Also rename the board to a meaningful name, this case “BoardXxx”
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[#808080](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[#808080](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[#808080](Copy a reference `OpenBoardPkg/BoardXXX`)
+<br><br><br>&nbsp;@color[#808080](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font>)
 <br><br><br>&nbsp;@color[yellow](<b>Use feature stages to port all required project  modules</b> )
 <br><br><br>&nbsp;@color[yellow](<b>Validate each stage test points defined w/ each stage</b>)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -1583,7 +1583,7 @@ As the foundational stage for further functionality, Stage I may include additio
 
 ---
 @title[Stage 1 Modules]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example `SecCore.efi`</span></p>
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example <font face="Consolas">SecCore.efi</font></span></p>
 
 
 @snap[north-west span-100 ]
@@ -1751,7 +1751,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Search the board platform .DSC file for where the @color[#A8ff60](`PlatformSecLib`) is in the Platform-Board Tree
+Search the board platform .DSC file for where the @color[#A8ff60](<font face="Consolas">PlatformSecLib</font>) is in the Platform-Board Tree
 </span></p>
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
@@ -1928,8 +1928,8 @@ Secmain(
 ```
 
 <p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
-`PeiCore` is the `PeiCoreEntryPoint` in the FvPreMemory  Firmware Volume<Br>
- `edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c`
+<font face="Consolas">PeiCore</font> is the <font face="Consolas">PeiCoreEntryPoint</font> in the FvPreMemory  Firmware Volume<Br>
+ <font face="Consolas">edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c</font>
 </span></p>
 
 ```
@@ -2052,9 +2052,9 @@ KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
 Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
    <font face="Consolas">@size[.8em](LibPcdGetSku&lpar;&rpar; & LibPcdSetSku&lpar;&rpar;)</font><br><br>
 
-<font face="Consolas">@size[.7em](KabylakeRvp3BoardDetect&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
-@size[.8em](<font face="Consolas">LibPcdSetSku&lpar;&rpar;)</font> stores Board ID)<br>
-@size[.8em](<font face="Consolas">LibPcdGetSku&lpar;&rpar;)</font> used from that point on)
+<font face="Consolas">@size[.8em](KabylakeRvp3BoardDetect&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
+@size[.8em](<font face="Consolas">LibPcdSetSku&lpar;&rpar;</font> stores Board ID)<br>
+@size[.8em](<font face="Consolas">LibPcdGetSku&lpar;&rpar;</font> used from that point on)
 
 <br>&nbsp;&nbsp;
 </span></p>
@@ -2063,6 +2063,9 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 
 
 Note:
+
+
+
 In order to determine which board specific driver needs to run and which does not need to run, there must be some code to detect the board type. 
 The board detection code is board specific. It should be under the board specific directory 
 
