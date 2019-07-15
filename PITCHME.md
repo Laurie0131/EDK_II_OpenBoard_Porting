@@ -1806,7 +1806,7 @@ IA32/<br>&nbsp;&nbsp;
 
 
 
-@snap[north-east span-25 fragment ]
+@snap[north-east span-20 fragment ]
 <br>
 <br>
 <br>
@@ -1815,8 +1815,8 @@ IA32/<br>&nbsp;&nbsp;
 <br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
 <br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
-    _ModuleEntryPoint<br>&nbsp;&nbsp;
-   @fa[left-arrow fa-2x gp-bullet-yellow ]<br>&nbsp;&nbsp;
+    <i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
+   @fa[arrow-left fa-2x gp-bullet-yellow]<br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
