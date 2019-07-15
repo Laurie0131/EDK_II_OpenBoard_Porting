@@ -956,6 +956,102 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 
 ---
+@title[Copy a Similar Reference OpenBoard]
+<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
+  Acpi<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  FspWrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabylakeRvp7 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.fdf
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+KabylakeRvp7 <br>&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiBoardInitPostMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    BasePlatformHookLib<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    BoardAcpiLib<br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+@snap[north-east span-75 fragment ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ Arrow<br>
+<br>
+ Arrow<br>
+<br>
+ <br>
+    <br>
+   <br>
+  <br>
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+
+This example KabylakeRvp3 and KabylakeRvp7 are very similar but different enough to make a new directory for KabylakeRvp7
+
+If we need to add a new board, such as Rvp7, we can copy the KabylakeRv3 folder to KabylakeRvp7 folder, and update all the modules in this KabylakeRvp7. 
+Once we move the board specific code to the board specific directory, the generic board code should not contain any board specific code. For example, we do not put PeiFspPolicyUpdateLib 
+into KabylakeRvp3, because this code only consumes a set of PCDs, such as PcdMrcRcompResistor, PcdSpecificLpHsioPtssTable1, PcdHdaVerbTable, etc. A KabylakeRvp3 board specific code BoardInitLib 
+produces these PCDs and Kabylake common board code consumes these PCDs 
+
+
+
+
+
+---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
