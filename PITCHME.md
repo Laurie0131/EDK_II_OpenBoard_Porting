@@ -1022,10 +1022,10 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <br>
 <br>
+
+ @fa[arrow-left fa-2x gp-bullet-yellow] <br>
 <br>
- @fa[arrow-left fa-2x gp-bullet-yellow] &larr; arrow<br>
-<br>
- @fa[arrow-left fa-2x gp-bullet-yellow] &larr; arrow<br>
+ @fa[arrow-left fa-2x gp-bullet-yellow] <br>
 <br>
  <br>
     <br>
