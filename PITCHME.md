@@ -1373,7 +1373,7 @@ Stage I is contained within SEC and PEI phases. Code must not be compressed and 
 
 ---?image=assets/images/slides/Slide24.JPG
 @title[High Level Control Flow – Stage 1]
-<p align="right"><span class="gold" >@size[1.1](<bHigh Level Control Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-50 ]
@@ -1432,32 +1432,32 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 		<td bgcolor="#0070C0"><p style="line-height:10%"><span style="font-size:0.56em" ><b>Content</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvPreMemory&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >SEC + StatusCode&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >FvPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em" >SEC + StatusCode&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvBspPreMemory&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Pre-memory board initialization</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >FvBspPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em" >Pre-memory board initialization</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspT&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >SEC silicon initialization - T-RAM &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspT&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em" >SEC silicon initialization - T-RAM &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspM&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Memory initialization</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspM&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em" >Memory initialization</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPreMemorySilicon&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Pre-memory silicon initialization&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPreMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em" >Pre-memory silicon initialization&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspS&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Silicon initialization</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspS&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:05%"><span style="font-size:0.56em" >Silicon initialization</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPostMemorySilicon&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Post-memory silicon initialization &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPostMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:05%"><span style="font-size:0.56em" >Post-memory silicon initialization &nbsp;</span></p></td>
 	</tr>
 </table>
 <br>
