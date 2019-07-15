@@ -1753,20 +1753,19 @@ reg exp to find string1 "Serial" string2 "Hob"
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSecLib`)</b> is in the Platform-Board Tree
 </span></p>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;">
+<p style="line-height:50%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
 <font face="Consolas">
-@size[.6em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
-  @size[.6em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
+@size[.7em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
+  @size[.7em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
 </font>
 <br>
-@size[.7em](Directory:)
+@size[.8em](Directory:)
 </span></p>
 @snapend
 
 
 @snap[north-east span-98 ]
-<br>
 <br>
 <br>
 <br>
@@ -1789,9 +1788,7 @@ Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-47 ]
-<br>
-<br>
+@snap[north-east span-45 ]
 <br>
 <br>
 <br>
@@ -1801,11 +1798,30 @@ Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
 IA32/<br>&nbsp;&nbsp;
    fsp.h<br>&nbsp;&nbsp;
    PeiCoreEntry.nasm<br>&nbsp;&nbsp;
-   SecEntry.nasm<br>&nbsp;&nbsp;
+   @color[yellow](SecEntry.nasm)<br>&nbsp;&nbsp;
    Stack.nasm<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
 @snapend
+
+
+
+@snap[north-east span-25 fragment ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
+<br>&nbsp;&nbsp;
+   <br>&nbsp;&nbsp;
+    _ModuleEntryPoint<br>&nbsp;&nbsp;
+   @fa[left-arrow fa-2x gp-bullet-yellow ]<br>&nbsp;&nbsp;
+   <br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
 
 
 Note:
