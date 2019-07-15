@@ -1757,8 +1757,9 @@ Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSec
 DSC FILE:<br>
 <font face="Consolas">
 @size[.7em](@color[#A8ff60](PlatformSecLib)|MinPlatformPkg/FspWrapper/Library/\ )<br>&nbsp;&nbsp;
-  @size[.7em](SecFspWrapperPlatformSecLib/SecFspWrapperPlatformSecLib.inf)
+  @size[.7em](SecFspWrapperPlatformSecLib/@color[yellow](SecFspWrapperPlatformSecLib.inf))
 </font>
+<br>
 <br>
 @size[.8em](Directory:)
 </span></p>
@@ -1772,12 +1773,13 @@ DSC FILE:<br>
 <br>
 <br>
 <br>
-<br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br>
 Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
     FsptCoreUpd.c<br>&nbsp;&nbsp;
     FspWrapperPlatformSecLib.c<br>&nbsp;&nbsp;
     Platforminint.c<br>&nbsp;&nbsp;
-    SecFspWrapperPlatformSecLib.inf<br>&nbsp;&nbsp;
+    @color[yellow](SecFspWrapperPlatformSecLib.inf)<br>&nbsp;&nbsp;
     SecGetPerformance.c<br>&nbsp;&nbsp;
     SecPlatforminformation.c<br>&nbsp;&nbsp;
     SecRamInitData.c<br>&nbsp;&nbsp;
@@ -1798,7 +1800,7 @@ Library/SecFspWrapperPlatformSecLib/<br>&nbsp;&nbsp;
 IA32/<br>&nbsp;&nbsp;
    fsp.h<br>&nbsp;&nbsp;
    PeiCoreEntry.nasm<br>&nbsp;&nbsp;
-   @color[yellow](SecEntry.nasm)<br>&nbsp;&nbsp;
+   @color[#A8ff60](SecEntry.nasm)<br>&nbsp;&nbsp;
    Stack.nasm<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
@@ -1806,7 +1808,7 @@ IA32/<br>&nbsp;&nbsp;
 
 
 
-@snap[north-east span-20 fragment ]
+@snap[north-east span-30 fragment ]
 <br>
 <br>
 <br>
@@ -1815,8 +1817,8 @@ IA32/<br>&nbsp;&nbsp;
 <br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
 <br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
-    <i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
-   @fa[arrow-left fa-2x gp-bullet-yellow]<br>&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
+   @fa[arrow-left fa-2x gp-bullet-yellow]<i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
