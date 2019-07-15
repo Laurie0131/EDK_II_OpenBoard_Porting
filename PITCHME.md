@@ -1699,15 +1699,15 @@ Board porting will require creation / porting of libraries identified as produce
 <p align="right"><span class="gold" >@size[1.1](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-65 ]
+@snap[north-west span-67 ]
 <br>
 <br>
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.7em" >1. Search the workspace .DSC files for the string of the library</span> </li>
-  <li><span style="font-size:0.7em" >2. Open the .DSC files associated with the open board platform project</span> </li>
-  <li><span style="font-size:0.7em" >3. Determine which Library is used and that should have the build path in the workspace</span> </li>
+  <li><span style="font-size:0.7em" >1. Search the workspace .DSC files for the &nbsp;&nbsp;&nbsp;string of the library</span> </li>
+  <li><span style="font-size:0.7em" >2. Open the .DSC files associated with the &nbsp;&nbsp;&nbsp;open board platform project</span> </li>
+  <li><span style="font-size:0.7em" >3. Determine which Library is used and that &nbsp;&nbsp;&nbsp;should have the build path in the &nbsp;&nbsp;&nbsp;workspace</span> </li>
   <li><span style="font-size:0.7em" >4. DSC file will have similar to:</span> </li>
   <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf</span> </li>
 </ul>
