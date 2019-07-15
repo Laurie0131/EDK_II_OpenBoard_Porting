@@ -2175,7 +2175,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 @snap[north-west span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -2189,10 +2189,10 @@ Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;
     BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabylakeRvp3DebugInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  		  EarlySiliconInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabylakeRvp3BoardBootModeDetect()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[yellow](KabylakeRvp3DebugInit&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		  @color[cyan](EarlySiliconInit&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[yellow](KabylakeRvp3BoardBootModeDetect&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 return <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		 BOOT_WITH_FULL_CONFIGURATION<br>&nbsp;&nbsp;<br>
 
@@ -2200,7 +2200,7 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
     SiliconInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       SiliconInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        EarlySiliconInit() <br>&nbsp;&nbsp;
+        @color[cyan](EarlySiliconInit&lpar;&rpar;) <br>&nbsp;&nbsp;
 
 <br>&nbsp;&nbsp;
 </span></p>
@@ -2210,12 +2210,12 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;&nbsp;
 <br>
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
-Once Board detection is successful, the next step is Board initialization. <br>
+Once Board detection is successful, the next step is Board initialization. <br><br>
 Kabylake example calls :
    <font face="Consolas">@size[.8em](EarlySiliconInit )</font>
    <br><br>
    - Early Platform PCH initialization<br><br>
-   - Boot Mode Detect <br>&nbsp;&nbsp;– @size[.8em](example returns Boot with full configuration )
+   - Boot Mode Detect <br>&nbsp;&nbsp;– @size[.8em](example returns Boot with full <br>&nbsp;&nbsp;&nbsp;&nbsp;configuration )
 </span></p>
 @snapend
 
