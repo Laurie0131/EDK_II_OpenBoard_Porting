@@ -2427,7 +2427,7 @@ Value of FspmUpd has been initialized by FSP binary default value
 @snapend
 
 @snap[south-west span-40 fragment]
-@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; " >@size[1.3em](FSP-M)<br>Fsp Silicon Policy Update Pre Mem<br>&nbsp;</span></p>)
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; " >@size[1.3em](FSP-M)<br>&nbsp;<br>Fsp Silicon Policy Update<br>Pre&nbsp;Mem<br>&nbsp;</span></p>)
 @snapend
 
 
