@@ -1856,6 +1856,56 @@ From reset vector to _ModuleEntryPoint
 ;   After enabling protected mode, a far jump is executed to
 ;   transfer to PEI using the newly loaded GDT.
 
+---?image=assets/images/slides/Slide32.JPG
+@title[Establish Temporary Memory ]
+<p align="right"><span class="gold" >@size[1.1](<b>Establish Temporary Memory </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+Call to TempRamInit API  located in the FSP Binary module
+</span></p>
+@snapend
+
+
+@snap[west span-40 ]
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.55em; font-family:Consolas;" >@size[1.3em](FSP-T)<br><br>TempRamInit API<br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[south-west span-60 ]
+<p style="line-height:70%" align="center"><span style="font-size:0.45em; font-family:Consolas;" >
+TempRamInit Api 
+</span></p>
+<ul style="list-style-type:disc; line-height:0.6;">
+  <li><span style="font-size:0.55em" >Initializes T-RAM silicon functionality<br>@size[.7em]( &nbsp;&nbsp;&nbsp;&nbsp;- No Evection mode / Cache As Ram)</span> </li>
+  <li><span style="font-size:0.55em" >Tests T-RAM functionality</span> </li>
+</ul>
+@snapend
+
+
+Note:
+
+The Temp memory is set up through the FSP TempRamInit API
+
+Call to the TempRamInit API is made that is located in the FSP Binary module
+The  FSP binary is rebased for the FvFspT Firmware Volume.
+
+Boot Loader must pass valid CAR region for FSP stack use through FSPM_UPD.FspmArchUpd.StackBase and
+FSPM_UPD.FspmArchUpd.StackSize UPDs.
+The minimum FSP stack size required for this revision of FSP is 160KB, stack base is 0xFEF17F00 by default. (from KabyLake FSP integraton Guide (KBLK IG)
+
+At the end of TempRamExit the original code and data caching are disabled. FSP will reconfigure all MTRRs as
+described in the table below for performance optimization.
+Memory range Cache Attribute
+0x00000000 - 0x0009FFFF Write back
+0x000C0000 - Top of Low Memory Write back
+0xFF800000 - 0xFFFFFFFF (Flash region) Write protect
+0x1000000000 - Top of High Memory Write back
+If the boot loader wish to reconfigure the MTRRs differently, it can be overridden immediately after this API call.
 
 
 ---
