@@ -2026,19 +2026,19 @@ Because this flow needs to involve the board initialization,  there is a set of 
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 MinPlatformPkg/<br>&nbsp;&nbsp;
- . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitPei -&gt;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei -&gt;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			 BoardDetect&lpar;&rpar;<br>
 KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
- . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      BoardInitLib -&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        PeiBoardInitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			BoardDetect&lpar;&rpar;  <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        PeiKabylakeRvp3Detect.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      BoardInitLib -&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PeiBoardInitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			BoardDetect&lpar;&rpar;  <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        PeiKabylakeRvp3Detect.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			KabylakeRvp3BoardDetect&lpar;&rpar;
 
 <br>&nbsp;&nbsp;
@@ -2052,9 +2052,9 @@ KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
 Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
    <font face="Consolas">@size[.7em](LibPcdGetSku&lpar;&rpar; & LibPcdSetSku&lpar;&rpar;)</font><br><br>
 
-<font face="Consolas">@size[.7em](KabylakeRvp3BoardDetect`&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
-<font face="Consolas">@size[.7em](LibPcdSetSku`&lpar;&rpar;)</font> stores Board ID
-<font face="Consolas">@size[.7em](LibPcdGetSku`&lpar;&rpar;)</font> used from that point on
+<font face="Consolas">@size[.7em](KabylakeRvp3BoardDetect&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
+<font face="Consolas">@size[.7em](LibPcdSetSku&lpar;&rpar;)</font> stores Board ID<br>
+<font face="Consolas">@size[.7em](LibPcdGetSku&lpar;&rpar;)</font> used from that point on
 
 <br>&nbsp;&nbsp;
 </span></p>
