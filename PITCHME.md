@@ -2350,8 +2350,8 @@ Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;
 		 SiliconInit&lpar;&rpar;<br>
 Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    SiliconInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      SiliconInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiDxeSmmGpioLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      GpioInit.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         @color[cyan](GpioConfigureSklPch &lpar;&rpar;) <br>&nbsp;&nbsp;
 
 <br>&nbsp;&nbsp;
@@ -2364,7 +2364,7 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 If GPIOs need to be Initialized pre-memory then the hook <font face="Consolas">GpioInitPreMem()</font> calls the silicon library for GPIOs<br><br>
 Example for Kabylake PCH GPIO pins
-Table :<font face="Consolas">KabylakeRvp3GpioTable.c</font>
+Table: <font face="Consolas">KabylakeRvp3GpioTable.c</font>
 </span></p>
 @snapend
 
@@ -2381,6 +2381,75 @@ procedure  GpioConfigurePads calls GpioConfigureSklPch()
   GpioPad and PadMode.
   Some GpioPads are configured and switched to native mode by RC, those include:
   SerialIo pins, ISH pins, ClkReq Pins
+
+
+---
+@title[Silicon Policy – Stage 1]
+<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-51 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/MinPlatformPkg/<br>&nbsp;
+ . . .<br>&nbsp;
+ PlatformInit/<br>&nbsp;&nbsp;&nbsp;
+  SiliconPolicyPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     SiliconPolicyPeiPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](SiliconPolicyInitPreMem&lpar;&rpar;)<br><br>
+
+Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;
+      PeiSiliconPolicyInitLibFsp<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         PeiFspPolicyInitLib.c  <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          @color[cyan](SiliconPolicyInitPreMem&lpar;&rpar;)
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br><br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+Performs silicon pre-mem policy initialization.<br><br>
+The meaning of Policy is defined by silicon code.<br><br>
+Input Policy should be <font face="Consolas">FspmUpd</font>. <br><br>
+Value of FspmUpd has been initialized by FSP binary default value
+<br><br>
+</span></p>
+@snapend
+
+@snap[south-west span-40 fragment]
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; " >@size[1.3em](FSP-M)<br><br>Fsp Silicon Policy Update Pre Mem<br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+Note:
+Performs silicon pre-memory policy update.
+
+The meaning of Policy is defined by silicon code.
+
+It could be the raw data, a handle, a PPI, etc.
+
+The input Policy must be returned by SiliconPolicyDonePreMemory().
+
+1) In FSP path, the input Policy should be FspmUpd.
+
+A platform may use this API to update the FSPM UPD policy initialized
+by the silicon module or the default UPD data.
+
+
+The output of FSPM UPD data from this API is the final UPD data.
+
 
 
 ---
