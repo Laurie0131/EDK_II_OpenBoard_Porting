@@ -1696,10 +1696,11 @@ Board porting will require creation / porting of libraries identified as produce
 
 ---?image=assets/images/slides/Slide30.JPG
 @title[How to search for Libraries in the Workspace]
-<p align="right"><span class="gold" >@size[1.1](<bHow to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-50 ]
+@snap[north-west span-40 ]
+<br>
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.8;">
