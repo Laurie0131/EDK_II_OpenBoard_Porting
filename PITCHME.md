@@ -2017,26 +2017,24 @@ Because this flow needs to involve the board initialization,  there is a set of 
 @snap[north-west span-49 ]
 <br>
 <br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-98 ]
 <br>
 <br>
-<br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-MinPlatformPkg<br>&nbsp;&nbsp;
+MinPlatformPkg/<br>&nbsp;&nbsp;
  . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PlatformInitPei -&gt;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			 BoardDetect&lpar;&rpar;<br>
-KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
+KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
  . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  KabylakeRvp3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       BoardInitLib -&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         PeiBoardInitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			BoardDetect&lpar;&rpar;  <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2047,17 +2045,16 @@ KabylakeOpenBoardPkg<br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <br>
 <br>
-<br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em; "><br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
-   `LibPcdGetSku`&lpar;&rpar; & `LibPcdSetSku`&lpar;&rpar;<br><br>
+   <font face="Consolas">@size[.7em](LibPcdGetSku&lpar;&rpar; & LibPcdSetSku&lpar;&rpar;)</font><br><br>
 
-`KabylakeRvp3BoardDetect`&lpar;&rpar; function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
-`LibPcdSetSku`&lpar;&rpar; stores Board ID
-`LibPcdGetSku`&lpar;&rpar; used from that point on
+<font face="Consolas">@size[.7em](KabylakeRvp3BoardDetect`&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
+<font face="Consolas">@size[.7em](LibPcdSetSku`&lpar;&rpar;)</font> stores Board ID
+<font face="Consolas">@size[.7em](LibPcdGetSku`&lpar;&rpar;)</font> used from that point on
 
 <br>&nbsp;&nbsp;
 </span></p>
