@@ -2320,6 +2320,68 @@ If the final BIOS image only needs to support one board, the board code can just
 
 
 
+---?image=assets/images/slides/Slide37.JPG
+@title[GPIOs – Stage 1]
+<p align="right"><span class="gold" >@size[1.1](<b>GPIOs – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-51 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;
+ . . .<br>&nbsp;
+ KabylakeRvp3/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;
+    BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[yellow](KabylakeRvp3BoardInitBeforeMemoryInit&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		 KabylakeRvp3InitPreMem ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		 I2CGpioExpanderInitPreMem()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 		 @color[cyan](GpioInitPreMem &lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 		 SioInit ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 SiliconInit&lpar;&rpar;<br>
+Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      SiliconInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](GpioConfigureSklPch &lpar;&rpar;) <br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br><br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+If GPIOs need to be Initialized pre-memory then the hook <font face="Consolas">GpioInitPreMem()</font> calls the silicon library for GPIOs<br><br>
+Example for Kabylake PCH GPIO pins
+Table :<font face="Consolas">KabylakeRvp3GpioTable.c</font>
+</span></p>
+@snapend
+
+
+
+
+Note:
+
+procedure  GpioConfigurePads calls GpioConfigureSklPch()
+ will initialize multiple GPIO pins. Use GPIO_INIT_CONFIG structure.
+  Structure contains fields that can be used to configure each pad.
+  Pad not configured using GPIO_INIT_CONFIG will be left with hardware default values.
+  Separate fields could be set to hardware default if it does not matter, except
+  GpioPad and PadMode.
+  Some GpioPads are configured and switched to native mode by RC, those include:
+  SerialIo pins, ISH pins, ClkReq Pins
+
 
 ---
 @title[Current Issues ]
