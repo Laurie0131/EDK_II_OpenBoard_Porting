@@ -2182,18 +2182,19 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 @snap[north-east span-98 ]
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
- . . .<br>&nbsp;&nbsp;
- KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabylakeRvp3DebugInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;
+ . . .<br>&nbsp;
+ KabylakeRvp3/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;
+    BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeRvp3DebugInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   		  EarlySiliconInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabylakeRvp3BoardBootModeDetect()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 return BOOT_WITH_FULL_CONFIGURATION<br>&nbsp;&nbsp;<br>
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeRvp3BoardBootModeDetect()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 return <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 BOOT_WITH_FULL_CONFIGURATION<br>&nbsp;&nbsp;<br>
 
 Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2214,7 +2215,7 @@ Kabylake example calls :
    <font face="Consolas">@size[.8em](EarlySiliconInit )</font>
    <br><br>
    - Early Platform PCH initialization<br><br>
-   - Boot Mode Detect – example returns Boot with full configuration 
+   - Boot Mode Detect <br>&nbsp;&nbsp;– @size[.8em](example returns Boot with full configuration )
 </span></p>
 @snapend
 
