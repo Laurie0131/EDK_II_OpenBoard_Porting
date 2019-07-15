@@ -1002,7 +1002,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
     BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPostMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp
+<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   
     BasePlatformHookLib<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -1023,9 +1023,9 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <br>
 <br>
- @fa[arrow-alt-left fa-2x gp-bullet-yellow] arrow<br>
+ @fa[arrow-left fa-2x gp-bullet-yellow] &larr; arrow<br>
 <br>
- @fa[arrow-alt-left fa-2x gp-bullet-yellow] arrow<br>
+ @fa[arrow-left fa-2x gp-bullet-yellow] &larr; arrow<br>
 <br>
  <br>
     <br>
