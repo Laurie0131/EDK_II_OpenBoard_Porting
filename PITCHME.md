@@ -1870,13 +1870,13 @@ Call to TempRamInit API  located in the FSP Binary module
 @snapend
 
 
-@snap[west span-40 ]
+@snap[west span-40 fragment]
 @box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-T)<br><br>TempRamInit API<br><br>&nbsp;</span></p>)
 @snapend
 
 
 
-@snap[south-west span-60 ]
+@snap[south-west span-60 fragment]
 <p style="line-height:70%" align="left"><span style="font-size:0.55em; font-family:Consolas;" >
 TempRamInit Api 
 </span></p>
@@ -1993,10 +1993,10 @@ MinPlatformPkg/<br>&nbsp;&nbsp;
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-BoardDetect&rpar;&lpar;<br>
-BoardDebugInit&rpar;&lpar;<br>
-BoardBootModeDetect&rpar;&lpar;<br>
-BoardInitBeforeMemoryInit&rpar;&lpar;<br>
+BoardDetect&lpar;&rpar;<br>
+BoardDebugInit&lpar;&rpar;<br>
+BoardBootModeDetect&lpar;&rpar;<br>
+BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 <br>&nbsp;&nbsp;
 </span></p>
 @snapend
