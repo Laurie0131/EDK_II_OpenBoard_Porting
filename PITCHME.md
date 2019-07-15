@@ -1882,7 +1882,7 @@ TempRamInit Api
 </span></p>
 <ul style="list-style-type:disc; line-height:0.6;">
   <li><span style="font-size:0.55em" >Initializes T-RAM silicon functionality<br>@size[.7em]( &nbsp;&nbsp;&nbsp;&nbsp;- No Evection mode / Cache As Ram)</span> </li>
-  <li><span style="font-size:0.55em" >Tests T-RAM functionality</span> </li>
+  <li><span style="font-size:0.55em" >Tests T-RAM functionality</span> </li><br>
 </ul>
 <br>
 <br>
@@ -1908,6 +1908,107 @@ Memory range Cache Attribute
 0xFF800000 - 0xFFFFFFFF (Flash region) Write protect
 0x1000000000 - Top of High Memory Write back
 If the boot loader wish to reconfigure the MTRRs differently, it can be overridden immediately after this API call.
+
+
+---
+@title[Transition to PEI Entry Point ]
+<p align="right"><span class="gold" >@size[1.1](<b>Transition to PEI Entry Point </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
+SecMain calls the entry point into PEI Core
+</span></p>
+
+```
+Secmain(  
+{ . . .
+  // Transfer the control to the PEI core
+  ASSERT (PeiCoreEntryPoint != NULL);
+  (*PeiCoreEntryPoint) (SecCoreData, PpiList); 
+  UNREACHABLE ();
+
+```
+
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;"><b>
+`PeiCore` is the `PeiCoreEntryPoint` in the FvPreMemory  Firmware Volume<Br>
+ `edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c`
+</b>
+</span></p>
+
+```
+EFIAPI
+PeiCore (
+  IN CONST EFI_SEC_PEI_HAND_OFF        *SecCoreDataPtr,
+  IN CONST EFI_PEI_PPI_DESCRIPTOR      *PpiList,
+  IN VOID                              *Data
+  )
+{
+
+
+```
+
+Note:
+
+Same ase slide
+
+
+---
+@title[Platform Initialization Board Hook Modules - Stage 1 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+  Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;
+  . . .<br>&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPreMem/<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+BoardDetect&rpar;&lpar;<br>
+BoardDebugInit&rpar;&lpar;<br>
+BoardBootModeDetect&rpar;&lpar;<br>
+BoardInitBeforeMemoryInit&rpar;&lpar;<br>
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+
+The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. 
+
+Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
+
 
 
 ---
