@@ -2274,11 +2274,11 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
 @snapend
 
 @snap[north-east span-46 ]
-<br>
+<br><br>
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 Board Initialization before Memory Initialization
- <br><br>
+ <br><br><br><br>
 The board specific initialization may include: 
 </span></p>
 @snapend
@@ -2291,9 +2291,9 @@ The board specific initialization may include:
 <br><br><br><br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.65em" >&nbsp;&nbsp;1. <br>&nbsp;</span> </li>
-  <li><span style="font-size:0.65em" >&nbsp;&nbsp;2. <br>&nbsp;</span> </li>
-  <li><span style="font-size:0.65em" >&nbsp;&nbsp;3. </span> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;&nbsp;1. <br>&nbsp;</span> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;&nbsp;2. <br>&nbsp;</span> </li>
+  <li><span style="font-size:0.65em" >&nbsp;&nbsp;&nbsp;3. </span> </li>
 </ul>
 @snapend
 
