@@ -1694,6 +1694,35 @@ To find the Libraries for the Platform specific code
 Board porting will require creation / porting of libraries identified as produced by the BoardPkg. Depending on the board, there may be existing libraries that are sufficient for a board, so it is important to assess the utility of existing library instances when developing board support.
 
 
+---?image=assets/images/slides/Slide30.JPG
+@title[How to search for Libraries in the Workspace]
+<p align="right"><span class="gold" >@size[1.1](<bHow to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.8;">
+  <li><span style="font-size:0.8em" >1. Search the workspace .DSC files for the string of the library</span> </li>
+  <li><span style="font-size:0.8em" >2. Open the .DSC files associated with the open board platform project</span> </li>
+  <li><span style="font-size:0.8em" >3. Determine which Library is used and that should have the build path in the workspace</span> </li>
+  <li><span style="font-size:0.8em" >4. DSC file will have similar to:</span> </li>
+  <li><span style="font-size:0.8em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf</span> </li>
+</ul>
+
+@snapend
+
+
+
+Note:
+http://sustituciondepuestosclaves.wikispaces.com/Metodo+de+Sustitucion+de+Puestos+Claves 
+
+Another Note: use Regular expressions to find multiple strings:
+Example, to fine the strings “Hob” and “Serial”
+
+    Serial.*Hob|Hob.*Serial  
+
+reg exp to find string1 "Serial" string2 "Hob"
 
 ---
 @title[Current Issues ]
