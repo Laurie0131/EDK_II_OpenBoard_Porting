@@ -1751,7 +1751,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Search the board platform .DSC file for where the <b>@color[yellow](`PlatformSecLib`)</b> is in the Platform-Board Tree
+Search the board platform .DSC file for where the <b>@color[#A8ff60](`PlatformSecLib`)</b> is in the Platform-Board Tree
 </span></p>
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
@@ -1808,7 +1808,7 @@ IA32/<br>&nbsp;&nbsp;
 
 
 
-@snap[north-east span-30 fragment ]
+@snap[north-east span-28 fragment ]
 <br>
 <br>
 <br>
@@ -1817,8 +1817,8 @@ IA32/<br>&nbsp;&nbsp;
 <br><p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br><br>
 <br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
-   @fa[arrow-left fa-2x gp-bullet-yellow]<i>@size[.7em](_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
+   <br>&nbsp;&nbsp;
+   &nbsp;&nbsp;@fa[arrow-left fa-2x gp-bullet-yellow]<i>@size[.7em](&nbsp;&nbsp;_ModuleEntryPoint)</i><br>&nbsp;&nbsp;
    <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 </span></p>
