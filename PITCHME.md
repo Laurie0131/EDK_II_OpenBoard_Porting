@@ -1283,6 +1283,210 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 </pre>
 
 
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+---?image=assets/images/slides/Slide23.JPG
+@title[Boot Flow – Stage 1]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+Stage I is contained within SEC and PEI phases. Code must not be compressed and content must be capable of being mapped to memory by hardware or other firmware.
+
+
+
+---?image=assets/images/slides/Slide24.JPG
+@title[High Level Control Flow – Stage 1]
+<p align="right"><span class="gold" >@size[1.1](<bHigh Level Control Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-50 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
+Major Execution Activities
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.8;">
+  <li><span style="font-size:0.8em" > Establish temporary memory (initialize MTRR)</span> </li>
+  <li><span style="font-size:0.8em" > Perform pre-memory board-specific initialization</span> </li>
+  <li><span style="font-size:0.8em" > Board detection</span> </li>
+  <li><span style="font-size:0.8em" > GPIOs</span> </li>
+  <li><span style="font-size:0.8em" > Serial Port initialization (Example: SIO, HSUART)</span> </li>
+</ul>
+@snapend
+
+Note:
+
+The objective of Stage I is to provide a foundation for more complex development in later stages. The board should implement a board-specific minimal code path capable of firmware debug output. Basic debug capability serves as a base for development activities in later stages. As Stage I is inherently foundational to product execution it may include more content and complexity than the functionality strictly required for debug output.
+
+
+These activities, contained within SEC and PEI phases, do not map 1:1 to the required functions. Some of this flow is already well defined by UEFI or EDK II specifications. 
+
+
+---?image=assets/images/slides/Slide25.JPG
+@title[Location of Stage 1 Modules]
+<p align="right"><span class="gold" >@size[1.1](<b> Location of Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Check the Board/Platform .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Where’s the platform code start? or the first point where the platform code is executed
+
+
+As the foundational stage for further functionality, Stage I may include additional content beyond what is strictly required to meet the stage objective. Typically this will include silicon initialization code that may be packaged in a variety of mechanisms including varying size binary blobs. 
+
+The Stage I modules will be combined into FVs to make up the Stage I components
+
+---
+@title[Stage 1 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0"><p style="line-height:10%"><span style="font-size:0.56em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0"><p style="line-height:10%"><span style="font-size:0.56em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >SEC + StatusCode&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvBspPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Pre-memory board initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspT&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >SEC silicon initialization - T-RAM &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspM&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Memory initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPreMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Pre-memory silicon initialization&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >FvFspS&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Silicon initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPostMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Post-memory silicon initialization &nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+Note:
+
+
+Use the Platform .Fdf File to determine which modules map to each FV
+Typically this will include silicon initialization code that may be packaged in a variety of mechanisms including varying size binary blobs. In the layout shown in this slide, the Intel® FSP solution is shown as an example. In this case, the FSP binary can be rebased and integrated in one step rather than distributing the work for the FSP-M and FSP-S rebase unnecessarily across later stages. 
+A Note that a child FV is a FV embedded within the parent FV. The child FV is identified by a file type of EFI_FV_FILETYPE_FIRMWARE_VOLUME_IMAGE.
+
+
+
+| `Name`              | `Content`                          | `Compressed` | `Parent FV` |
+| ------------------- | ---------------------------------- | ------------ | ----------- |
+| FvPreMemory         | SEC + StatusCode                   | No           | None        |
+| FvBspPreMemory      | Pre-memory board initialization    | No           | None        |
+| FvFspT              | SEC silicon initialization         | No           | None        |
+| FvFspM              | Memory initialization              | No           | None        |
+| FvPreMemorySilicon  | Pre-memory silicon initialization  | No           | FvFspM      |
+| FvFspS              | Silicon initialization             | No           | None        |
+| FvPostMemorySilicon | Post-memory silicon initialization | Yes          | FvFspS      |
+
+
+
+
 ---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
