@@ -2087,6 +2087,155 @@ SkuIds is a special usage of PCD. It can support multiple configurations generat
 Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku () 
 
 
+---
+@title[Configuration Multi-SKU PCD – Board ID  ]
+<p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-48 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-48 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
+@color[cyan](DSC File – SKU Set at BUILD time)
+</span></p>
+
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+ .&nbsp;.&nbsp;.<br>&nbsp;&nbsp;
+SKUID_IDENTIFIER = ?<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+[SkuIds]<br>&nbsp;&nbsp;
+0|DEFAULT<br>&nbsp;&nbsp;
+4|BoardX<br>&nbsp;&nbsp;
+0x42|BoardY<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+[PcdsDynamicDefault.common.@color[yellow](BoardX)]<br>&nbsp;&nbsp;
+gBoardModuleTokenSpaceGuid.PcdGpioPin|0x8<br>&nbsp;&nbsp;
+gBoardModuleTokenSpaceGuid.PcdGpioInitValue|\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+        &lbrace;0x00, 0x04, 0x02, 0x04, ...&rbrace;<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+[PcdsDynamicDefault.common.@color[yellow](BoardY)]<br>&nbsp;&nbsp;
+gBoardModuleTokenSpaceGuid.PcdGpioPin|0x4<br>&nbsp;&nbsp;
+gBoardModuleTokenSpaceGuid.PcdGpioInitValue|\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+        &lbrace;0x00, 0x02, 0x01, 0x02, ...&rbrace;<br>&nbsp;&nbsp;
+</span></p> 
+@snapend
+
+
+@snap[north-east span-47 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
+@color[cyan](SKU PCD Set Dynamically)
+</span></p>
+<br>
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >
+&nbsp;&nbsp;
+BoardXBoardDetect( VOID)<br>&nbsp;&nbsp;
+&lbrace;<br>&nbsp;&nbsp;
+. . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  if (@color[yellow](LibPcdGetSku) () != 0) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return EFI_SUCCESS;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &rbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  if (IsBoardX ()) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     @color[yellow](LibPcdSetSku) (BoardIdIsBoardX);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     ASSERT (LibPcdGetSku() == <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              BoardIdIsBoardX);<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &rbrace;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  return EFI_SUCCESS;<br>&nbsp;&nbsp;
+&rbrace;<br>&nbsp;&nbsp;
+</span></p> 
+@snapend
+
+
+Note:
+SkuIds is a special usage of PCD. It can support multiple configurations generated at build time, and it supports runtime selection to make one configuration take effect finally. 
+
+Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku (). 
+
+The SKU PCD is actually a dynamic PCD. During boot, the board detection takes the responsibility to set the SKU. Once the SKU PCD is set, the configuration associated with this SKU takes effect immediately 
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Board Debug Initialization ]
+<p align="right"><span class="gold" >@size[1.1](<b>Board Debug Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+Platform/Intel/KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+ KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiKabylakeRvp3InitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeRvp3DebugInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		  EarlySiliconInit()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeRvp3BoardBootModeDetect()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 return BOOT_WITH_FULL_CONFIGURATION<br>&nbsp;&nbsp;<br>
+
+Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconInitLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      SiliconInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        EarlySiliconInit() <br>&nbsp;&nbsp;
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+Once Board detection is successful, the next step is Board initialization. <br>
+Kabylake example calls :
+   <font face="Consolas">@size[.8em](EarlySiliconInit )</font>
+   <br><br>
+   - Early Platform PCH initialization<br><br>
+   - Boot Mode Detect – example returns Boot with full configuration 
+</span></p>
+@snapend
+
+
+
+Note:
+
+
+### Early Platform PCH initialization
+- Program ACPI BASE
+- Program PWRM BASE
+- Program TCO BASE if it is present and not locked
+- LPC I/O Configuration
+- Enable the upper 128-byte bank of RTC RAM
+- Disable the Watchdog timer expiration from causing a system reset 
+- Halt the TCO timer
+- Disable SERR NMI and IOCHK# NMI in port 61
+- Program timer 1 as refresh timer
+
+
+
 
 ---
 @title[Current Issues ]
