@@ -2397,7 +2397,6 @@ procedure  GpioConfigurePads calls GpioConfigureSklPch()
 
 @snap[north-east span-98 ]
 <br>
-<br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
 Platform/Intel/MinPlatformPkg/<br>&nbsp;
  . . .<br>&nbsp;
@@ -2428,7 +2427,7 @@ Value of FspmUpd has been initialized by FSP binary default value
 @snapend
 
 @snap[south-west span-40 fragment]
-@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; " >@size[1.3em](FSP-M)<br><br>Fsp Silicon Policy Update Pre Mem<br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; " >@size[1.3em](FSP-M)<br>Fsp Silicon Policy Update Pre Mem<br>&nbsp;</span></p>)
 @snapend
 
 
