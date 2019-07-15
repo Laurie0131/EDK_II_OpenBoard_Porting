@@ -1636,16 +1636,16 @@ Board porting will require creation of libraries identified as produced by the B
 <br>
 <table id="recTable-1">
 	<tr>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Item</b></span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:50%"><span style="font-size:0.65em" ><b>API Definition</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:50%"><span style="font-size:0.65em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Description</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardInitLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em" > Board initialization library. </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" > Board initialization library. </span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > ReportFvLib&nbsp;</span></p></td>
@@ -1657,25 +1657,25 @@ Board porting will require creation of libraries identified as produced by the B
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SerialPortLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MdeModulePkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  SIO vendor specific initialization to enable serial port.</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:025%"><span style="font-size:0.4em" >  SIO vendor specific initialization to enable serial port.</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicyInitLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > IntelSiliconPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" > Provides default silicon configuration policy data. </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:025%"><span style="font-size:0.4em" > Provides default silicon configuration policy data. </span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicyUpdateLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > IntelSiliconPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" > Provides board updates to silicon configuration policy data. </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:025%"><span style="font-size:0.4em" > Provides board updates to silicon configuration policy data. </span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > PlatformSecLib&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > UefiCpuPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  Reset vector and SEC initialization code.</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em" >  Reset vector and SEC initialization code.</span></p></td>
 	</tr>
 </table>
 <br>
