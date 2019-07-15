@@ -1858,32 +1858,34 @@ From reset vector to _ModuleEntryPoint
 
 ---?image=assets/images/slides/Slide32.JPG
 @title[Establish Temporary Memory ]
-<p align="right"><span class="gold" >@size[1.1](<b>Establish Temporary Memory </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>Establish Temporary Memory </b>)</span><span style="font-size:0.75em;" ><br>Call to FSP API </span></p>
 
 
 @snap[north-west span-60 ]
 <br>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
 Call to TempRamInit API  located in the FSP Binary module
 </span></p>
 @snapend
 
 
 @snap[west span-40 ]
-@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.55em; font-family:Consolas;" >@size[1.3em](FSP-T)<br><br>TempRamInit API<br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-T)<br><br>TempRamInit API<br><br>&nbsp;</span></p>)
 @snapend
 
 
 
 @snap[south-west span-60 ]
-<p style="line-height:70%" align="center"><span style="font-size:0.45em; font-family:Consolas;" >
+<p style="line-height:70%" align="left"><span style="font-size:0.55em; font-family:Consolas;" >
 TempRamInit Api 
 </span></p>
 <ul style="list-style-type:disc; line-height:0.6;">
   <li><span style="font-size:0.55em" >Initializes T-RAM silicon functionality<br>@size[.7em]( &nbsp;&nbsp;&nbsp;&nbsp;- No Evection mode / Cache As Ram)</span> </li>
   <li><span style="font-size:0.55em" >Tests T-RAM functionality</span> </li>
 </ul>
+<br>
+<br>
 @snapend
 
 
