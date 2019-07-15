@@ -1013,7 +1013,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 @snapend
 
 
-@snap[north-east span-75 fragment ]
+@snap[north-east span-80 fragment ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 <br>
