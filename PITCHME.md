@@ -2549,14 +2549,14 @@ also shown are the debug configuration PCDs
 
 @snap[north-east span-98 ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br><br>
  1. Copy the EDK II packages to a local workspace  <br>
  2. Select the correct Intel® FSP & review requirements  <br>
  3. Get silicon initialization requirements for the given board. <br>
- 4. Customize the silicon initialization solution to the board-specific <br>&nbsp;&nbsp;&nbsp;requirements. <br>
+ 4. Customize the silicon initialization solution to the board-specific <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements. <br>
  5. Determine other firmware and software components <br>
- 6. Determine board-specific information required to fetch code and <br>&nbsp;&nbsp;&nbsp;show debug output. <br>
- 7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the <br>&nbsp;&nbsp;&nbsp;board interfaces in Required Functions. <br>
+ 6. Determine board-specific information required to fetch code and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show debug output. <br>
+ 7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board interfaces in Required Functions. <br>
    &nbsp;&nbsp;&nbsp;&nbsp;- serial port initialization code in <font face="Consolas">@size[.8em](PlatformHookSerialPortInitialize &lpar;&rpar;)</font> at<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font face="Consolas">@size[.8em](BoardPkg/Library/BasePlatformHookLib.)</font> <br>
    &nbsp;&nbsp;&nbsp;&nbsp;- Add Board detection code in <font face="Consolas">@size[.8em](BoardDetect &lpar;&rpar;)</font>
 </span></p>
@@ -2607,7 +2607,7 @@ achieve debug output.
 <p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
-<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPreMemLib)</font>
+<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))</font>
 </span></p>
 
 @snap[north-east span-13]
@@ -2615,6 +2615,7 @@ Kabylake -<br>
 @snapend
 
 @snap[north-east span-98 ]
+<br>
 <br>
 <br>
 <br>
@@ -2644,6 +2645,130 @@ your board.
 achieve debug output.
 8. Boot the system, collect the debug log, and verify the test point results defined in the
 Test Point section are correct.
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features Section 02 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+
+---?image=assets/images/slides/Slide46.JPG
+@title[Boot Flow – Stage 2]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+ The objective of Stage II is to enable a minimal boot path memory initialization code execution that successfully installs permanent memory.
+
+
+
+---?image=assets/images/slides/Slide47.JPG
+@title[High Level Control Flow – Stage 2]
+<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-55 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
+Major Execution Activities
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > Complete execution of the memory initialization module</span> </li>
+  <li><span style="font-size:0.65em" > Discover, train and install permanent memory </span> </li>
+  <li><span style="font-size:0.65em" > Migrate the temporary memory/stack to permanent memory.</span> </li>
+  <li><span style="font-size:0.65em" > Migrate any code modules from temporary RAM to permanent memory.</span> </li>
+  <li><span style="font-size:0.65em" > Perform cache configuration for a post-memory environment.</span> </li>
+  <li><span style="font-size:0.65em" > Execute memory installed notification actions.</span> </li>
+</ul>
+@snapend
+
+Note:
+
+Stage II extends the Stage I control flow by executing the platform and silicon initialization required for memory initialization. The stage is completed when permanent memory is installed. Since execution prior to memory initialization typically occurs in a resource-constrained environment, the code in this stage is not compressed. To simplify silicon enabling which may be opaque to the board engineer in the form of a binary blob, Stage II enabling does not strictly constrain the extent of silicon initialization. In particular, it is recommended to perform standard security lock functionality such as register locks, privilege level changes, and other actions that are in the system requirements to reduce conditional logic and therefore potential for error in enabling those settings. This only pertains to security settings within the chipset. This does not include larger industry standard security features such as UEFI Secure Boot and TCG measured boot. Those features are enabled in Stage V Security Enable.
+
+#### Stage II functionality:
+- Non-volatile storage read-only access
+- Pre-memory silicon policy initialization - Basic services like cache and CPU IO
+- Initialization of decompression capability
+- Memory initialization and basic memory test  
+
+
+
+
 
 
 
