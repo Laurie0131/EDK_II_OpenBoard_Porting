@@ -2739,7 +2739,7 @@ Note:
 <p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-east span-55 ]
+@snap[north-east span-58 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
@@ -2767,7 +2767,218 @@ Stage II extends the Stage I control flow by executing the platform and silicon 
 - Memory initialization and basic memory test  
 
 
+---
+@title[Stage 2 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvPostMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" >Post-memory modules&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvFspM&nbsp;</span></p></td>
+		<td bgcolor="#323232" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" >Memory initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPreMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" >Pre-memory silicon initialization&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvFspS&nbsp;</span></p></td>
+		<td bgcolor="#323232" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" >Silicon initialization</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;-&gt;FvPostMemorySilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".0%2"><p style="line-height:01%"><span style="font-size:0.5em" >Post-memory silicon initialization &nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+Note:
+
+Stage II leverages most of the Stage I content.
+Notice FvFspM is in both Stage 1 and stage 2
+
+
+
+
+---
+@title[Stage 2 FVs Contents]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvPostMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >PlatformInitPostMem.efi&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".020%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" >Performs post memory initialization		&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >FspsWrapperPeim.efi &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.45em" >Calls FSP-M & FSP-S FV </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicyPeiPostMem.efi&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.45em" >Publishes silicon initialization configuration </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > DxeIpl.efi&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.45em" > Load and invoke DXE</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >. . . &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.45em" > &nbsp;</span></p></td>
+	</tr>
+
+</table>
+<br>
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Mapped according to .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Main purpose is to initialize memory.
+Example show Kabylake with FSP wrapper to call the FSP MemoryInit function inside FSP module.
+
+
+---
+@title[Stage 2 Platform Libraries - PEI]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Platform Libraries - PEI</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable-1">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardInitLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" > Board initialization library. </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicyInitLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > IntelSiliconPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" > Provides default silicon configuration policy data. </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicy UpdateLib &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > IntelSiliconPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  Provides board updates to silicon configuration policy data.</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > TestPointCheckLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  Test point check library.</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > TestPointLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  Test point library.</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+
+Note:
+
+BoardInitLib 
+-  MinPlatformPkg - BoardPkg  - Board initialization library.
+SiliconPolicyInitLib 
+ - IntelSiliconPkg SiliconPkg Provides default silicon configuration policy data.
+SiliconPolicyUpdateLib 
+- IntelSiliconPkg BoardPkg Provides board updates to silicon configuration policy data.
+TestPointCheckLib 
+- MinPlatformPkg MinPlatformPkg Test point check library. It is called by PlatformInit module to perform stagespecific checks.
+TestPointLib 
+MinPlatformPkg MinPlatformPkg Test point library. It provides helper functionality for TestPointCheck lib.
+
+
+---
+@title[Stage 2 Platform Libraries - DXE]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Platform Libraries - DXE</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable-1">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  ResetSystemLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  MdeModulePkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  SiliconPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" >  For DXE reset architecture protocol</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  PciHostBridgeLib&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  MdeModulePkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  SiliconPkg&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" > For DXE PCI host bridge driver </span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+
+Note:
+Stage II contains some DXE items needed to enable Stage III. No board porting of these libraries is required. Board integrators should ensure that their silicon package provides the necessary libraries. These libraries and the UEFI Components (DXE) are functionally irrelevant to Stage II functionality.
+
+ResetSystemLibSilicon/ Intel /KabylakeSiliconPkg/Pch/Library/DxeRuntimeResetSystemLib/DxeRuntimeResetSystemLib
+
+PciHostBridgeLib
+
+- Kabylake:
+   - MinPlatformPkg\Pci\Library\PciHostBridgeLibSimple\PciHostBridgeLibSimple
+  used in \MdeModulePkg\Bus\Pci\PciHostBridgeDxe\PciHostBridgeDxe
 
 
 
