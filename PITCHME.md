@@ -2500,8 +2500,8 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
 @snap[north-west span-100 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
-<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br><br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -2519,7 +2519,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdSerialLineControl - <font face="Arial">Serial 
 gEfiMdeModulePkgTokenSpaceGuid.PcdSerialFifoControl - <font face="Arial">Serial port FIFO control  </font><br>
 gMinPlatformPkgTokenSpaceGuid.PcdSecSerialPortDebugEnable - <font face="Arial">Enable serial port debug in SEC phase </font><br>
 <br>
-
+<br>
 <font face="Arial">@size[1.4em](Debug configuration PCDs) </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control build time optimization based on debug print level </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask - <font face="Arial">Control DebugLib behavior  </font><br>
