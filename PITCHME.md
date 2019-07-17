@@ -2897,7 +2897,7 @@ Example show Kabylake with FSP wrapper to call the FSP MemoryInit function insid
 		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" > Provides default silicon configuration policy data. </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicy UpdateLib &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em; font-family:Consolas;" > SiliconPolicy UpdateLib &nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > IntelSiliconPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > BoardPkg&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:020%"><span style="font-size:0.4em" >  Provides board updates to silicon configuration policy data.</span></p></td>
@@ -2979,6 +2979,72 @@ PciHostBridgeLib
 - Kabylake:
    - MinPlatformPkg\Pci\Library\PciHostBridgeLibSimple\PciHostBridgeLibSimple
   used in \MdeModulePkg\Bus\Pci\PciHostBridgeDxe\PciHostBridgeDxe
+
+
+
+---
+@title[Platform Initialization Board Hook Modules - Stage 2 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+  Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](SiliconPolicyInitLib.h)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](SiliconPolicyUpdateLib.h)<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;
+  . . .<br>&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PlatformInitPreMem/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPostMem/<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+BoardBootModeDetect&lpar;&rpar;<br>
+BoardInitBeforeMemoryInit&lpar;&rpar;<br>
+<br>
+MemoryInit&lpar;&rpar;<br>
+<br>
+SiliconPolicyInitPreMemory&lpar;&rpar;<br>
+SiliconPolicyUpdatePreMemory&lpar;&rpar;<br>
+SiliconPolicyDonePreMemory&lpar;&rpar;<br>
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+
+The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
 
 
