@@ -2492,8 +2492,8 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
 
 
 ---
-@title[Debug Configuration - Serial Port]
-<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Debug Configuration PCDs - Serial Port]
+<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration PCDs - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
@@ -2502,14 +2502,14 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-98 ]
 <br>
-<br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br>
 gEfiMdeModulePkgTokenSpaceGuid.PcdSerialBaudRate - <font face="Arial">Baud rate for the 16550 serial port</font><br>
 gEfiMdeModulePkgTokenSpaceGuid.PcdSerialUseMmio - <font face="Arial">Enable serial port MMIO addressing </font><br>
 gEfiMdeModulePkgTokenSpaceGuid.PcdSerialUseHardwareFlowControl - <font face="Arial">Enable serial port HW flow control  </font><br>
@@ -2519,8 +2519,8 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdSerialLineControl - <font face="Arial">Serial 
 gEfiMdeModulePkgTokenSpaceGuid.PcdSerialFifoControl - <font face="Arial">Serial port FIFO control  </font><br>
 gMinPlatformPkgTokenSpaceGuid.PcdSecSerialPortDebugEnable - <font face="Arial">Enable serial port debug in SEC phase </font><br>
 <br>
-<br>
-<font face="Arial">@size[1.2em](Debug configuration PCDs) </font><br>
+
+<font face="Arial">@size[1.4em](Debug configuration PCDs) </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control build time optimization based on debug print level </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask - <font face="Arial">Control DebugLib behavior  </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel - <font face="Arial">Control run time debug print level </font><br>
