@@ -3050,6 +3050,62 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 
 
+---
+@title[Platform Initialization Memory Init]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-51 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+edk2-platforms/<br>&nbsp;
+Platform/Intel/MinPlatformPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+ PlatformInit/<br>&nbsp;&nbsp;&nbsp;
+  PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PlatformInitPostMem.c<br>
+	 <br>
+edk2/<br>&nbsp;&nbsp;
+  FspIntelFsp2WrapperPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    FspmWrapperPeim/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[yellow](FspMemoryInitApi&lpar;&rpar;)
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br><br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<font face="Arial"> Notify call back </font><br>&nbsp;&nbsp;
+  @color[yellow](BoardInitAfterMemoryInit&lpar;&rpar;)
+</span></p>
+@snapend
+
+@snap[south-east span-40 fragment]
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-M)<br>&nbsp;<br> FspMemoryInitApi&lpar;&rpar;<br>&nbsp;</span></p>)
+<br>
+@snapend
+
+
+
+Note:
+
+Memory Initialization  done using the FSP Memory Init API through the FSP wrapper.
+
 
 ---
 @title[Current Issues ]
