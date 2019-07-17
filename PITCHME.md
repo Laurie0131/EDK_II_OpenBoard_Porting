@@ -2455,15 +2455,15 @@ The output of FSPM UPD data from this API is the final UPD data.
 ---
 @title[Debug Configuration - Serial Port]
 <p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
-<br>
+
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 Serial port parameters come from the board and are used for debug features, serial input/output devices supporting local or remote consoles, and OS level debuggers<br><br>
 Library – <font face="Consolas">@color[yellow](SerialPortLib)</font> find in workspace used by board .dsc<br><br>
 Serial port configuration options consumed by <font face="Consolas">@color[yellow](SerialPortLib)</font> <br><br>
 <font face="Consolas">@color[yellow](SerialPortLib)</font> is used by the <font face="Consolas">@color[yellow](StatusCodeHandlerPei.inf)</font> component to initialize and 
 display messages to a serial port<br><br>
-Serial port configuration options are published via PCH_SERIAL_IO_CONFIG used by <font face="Consolas">@color[yellow](PeiPchPolicyLib)</font>  <br>
-&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.8em](@color[yellow](Silicon/Intel/KabylakeSiliconPkg/Pch/Library/PeiPchPolicyLib))</font>
+Serial port configuration options are published via @color[yellow](PCH_SERIAL_IO_CONFIG) used by <font face="Consolas">@color[yellow](PeiPchPolicyLib)</font>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.8em](Silicon/Intel/KabylakeSiliconPkg/Pch/Library/PeiPchPolicyLib)</font>
 </span></p>
 
 Note:
@@ -2491,11 +2491,49 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
   through Policy.
 
 
+---
+@title[Debug Configuration - Serial Port]
+<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
+@snap[north-west span-100 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+@snapend
 
 
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialBaudRate - <font face="Arial">Baud rate for the 16550 serial port</font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialUseMmio - <font face="Arial">Enable serial port MMIO addressing </font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialUseHardwareFlowControl - <font face="Arial">Enable serial port HW flow control  </font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialDetectCable - <font face="Arial">Enable blocking Tx if no cable  </font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialRegisterBase - <font face="Arial">Register the serial port base address </font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialLineControl - <font face="Arial">Serial port line control configuration  </font><br>
+gEfiMdeModulePkgTokenSpaceGuid.PcdSerialFifoControl - <font face="Arial">Serial port FIFO control  </font><br>
+gMinPlatformPkgTokenSpaceGuid.PcdSecSerialPortDebugEnable - <font face="Arial">Enable serial port debug in SEC phase </font><br>
+<br>
+<br>
+<font face="Arial">@size[1.2em](Debug configuration PCDs) </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control build time optimization based on debug print level </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask - <font face="Arial">Control DebugLib behavior  </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel - <font face="Arial">Control run time debug print level </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask - <font face="Arial">Control display of status codes </font><br>
+</span></p>
+@snapend
+
+
+Note:
+
+slide show the PCDs for the serial port for configuration 
+
+also shown are the debug configuration PCDs
 
 
 
