@@ -2501,7 +2501,7 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
-<br><br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -2520,8 +2520,9 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdSerialFifoControl - <font face="Arial">Serial 
 gMinPlatformPkgTokenSpaceGuid.PcdSecSerialPortDebugEnable - <font face="Arial">Enable serial port debug in SEC phase </font><br>
 <br>
 <br>
+<br>
 <font face="Arial">@size[1.4em](Debug configuration PCDs) </font><br>
-gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control build time optimization based on debug print level </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control optimization based on debug print level - messaage </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask - <font face="Arial">Control DebugLib behavior  </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel - <font face="Arial">Control run time debug print level </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask - <font face="Arial">Control display of status codes </font><br>
