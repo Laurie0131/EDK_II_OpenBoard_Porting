@@ -2540,8 +2540,7 @@ also shown are the debug configuration PCDs
 ---
 @title[Stage 1 Checklist ]
 <p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist </b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-Steps to enable a board for Stage 1.
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">Steps to enable a board for Stage 1.
 </span></p>
 
 @snap[north-east span-13]
@@ -2554,11 +2553,11 @@ Steps to enable a board for Stage 1.
  1. Copy the EDK II packages to a local workspace  <br>
  2. Select the correct Intel® FSP & review requirements  <br>
  3. Get silicon initialization requirements for the given board. <br>
- 4. Customize the silicon initialization solution to the board-specific requirements. <br>
+ 4. Customize the silicon initialization solution to the board-specific <br>&nbsp;&nbsp;&nbsp;requirements. <br>
  5. Determine other firmware and software components <br>
- 6. Determine board-specific information required to fetch code and show debug output. <br>
- 7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the board interfaces in Required Functions. <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;- serial port initialization code in <font face="Consolas">@size[.8em](PlatformHookSerialPortInitialize &lpar;&rpar;)</font> at  <font face="Consolas">@size[.8em](BoardPkg/Library/BasePlatformHookLib.)</font> <br>
+ 6. Determine board-specific information required to fetch code and <br>&nbsp;&nbsp;&nbsp;show debug output. <br>
+ 7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the <br>&nbsp;&nbsp;&nbsp;board interfaces in Required Functions. <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- serial port initialization code in <font face="Consolas">@size[.8em](PlatformHookSerialPortInitialize &lpar;&rpar;)</font> at<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <font face="Consolas">@size[.8em](BoardPkg/Library/BasePlatformHookLib.)</font> <br>
    &nbsp;&nbsp;&nbsp;&nbsp;- Add Board detection code in <font face="Consolas">@size[.8em](BoardDetect &lpar;&rpar;)</font>
 </span></p>
 @snapend
@@ -2606,10 +2605,9 @@ achieve debug output.
 ---
 @title[Stage 1 Checklist 02 ]
 <p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
-<font face="Consolas">@size[.8em](
-KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPreMemLib)</font>
+<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPreMemLib)</font>
 </span></p>
 
 @snap[north-east span-13]
@@ -2617,6 +2615,7 @@ KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPreMemLib)</f
 @snapend
 
 @snap[north-east span-98 ]
+<br>
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br>
