@@ -2522,7 +2522,7 @@ gMinPlatformPkgTokenSpaceGuid.PcdSecSerialPortDebugEnable - <font face="Arial">E
 <br>
 <br>
 <font face="Arial">@size[1.4em](Debug configuration PCDs) </font><br>
-gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control optimization based on debug print level - messaage </font><br>
+gEfiMdePkgTokenSpaceGuid.PcdFixedDebugPrintErrorLevel - <font face="Arial">Control optimization based on debug print level - messaage type</font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask - <font face="Arial">Control DebugLib behavior  </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel - <font face="Arial">Control run time debug print level </font><br>
 gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask - <font face="Arial">Control display of status codes </font><br>
@@ -2535,6 +2535,116 @@ Note:
 slide show the PCDs for the serial port for configuration 
 
 also shown are the debug configuration PCDs
+
+
+---
+@title[Stage 1 Checklist ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+Steps to enable a board for Stage 1.
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br>
+ 1. Copy the EDK II packages to a local workspace  <br>
+ 2. Select the correct Intel® FSP & review requirements  <br>
+ 3. Get silicon initialization requirements for the given board. <br>
+ 4. Customize the silicon initialization solution to the board-specific requirements. <br>
+ 5. Determine other firmware and software components <br>
+ 6. Determine board-specific information required to fetch code and show debug output. <br>
+ 7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the board interfaces in Required Functions. <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- serial port initialization code in <font face="Consolas">@size[.8em](PlatformHookSerialPortInitialize &lpar;&rpar;)</font> at  <font face="Consolas">@size[.8em](BoardPkg/Library/BasePlatformHookLib.)</font> <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;- Add Board detection code in <font face="Consolas">@size[.8em](BoardDetect &lpar;&rpar;)</font>
+</span></p>
+@snapend
+
+Note:
+
+Steps to enable a board for Stage I.
+Copy the EDK II packages locally to the workspace.
+Select silicon initialization solution .i.e. Intel® FSP. & Review the requirements for the silicon initialization solution.
+Gather the silicon initialization requirements for the given board.
+Customize the silicon initialization solution to configure the system to the board-specific requirements
+  - For Intel® FSP, this includes setting minimal policy configuration.
+  - For other silicon solutions, similar parameter customization may be needed if the silicon solution is not written for a particular system design.
+6, Determine other firmware and software components required for the system to function properly.
+  - For an Intel platform, this may include firmware images such as the appropriate microcode patch, EC firmware image, power management controller firmware, and others.
+  - Additional third-party add-in components such as specific UEFI drivers may also be required.
+7. Determine board-specific information required to fetch code and show debug output.
+  - This includes details such as the NVRAM layout and strap information.
+8. Copy a reference GenerationOpenBoardPkg/BoardXXX and update the board
+interfaces in Required Functions.
+  - Add serial port initialization code in PlatformHookSerialPortInitialize () at 				BoardPkg/Library/BasePlatformHookLib.
+  - This is SIO related code.
+ii. Add Board detection code in BoardDetect ()
+
+
+BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c`
+If the project only supports one board, this function can return directly.
+2. Add Board pre-memory debug initialization code in BoardDebugInit () ,
+BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c.
+i. This is for debug channel related initialization.
+3. Audit BoardPkg/Stage1.dsc, ensure all PCDs in the Configuration section are correct for
+your board.
+i. Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 1
+ii. Follow "Debug Lib Selection" to enable serial debug capability.
+4. Audit all other PCD settings in the board DSC file to verify the values are correct for
+your board.
+5. Verify the flash layout is compliant with this specification.
+6. Verify the required binaries will be included in the image produced in the build.
+7. Verify the code execution path for Stage I will only perform the actions required to
+achieve debug output.
+8. Boot the system, collect the debug log, and verify the test point results are correct.
+
+
+
+---
+@title[Stage 1 Checklist 02 ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+Kabylake -<br>
+<font face="Consolas">@size[.8em](
+KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPreMemLib)</font>
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br>
+ 1. Add Board pre-memory debug initialization code in <font face="Consolas">@size[.8em](BoardDebugInit&lpar;&rpar;)</font>  <br>
+ 2. Ensure all PCDs in the Configuration section are correct (i.e. Serial debug) <br>
+ 3. Verify values of other PCDs are correct <br>
+ 4. Verify the flash layout is compliant <br>
+ 5. Verify the required binaries  included in the build <br>
+ 6. Verify debug output during the code execution path for Stage 1 <br>
+ 7. Verify the test point results  are correct <br>
+</span></p>
+@snapend
+
+Note:
+BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c`
+
+1. If the project only supports one board, this function can return directly.
+2.  Add Board pre-memory debug initialization code in BoardDebugInit () , BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c. - This is for debug channel related initialization.
+3.  Audit BoardPkg/Stage1.dsc, ensure all PCDs in the Configuration section are correct for
+your board. - Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 1 and  Follow "Debug Lib Selection" to enable serial debug capability.
+4. Audit all other PCD settings in the board DSC file to verify the values are correct for
+your board.
+5. Verify the flash layout is compliant with this specification.
+6. Verify the required binaries will be included in the image produced in the build.
+7. Verify the code execution path for Stage I will only perform the actions required to
+achieve debug output.
+8. Boot the system, collect the debug log, and verify the test point results defined in the
+Test Point section are correct.
 
 
 
