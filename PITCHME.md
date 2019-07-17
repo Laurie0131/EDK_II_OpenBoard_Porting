@@ -381,8 +381,8 @@ Get the source from the open source repositories to a local workspace directory
 
 
 ---
-@title[Get the Reference OpenBoard Source ]
-<p align="right"><span class="gold" >@size[1.1](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Build the Reference OpenBoard ]
+<p align="right"><span class="gold" >@size[1.1](<b>Build the Reference OpenBoard </b>)</span><span style="font-size:0.75em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Open a Command Window and CD to the workspace directory<br><br>
@@ -896,7 +896,7 @@ edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/ "@color[#FFC000](Board common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[yellow](NewOpenBoardPkg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           @color[yellow](BoardXXX)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+           @color[yellow](BoardXxx)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabyLakeSilconPkg/"@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;
@@ -913,8 +913,8 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.65em" > 1. <br><br></span> </li>
-  <li><span style="font-size:0.65em" > 2. <br><br> </span> </li>
+  <li><span style="font-size:0.65em" >@color[gray]( 1. )<br><br></span> </li>
+  <li><span style="font-size:0.65em" >@color[gray]( 2. )<br><br> </span> </li>
   <li><span style="font-size:0.65em" > 3. </span> </li>
 </ul>
 @snapend
@@ -925,13 +925,13 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <ul style="list-style-type:none; line-height:0.7;">
-  <li><span style="font-size:0.65em" > Get the EDK II packages locally to the workspace</span> </li>
-  <li><span style="font-size:0.65em" > Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution</span> </li>
-  <li><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXXX</font> to a new directory  </span> </li>
+  <li><span style="font-size:0.65em" > @color[gray](Get the EDK II packages locally to the workspace)</span> </li>
+  <li><span style="font-size:0.65em" > @color[gray](Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution)</span> </li>
+  <li class=fragment><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
 </ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-<font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardX)</font>
+<font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardXxx)</font>
 </span></p>
 <br>
 <br>
@@ -1172,14 +1172,14 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 5. Validate each stage test point results defined with each stage 
 
 ---?image=assets/images/binary-strings-black2.jpg
-@title[Port by Stages Section]
+@title[Port by Stages Section 1]
 <br><br><br><br><br>
 ## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Port by Stages</span>
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the staged architecture as a porting guide</span>
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
-@title[Staged Approach by Features]
+@title[Staged Approach by Features Section]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
 <br>
@@ -1252,7 +1252,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 - Stage III - Boot to UEFI Shell
    - Generic DXE driver execution
 - Stage IV - Boot to OS
-  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables. Stage V -Security Enabled
   - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
 - Stage VI - Advanced Feature Selection
   - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
@@ -1285,7 +1285,9 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
-@title[Staged Approach by Features]
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Staged Approach by Features Section ]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
@@ -1352,7 +1354,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 - Stage III - Boot to UEFI Shell
    - Generic DXE driver execution
 - Stage IV - Boot to OS
-  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
   - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
 - Stage VI - Advanced Feature Selection
   - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
@@ -2448,6 +2450,52 @@ by the silicon module or the default UPD data.
 
 
 The output of FSPM UPD data from this API is the final UPD data.
+
+
+---
+@title[Debug Configuration - Serial Port]
+<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+Serial port parameters come from the board and are used for debug features, serial input/output devices supporting local or remote consoles, and OS level debuggers<br><br>
+Library – <font face="Consolas">@color[yellow](SerialPortLib)</font> find in workspace used by board .dsc<br><br>
+Serial port configuration options consumed by <font face="Consolas">@color[yellow](SerialPortLib)</font> <br><br>
+<font face="Consolas">@color[yellow](SerialPortLib)</font> is used by the <font face="Consolas">@color[yellow](StatusCodeHandlerPei.inf)</font> component to initialize and 
+display messages to a serial port<br><br>
+Serial port configuration options are published via PCH_SERIAL_IO_CONFIG used by <font face="Consolas">@color[yellow](PeiPchPolicyLib)</font>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.8em](@color[yellow](Silicon/Intel/KabylakeSiliconPkg/Pch/Library/PeiPchPolicyLib))</font>
+</span></p>
+
+Note:
+
+Serial port parameters come from the board
+and are used for debug features, serial input/output devices supporting local or remote
+consoles, and OS level debuggers
+
+Serial port configuration options are consumed by the SerialPortLib library class implementation.
+SerialPortLib library class is used by the StatusCodeHandlerPei.inf component to initialize and display messages to a serial port.
+
+Find the SerialPortLib for the board code
+To find the Libraries for the Platform specific code
+1. Search the Work space .DSC files for the string of the library
+2. Open the .DSC files associated with the platform
+3. Determine which Library is used and that should have the build path in the workspace.
+
+Kabylake uses SerialPortLib default core from MdeModulePkg/Library/BaseSerialPortLib16550/BaseSerialPortLib16550.inf
+Kabylake uses StatusCodeHandlerPei from MdeModulePkg/Universal/StatusCodeHandler/Pei/StatusCodeHandlerPei.inf
+
+Find library for creating Serial for the Hobs to pass to next phase. For Kabylake it is PCH_SERIAL_IO_CONFIG used by PeiPchPolicyLib for Hobs  located: Silicon/Intel/KabylakeSiliconPkg/Pch/Library/PeiPchPolicyLib
+
+The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO controllers
+  to Acpi devices or Pci controllers, and also set the interrupt type to Acpi or Pci
+  through Policy.
+
+
+
+
+
+
+
 
 
 
