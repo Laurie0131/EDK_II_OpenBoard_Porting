@@ -3723,6 +3723,76 @@ package.
 
 
 
+---
+@title[Stage 2 Checklist  ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 2 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
+Steps to enable a board for Stage 2.
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<ul style="list-style-type:decimal; line-height:0.7;">
+  <li><span style="font-size:0.65em" > Update GenerationOpenBoardPkg/BoardXXX </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+      <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c. </span> </li>
+      <ul style="list-style-type:circle; line-height:0.5;">
+        <li><span style="font-size:0.5em" > The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, 
+		    such as S3 (silicon register), Capsule (variable), Recovery(GPIO). </span> </li>
+      </ul>
+      <li><span style="font-size:0.55em" > Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c. </span> </li>
+      <ul style="list-style-type:circle; line-height:0.5;">
+        <li><span style="font-size:0.5em" > It initializes board specific hardware devices, such as GPIO.</span> </li>
+        <li><span style="font-size:0.5em" > It also updates pre-memory policy configuration by using PCD </span> </li>
+      </ul>
+      <li><span style="font-size:0.55em" > Add Board policy update code in SiliconPolicyUpdatePreMemory () , BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib. </span> </li>
+      <ul style="list-style-type:circle; line-height:0.5;">
+        <li><span style="font-size:0.5em" > The PCD updated in BoardInitBeforeMemoryInit () might be used here. </span> </li>
+      </ul>
+  </ul>
+  <li><span style="font-size:0.65em" > Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
+  <li><span style="font-size:0.65em" > Ensure all required binaries in the flash file (FDF files) are correct for your boar .</span> </li>
+        <ul style="list-style-type:disc; line-height:0.5;">
+        <li><span style="font-size:0.5em" > Boot, collect log, verify test point results are correct.  </span> </li>
+      </ul>
+
+</ul>
+@snapend
+
+
+Note:
+
+
+1. Update GenerationOpenBoardPkg/BoardXXX
+  - Add Board boot mode detection code in BoardBootModeDetect () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c.
+    - The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, such as S3 (silicon register), Capsule (variable), Recovery(GPIO).
+  - Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c.
+    - It initializes board specific hardware devices, such as GPIO.
+    - It also updates pre-memory policy configuration by using PCD
+  - Add Board policy update code in SiliconPolicyUpdatePreMemory () , BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
+    - The PCD updated in BoardInitBeforeMemoryInit () might be used here.
+2. Ensure all PCDs in the configuration section (DSC files) are correct for your board.
+3. Ensure all required binaries in the flash file (FDF files) are correct for your board.
+  - Boot, collect log, verify test point results are correct.
+
+
+
+
+
+
+ 1. Add Board pre-memory debug initialization code in <font face="Consolas">@size[.8em](BoardDebugInit&lpar;&rpar;)</font>  <br>
+ 2. Ensure all PCDs in the Configuration section are correct (i.e. Serial debug) <br>
+ 3. Verify values of other PCDs are correct <br>
+ 4. Verify the flash layout is compliant <br>
+ 5. Verify the required binaries  included in the build <br>
+ 6. Verify debug output during the code execution path for Stage 1 <br>
+ 7. Verify the test point results  are correct <br>
+
 
 
 ---
