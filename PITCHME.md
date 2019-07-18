@@ -3657,16 +3657,16 @@ The silicon post-mem policy is finalized.
 
 @snap[north-east span-70 ]
 
-<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br><br>&nbsp;</span></p>
+<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
-@snap[north-west span-30 ]
+@snap[north-west span-31 ]
 <p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Hob Output</b><br><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Hob Output</b><br><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>MTRR Configuration</b><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>DXE IPL</b><br><br><br>&nbsp;</span></p>)
 @snapend
@@ -3674,9 +3674,9 @@ The silicon post-mem policy is finalized.
 
 
 @snap[north-east span-67 ]
-<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br><br><br>&nbsp;</span></p>
+<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br><br><br><br>&nbsp;</span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.67em;" >&bull; 2 Hob lists - FSP &  FSP Wrapper<br><br><br><br></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.67em;" >&bull; 2 locations – after permanent Memory & Prior to <br>&nbsp;&nbsp;&nbsp; DXE IPL platform's capabilities <br><br><br><br> </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.67em;" >&bull; 2 locations – after permanent Memory & Prior to <br>&nbsp;&nbsp;&nbsp; DXE IPL platform's capabilities <br><br><br><br><br> </span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.67em;" >&bull; Load and invoke DXE <br><br><br><br> </span></p>
 
 @snapend
