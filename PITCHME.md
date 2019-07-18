@@ -3785,6 +3785,159 @@ BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
 4. Boot, collect log, verify test point results defined in section 4.9 from the EDK II Open Platform spec are correct.
 
 
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features Section 03 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+
+---?image=assets/images/slides/Slide65.JPG
+@title[Boot Flow – Stage 3]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+ The objective of Stage III is to enable a minimal boot path that successfully loads
+the UEFI Shell. A secondary objective for Stage III is to be silicon and board agnostic. All
+silicon and board specific details should be leveraged from Stages I and II. Demonstrating
+the capability to load the UEFI shell does not imply that the UEFI shell is a required
+component in the end product firmware. It does ensure that the platforms with a terminal
+boot stage target greater than Stage II can load the UEFI shell so the system can be
+analyzed and configured in the UEFI boot services environment with well-defined behavior in
+a consistent manner with other Minimum Platform specification-compliant systems.
+
+The minimal UI capability that is required is serial console. UEFI variables must be
+supported with at least emulated variable behavior. UEFI variable storage to a non-volatile
+media such as SPI NOR flash is acceptable if the platform requirements mandate such
+support. Additional capabilities are optional and must not be assumed. These include USB
+input devices, graphics devices, and other storage devices.
+
+
+
+
+
+---?image=assets/images/slides/Slide66.JPG
+@title[High Level Control Flow – Stage 3]
+<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-58 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
+Major Execution Activities
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > DXE Initial Program Load (IPL) </span> </li>
+  <li><span style="font-size:0.65em" > DXE Core initialization and dispatcher execution </span> </li>
+  <li><span style="font-size:0.65em" > Initialize the generic infrastructure required for the DXE environment </span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">  
+      <li><span style="font-size:0.6em" > -  DXE architectural protocols - Initialization of architecturally required hardware such as timers</span> </li>
+  </ul>  
+  <li><span style="font-size:0.65em" > Post-memory silicon policy initialization </span> </li>
+  <li><span style="font-size:0.65em" > Serial console input and output capabilities</span> </li>
+</ul>
+@snapend
+
+Note:
+
+Stage III extends Stage II control flow by executing Driver Execution Environment (DXE),
+executing Boot Device Selection (BDS) and invoking the UEFI Shell.
+
+After memory is installed during Stage II, the remaining silicon and platform initialization
+must take place in the PEI phase only. All silicon initialization tasks should have been
+completed in Stage II, and there should be no silicon-specific initialization required in the
+DXE phase. The default console information should be transferred via a HOB and initialized
+and used in Stage III.
+
+- Universally usable infrastructure: DXE Core, Minimal BDS, console infrastructure
+- Silicon agnostic architectural protocol producing hardware modules
+- UEFI Variable support (emulation allowed)
+- UEFI Shell
+- Tests for Memory Map, Cache Map, architectural hardware
+
+
+
+
+
+
+
+
+
 ---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
