@@ -3269,25 +3269,24 @@ For Kabylake just returns EFI_SUCCESS
 @snap[north-east span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-98 ]
-<br>
+<br><br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
 edk2/<br>&nbsp;&nbsp;
   FspIntelFsp2WrapperPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
     FspmWrapperPeim/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      @color[yellow](PeiMemoryDiscovredNotify&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="Arial">Finish Memory Migration <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        --&gt;FSP Silcon Init API </font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[yellow](PeiMemoryDiscovredNotify&lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="Arial">Finish Memory Migration</font>   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="Arial">--&gt;FSP Silcon Init API </font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         @color[cyan](PostFspHobProcess&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
 @snap[north-east span-47 ]
 <br><br>
-<br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
 MinPlatformPkg/FspWrapper/<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3298,7 +3297,7 @@ MinPlatformPkg/FspWrapper/<br>&nbsp;&nbsp;
 @snapend
 
 @snap[south-east span-40 fragment]
-@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-M)<br>&nbsp;<br> FspSiliconInitApi&lpar;&rpar;<br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-S)<br>&nbsp;<br> FspSiliconInitApi&lpar;&rpar;<br><br>&nbsp;</span></p>)
 <br>
 <br>
 @snapend
@@ -3313,7 +3312,7 @@ Note:
 @title[Silicon Policy Update Lib ]
 <p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Update Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-70 ]
+@snap[north-west span-75 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em; ">
@@ -3331,10 +3330,17 @@ Using the <font face="Consolas">@color[yellow](SiliconPolicyUpdateLib)</font>, t
 
 
 
-@snap[east span-10 ]
+@snap[east span-24 ]
 <br><br>
 ![SiliconPolicyLib](/assets/images/SiliconPolicyLib.png)
 @snapend
+
+
+
+@snap[south span-100 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">One silicon policy data structure created per silicon module<br><br>&nbsp;</span></p>)
+@snapend
+
 
 Note:
 
