@@ -3459,8 +3459,7 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
     PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-	   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[cyan](SiliconPolicyPeiPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) 
@@ -3476,12 +3475,22 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
     PeiSiliconPolicyInitLibFsp/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiFspPolicyInitLib.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        @color[cyan](SiliconPolicyInitPostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](SiliconPolicyInitPostMem&lpar;&rpar;) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="Arial">// Using the FSP Update policy  </font> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspPchPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspMePolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) 
 </span></p>
+@snapend
+
+
+
+
+
+@snap[south span-100 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake of FSP Silicon Policy Update<br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 
