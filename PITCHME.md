@@ -3894,7 +3894,7 @@ input devices, graphics devices, and other storage devices.
 <p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-east span-58 ]
+@snap[north-east span-60 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
