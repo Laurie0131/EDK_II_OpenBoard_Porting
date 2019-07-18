@@ -3430,8 +3430,8 @@ SiliconPolicyDonePreMemory ()
 
 
 ---?image=assets/images/slides/Slide37.JPG
-@title[Platform Initialization Board Hook Modules 02]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Platform Initialization Board Hook Silicon]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3460,7 +3460,7 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         SiliconPolicyPeiPostMementrypoint() <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         SiliconPolicyPeiPostMemEntrypoint() <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          @color[cyan](SiliconPolicyInitPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          @color[yellow](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          @color[yellow](SiliconPolicyDonePostMem&lpar;&rpar;) 
@@ -3491,7 +3491,6 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
 
 @snap[south span-100 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - Post Mem FSP Silicon Init<br><br>&nbsp;</span></p>)
-<br>
 @snapend
 
 
@@ -3501,6 +3500,72 @@ Kabylake example:
 Slide show location of the Platform vs. silicon modules corresponding to the Silicon Policy updates after memory init. 
 
 Platform calls silicon module relying on the FSP code to manage the underling data structures.
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Silicon 02]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+  . . . <br>&nbsp;&nbsp;
+  PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         SiliconPolicyPeiPostMemEntrypoint() <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[gray](SiliconPolicyInitPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](SiliconPolicyDonePostMem&lpar;&rpar;) 
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
+  FspWrapper/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiSiliconPolicyUpdateLibFsp/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PeiFspPolicyUpdateLib.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+
+
+@snap[south span-100 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Notice the Update is from board FSP Wrapper Library<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+
 
 
 ---
