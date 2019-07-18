@@ -3737,27 +3737,28 @@ Steps to enable a board for Stage 2.
 @snap[north-east span-98 ]
 <br>
 <br>
-<ul style="list-style-type:decimal; line-height:0.7;">
-  <li><span style="font-size:0.65em" > Update GenerationOpenBoardPkg/BoardXXX </span> </li>
+<br>
+<ul style="list-style-type:None; line-height:0.7;">
+  <li><span style="font-size:0.65em" >1. Update GenerationOpenBoardPkg/BoardXXX </span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
       <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c. </span> </li>
-      <ul style="list-style-type:circle; line-height:0.5;">
+      <ul style="list-style-type:none; line-height:0.5;">
         <li><span style="font-size:0.5em" > The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, 
 		    such as S3 (silicon register), Capsule (variable), Recovery(GPIO). </span> </li>
       </ul>
       <li><span style="font-size:0.55em" > Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c. </span> </li>
-      <ul style="list-style-type:circle; line-height:0.5;">
+      <ul style="list-style-type:none; line-height:0.5;">
         <li><span style="font-size:0.5em" > It initializes board specific hardware devices, such as GPIO.</span> </li>
         <li><span style="font-size:0.5em" > It also updates pre-memory policy configuration by using PCD </span> </li>
       </ul>
       <li><span style="font-size:0.55em" > Add Board policy update code in SiliconPolicyUpdatePreMemory () , BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib. </span> </li>
-      <ul style="list-style-type:circle; line-height:0.5;">
+      <ul style="list-style-type:none; line-height:0.5;">
         <li><span style="font-size:0.5em" > The PCD updated in BoardInitBeforeMemoryInit () might be used here. </span> </li>
       </ul>
   </ul>
-  <li><span style="font-size:0.65em" > Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
-  <li><span style="font-size:0.65em" > Ensure all required binaries in the flash file (FDF files) are correct for your boar .</span> </li>
-        <ul style="list-style-type:disc; line-height:0.5;">
+  <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
+  <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your boar .</span> </li>
+        <ul style="list-style-type:none; line-height:0.5;">
         <li><span style="font-size:0.5em" > Boot, collect log, verify test point results are correct.  </span> </li>
       </ul>
 
