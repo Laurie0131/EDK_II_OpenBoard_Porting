@@ -3933,6 +3933,135 @@ and used in Stage III.
 
 
 
+---
+@title[Stage 3 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvUefiBoot&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" >Common UEFI, DXE & BDS Services&nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+@snap[north-west span-100 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >FvUefiBoot&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >DxeCore.efi&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".020%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" >UEFI Sytem table, DXE Services, Dispatcher & APs		&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > . . .  &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.45em" >All other UEFI / DXE Modules, See .FDF file</span></p></td>
+	</tr>
+</table>	
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Mapped according to .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Stage III finalizes silicon and prepares DXE/BDS services
+See 
+
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/52_firmware_volumes.html#52-firmware-volumes
+
+for a list of more Modules in the FV for stage 3
+
+
+
+---
+@title[Stage 3 Platform Libraries - PEI]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.75em;">
+Stage 3 Modules - List of UEFI and DXE Components <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/53_modules.html#53-modules">Link</a>
+<br>
+<br>
+Stage 3 Platform Architecture Libraries
+</span></p>
+
+
+<table id="recTable-1">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SerialPortLib </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MdeModulePkg </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" >  Serial port leveraging PEI and HOB initializatio </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > PlatformBootManagerLib </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MdeModulePkg </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MinPlatformPkg </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:01%"><span style="font-size:0.4em" >  Basic platform boot manager port. </span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+
+Note:
+
+
+
+Only modules in the board package should be modified in the process of board porting. The minimum platform package and other common package 
+contents must not be directly modified. The board package and silicon package modules may have multiple instances to support different boards and different silicon. 
+These components are required. They enable orderly board porting and add the support for extensibility in later stages. The libraries consumed are the subset of 
+libraries required by this specification. 
+
+See:
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/53_modules.html#53-modules
+
+
+To find the Libraries for the Platform specific code
+1 Search the Work space .DSC files for the string of the library
+2 Open the .DSC files associated with the platform
+3 Determine which Library is used and that should have the build path in the workspace.
+
+
+For KabyLake only the PlatformBootManagerLib will be ported.
+Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 
 
 
