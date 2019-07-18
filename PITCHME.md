@@ -3312,7 +3312,7 @@ Note:
 @title[Silicon Policy Update Lib ]
 <p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Update Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-75 ]
+@snap[north-west span-95 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em; ">
@@ -3339,6 +3339,7 @@ Using the <font face="Consolas">@color[yellow](SiliconPolicyUpdateLib)</font>, t
 
 @snap[south span-100 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">One silicon policy data structure created per silicon module<br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 
@@ -3350,14 +3351,40 @@ When a silicon module installs this policy data, it should consider the most com
 as the default policy data. Therefore, a board module must only update non-default values
 instead of all fields.
 
-This silicon code may expose the APIs:
 
-- An API to initialize all policy data to the default value, based upon the current silicon.
-- An API to tell silicon code that all policy data have been updated, and they are ready to consume.
+---
+@title[Silicon Policy APIs ]
+<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy APIs </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-75 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.9em; ">
+Silicon code exposes  APIs:
+</span></p>
+<ul style="list-style-type:disc; line-height:0.75;">
+    <li><span style="font-size:0.8em" > Initialize all policy data to the default value, based upon the current silicon. </span> </li>
+    <li><span style="font-size:0.8em" > Inform silicon code that all policy data have been updated, and they are ready to consume. </span> </li>
+</ul>
+@snapend
 
 
 
 
+@snap[east span-24 ]
+<br><br>
+![API_Pic](/assets/images/API_Pic.png)
+@snapend
+
+
+
+@snap[south span-100 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Board module only updates non-default values<br><br>&nbsp;</span></p>)
+<br>
+@snapend
+
+
+Note:
 
 
 ---
