@@ -3460,9 +3460,10 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       @color[cyan](SiliconPolicyPeiPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) 
+         SiliconPolicyPeiPostMementrypoint() <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[cyan](SiliconPolicyInitPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](SiliconPolicyDonePostMem&lpar;&rpar;) 
 </span></p>
 @snapend
 
@@ -3489,7 +3490,7 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
 
 
 @snap[south span-100 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake of FSP Silicon Policy Update<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - Post Mem FSP Silicon Init<br><br>&nbsp;</span></p>)
 <br>
 @snapend
 
