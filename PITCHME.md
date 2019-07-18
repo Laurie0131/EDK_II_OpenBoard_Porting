@@ -4008,7 +4008,9 @@ for a list of more Modules in the FV for stage 3
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.75em;">
-Stage 3 Modules - List of UEFI and DXE Components <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/53_modules.html#53-modules">Link</a>
+Stage 3 Modules - @size[.8em](List of UEFI and DXE Components: <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/content/appendix_a_full_maps/a1_firmware_volume_layout.html">EDK II Open Platform Spec.</a>)
+<br>
+<br>
 <br>
 <br>
 Stage 3 Platform Architecture Libraries
@@ -4018,8 +4020,8 @@ Stage 3 Platform Architecture Libraries
 <table id="recTable-1">
 	<tr>
 		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
 		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
