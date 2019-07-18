@@ -3490,7 +3490,7 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
 
 
 @snap[south span-100 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - Post-Mem FSP Silicon Init<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - post-mem FSP Silicon Init<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -3651,6 +3651,79 @@ The silicon post-mem policy is finalized.
 
   The input Policy must be returned by SiliconPolicyInitPostMem().
  
+---
+@title[Prepare for Hand-off to DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Prepare for Hand-off to DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north span-50 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Hob Output</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>MTRR Configuration</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>DXE IPL</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-67 ]
+<br>
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; 2 Hob lists - FSP &  FSP Wrapper<br><br><br></span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; 2 locations – after permanent Memory & Prior to DXE IPL <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Load and invoke DXE <br><br><br><br> </span></p>
+
+@snapend
+
+
+Note:
+
+Intel® FSP HOB to PEI HOB transition
+
+
+In an Intel® FSP API mode boot with an EDK II wrapper, the system will have two HOB
+lists - one maintained in the FSP PEI environment and the other in the FSP wrapper PEI
+environment. The FSP wrapper environment is responsible for converting data from the
+FSP HOB to a PEI HOB. These HOBs are platform-specific; examples include the
+SmbiosHob and GraphicInfoHob.
+
+
+MTRR Configuration Settings in Post-Memory
+The system MTRR settings are typically configured in two locations after permanent memory
+initialization.
+
+
+1. After permanent memory installation
+
+
+At this point, cache attributes are set for PEI memory usage. This specification does not
+require any particular MTRR configuration, as it is ultimately dependent upon platform
+goals such as functionality and performance given the device and storage technologies
+present on the platform. The most common ranges configured are the default memory
+setting as UC, the DRAM region as WB, and the SPI flash MMIO region as WP. These
+settings are usually applied in a memory installation notification function or a PEIM
+shadow. The architecture requires that the settings be applied in the board package.
+
+
+2. Prior to DXE IPL
+
+
+At this point PEI execution has completed and control is transitioning to the DXE phase.
+The MTRR settings are typically modified to prepare for the DXE environment. The
+most common ranges configured are the default memory as WB, the TSEG (SMRAM)
+region as UC, and MMIO as UC. These settings are usually applied in an end of PEI
+notification function. The architecture requires that the settings be applied in the board
+package.
+
+
 
 
 
