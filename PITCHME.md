@@ -3481,7 +3481,7 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
           @color[yellow](PeiFspPchPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspMePolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) 
+          @color[yellow](PeiFspCpuPolicyInit &lpar;&rpar;) 
 </span></p>
 @snapend
 
@@ -3490,7 +3490,7 @@ KabylakeSiliconPkg/<br>&nbsp;&nbsp;
 
 
 @snap[south span-100 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - Post Mem FSP Silicon Init<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Example: Kabylake - Post-Mem FSP Silicon Init<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -3550,7 +3550,9 @@ KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
     Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiSiliconPolicyUpdateLibFsp/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         PeiFspPolicyUpdateLib.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspSaPolicyUpdate &lpar;&rpar;)        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspPchPolicyUpdate &lpar;&rpar;) 
 </span></p>
 @snapend
 
@@ -3565,6 +3567,90 @@ KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
 
 Note:
 
+Notice the Update Post mem is from the Kabylake FSP wrapper and not the silicon.
+
+This is because the previous slide (init) already  got the FSP API pointer so the board can now just do the update.
+
+
+Performs silicon post-mem policy update.
+
+  The meaning of Policy is defined by silicon code.
+  It could be the raw data, a handle, a PPI, etc.
+  
+  The input Policy must be returned by SiliconPolicyDonePostMem().
+  
+  1) In FSP path, the input Policy should be FspsUpd.
+  A platform may use this API to update the FSPS UPD policy initialized
+  by the silicon module or the default UPD data.
+  The output of FSPS UPD data from this API is the final UPD data.
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Silicon 03]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+  . . . <br>&nbsp;&nbsp;
+  PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         SiliconPolicyPeiPostMemEntrypoint() <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[gray](SiliconPolicyInitPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[gray](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) 
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Silicon/Intel/<br>
+KabylakeSiliconPkg/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiSiliconPolicyInitLibFsp/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiFspPolicyInitLib.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span></p>
+@snapend
+
+
+
+
+@snap[south span-100 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Silicon post-mem policy is finalized<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+The silicon post-mem policy is finalized.
+  Silicon code can do initialization based upon the policy data.
+
+  The input Policy must be returned by SiliconPolicyInitPostMem().
+ 
 
 
 
