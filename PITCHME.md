@@ -4041,6 +4041,9 @@ Stage 3 Platform Architecture Libraries
 @snapend
 
 
+@snap[south span-95 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only modules in the board package should be modified <br><br>&nbsp;</span></p>)
+@snapend
 
 
 Note:
