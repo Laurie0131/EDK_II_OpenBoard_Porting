@@ -3739,27 +3739,27 @@ Steps to enable a board for Stage 2.
 <br>
 <br>
 <ul style="list-style-type:None; line-height:0.7;">
-  <li><span style="font-size:0.65em" >1. Update GenerationOpenBoardPkg/BoardXXX </span> </li>
+  <li><span style="font-size:0.65em" >1. Update <font face="Consolas"><i>@color[cyan](NewOpenBoardPkg/BoardXxx) </i></font></span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
-      <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c. </span> </li>
+      <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , <font face="Consolas">@color[yellow](BoardXXX/BoardInitLib/PeiBoardXxxInitPreMemoryLib.c.)</font> </span> </li>
       <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, 
-		    such as S3 (silicon register), Capsule (variable), Recovery(GPIO). </span> </li>
+        <li><span style="font-size:0.5em" > - The boot mode can be hardcoded. It should reflect actual functionality based upon<br>&nbsp;&nbsp;&nbsp;
+             the feature, such as S3 (silicon register), Capsule (variable), Recovery(GPIO). </span> </li>
       </ul>
-      <li><span style="font-size:0.55em" > Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c. </span> </li>
+      <li><span style="font-size:0.55em" > Add Board pre-memory initialization code in <font face="Consolas">@color[yellow](BoardInitBeforeMemoryInit &lpar;&rpar;) and @color[yellow](BoardInitAfterMemoryInit &lpar;&rpar; , BoardXxx/BoardInitLib/PeiBoardXxxInitPreMemLib.c.)</font> </span> </li>
       <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > It initializes board specific hardware devices, such as GPIO.</span> </li>
-        <li><span style="font-size:0.5em" > It also updates pre-memory policy configuration by using PCD </span> </li>
+        <li><span style="font-size:0.5em" > - It initializes board specific hardware devices, such as GPIO.</span> </li>
+        <li><span style="font-size:0.5em" > - It also updates pre-memory policy configuration by using PCD </span> </li>
       </ul>
-      <li><span style="font-size:0.55em" > Add Board policy update code in SiliconPolicyUpdatePreMemory () , BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib. </span> </li>
+      <li><span style="font-size:0.55em" > Add Board policy update code in <font face="Consolas">@color[yellow](SiliconPolicyUpdatePreMemory &lpar;&rpar; , BoardXxx/PeiSiliconPolicyUpdateLib/PeiBoardXxxInitPreMemoryLib.)</font> </span> </li>
       <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > The PCD updated in BoardInitBeforeMemoryInit () might be used here. </span> </li>
+        <li><span style="font-size:0.5em" > - The PCD updated in <font face="Consolas">@color[yellow](BoardInitBeforeMemoryInit &lpar;&rpar; ) might be used here. </span> </li>
       </ul>
   </ul>
   <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
-  <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your boar .</span> </li>
+  <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your board .</span> </li>
         <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > Boot, collect log, verify test point results are correct.  </span> </li>
+        <li><span style="font-size:0.5em" > - Boot, collect log, verify test point results are correct.  </span> </li>
       </ul>
 
 </ul>
@@ -3768,32 +3768,21 @@ Steps to enable a board for Stage 2.
 
 Note:
 
+Steps to enable a board for Stage II
+1.  Update the NewOpenBoardPkg/BoardXXX
+  i. Add Board boot mode detection code in BoardBootModeDetect () ,    BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c.
+     i. The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, such as S3 (silicon register), Capsule (variable), Recovery (GPIO).
+  ii. Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c.
+  i. It initializes board specific hardware devices, such as GPIO.
+  ii. It also updates pre-memory policy configuration by using PCD
+  iii. Add Board policy update code in SiliconPolicyUpdatePreMemory () ,
 
-1. Update GenerationOpenBoardPkg/BoardXXX
-  - Add Board boot mode detection code in BoardBootModeDetect () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c.
-    - The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, such as S3 (silicon register), Capsule (variable), Recovery(GPIO).
-  - Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c.
-    - It initializes board specific hardware devices, such as GPIO.
-    - It also updates pre-memory policy configuration by using PCD
-  - Add Board policy update code in SiliconPolicyUpdatePreMemory () , BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
-    - The PCD updated in BoardInitBeforeMemoryInit () might be used here.
+BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
+  i. The PCD updated in BoardInitBeforeMemoryInit () might be used here.
 2. Ensure all PCDs in the configuration section (DSC files) are correct for your board.
+  i. Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 2
 3. Ensure all required binaries in the flash file (FDF files) are correct for your board.
-  - Boot, collect log, verify test point results are correct.
-
-
-
-
-
-
- 1. Add Board pre-memory debug initialization code in <font face="Consolas">@size[.8em](BoardDebugInit&lpar;&rpar;)</font>  <br>
- 2. Ensure all PCDs in the Configuration section are correct (i.e. Serial debug) <br>
- 3. Verify values of other PCDs are correct <br>
- 4. Verify the flash layout is compliant <br>
- 5. Verify the required binaries  included in the build <br>
- 6. Verify debug output during the code execution path for Stage 1 <br>
- 7. Verify the test point results  are correct <br>
-
+4. Boot, collect log, verify test point results defined in section 4.9 from the EDK II Open Platform spec are correct.
 
 
 ---
