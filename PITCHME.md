@@ -3351,6 +3351,8 @@ When a silicon module installs this policy data, it should consider the most com
 as the default policy data. Therefore, a board module must only update non-default values
 instead of all fields.
 
+http://infodome.wikidot.com/local--files/rules-of-combat-dome/rule_book1.gif
+
 
 ---
 @title[Silicon Policy APIs ]
@@ -3360,7 +3362,7 @@ instead of all fields.
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.9em; ">
-Silicon code exposes  APIs:
+Silicon code exposes  APIs to:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.75;">
     <li><span style="font-size:0.8em" > Initialize all policy data to the default value, based upon the current silicon. </span> </li>
@@ -3385,6 +3387,109 @@ Silicon code exposes  APIs:
 
 
 Note:
+
+http://mathinsight.org/media/image/image/function_machine.png
+
+This silicon code may expose the APIs:
+An API to initialize all policy data to the default value, based upon the current silicon.
+An API to tell silicon code that all policy data have been updated, and they are ready to consume.
+
+a board module must only update non-default values
+instead of all fields.
+
+
+
+
+
+
+
+
+---?image=assets/images/slides/Slide58.JPG
+@title[FSP Silicon Policy Data Flow ]
+<p align="right"><span class="gold" >@size[1.1](<b>FSP Silicon Policy Data Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+
+Note:
+Slide from: https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification 4.6.1.5 Intel® FSP Policy Data Flow
+
+
+After policy configuration is completed, the board may indicate that the policy is configured
+with board-specific actions in the SiliconPolicyDonePreMemory ( ) API in SiliconPolicyInitLib
+
+<pre>
+UpdateFspmUpdData (Upd)
+SiliconPolicyInitPreMemory ()
+SiliconPolicyUpdatePreMemory ()
+Minimum platform: Minor update of relevant options
+Fully featured platform (Stage VI and greater): Full update for all platform features
+SiliconPolicyDonePreMemory ()
+</pre>
+
+
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules 02]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+  . . . <br>&nbsp;&nbsp;
+  PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SiliconPolicyPeiPostMem.c     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+       @color[cyan](SiliconPolicyPeiPostMem&lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) 
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Silicon/Intel/<br>
+KabylakeSiliconPkg/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiSiliconPolicyInitLibFsp/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PeiFspPolicyInitLib.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](SiliconPolicyInitPostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspPchPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspMePolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[yellow](PeiFspSaPolicyInit &lpar;&rpar;) 
+</span></p>
+@snapend
+
+
+Note:
+
+Kabylake example:
+Slide show location of the Platform vs. silicon modules corresponding to the Silicon Policy updates after memory init. 
+
+Platform calls silicon module relying on the FSP code to manage the underling data structures.
 
 
 ---
