@@ -3753,7 +3753,7 @@ Steps to enable a board for Stage 2.
       </ul>
       <li><span style="font-size:0.55em" > Add Board policy update code in <font face="Consolas">@color[yellow](SiliconPolicyUpdatePreMemory &lpar;&rpar; , BoardXxx/PeiSiliconPolicyUpdateLib/PeiBoardXxxInitPreMemoryLib.)</font> </span> </li>
       <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > - The PCD updated in <font face="Consolas">@color[yellow](BoardInitBeforeMemoryInit &lpar;&rpar; ) might be used here. </span> </li>
+        <li><span style="font-size:0.5em" > - The PCD updated in <font face="Consolas">@color[yellow](BoardInitBeforeMemoryInit &lpar;&rpar; ) </font>might be used here. </span> </li>
       </ul>
   </ul>
   <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
