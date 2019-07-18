@@ -3255,6 +3255,103 @@ For Kabylake just returns EFI_SUCCESS
 
 
 
+---?image=assets/images/slides/Slide37.JPG
+@title[FSP Wrapper for Silicon Initialization ]
+<p align="right"><span class="gold" >@size[1.1](<b>FSP Wrapper for Silicon Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+edk2/<br>&nbsp;&nbsp;
+  FspIntelFsp2WrapperPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    FspmWrapperPeim/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[yellow](PeiMemoryDiscovredNotify&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="Arial">Finish Memory Migration <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        --&gt;FSP Silcon Init API </font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](PostFspHobProcess&lpar;&rpar;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br><br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+MinPlatformPkg/FspWrapper/<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   PeiFspWrapperHobProcessLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    FspWrapperHobProcessLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](PostFspsHobProcess&lpar;&rpar;)
+</span></p>
+@snapend
+
+@snap[south-east span-40 fragment]
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-M)<br>&nbsp;<br> FspSiliconInitApi&lpar;&rpar;<br><br>&nbsp;</span></p>)
+<br>
+<br>
+@snapend
+
+
+
+Note:
+
+ FSP Wrapper is used to call into the FSP-S for the FspSiliconInit API.
+
+---
+@title[Silicon Policy Update Lib ]
+<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Update Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-70 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em; ">
+Using the <font face="Consolas">@color[yellow](SiliconPolicyUpdateLib)</font>, the board package may reference a variety of sources to obtain the board-specific policy values
+</span></p>
+<ul style="list-style-type:none; line-height:0.7;">
+    <li><span style="font-size:0.7em" >1.&nbsp; PCD database  </span> </li>
+    <li><span style="font-size:0.7em" >2.&nbsp; UEFI Variable </span> </li>
+    <li><span style="font-size:0.7em" >3.&nbsp; Binary Blob </span> </li>
+    <li><span style="font-size:0.7em" >4.&nbsp; Built-in C structure </span> </li>
+    <li><span style="font-size:0.7em" >5.&nbsp; Hardware information </span> </li>
+</ul>
+@snapend
+
+
+
+
+@snap[east span-10 ]
+<br><br>
+![SiliconPolicyLib](/assets/images/SiliconPolicyLib.png)
+@snapend
+
+Note:
+
+One silicon policy data structure is created per silicon module. The data structure should
+only contain data. Functions should not be used in silicon policy data.
+When a silicon module installs this policy data, it should consider the most common usage
+as the default policy data. Therefore, a board module must only update non-default values
+instead of all fields.
+
+This silicon code may expose the APIs:
+
+- An API to initialize all policy data to the default value, based upon the current silicon.
+- An API to tell silicon code that all policy data have been updated, and they are ready to consume.
+
+
+
+
 
 
 ---
