@@ -3665,7 +3665,7 @@ The silicon post-mem policy is finalized.
 
 
 @snap[north-west span-30 ]
-<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;</span></p>
+<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Hob Output</b><br><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>MTRR Configuration</b><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>DXE IPL</b><br><br><br>&nbsp;</span></p>)
