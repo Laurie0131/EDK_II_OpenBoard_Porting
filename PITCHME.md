@@ -3164,7 +3164,9 @@ KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
 @snapend
 
 
-
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Hook for Before Silicon Initialization<br><br>&nbsp;</span></p>)
+@snapend
 
 Note:
 
@@ -3179,6 +3181,77 @@ KabylakeOpenBoardPkg\KabylakeRvp3\Library\BoardInitLib\PeiKabylakeRvp3InitPostMe
 
 With call to: KabylakeRvp3BoardInitBeforeSiliconInit()
 
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules 02]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+ PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[gray](PlatformInitPreMem)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](PlatformInitPostMem)/ <br>&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @color[gray](BoardInitBeforeSiliconInit&lpar;&rpar; )<br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitEndOfPei() <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](BoardInitAfterSiliconInit&lpar;&rpar; ) <br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br><br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
+ KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   BoardInitLib/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiBoardInitPostMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](BoardInitAfterSiliconInit&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Hook for After Silicon Initialization<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+
+Same but now for BoardInitAfterSilicon
+From the Kabylake FDF PlatformInitPostMem module has 
+ BoardInitBeforeSiliconInit()
+    PlatformInitEndOfPei()
+     BoardInitAfterSiliconInit()
+
+And the Platform Libs to go with this are in edk2-platforms\Platform\Intel\
+KabylakeOpenBoardPkg\KabylakeRvp3\Library\BoardInitLib\PeiBoardInitPostMemLib.c
+
+For Kabylake just returns EFI_SUCCESS
 
 
 
