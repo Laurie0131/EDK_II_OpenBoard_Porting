@@ -3656,8 +3656,8 @@ The silicon post-mem policy is finalized.
 <p align="right"><span class="gold" >@size[1.1](<b>Prepare for Hand-off to DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-east span-70 ]
-<br>
-<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>)
+
+<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
@@ -3665,7 +3665,6 @@ The silicon post-mem policy is finalized.
 
 
 @snap[north-west span-30 ]
-<br>
 <p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Hob Output</b><br><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>MTRR Configuration</b><br><br>&nbsp;</span></p>)
@@ -3675,8 +3674,7 @@ The silicon post-mem policy is finalized.
 
 
 @snap[north-east span-67 ]
-<br>
-<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>)
+<p style="line-height:20%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;</span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.57em;" >&bull; 2 Hob lists - FSP &  FSP Wrapper<br><br><br><br></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.57em;" >&bull; 2 locations – after permanent Memory & Prior to DXE IPL <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br><br> </span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.57em;" >&bull; Load and invoke DXE <br><br><br><br> </span></p>
