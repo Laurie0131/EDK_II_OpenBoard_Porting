@@ -3459,8 +3459,9 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
     PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     SiliconPolicyPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       SiliconPolicyPeiPostMem.c     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
-       @color[cyan](SiliconPolicyPeiPostMem&lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       SiliconPolicyPeiPostMem.c <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+	   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](SiliconPolicyPeiPostMem &lpar;&rpar;)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[cyan](SiliconPolicyUpdatePostMem&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[cyan](SiliconPolicyDonePostMem&lpar;&rpar;) 
 </span></p>
