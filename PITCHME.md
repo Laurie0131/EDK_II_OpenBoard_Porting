@@ -3055,29 +3055,29 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-51 ]
+@snap[north-west span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-edk2-platforms/<br>&nbsp;
+<font color="gray">edk2-platforms/<br>&nbsp;
 Platform/Intel/MinPlatformPkg/<br>&nbsp;&nbsp;
  . . .<br>&nbsp;&nbsp;
  PlatformInit/<br>&nbsp;&nbsp;&nbsp;
-  PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;
      PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      PlatformInitPostMem.c<br>
-	 <br>
+	 <br><br></font>
 edk2/<br>&nbsp;&nbsp;
   FspIntelFsp2WrapperPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
     FspmWrapperPeim/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3096,7 +3096,8 @@ edk2/<br>&nbsp;&nbsp;
 @snapend
 
 @snap[south-east span-40 fragment]
-@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-M)<br>&nbsp;<br> FspMemoryInitApi&lpar;&rpar;<br>&nbsp;</span></p>)
+@box[bg-green-pp text-black waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.65em; font-family:Consolas;" >@size[1.3em](FSP-M)<br>&nbsp;<br> FspMemoryInitApi&lpar;&rpar;<br><br>&nbsp;</span></p>)
+<br>
 <br>
 @snapend
 
@@ -3105,6 +3106,82 @@ edk2/<br>&nbsp;&nbsp;
 Note:
 
 Memory Initialization  done using the FSP Memory Init API through the FSP wrapper.
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+ PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   PlatformInitPreMem/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   PlatformInitPostMem/ <br>&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardInitBeforeSiliconInit() <br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitEndOfPei() <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     BoardInitAfterSiliconInit() <br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br><br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
+ KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   BoardInitLib/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PeiKabylakeRvp3InitPostMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        KabylakeRvp3\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        BoardInitBeforeSiliconInit() <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  ConfigureGpio() <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    . . . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  LateSiliconInit() <br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+
+Note:
+
+
+From the Kabylake FDF PlatformInitPostMem module has 
+ BoardInitBeforeSiliconInit()
+    PlatformInitEndOfPei()
+     BoardInitAfterSiliconInit()
+
+And the Platform Libs to go with this are in edk2-platforms\Platform\Intel\
+KabylakeOpenBoardPkg\KabylakeRvp3\Library\BoardInitLib\PeiKabylakeRvp3InitPostMemLib.c
+
+With call to: KabylakeRvp3BoardInitBeforeSiliconInit()
+
+
+
+
 
 
 ---
