@@ -4662,7 +4662,7 @@ collectively enabled in Stage VI.
 <p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-east span-60 ]
+@snap[north-east span-57 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
@@ -4711,6 +4711,7 @@ The green blocks on slide Control Flow are reuse of the existing blocks from Sta
 @snap[north-west span-100 ]
 <br>
 <br>
+<br>
 <table id="recTable">
 	<tr>
 		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
@@ -4726,10 +4727,10 @@ The green blocks on slide Control Flow are reuse of the existing blocks from Sta
 	</tr>
 </table>
 <br>
-<ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.75em" > Finalize silicon initialization</span> </li>
-  <li><span style="font-size:0.75em" > Add basic operating system required interfaces</span> </li>
-  <li><span style="font-size:0.75em" > Add support for minimal featured operating system boot. </span> </li>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp; Finalize silicon initialization</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp; Add basic operating system required interfaces</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp; Add support for minimal featured operating system boot. </span> </li>
 </ul>
 
 @snapend
@@ -4750,7 +4751,7 @@ dedicated firmware volume.
 <p align="right"><span class="gold" >@size[1.1](<b> Stage 4 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
-@snap[north-west span-100 fragment]
+@snap[north-west span-100 ]
 <br>
 <br>
 
@@ -4778,7 +4779,7 @@ dedicated firmware volume.
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; " > List Storage media modules&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" > Sata, USB, . . . , (DXE)&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:22%"><span style="font-size:0.45em" > Sata, USB, . . . , (DXE)&nbsp;</span></p></td>
 	</tr>
 </table>	
 @snapend
@@ -4813,7 +4814,6 @@ Stage 4 Modules - @size[.8em](List of UEFI and DXE Components: <a href="https://
 <br>
 <br>
 <br>
-<br>
 Stage 4 Platform Architecture Libraries
 </span></p>
 
@@ -4835,7 +4835,7 @@ Stage 4 Platform Architecture Libraries
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardInitLib</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  MinPlatformPkg</span></p></td>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardPkg</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >Board specific initialization hook at DXE phase for BoardNotificationInit   </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:21%"><span style="font-size:0.4em" >Board specific initialization hook at DXE phase for BoardNotificationInit   </span></p></td>
 	</tr>
 </table>
 <br>
@@ -4843,7 +4843,7 @@ Stage 4 Platform Architecture Libraries
 
 
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Board porting requires creation of libraries produced by the BoardPkg <br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">Board porting requires creation of libraries produced <br>by the <font face="Consolas">@size[.7](BoardPkg)</font> <br>&nbsp;</span></p>)
 @snapend
 
 
