@@ -4399,7 +4399,7 @@ We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the pl
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4422,7 +4422,7 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
   Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       DxePlatformBootManagerLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          BdsPlatform/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           PlatformBootManagerBeforeConsole()
+           @color[yellow](PlatformBootManagerBeforeConsole&lpar;&rpar;)
 </span></p>
 @snapend
 
@@ -4439,10 +4439,10 @@ PlatformBootManagerLib <br>
 
 
 @snap[south-west span-100 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
-&bull; &nbsp;&nbsp;Call before BDS to connect all devices
-&bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font>
-&bull; &nbsp;&nbsp;Updates consule etc.
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em" >
+&bull; &nbsp;&nbsp;Call before BDS to connect all devices<br>
+&bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font><br>
+&bull; &nbsp;&nbsp;Updates consule etc.<br>
 </span></p>
 <br>
 @snapend
