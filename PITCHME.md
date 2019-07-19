@@ -4438,12 +4438,13 @@ PlatformBootManagerLib <br>
 
 
 
-@snap[south-west span-100 ]
+@snap[south-east span-95 fragment ]
 <p style="line-height:80%" align="left" ><span style="font-size:0.8em" >
 &bull; &nbsp;&nbsp;Call before BDS to connect all devices<br>
 &bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font><br>
 &bull; &nbsp;&nbsp;Updates consule etc.<br>
 </span></p>
+<br>
 <br>
 @snapend
 
