@@ -1951,7 +1951,7 @@ Note:
 Same ase slide
 
 
----
+---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 1 ]
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -1982,7 +1982,7 @@ MinPlatformPkg/<br>&nbsp;&nbsp;
 	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;
   . . .<br>&nbsp;&nbsp;
-  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](PlatformInit/)<br>&nbsp;&nbsp;&nbsp;&nbsp;
     PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  PlatformInitPreMem/<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
@@ -2002,6 +2002,10 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 </span></p>
 @snapend
 
+
+@snap[south span-95 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.7em](PlatformInit)</font> controls the platform initialization flow<br><br>&nbsp;</span></p>)
+@snapend
 
 
 Note:
