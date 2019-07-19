@@ -4070,6 +4070,86 @@ Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 
 
 
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules - Stage 3 PEI]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.75em;">Silicon Init. done in Stage 2 for Stage 3</span></p>
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+ Include/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](BoardinitLib.h)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](SiliconPolicyInitLib.h)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](SiliconPolicyUpdateLib.h)  <br>&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;
+ Library/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  . . . <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PlatformInitPostMem/ 
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+BoardInitBeforeSiliconInit() <br>
+ <br>
+SiliconPolicyInitPostemory() <br>
+SiliconPolicyUpdatePostMemory() <br>
+SiliconPolicyDonePostMemory() <br>
+ <br>
+BoardInitAfterSiliconInit() <br>
+ <br>
+DxeLoadCore()
+</span></p>
+
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > No silicon-specific initialization in DXE phase </span> </li>
+  <li><span style="font-size:0.65em" > HOBs should transfer Init settings to Stage 3</span> </li>
+</ul>
+
+
+@snapend
+
+
+Note:
+
+
+The following functions on Right are required to exist and to execute in the listed order. The
+component that provides the function is not specified because it is not required by the
+architecture.
+
+After memory is installed during Stage II, the remaining silicon and platform initialization
+must take place in the PEI phase only. All silicon initialization tasks should have been
+completed in Stage II, and there should be no silicon-specific initialization required in the
+DXE phase. The default console information should be transferred via a HOB and initialized
+and used in Stage III.
+
+
+
+
 
 
 ---
