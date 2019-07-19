@@ -2005,7 +2005,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 
 
 
-@snap[north-east span-70 fragment]
+@snap[north-east span-75 fragment]
 <br>
 <br>
 <br>
@@ -2013,7 +2013,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 <br>
 <br>
 <br>
-<font face="Arial">@size[1.3](@color[#A8ff60]( &larr;)) // hooks</font><br>&nbsp;&nbsp;
+<b><font face="Arial">@size[1.5](@color[#A8ff60]( &larr;)) &nbsp;&nbsp;// hooks</font></b><br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
