@@ -5217,6 +5217,143 @@ EDK II Open Platform Spec Test points Stage 4:
 https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/69_test_point_results.html
 
 
+
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features Section 05 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+
+---?image=assets/images/slides/Slide89.JPG
+@title[Boot Flow – Stage 5]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 5</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+The objective of Stage V is to establish the basic system security foundation for a production
+environment. Given the importance of security for all connected systems, the platform
+architecture considers the following basic security features as minimum requirements for any
+product and thus an important part of the effort to produce a minimal platform. This stage is
+concerned with enabling security technologies described in industry specifications. Lowerlevel
+chipset-specific security technologies such as register locks may exist and those
+should be enabled during standard silicon initialization flows in earlier stages.
+
+
+
+---?image=assets/images/slides/Slide90.JPG
+@title[Stage 5 is Focused on Security 
+<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 is Focused on Security </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
+List of Documents on Security with EDK II -     <a href="https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Security-White-Papers">EDK II tianocore Wiki </a><br>
+Minimal security checks should be done
+</span></p>
+@snapend
+
+@snap[north-west span-70]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" ><a href="https://github.com/chipsec/chipsec">Chipsec</a> </span> </li>
+  <li><span style="font-size:0.65em" > Microsoft Hardware Security Test Interface (HSTI)</span> </li>
+  <li><span style="font-size:0.65em" > Windows Security Mitigations Table (WSMT). </span> </li>
+  <li><span style="font-size:0.65em" > Memory Attribute Table </span> </li>
+  <li><span style="font-size:0.65em" > SMM Memory Attribute Table </span> </li>
+  <li><span style="font-size:0.65em" > 3rd party option ROM </span> </li>
+  <li><span style="font-size:0.65em" > Trusted Console - Trusted Storage </span> </li>
+  <li><span style="font-size:0.65em" > DMA protection for VT-d/IOMM</span> </li>
+  <li><span style="font-size:0.65em" > SMI Handler</span> </li>
+  <li><span style="font-size:0.65em" > TPM</span> </li>
+  <li><span style="font-size:0.65em" > Firmware Update</span> </li>
+</ul>
+<br>
+<br>
+@snapend
+
+
+
+
+
+
+
 ---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
