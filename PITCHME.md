@@ -2672,7 +2672,7 @@ Kabylake -<br>
 </span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
-<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/39_test_point_results.html">EDK II Open Platform Spec Test points Stage 1</a>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/39_test_point_results.html">EDK II Open Platform Spec Test points Stage 1</a>
 </span></p>
 
 @snapend
@@ -3812,7 +3812,7 @@ Steps to enable a board for Stage 2.
  
 </ul>
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
-<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/49_test_point_results.html">EDK II Open Platform Spec Test points Stage 2</a>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/49_test_point_results.html">EDK II Open Platform Spec Test points Stage 2</a>
 </span></p>
 
 @snapend
@@ -4522,7 +4522,7 @@ Steps to enable a board for Stage 3.
 </ul>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
-<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/59_test_point_results.html">EDK II Open Platform Spec Test points Stage 3</a>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/59_test_point_results.html">EDK II Open Platform Spec Test points Stage 3</a>
 </span></p>
 
 @snapend
@@ -5171,7 +5171,7 @@ This routine registers two callbacks to call fsp's notifies
 ---
 @title[Stage 4 Checklist  ]
 <p align="center"><span class="gold" >@size[1.1](<b>Stage 4 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
 Steps to enable a board for Stage 4.
 </span></p>
 
@@ -5183,16 +5183,18 @@ Steps to enable a board for Stage 4.
 <br>
 <br>
 <br>
+<br>
 <ul style="list-style-type:None; line-height:0.7;">
- <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Install the minimal DSDT <br>&nbsp;&nbsp;-&nbsp;&nbsp; In rare cases: Install board-specific SSDT </span></li>
- <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. <br>&nbsp;&nbsp;-&nbsp;&nbsp; Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4)</font></span></li>
- <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
+ <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Install the minimal DSDT <br>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; In rare cases: Install board-specific SSDT </span></li>
+ <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are<br>&nbsp;&nbsp;&nbsp;&nbsp;  correct for your board. <br>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4)</font></span></li>
+ <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are<br>&nbsp;&nbsp;&nbsp;&nbsp; correct for your board.</span></li>
  <li><span style="font-size:0.78em" >4.&nbsp;&nbsp; Boot, collect log, verify test point results defined are correct</span></li>
 </ul>
 <br>
 <br>
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
-<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/69_test_point_results.html">EDK II Open Platform Spec Test points Stage 4</a>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/69_test_point_results.html">EDK II Open Platform Spec Test points Stage 4</a>
 </span></p>
 
 @snapend
@@ -5201,6 +5203,18 @@ Steps to enable a board for Stage 4.
 Note:
 
 
+Steps to enable a board for Stage IV
+1. Install the minimal DSDT - In rare cases: Install board-specific SSDT
+2. Ensure all PCDs in the configuration section (DSC files) are correct for your board. - Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4
+3. Ensure all required binaries in the flash file (FDF files) are correct for your board.
+4. Boot, collect log, verify test point results defined in section 6.9 Test Point Results are
+correct
+
+
+
+EDK II Open Platform Spec Test points Stage 4:
+
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/69_test_point_results.html
 
 
 ---
