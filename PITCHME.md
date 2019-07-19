@@ -5045,7 +5045,127 @@ Notify:<br>
 
 Note:
 
-purple-pp
+This routine registers two callbacks to call fsp's notifies
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Required SMM Function Interfaces DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-52 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
+ KabylakeRvp3/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      BoardAcpiLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](SmmBoardAcpiEnableLib.c)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+		 or<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](SmmMultiBoardAcpiSupportLib.c)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-44 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.65em; font-family:Consolas;"><br><br>
+@color[yellow](BoardAcpiEnableLib) <br>
+ <br>
+</span></p>
+<br><br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
+Board specific initialization hook at DXE phase.<br><br>
+<br>
+<font face="Consolas">@size[.8em](@color[yellow](SiliconEnableAcpi &lpar;&rpar; ))</font><br>
+<font face="Consolas">@size[.8em](@color[yellow](SiliconDisableAcpi &lpar;&rpar;))</font>
+</span></p>
+
+@snapend
+
+
+Note:
+
+This routine registers two callbacks to call fsp's notifies
+
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Required SMM Function Interfaces DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-52 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
+ KabylakeRvp3/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      BoardAcpiLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](DxeBoardAcpiTableLib.c)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+		 or<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         @color[yellow](DxeMultiBoardAcpiSupportLib.c)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-44 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.65em; font-family:Consolas;"><br><br>
+@color[yellow](BoardAcpiTableLib) <br>
+ <br>
+</span></p>
+<br><br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
+Board specific initialization hook at DXE phase.<br><br>
+<br>
+<font face="Consolas">@size[.8em](@color[yellow](BoardUpdateAcpiTable&lpar;&rpar; ))</font><br>
+</span></p>
+
+@snapend
+
+
+Note:
+
+This routine registers two callbacks to call fsp's notifies
+
 
 
 ---
