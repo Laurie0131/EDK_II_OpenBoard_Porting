@@ -4451,7 +4451,7 @@ PlatformBootManagerLib <br>
 @snap[south-east span-95 ]
 <p style="line-height:80%" align="left" ><span style="font-size:0.8em" >
 &bull; &nbsp;&nbsp;Call before BDS to connect all devices<br>
-&bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font><br>
+&bull; &nbsp;&nbsp;Creates event,<font face="Consolas">@size[.8em](OnReadyToBootCallBack)</font><br>
 &bull; &nbsp;&nbsp;Updates consule etc.<br>
 </span></p>
 <br>
@@ -4498,24 +4498,24 @@ Steps to enable a board for Stage 3.
 <br>
 <ul style="list-style-type:None; line-height:0.7;">
  <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in 
- <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> and <font face"Consolas">@size[.7](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
- <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c)</font></span> </li>
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> and <font face="Consolas">@size[.7em](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Initialize board-specific hardware device, such as GPIO.</span><li>
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Update post-memory policy configuration by using PCD.</span><li>
   </ul> 
- <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face"Consolas">@size[.8](SiliconPolicyUpdatePostMemory &lpar;&rpar;)</font> ,
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
+ <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face="Consolas">@size[.8em](SiliconPolicyUpdatePostMemory &lpar;&rpar;)</font> ,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
-     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face="Consolas">@size[.7em](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
- <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face"Consolas">@size[.7](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
- <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face"Consolas">@size[.8](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
+ <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face="Consolas">@size[.7em](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Consolas">@size[.8em](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
    <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
  <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face"Consolas">@size[.7](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face="Consolas">@size[.7em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
  <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
  <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
@@ -4843,7 +4843,7 @@ Stage 4 Platform Architecture Libraries
 
 
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">Board porting requires creation of libraries produced <br>by the <font face="Consolas">@size[.7](BoardPkg)</font> <br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">Board porting requires creation of libraries produced <br>by the <font face="Consolas">@size[.7em](BoardPkg)</font> <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4894,7 +4894,7 @@ important to assess the utility of existing library instances when developing bo
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use board specific library for ACPI global NVS area<br>&nbsp;&nbsp; assignments instead defining in ASL Code<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific<br>&nbsp;&nbsp; configuration in the global NVS area<br><br><br></span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific devices or advanced features<br>&nbsp;&nbsp;  should be moved to the board specific directory<br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the <font face="Consolas">@size[.7](GlobalNvs.asl)</font><br>&nbsp;&nbsp; and <font face="Consolas">@size[.7](GobalNvsAreaDef.h)</font>  files<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the <font face="Consolas">@size[.7em](GlobalNvs.asl)</font><br>&nbsp;&nbsp; and <font face="Consolas">@size[.7em](GobalNvsAreaDef.h)</font>  files<br><br><br></span></p>)
 @snapend
 
 
@@ -4927,7 +4927,7 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em" ><br><br>
 &bull; &nbsp;&nbsp;Tip: Board specific device selection - define a board-neutral name<br>
 &bull; &nbsp;&nbsp;Data structure is board neutral <font face="Consolas">@size[.8em](@color[yellow]( .../Include/Acpi/GlobalNvsAreaDef.h ))</font><br>
-&bull; &nbsp;&nbsp;File: <font face="Consolas">@size[.75em](@color[yellow](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/))<br>&nbsp;&nbsp;&nbsp;  @size[.75em](@color[yellow](DxeKabylakeRvp3AcpiTableLib.c))</font>
+&bull; &nbsp;&nbsp;File:&nbsp; <font face="Consolas">@size[.75em](@color[yellow](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @size[.75em](@color[yellow](DxeKabylakeRvp3AcpiTableLib.c))</font>
 </span></p>
 
 @snapend
@@ -4982,6 +4982,62 @@ The other way to resolve above issue is to move the board specific ACPI Secondar
 This means the .asi  has to determine specifics
 A better way is to keep those board specific SSDT in board directly using a board specific library as the example of this slide
 
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Required Function Interfaces DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Required Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-52 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+ PlatformInit/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      MultiBoardInitSupportLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         DxeMultiBoardInitSupportLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInitDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitDxe.c <br>&nbsp;&nbsp;&nbsp;&nbsp; 
+       @color[yellow](BoardNotificationInitEntryPoint&lpar;&rpar;)
+</span></p>
+@snapend
+
+@snap[north-east span-44 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.65em; font-family:Consolas;"><br><br>
+@color[yellow](BoardInitLib) <br>
+ <br>
+</span></p>
+<p style="line-height:80%" align="left" ><span style="font-size:0.75em" >
+Board specific initialization hook at DXE phase.<br><br>
+Notify:<br>
+<font face="Consolas">@size[.8em]@color[yellow((OnPciEnumerationComplete ))</font><br>
+<font face="Consolas">@size[.8em]@color[yellow((SmmReadyToLockRegistration))</font>
+</span></p>
+
+@snapend
+
+
+Note:
 
 
 
