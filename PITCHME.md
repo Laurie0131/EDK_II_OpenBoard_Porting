@@ -4078,18 +4078,21 @@ Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 @snap[north-west span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-49 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-98 ]
+<br>
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
@@ -4109,7 +4112,8 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-47 ]
+@snap[north-east span-45 ]
+<br>
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
@@ -4124,13 +4128,17 @@ BoardInitAfterSiliconInit() <br>
 DxeLoadCore()
 </span></p>
 
+@snapend
 
+
+<br>
+@snap[south-east span-48 ]
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" > No silicon-specific initialization in DXE phase </span> </li>
   <li><span style="font-size:0.65em" > HOBs should transfer Init settings to Stage 3</span> </li>
 </ul>
 
-
+<br>
 @snapend
 
 
