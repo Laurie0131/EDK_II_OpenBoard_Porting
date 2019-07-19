@@ -4391,6 +4391,69 @@ We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the pl
 
 
 
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules - Stage 3 DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE</span></p>
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+ Bds/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      DxePlatformBootManagerLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         BdsPlatform/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           PlatformBootManagerBeforeConsole()
+</span></p>
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.65em; font-family:Consolas;"><br>
+PlatformBootManagerLib <br>
+ <br>
+</span></p>
+
+@snapend
+
+
+
+@snap[south-east span-48 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
+&bull; &nbsp;&nbsp;Call before BDS to connect all devices
+&bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font>
+&bull; &nbsp;&nbsp;Updates consule etc.
+</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+@snapend
+
+
+Note:
+
 
 
 ---
