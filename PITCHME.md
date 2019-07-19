@@ -4507,7 +4507,7 @@ Steps to enable a board for Stage 3.
  <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face="Consolas">@size[.8em](SiliconPolicyUpdatePostMemory &lpar;&rpar;)</font> ,
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
-     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face="Consolas">@size[.7em](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face="Consolas">@size[.9em](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
  <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face="Consolas">@size[.7em](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Consolas">@size[.8em](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
@@ -4515,7 +4515,7 @@ Steps to enable a board for Stage 3.
      <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
  <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face="Consolas">@size[.7em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
  <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your 
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
  <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
@@ -4843,7 +4843,7 @@ Stage 4 Platform Architecture Libraries
 
 
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">Board porting requires creation of libraries produced <br>by the <font face="Consolas">@size[.7em](BoardPkg)</font> <br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">Board porting requires creation of libraries produced <br>by the <font face="Consolas">@size[.85em](BoardPkg)</font> <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4991,7 +4991,7 @@ A better way is to keep those board specific SSDT in board directly using a boar
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4999,7 +4999,7 @@ A better way is to keep those board specific SSDT in board directly using a boar
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -5014,8 +5014,8 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
   Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       MultiBoardInitSupportLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          DxeMultiBoardInitSupportLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  PlatformInitDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitDxe.c <br>&nbsp;&nbsp;&nbsp;&nbsp; 
+  PlatformInitDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitDxe.c <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
        @color[yellow](BoardNotificationInitEntryPoint&lpar;&rpar;)
 </span></p>
 @snapend
@@ -5027,19 +5027,25 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
 @color[yellow](BoardInitLib) <br>
  <br>
 </span></p>
-<p style="line-height:80%" align="left" ><span style="font-size:0.75em" >
+<br><br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
 Board specific initialization hook at DXE phase.<br><br>
 Notify:<br>
-<font face="Consolas">@size[.8em]@color[yellow((OnPciEnumerationComplete ))</font><br>
-<font face="Consolas">@size[.8em]@color[yellow((SmmReadyToLockRegistration))</font>
+<font face="Consolas">@size[.8em](@color[yellow](OnPciEnumerationComplete ))</font><br>
+<font face="Consolas">@size[.8em](@color[yellow](SmmReadyToLockRegistration))</font>
 </span></p>
 
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Registers two callbacks to call FSP notifies<br><br>&nbsp;</span></p>)
 @snapend
 
 
 Note:
 
-
+purple-pp
 
 
 ---
