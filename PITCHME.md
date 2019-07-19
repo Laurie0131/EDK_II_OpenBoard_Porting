@@ -4919,14 +4919,15 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 <p align="right"><span class="gold" >@size[1.1](<b>Example: Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[south-west span-100 ]
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 @snap[north-east span-95 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em" ><br>
 &bull; &nbsp;&nbsp;Tip: Board specific device selection - define a board-neutral name<br>
-&bull; &nbsp;&nbsp;Data structure is board neutral <font face="Consolas">@size[.6](@color[yellow]( …/Include/Acpi/GlobalNvsAreaDef.h ))</font><br>
-&bull; &nbsp;&nbsp;<font face="Consolas">@size[.5](@color[yellow]( KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/  DxeKabylakeRvp3AcpiTableLib.c))</font>
+&bull; &nbsp;&nbsp;Data structure is board neutral <font face="Consolas">@size[.6em](@color[yellow]( .../Include/Acpi/GlobalNvsAreaDef.h ))</font><br>
+&bull; &nbsp;&nbsp;<font face="Consolas">@size[.5em](@color[yellow]( KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/  DxeKabylakeRvp3AcpiTableLib.c))</font>
 </span></p>
 
 @snapend
@@ -4938,9 +4939,9 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 <br>
 <br>
 <br>
-<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<p style="line-height:35%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br><br>
 VOID<br>
-KabylakeRvp3UpdateGlobalNvs (<br>
+@color[yellow](KabylakeRvp3UpdateGlobalNvs) (<br>
 VOID<br>
 )<br>
 &lbrace; // <font face="Arial">@color[#A8ff60](Update global NVS area for ASL and SMM init code to use)</font> <br>&nbsp;&nbsp;
