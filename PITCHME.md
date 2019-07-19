@@ -2003,6 +2003,36 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 @snapend
 
 
+
+
+@snap[north-east span-60 fragment]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<br>
+<br>
+<font face="Arial"> // hooks</font><br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+BoardDetect&lpar;&rpar;<br>
+BoardDebugInit&lpar;&rpar;<br>
+BoardBootModeDetect&lpar;&rpar;<br>
+BoardInitBeforeMemoryInit&lpar;&rpar;<br>
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+
 @snap[south span-95 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.75em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
 @snapend
