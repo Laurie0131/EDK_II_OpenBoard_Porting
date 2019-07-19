@@ -4073,7 +4073,7 @@ Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 3 PEI]
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:45%" align="left" ><span style="font-size:0.75em;">Silicon Init. done in Stage 2 for Stage 3</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.75em;">Silicon Initilization done in Stage 2 for Stage 3</span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -4087,7 +4087,7 @@ Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4137,7 +4137,7 @@ DxeLoadCore()
   <li><span style="font-size:0.65em" > No silicon-specific initialization in DXE phase </span> </li>
   <li><span style="font-size:0.65em" > HOBs should transfer Init settings to Stage 3</span> </li>
 </ul>
-
+<br>
 <br>
 @snapend
 
