@@ -4216,7 +4216,7 @@ and used in Stage III.
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4243,7 +4243,7 @@ MinPlatformPkg/ <br>&nbsp;&nbsp;
 @snap[north-east span-45 ]
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
 BoardNotificationInit() <br>
  <br>
 </span></p>
@@ -4253,7 +4253,7 @@ BoardNotificationInit() <br>
 
 
 @snap[south-east span-48 fragment]
-<p style="line-height:45%" align="left" ><span style="font-size:0.75em" >
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em" >
 Create Events:<br>
 &bull; &nbsp;&nbsp; PCI Enumeration complete<br>
 &bull; &nbsp;&nbsp; DXE SMM ready to Lock
