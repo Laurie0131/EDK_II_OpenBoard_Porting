@@ -5314,11 +5314,12 @@ should be enabled during standard silicon initialization flows in earlier stages
 
 
 ---?image=assets/images/slides/Slide90.JPG
-@title[Stage 5 is Focused on Security 
+@title[Stage 5 is Focused on Security ]
 <p align="right"><span class="gold" >@size[1.1](<b>Stage 5 is Focused on Security </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100]
+<br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 List of Documents on Security with EDK II -     <a href="https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Security-White-Papers">EDK II tianocore Wiki </a><br>
@@ -5327,6 +5328,7 @@ Minimal security checks should be done
 @snapend
 
 @snap[north-west span-70]
+<br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
 </span></p>
