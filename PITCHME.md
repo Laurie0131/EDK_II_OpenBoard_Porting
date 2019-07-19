@@ -1979,7 +1979,7 @@ Same ase slide
 MinPlatformPkg/<br>&nbsp;&nbsp;
   Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	   @color[yellow](BoardnitLib.h)<font face="Arial"> &nbsp;&nbsp;&nbsp;&nbsp;// hooks</font><br>&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;
   . . .<br>&nbsp;&nbsp;
   @color[cyan](PlatformInit/)<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2005,7 +2005,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 
 
 
-@snap[north-east span-60 fragment]
+@snap[north-east span-70 fragment]
 <br>
 <br>
 <br>
@@ -2013,7 +2013,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 <br>
 <br>
 <br>
-<font face="Arial"> // hooks</font><br>&nbsp;&nbsp;
+<font face="Arial">@size[1.3](@color[#A8ff60]( &larr;)) // hooks</font><br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
