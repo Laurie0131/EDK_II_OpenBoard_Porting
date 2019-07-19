@@ -5330,7 +5330,7 @@ Minimal security checks should be done
 @snap[north-west span-70]
 <br>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.75em;" ><br><br><br>
 </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
@@ -5359,13 +5359,13 @@ Once the board porting work is finished, some minimal security checks should be 
 
 
 ---
-@title[Stage 5 Porting - Goal]
-<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 Porting - Goal</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Stage 5 Porting - Goals]
+<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 Porting - Goals</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Satisfy industry standard security specifications 
 </span></p>
 
-@snap[north-west span-70 ]
+@snap[north-west span-75 ]
 <br>
 <br>
 <br>
