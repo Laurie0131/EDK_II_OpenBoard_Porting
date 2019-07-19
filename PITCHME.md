@@ -4256,7 +4256,7 @@ BoardNotificationInit() <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.75em" >
 Create Events:
 </span></p>
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.7; align="left">
   <li><span style="font-size:0.65em" > PCI Enumeration complete</span> </li>
   <li><span style="font-size:0.65em" > DXE SMM ready to Lock</span></li>
 </ul>
