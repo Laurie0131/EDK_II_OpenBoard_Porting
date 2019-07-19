@@ -4892,7 +4892,7 @@ important to assess the utility of existing library instances when developing bo
 <br>
 <br>
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use board specific library for ACPI global NVS area<br>&nbsp;&nbsp;&nbsp; assignments instead defining in ASL Code<br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific<br>&nbsp;&nbsp;&nbsp; configuration in the global NVS area<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific<br>&nbsp;&nbsp;&nbsp; configuration in the global NVS area<br><br><br></span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific devices or advanced features should<br>&nbsp;&nbsp;&nbsp; be moved to the board specific directory<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the <font face="Consolas">@size[.7](GlobalNvs.asl)</font><br>&nbsp;&nbsp;&nbsp; and <font face="Consolas">@size[.7](GobalNvsAreaDef.h)</font>  files<br><br><br></span></p>)
 @snapend
