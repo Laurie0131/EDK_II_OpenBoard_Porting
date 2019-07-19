@@ -4803,7 +4803,7 @@ for a list of more Modules in the FV for stage
 
 ---
 @title[Stage 4 Platform Libraries - PEI]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4848,6 +4848,69 @@ Stage 4 Platform Architecture Libraries
 
 
 Note:
+
+To find the Libraries for the Platform specific code
+1 Search the Work space .DSC files for the string of the library
+2 Open the .DSC files associated with the platform
+3 Determine which Library is used and that should have the build path in the workspace.
+
+Board porting will require creation of libraries identified as produced by the BoardPkg.
+
+
+Depending on the board, there may be existing libraries that are sufficient for a board, so it is
+important to assess the utility of existing library instances when developing board support.
+
+
+
+---
+@title[Tips for Board Specific ACPI  ]
+<p align="right"><span class="gold" >@size[1.1](<b> Tips for Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-70 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-31 ]
+<br>
+<br>
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Board Library</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> NVS Space</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> Special Features</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> ASL & C In Same  Dir </b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-67 ]
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use board specific library for ACPI global NVS area assignments instead defining in ASL Code<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific configuration in the global NVS area<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific devices or advanced features should be moved to the board specific directory<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the GlobalNvs.asl and GobalNvsAreaDef.h  files<br><br><br></span></p>)
+@snapend
+
+
+Note:
+
+It is not recommended define BoardId in ACPI global NVS and use the board ID check in the ASL code. Use a board specific library instead
+
+Do Not define huge amount of board specific configuration in the global NVS area because a generic platform should not have the board specific knowledge 
+
+If this Global NVS is for a board specific device, it should be moved to the board specific directory. A board should define a board specific NVS, or just use a simple Name object under this device node. 
+
+If this Global NVS is for a board advanced feature, it should be moved to the feature directory. This fetaure driver should define a feature specific NVS, or just use a simple Name object for the feature. 
+
+
+The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platforms/blob/devel-MinPlatform/Platform/Intel/KabylakeOpenBoardPkg/Include/Acpi/GlobalNvs.asl) and C-language definition (such as https://github.com/tianocore/edk2-platforms/blob/devel-MinPlatform/Platform/Intel/KabylakeOpenBoardPkg/Include/Acpi/GlobalNvsAreaDef.h) should be put to same directory. As such people can compare them to know the mapping between C-language definition and ASL definition. A better is to use a tool to create one from the other to avoid mismatch issue. 
+
 
 
 
