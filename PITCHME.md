@@ -4273,6 +4273,128 @@ at DXE phase
 
 
 
+---?image=assets/images/slides/Slide71.JPG
+@title[Initial Program Load (IPL) PEIM for DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Initial Program Load (IPL) PEIM for DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<br>
+<div class="left">
+<span style="font-size:0.8em" > &nbsp;</span>
+</div>
+<div class="right">
+<br>
+@ul[no-bullet]
+-  <font color="white">&nbsp;&nbsp;<b><font face="Consolas">DxeLoadCore&lpar;&rpar</font> </b></font>  <BR><br>
+-  <font color="#FFFF00">&nbsp;&nbsp;<b>Creates HOBs </b></font> <br><br>
+-  <font color="white">&nbsp;&nbsp;<b>Locates DXE main </b></font>  <BR><br>
+-  <font color="#ffc000">&nbsp;&nbsp;<b>Switch Stacks</b></font>  <br><br>
+-  <font color="cyan">&nbsp;&nbsp;<b>&rarr;&nbsp;<font face="Consolas">DxeMain&lpar;&rpar</font></b></font> 
+@ulend
+</div>			
+
+
+Note:
+-  The DXE IPL PEIM should not require porting, but  knowing what is does it important.  This is a good place for a breakpoint and starting to debug.  For example, if porting didn’t work this is where it will fail.
+
+-  The DXE IPL PEIM performs several tasks
+
+  -  Shadows DXE IPL into permanent memory to allow sharing of the decompression algorithm and several other library routines (e.g. security)
+  -  Allocates 128KB of stack for the DXE phase
+  -  Creates HOBs for passing library routines and the firmware volumes discovered during the PEI phase. Most commonly this is the main FV and any other FVs that DXE will use to load drivers from (for example backup block)
+  -  If S3, then the OS waking vector is called
+  -  Locate DXE Main in the FVs
+  -  If not S3 then switch stacks and call DXE Main
+
+
+Characteristics 
+-  The last PEIM to execute
+-  Shadows into permanent memory
+-  Shares data from PEI phase with DXE
+-  Creates a stack for DXE Phase
+-  Creates HOBs
+-  Calls S3 vector if appropriate
+-  Locate DXE Main
+-  Switch stack and call DXE Main
+
+
+
+
+
+---?image=assets/images/slides/Slide72.JPG
+@title[DXE Phase Stage 3]
+<p align="right"><span class="gold" >@size[1.1](<b>DXE Phase Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+<div class="left-1">
+<span style="font-size:0.8em" > &nbsp;</span>
+</div>
+<div class="right-1">
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.8;">
+  <li><span style="font-size:0.9em" ><font color="yellow">DXE Core initialization and dispatcher execution </font> </span></li><br>
+  <li><span style="font-size:0.9em" ><font color="cyan">Establish Architectural Protocols </font> </span></li><br>
+  <li><span style="font-size:0.9em" ><font color="#ffc000">Install any required DXE / UEFI Drivers for Stage 3 </font> </span></li>
+</ul>
+</div>		
+
+Note:
+
+
+Again, the DXE Main core code should not require porting, but  knowing what is does it important.
+
+-  The main platform DXE code is in subdirectories of the platform package having “DXE” in the directory name (i.e. PciPlatformDxe)
+   -  It will reference other packages DXE modules
+-  Establish the architectural protocols
+  -  Isolate platform specific hardware (e.g., RTC)
+  -  Provide support for boot and runtime services
+  -  Low level protocols that support DXE APIs
+  -  Directly called by DXE core
+-  Install any required DXE and then the UEFI Drivers
+
+
+---?image=assets/images/slides/Slide73.JPG
+@title[Architectural Protocols for KabyLake]
+<p align="right"><span class="gold" >@size[1.1](<b>Architectural Protocols for KabyLake</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+
+
+Silicon agnostic architectural protocol producing hardware modules
+
+Example show KabyLake APs
+
+For the gEfiTimerArchProtocolGuid 
+
+Search the workspace for all .inf files with the string: gEfiTimerArchProtocolGuid 
+Notice there are 2 where this protocol is gEfiTimerArchProtocolGuid                     ## PRODUCES
+Next search the board/platform .dsc file for which .inf file is included.
+
+We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the platform .dsc file
+
+
+- gEfiBdsArchProtocolGuid 	MdeModulePkg/Universal/BdsDxe/ 
+- gEfiCapsuleArchProtocolGuid 	MdeModulePkg/Universal/CapsuleRuntimeDxe 
+- gEfiCpuArchProtocolGuid                       	UefiCpuPkg/CpuDxe/
+- gEfiMetronomeArchProtocolGuid 	MdeModulePkg/Universal/Metronome
+- gEfiMonotonicCounterArchProtocolGuid 	MdeModulePkg/Universal/MonotonicCounterRuntimeDxe 
+- gEfiRealTimeClockArchProtocolGuid 	PcAtChipsetPkg/PcatRealTimeClockRuntimeDxe
+- gEfiResetArchProtocolGuid 	MdeModulePkg/Universal/ResetSystemRuntimeDxe
+- gEfiRuntimeArchProtocolGuid 	MdeModulePkg/Core/RuntimeDxe 
+- gEfiSecurity2ArchProtocolGuid 	MdeModulePkg/Universal/SecurityStubDxe
+- gEfiStatusCodeRuntimeProtocolGuid 	MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe 
+- gEfiTimerArchProtocolGuid 	PcAtChipsetPkg/HpetTimerDxe
+- gEfiVariableArchProtocolGuid 	MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe or
+                                   VariableSmmRuntimeDxe (depends on PcdBootToShellOnly)
+
+- gEfiVariableWriteArchProtocolGuid 	MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe or
+                    VariableSmmRuntimeDxe (depends on PcdBootToShellOnly)
+
+- gEfiWatchdogTimerArchProtocolGuid 	MdeModulePkg/Universal/WatchdogTimerDxe 
+
+
+
+
+
+
 ---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
