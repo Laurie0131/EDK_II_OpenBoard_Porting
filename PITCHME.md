@@ -1979,7 +1979,7 @@ Same ase slide
 MinPlatformPkg/<br>&nbsp;&nbsp;
   Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	   @color[yellow](BoardnitLib.h)<font face="Arial"> // hooks</font><br>&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<font face="Arial"> &nbsp;&nbsp;&nbsp;&nbsp;// hooks</font><br>&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;
   . . .<br>&nbsp;&nbsp;
   @color[cyan](PlatformInit/)<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2004,7 +2004,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 
 
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.7em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.75em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
 @snapend
 
 
