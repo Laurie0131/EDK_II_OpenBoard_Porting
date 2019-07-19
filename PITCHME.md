@@ -4880,10 +4880,10 @@ important to assess the utility of existing library instances when developing bo
 @snap[north-west span-31 ]
 <br>
 <br>
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Board Library</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> NVS Space</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> Special Features</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> ASL & C In Same  Dir </b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Board Library</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> NVS Space</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> Special Features</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.9em;" ><b> ASL & C In<br> Same  Dir </b><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -4891,10 +4891,10 @@ important to assess the utility of existing library instances when developing bo
 @snap[north-east span-67 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use board specific library for ACPI global NVS area assignments instead defining in ASL Code<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific configuration in the global NVS area<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific devices or advanced features should be moved to the board specific directory<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the GlobalNvs.asl and GobalNvsAreaDef.h  files<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use board specific library for ACPI global NVS area<br>&nbsp;&nbsp;&nbsp; assignments instead defining in ASL Code<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Do Not define huge amount of board specific<br>&nbsp;&nbsp;&nbsp; configuration in the global NVS area<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific devices or advanced features should<br>&nbsp;&nbsp;&nbsp; be moved to the board specific directory<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Use the same directory for the <font face="Consolas">@size[.7](GlobalNvs.asl)</font><br>&nbsp;&nbsp;&nbsp; and <font face="Consolas">@size[.7](GobalNvsAreaDef.h)</font>  files<br><br><br></span></p>)
 @snapend
 
 
