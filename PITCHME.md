@@ -5169,6 +5169,41 @@ This routine registers two callbacks to call fsp's notifies
 
 
 ---
+@title[Stage 4 Checklist  ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 4 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
+Steps to enable a board for Stage 4.
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:None; line-height:0.7;">
+ <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Install the minimal DSDT <br>&nbsp;&nbsp;-&nbsp;&nbsp; In rare cases: Install board-specific SSDT </span></li>
+ <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. <br>&nbsp;&nbsp;-&nbsp;&nbsp; Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4)</font></span></li>
+ <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
+ <li><span style="font-size:0.78em" >4.&nbsp;&nbsp; Boot, collect log, verify test point results defined are correct</span></li>
+</ul>
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
+<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/69_test_point_results.html">EDK II Open Platform Spec Test points Stage 4</a>
+</span></p>
+
+@snapend
+
+
+Note:
+
+
+
+
+---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
