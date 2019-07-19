@@ -3803,12 +3803,13 @@ Steps to enable a board for Stage 2.
         <li><span style="font-size:0.5em" > - The PCD updated in <font face="Consolas">@color[yellow](BoardInitBeforeMemoryInit &lpar;&rpar; ) </font>might be used here. </span> </li>
       </ul>
   </ul>
-  <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your board. </span> </li>
-  <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your board .</span> </li>
-        <ul style="list-style-type:none; line-height:0.5;">
-        <li><span style="font-size:0.5em" > - Boot, collect log, verify test point results are correct.  </span> </li>
-      </ul>
-
+  <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspboard. </span> </li>
+  <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspboard .</span> </li>
+ 
+  <li><span style="font-size:0.5em" >4. Boot, collect log, verify test point results are correct.  </span> </li>
+ 
 </ul>
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
 <a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/49_test_point_results.html">EDK II Open Platform Spec Test points Stage 2</a>
@@ -4496,8 +4497,8 @@ Steps to enable a board for Stage 3.
 <br>
 <br>
 <ul style="list-style-type:None; line-height:0.7;">
- <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in <font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font>
- <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and <font face"Consolas">@size[.7](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
+ <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in 
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> and <font face"Consolas">@size[.7](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Initialize board-specific hardware device, such as GPIO.</span><li>
@@ -4509,7 +4510,7 @@ Steps to enable a board for Stage 3.
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
  <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face"Consolas">@size[.7](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
- <br>&nbsp;&nbsp;&nbsp;&nbsp; <font face"Consolas">@size[.8](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face"Consolas">@size[.8](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
    <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
