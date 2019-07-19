@@ -4487,21 +4487,21 @@ Steps to enable a board for Stage 3.
 <br>
 <br>
 <ul style="list-style-type:None; line-height:0.7;">
- <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in BoardInitBeforeSiliconInit () and BoardInitAfterSiliconInit () ,   
-           BoardPkg/BoardInitLib/PeiBoardXXXInitPostMemoryLib.c</span> </li>
+ <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in <font face"Consolas">@size[.8](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> and <font face"Consolas">@size[.8](BoardInitAfterSiliconInit &lpar;&rpar;)</font> 
+   ,  <font face"Consolas">@size[.8](BoardPkg/BoardInitLib/PeiBoardXXXInitPostMemoryLib.c)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Initialize board-specific hardware device, such as GPIO.</span><li>
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Update post-memory policy configuration by using PCD.</span><li>
   </ul> 
- <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in SiliconPolicyUpdatePostMemory () , BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXXXInitLib.c.</span> </li>
+ <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face"Consolas">@size[.8](SiliconPolicyUpdatePostMemory &lpar;&rpar; , BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXXXInitLib.c.)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
-     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in BoardInitBeforeSiliconInit () might be used here.</span><li>
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face"Consolas">@size[.8](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
- <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in BoardInitAfterPciEnumeration () , BoardInitReadyToBoot(),  BoardInitEndOfFirmware () . </span> </li>
+ <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face"Consolas">@size[.8](BoardInitAfterPciEnumeration &lpar;&rpar; , BoardInitReadyToBoot&lpar;&rpar;,  BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
    <ul style="list-style-type:none; line-height:0.5;">
-     <li><span style="font-size:0.5em" >– Note: The functions may be empty if nothing needs to be updated.</span> </li>
+     <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
- <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your board. -  Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3</span> </li>
+ <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your board. -  Set <font face"Consolas">@size[.8](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
  <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your board.</span> </li>
  <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
 </ul>
