@@ -4778,8 +4778,8 @@ dedicated firmware volume.
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; " > List Storage media modules&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:22%"><span style="font-size:0.45em" > Sata, USB, . . . , (DXE)&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:21%"><span style="font-size:0.4em; " > List Storage media modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:.02%"><span style="font-size:0.45em" > Sata, USB, . . . , (DXE)&nbsp;</span></p></td>
 	</tr>
 </table>	
 @snapend
