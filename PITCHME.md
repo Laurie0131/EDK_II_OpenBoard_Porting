@@ -4283,11 +4283,11 @@ at DXE phase
 <div class="right">
 <br>
 @ul[no-bullet]
--  <font color="white">&nbsp;&nbsp;<b><font face="Consolas">DxeLoadCore&lpar;&rpar</font> </b></font>  <BR><br>
+-  <font color="white">&nbsp;&nbsp;<b><font face="Consolas">DxeLoadCore&lpar;&rpar;</font> </b></font>  <BR><br>
 -  <font color="#FFFF00">&nbsp;&nbsp;<b>Creates HOBs </b></font> <br><br>
 -  <font color="white">&nbsp;&nbsp;<b>Locates DXE main </b></font>  <BR><br>
 -  <font color="#ffc000">&nbsp;&nbsp;<b>Switch Stacks</b></font>  <br><br>
--  <font color="cyan">&nbsp;&nbsp;<b>&rarr;&nbsp;<font face="Consolas">DxeMain&lpar;&rpar</font></b></font> 
+-  <font color="cyan">&nbsp;&nbsp;<b>&rarr;&nbsp;<font face="Consolas">DxeMain&lpar;&rpar;</font></b></font> 
 @ulend
 </div>			
 
@@ -4371,24 +4371,22 @@ Next search the board/platform .dsc file for which .inf file is included.
 We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the platform .dsc file
 
 
-- gEfiBdsArchProtocolGuid 	MdeModulePkg/Universal/BdsDxe/ 
-- gEfiCapsuleArchProtocolGuid 	MdeModulePkg/Universal/CapsuleRuntimeDxe 
-- gEfiCpuArchProtocolGuid                       	UefiCpuPkg/CpuDxe/
-- gEfiMetronomeArchProtocolGuid 	MdeModulePkg/Universal/Metronome
-- gEfiMonotonicCounterArchProtocolGuid 	MdeModulePkg/Universal/MonotonicCounterRuntimeDxe 
-- gEfiRealTimeClockArchProtocolGuid 	PcAtChipsetPkg/PcatRealTimeClockRuntimeDxe
-- gEfiResetArchProtocolGuid 	MdeModulePkg/Universal/ResetSystemRuntimeDxe
-- gEfiRuntimeArchProtocolGuid 	MdeModulePkg/Core/RuntimeDxe 
-- gEfiSecurity2ArchProtocolGuid 	MdeModulePkg/Universal/SecurityStubDxe
-- gEfiStatusCodeRuntimeProtocolGuid 	MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe 
-- gEfiTimerArchProtocolGuid 	PcAtChipsetPkg/HpetTimerDxe
-- gEfiVariableArchProtocolGuid 	MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe or
-                                   VariableSmmRuntimeDxe (depends on PcdBootToShellOnly)
+- gEfiBdsArchProtocolGuid 	`MdeModulePkg/Universal/BdsDxe/ `
+- gEfiCapsuleArchProtocolGuid 	`MdeModulePkg/Universal/CapsuleRuntimeDxe `
+- gEfiCpuArchProtocolGuid                       	`UefiCpuPkg/CpuDxe/`
+- gEfiMetronomeArchProtocolGuid 	`MdeModulePkg/Universal/Metronome`
+- gEfiMonotonicCounterArchProtocolGuid 	`MdeModulePkg/Universal/MonotonicCounterRuntimeDxe `
+- gEfiRealTimeClockArchProtocolGuid 	`PcAtChipsetPkg/PcatRealTimeClockRuntimeDxe`
+- gEfiResetArchProtocolGuid 	`MdeModulePkg/Universal/ResetSystemRuntimeDxe`
+- gEfiRuntimeArchProtocolGuid 	`MdeModulePkg/Core/RuntimeDxe `
+- gEfiSecurity2ArchProtocolGuid 	`MdeModulePkg/Universal/SecurityStubDxe`
+- gEfiStatusCodeRuntimeProtocolGuid 	`MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe` 
+- gEfiTimerArchProtocolGuid 	`PcAtChipsetPkg/HpetTimerDxe`
+- gEfiVariableArchProtocolGuid 	`MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe` or        `VariableSmmRuntimeDxe` (depends on PcdBootToShellOnly)
 
-- gEfiVariableWriteArchProtocolGuid 	MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe or
-                    VariableSmmRuntimeDxe (depends on PcdBootToShellOnly)
+- gEfiVariableWriteArchProtocolGuid 	`MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe` or   `VariableSmmRuntimeDxe` (depends on PcdBootToShellOnly)
 
-- gEfiWatchdogTimerArchProtocolGuid 	MdeModulePkg/Universal/WatchdogTimerDxe 
+- gEfiWatchdogTimerArchProtocolGuid 	`MdeModulePkg/Universal/WatchdogTimerDxe `
 
 
 
