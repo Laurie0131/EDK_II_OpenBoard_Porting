@@ -5330,7 +5330,7 @@ Minimal security checks should be done
 @snap[north-west span-70]
 <br>
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.75em;" ><br><br><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.75em;" ><br><br><br><br>
 </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
@@ -5365,7 +5365,7 @@ Once the board porting work is finished, some minimal security checks should be 
 Satisfy industry standard security specifications 
 </span></p>
 
-@snap[north-west span-75 ]
+@snap[north-west span-85 ]
 <br>
 <br>
 <br>
