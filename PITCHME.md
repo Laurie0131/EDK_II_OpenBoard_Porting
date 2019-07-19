@@ -2670,6 +2670,11 @@ Kabylake -<br>
  6. Verify debug output during the code execution path for Stage 1 <br>
  7. Verify the test point results  are correct <br>
 </span></p>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
+<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/39_test_point_results.html">EDK II Open Platform Spec Test points Stage 1</a>
+</span></p>
+
 @snapend
 
 Note:
@@ -3805,6 +3810,10 @@ Steps to enable a board for Stage 2.
       </ul>
 
 </ul>
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
+<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/49_test_point_results.html">EDK II Open Platform Spec Test points Stage 2</a>
+</span></p>
+
 @snapend
 
 
@@ -4487,29 +4496,33 @@ Steps to enable a board for Stage 3.
 <br>
 <br>
 <ul style="list-style-type:None; line-height:0.7;">
- <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in <font face"Consolas">@size[.8](BoardInitBeforeSiliconInit &lpar;&rpar;)</font>
- <br>&nbsp;&nbsp;&nbsp;&nbsp;and <font face"Consolas">@size[.8](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
- <br>&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c)</font></span> </li>
+ <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in <font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font>
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and <font face"Consolas">@size[.7](BoardInitAfterSiliconInit &lpar;&rpar;)</font> ,
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Initialize board-specific hardware device, such as GPIO.</span><li>
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Update post-memory policy configuration by using PCD.</span><li>
   </ul> 
  <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face"Consolas">@size[.8](SiliconPolicyUpdatePostMemory &lpar;&rpar;)</font> ,
-<br>&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face"Consolas">@size[.7](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
-     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face"Consolas">@size[.8](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face"Consolas">@size[.7](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
- <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face"Consolas">@size[.8](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
+ <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in <font face"Consolas">@size[.7](BoardInitAfterPciEnumeration &lpar;&rpar;)</font>,
  <br>&nbsp;&nbsp;&nbsp;&nbsp; <font face"Consolas">@size[.8](BoardInitReadyToBoot&lpar;&rpar;,   BoardInitEndOfFirmware &lpar;&rpar;)</font> . </span> </li>
    <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
  <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face"Consolas">@size[.7](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face"Consolas">@size[.7](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
  <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
  <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
 </ul>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
+<a href-"https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/59_test_point_results.html">EDK II Open Platform Spec Test points Stage 3</a>
+</span></p>
 
 @snapend
 
