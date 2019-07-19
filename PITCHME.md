@@ -5184,10 +5184,10 @@ Steps to enable a board for Stage 4.
 <br>
 <br>
 <br>
-<ul style="list-style-type:None; line-height:0.7;">
- <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Install the minimal DSDT <br>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; In rare cases: Install board-specific SSDT </span></li>
- <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are<br>&nbsp;&nbsp;&nbsp;&nbsp;  correct for your board. <br>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4)</font></span></li>
- <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are<br>&nbsp;&nbsp;&nbsp;&nbsp; correct for your board.</span></li>
+<ul style="list-style-type:None; line-height:0.75;">
+ <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Install the minimal DSDT <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; In rare cases: Install board-specific SSDT </span></li>
+ <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  correct for your board. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; Set <font face="Consolas">@size[.8em](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 4)</font></span></li>
+ <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; correct for your board.</span></li>
  <li><span style="font-size:0.78em" >4.&nbsp;&nbsp; Boot, collect log, verify test point results defined are correct</span></li>
 </ul>
 <br>
