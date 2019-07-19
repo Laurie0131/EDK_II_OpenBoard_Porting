@@ -3804,11 +3804,11 @@ Steps to enable a board for Stage 2.
       </ul>
   </ul>
   <li><span style="font-size:0.65em" >2.  Ensure all PCDs in the configuration section (DSC files) are correct for your 
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspboard. </span> </li>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. </span> </li>
   <li><span style="font-size:0.65em" >3.  Ensure all required binaries in the flash file (FDF files) are correct for your 
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspboard .</span> </li>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board .</span> </li>
  
-  <li><span style="font-size:0.5em" >4. Boot, collect log, verify test point results are correct.  </span> </li>
+  <li><span style="font-size:0.65em" >4. Boot, collect log, verify test point results are correct.  </span> </li>
  
 </ul>
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
@@ -4515,9 +4515,9 @@ Steps to enable a board for Stage 3.
      <li><span style="font-size:0.5em" >– Note: The functions may be empty if no updating is required.</span> </li>
    </ul>
  <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face"Consolas">@size[.7](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board. -  Set <font face"Consolas">@size[.7](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3)</font></span> </li>
  <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your 
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board.</span> </li>
  <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
 </ul>
 
@@ -4553,6 +4553,303 @@ EDK II Open platform spec Test points Stage 3:
 https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/59_test_point_results.html
 
 
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features Section 04 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+
+---?image=assets/images/slides/Slide77.JPG
+@title[Boot Flow – Stage 4]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+The objective of Stage IV is to enable a minimal boot path that successfully boots a
+commercial operating system such as Linux or Windows, with UEFI interfaces exposed to
+the OS implemented in compliance with the UEFI specification. The minimal boot path only
+involves functionality necessary to load the OS to a state where a user may begin
+performing more complex interactions. This involves successfully reaching an environment
+that allows the user to launch applications. 
+
+
+The stage does not include support for all
+applications that, for example, may require certain CPU or GPU features enabled. Nor does
+it require any further support, including but not limited to device and system power
+management, full hardware performance support enabled, system reset support, etc.
+Any additional functionality is classified as an advanced feature. Those features are
+collectively enabled in Stage VI.
+
+
+
+
+
+
+---?image=assets/images/slides/Slide78.JPG
+@title[High Level Control Flow – Stage 4]
+<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-60 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em; "><br>
+Major Execution Activities
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > Minimum ACPI Table Initialization </span> </li>
+  <li><span style="font-size:0.65em" > Additional input, output, and storage support based on platform and operating system requirements</span> </li>
+  <li><span style="font-size:0.65em" > SMM </span> </li>
+  <li><span style="font-size:0.65em" > Perform ACPI enable/disable</span> </li>
+  <li><span style="font-size:0.65em" > Kernel debug support</span> </li>
+  <li><span style="font-size:0.65em" > UEFI variable support</span> </li>
+</ul>
+@snapend
+
+Note:
+
+
+Stage IV introduces additional functionality to meet the minimal requirements for a UEFIcompliant
+operating system. Much of the support required will be performed during the DXE
+phase interleaving Stage IV control flows with pre-existing control flows from Stage III. A
+minimum set of ACPI tables, namely RSDT, FACP, FACS, FADT, MADT, HPET and DSDT,
+need to be initialized and published. If there are alternative and/or additional operating
+system expectations such as full DeviceTree support, that should be enabled to allow the
+operating system to be loaded.
+
+
+It is recommended that only the mandatory boot option devices are connected in BDS to
+minimize complexity and boot time in the minimal execution path to the operating system. In
+the flow diagram below, the left half is identical to the functionality enabled by Stage III prior
+to entering the BDS phase. It is expected that the Stage III components are reused to
+complete Stage IV tasks.
+
+
+The green blocks on slide Control Flow are reuse of the existing blocks from Stage III
+
+
+
+
+---
+@title[Stage 4 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > FvOsBoot&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Continued DXE/BDS Services&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > FvLateSilicon&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > ACPI and SMM silicon support&nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.75em" > Finalize silicon initialization</span> </li>
+  <li><span style="font-size:0.75em" > Add basic operating system required interfaces</span> </li>
+  <li><span style="font-size:0.75em" > Add support for minimal featured operating system boot. </span> </li>
+</ul>
+
+@snapend
+
+
+
+
+Note:
+
+Stage IV finalizes silicon initialization, adds basic operating system required interfaces, and
+supports minimally featured operating system boot. The new components are support in a
+dedicated firmware volume.
+
+
+
+---
+@title[Stage 4 Firmware Volumes Contents]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 fragment]
+<br>
+<br>
+
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > FvOsBoot&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > FvLateSilicon.fv&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" > Additional silicon initialization support that is performed late in boot&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; " > List of ACPI modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" > ACPI Table, Platform & Board DXE &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; " >List of SMM modules &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" > SmmIpl, SMM Core,SMM CPU etc, (DXE) &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; " > List Storage media modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="70%"><p style="line-height:022%"><span style="font-size:0.45em" > Sata, USB, . . . , (DXE)&nbsp;</span></p></td>
+	</tr>
+</table>	
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Mapped according to .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+1.  Late silicon - Additional silicon initialization support that is performed late in the boot
+2. ACPI Modules - Acpi Table, platform & Board Dxe 
+3. SMM Modules - SmmIpl, SMM Core,SMM CPU etc, DXE 
+4. Storage Media - Sata, USB, Bus etc, DXE
+
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/62_firmware_volumes.html#62-firmware-volumes
+
+for a list of more Modules in the FV for stage 
+
+
+---
+@title[Stage 4 Platform Libraries - PEI]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.75em;">
+Stage 4 Modules - @size[.8em](List of UEFI and DXE Components: <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/content/appendix_a_full_maps/a1_firmware_volume_layout.html">EDK II Open Platform Spec.</a>)
+<br>
+<br>
+<br>
+<br>
+Stage 4 Platform Architecture Libraries
+</span></p>
+
+
+<table id="recTable-1">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Item</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>API Definition</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:30%"><span style="font-size:0.5em" ><b>Producing Pkg</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Description</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardAcpiLib</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  MinPlatformPkg</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardPkg</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Services for ACPI table creation and SMM enable/dis</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardInitLib</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  MinPlatformPkg</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  BoardPkg</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >Board specific initialization hook at DXE phase for BoardNotificationInit   </span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south span-95 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Board porting requires creation of libraries produced by the BoardPkg <br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+
 
 
 ---
@@ -4573,26 +4870,6 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_bo
 
 
 Note:
-
-Before an open source IA firmware appeared, there were many closed source IA firmware solutions in the world. We did research on the UEFI firmware examples of Intel ATOM based small core, Intel Core-i7 based big core client, and Intel XEON based big core servers. We came across some common issues, including: 
-
-1) Developers need a way to turn on and off of a feature. 
-For example, the Trusted Platform Module (TPM) or UEFI Secure Boot may need to be supported. In principle it is valuable to provide this class of capability, but the problem is too many configurations are often provided. In fact, we observed that one BIOS provides more than 100 configurations exposed for the developers to control. Regrettably, some configurations of those various controls do not even work. 
-This often leads to the request of having a minimal BIOS to boot, and to do so, how to select among these 100 configurations? 
-
-
-2) Developers need a way to get the platform configuration data. 
-For example, one configuration choice can include "is VT enabled by the end user?" Another control can include "is the TSEG SMRAM size 1M, 8M or 16M," or "is there an Embedded Controller (EC) or DOCK attached on the board?" The EDKII BIOS provides many choices on the source of the configuration data. For example, the UEFI specification defines UEFI Variables; the UEFI PI specification defines PCD; the Intel FSP defines UPD; silicon reference code defines the policy HOB, policy PPI, and policy protocol; silicon specific code has a signed static configuration data blob; and even legacy CMOS region exists. People may ask: which interface should I use in my platform code? 
-
-3)
-Developers need to do porting work from an existing board to a new board. 
-There might be GPIO routing differences, or alternate component choices, such as SIO differences. However, some older platform code may use a "switch-case" mechanisms to check the board type, with such "switch-case" usages is scattered across many platform drivers. These platform elements include AcpiPlatform, SmmPlatform, PlatformInit, EC, ASL code, VFR pages, etc. In order to add a new board on update a existing platform, a developer has to find out all the places to make the change. 
-People may think: How can I know how many modules I need to port, and when have I finished updating all required modules? 
-
-
-4) Developers might need to work on a different board. 
-For example, there might be an ATOM based on a server, a Core-i7 based server, or a XEON based server. However, the BIOS from different segments are different. We once compared an ATOM based firwmare with a Core-i7 based firmware. There are ~20 directories under Platform. Only 2 are same, which are "Include", and "Library". People might require significant time to ramp up again to get familiar with the new platform structure. 
-Why can’t the platform tree structures bear more similarity? 
 
 
 ---
