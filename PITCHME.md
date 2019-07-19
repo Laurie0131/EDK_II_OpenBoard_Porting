@@ -4914,6 +4914,89 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 
 
 
+---?image=assets/images/slides/Slide37.JPG
+@title[Example: Board Specific ACPI ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example: Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[south-west span-100 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@snapend
+
+@snap[north-east span-95 ]
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em" ><br>
+&bull; &nbsp;&nbsp;BKM: Board specific device selection - define a board-neutral name<br>
+&bull; &nbsp;&nbsp;Data structure is board neutral <font face"Consolas">@size[.7](@color[yellow]( …/Include/Acpi/GlobalNvsAreaDef.h ))</font><br>
+&bull; &nbsp;&nbsp;<font face"Consolas">@size[.7](@color[yellow]( KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/  DxeKabylakeRvp3AcpiTableLib.c))</font>
+<br>
+</span></p>
+<br>
+<br>
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+VOID<br>
+KabylakeRvp3UpdateGlobalNvs (<br>
+VOID<br>
+)<br>
+&lbrace; // <font face"Arial">@color[#A8ff60](Update global NVS area for ASL and SMM init code to use)</font> <br>&nbsp;&nbsp;
+mGlobalNvsArea.Area = (VOID *)(UINTN)PcdGet64 (PcdAcpiGnvsAddress);<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;PowerState = 1;<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;NativePCIESupport = PcdGet8 (PcdPciExpNative);<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;ApicEnable = GLOBAL_NVS_DEVICE_ENABLE;<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;LowPowerS0Idle = PcdGet8 (PcdLowPowerS0Idle);<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;Ps2MouseEnable = FALSE;<br>&nbsp;&nbsp;
+mGlobalNvsArea.Area-&gt;Ps2KbMsEnable = PcdGet8 (PcdPs2KbMsEnable);<br>
+&rbrace;
+</span></p>
+@snapend
+
+@snap[north-east span-44 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.65em; font-family:Consolas;"><br><br>
+PlatformBootManagerLib <br>
+ <br>
+</span></p>
+
+@snapend
+
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Tip: use board specific library for ACPI NVS Area<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+It is not recommended define BoardId in ACPI global NVS and use the board ID check in the ASL code.
+
+BKM is to define a board-neutral name for the branch condition  
+If this device is a silicon device and it might be enabled/disabled by policy, BKM recommended is using the this mechanism. 
+
+Protocol from 
+KabylakeOpenBoardPkg\Include\Protocol\GlobalNvsArea.h
+
+Data structure typedef:
+KabylakeOpenBoardPkg\Include\Acpi\GlobalNvsAreaDef.h
+
+
+The other way to resolve above issue is to move the board specific ACPI Secondary System Description Table (SSDT) to the board specific directory and let it be installed by a board specific ACPI driver. The basic platform ACPI driver should only handle generic ACPI tables, like FADT, MCFG, HPET, MCFG, and etc. 
+
+This means the .asi  has to determine specifics
+A better way is to keep those board specific SSDT in board directly using a board specific library as the example of this slide
+
+
+
+
 
 ---
 @title[Current Issues ]
