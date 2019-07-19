@@ -1915,7 +1915,7 @@ If the boot loader wish to reconfigure the MTRRs differently, it can be overridd
 ---
 @title[Transition to PEI Entry Point ]
 <p align="right"><span class="gold" >@size[1.1](<b>Transition to PEI Entry Point </b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
+<p style="line-height:80%" align="left" ><span style="font-size:0.75em;">
 SecMain calls the entry point into PEI Core
 </span></p>
 
@@ -1930,7 +1930,7 @@ Secmain(
 ```
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;">
-<font face="Consolas">PeiCore</font> is the <font face="Consolas">PeiCoreEntryPoint</font> in the FvPreMemory  Firmware Volume<Br>
+<font face="Consolas">PeiCore</font> is the <font face="Consolas">@size[.8em](PeiCoreEntryPoint)</font> in the FvPreMemory  Firmware Volume:<Br>
  <font face="Consolas">@size[.7em](@color[yellow](edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c))</font>
 </span></p>
 
