@@ -2045,9 +2045,10 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
 
----
-@title[Board Detection ]
-<p align="right"><span class="gold" >@size[1.1](<b>Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Hook - Board Detection ]
+<p align="right"><span class="gold" >@size[1.1](<b>Hook - Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
 
 
 @snap[north-west span-49 ]
@@ -2082,6 +2083,7 @@ KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
 @snapend
 
 @snap[north-east span-47 ]
+<br>
 <br>
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
@@ -2193,6 +2195,12 @@ BoardXBoardDetect( VOID)<br>&nbsp;&nbsp;
   return EFI_SUCCESS;<br>&nbsp;&nbsp;
 &rbrace;<br>&nbsp;&nbsp;
 </span></p> 
+@snapend
+
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PCD Determines Board ID at Build time<br>&nbsp;</span></p>)
 @snapend
 
 
