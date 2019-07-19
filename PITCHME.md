@@ -4438,7 +4438,7 @@ PlatformBootManagerLib <br>
 
 
 
-@snap[south-east span-95 fragment ]
+@snap[south-east span-95 ]
 <p style="line-height:80%" align="left" ><span style="font-size:0.8em" >
 &bull; &nbsp;&nbsp;Call before BDS to connect all devices<br>
 &bull; &nbsp;&nbsp;Creates event,<font face"Consolas">@size[.8](OnReadyToBootCallBack)</font><br>
@@ -4449,7 +4449,90 @@ PlatformBootManagerLib <br>
 @snapend
 
 
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Typically, no board porting is required<br><br>&nbsp;</span></p>)
+@snapend
+
+
 Note:
+
+To find the Libraries for the Platform specific code
+1 Search the Work space .DSC files for the string of the library
+2 Open the .DSC files associated with the platform
+3 Determine which Library is used and that should have the build path in the workspace.
+
+- Call before BDS to connect all devices
+- Creates event, OnReadyToBootCallBack
+- Updates consule etc.
+
+
+- No board porting of these libraries is required.
+
+
+
+---
+@title[Stage 3 Checklist  ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 3 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
+Steps to enable a board for Stage 3.
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:None; line-height:0.7;">
+ <li><span style="font-size:0.65em" >1.&nbsp;&nbsp; Add board post-memory initialization code in BoardInitBeforeSiliconInit () and BoardInitAfterSiliconInit () ,   
+           BoardPkg/BoardInitLib/PeiBoardXXXInitPostMemoryLib.c</span> </li>
+  <ul style="list-style-type:none; line-height:0.5;">
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Initialize board-specific hardware device, such as GPIO.</span><li>
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Update post-memory policy configuration by using PCD.</span><li>
+  </ul> 
+ <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in SiliconPolicyUpdatePostMemory () , BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXXXInitLib.c.</span> </li>
+  <ul style="list-style-type:none; line-height:0.5;">
+     <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in BoardInitBeforeSiliconInit () might be used here.</span><li>
+  </ul> 
+ <li><span style="font-size:0.65em" >3.&nbsp;&nbsp;  Add board initialization DXE code in BoardInitAfterPciEnumeration () , BoardInitReadyToBoot(),  BoardInitEndOfFirmware () . </span> </li>
+   <ul style="list-style-type:none; line-height:0.5;">
+     <li><span style="font-size:0.5em" >– Note: The functions may be empty if nothing needs to be updated.</span> </li>
+   </ul>
+ <li><span style="font-size:0.65em" >4.&nbsp;&nbsp;  Ensure all PCDs in the configuration section (DSC files) are correct for your board. -  Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 3</span> </li>
+ <li><span style="font-size:0.65em" >5.&nbsp;&nbsp;  Ensure all required binaries in the flash file (FDF files) are correct for your board.</span> </li>
+ <li><span style="font-size:0.65em" >6.&nbsp;&nbsp;  Boot, collect debug log, and verify the test point results are correct.</span> </li>
+</ul>
+
+@snapend
+
+
+Note:
+
+Steps to enable a board for Stage III
+Add board post-memory initialization code in BoardInitBeforeSiliconInit () and
+BoardInitAfterSiliconInit () ,
+BoardPkg/BoardInitLib/PeiBoardXXXInitPostMemoryLib.c.
+i. Initialize board-specific hardware device, such as GPIO.
+ii. Update post-memory policy configuration by using PCD.
+2. Add board policy update code in SiliconPolicyUpdatePostMemory () ,
+BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXXXInitLib.c.
+i. The PCD updated in BoardInitBeforeSiliconInit () might be used here.
+3. Add board initialization DXE code in BoardInitAfterPciEnumeration () ,
+BoardInitReadyToBoot () , BoardInitEndOfFirmware () .
+i. NOTE: The functions may be empty if nothing needs to be updated.
+4. Ensure all PCDs in the configuration section (DSC files) are correct for your board.
+i. Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 2
+5. Ensure all required binaries in the flash file (FDF files) are correct for your board.
+6. Boot, collect debug log, and verify the test point results defined in section 5.9 of the EDK II Open platform spec are
+correct.
+ 
+
+EDK II Open platform spec Test points Stage 3: 
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/59_test_point_results.html
+
 
 
 
