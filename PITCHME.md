@@ -1929,9 +1929,9 @@ Secmain(
 
 ```
 
-<p style="line-height:80%" align="left" ><span style="font-size:0.8em;">
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;">
 <font face="Consolas">PeiCore</font> is the <font face="Consolas">PeiCoreEntryPoint</font> in the FvPreMemory  Firmware Volume<Br>
- <font face="Consolas">edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c</font>
+ <font face="Consolas">@size[.7em](@color[yellow](edk2/MdeModulePkg/Core/Pei/PeiMain PeiMain.c))</font>
 </span></p>
 
 ```
