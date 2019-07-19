@@ -5322,7 +5322,7 @@ should be enabled during standard silicon initialization flows in earlier stages
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
-List of Documents on Security with EDK II -     <a href="https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Security-White-Papers">EDK II tianocore Wiki </a><br>
+List of Documents on Security with EDK II -     <a href="https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Security-White-Papers">EDK II tianocore Wiki </a><br><br>
 Minimal security checks should be done
 </span></p>
 @snapend
@@ -5351,9 +5351,46 @@ Minimal security checks should be done
 @snapend
 
 
+Note:
+
+
+Once the board porting work is finished, some minimal security checks should be done to make sure there is not security hole
 
 
 
+---
+@title[Stage 5 Porting - Goal]
+<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 Porting - Goal</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
+Satisfy industry standard security specifications 
+</span></p>
+
+@snap[north-west span-70 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;Establish a Static Root of Trust for Verification (S-RTV)  <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;Static Root of Trust for Measurement (S-RTM) <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;Direct Memory Access (DMA) Protection  <br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Stage V introduces new modules and requirements to the boot incrementally over Stage IV.
+
+The key requirement is to satisfy industry standard security specifications applicable to the
+platform. The security technologies enabled in this stage are not strictly bound to the
+definition in this specification and may consist of a subset or superset of the content
+described in this section. However, the only case in which a modern production system
+should not implement a form of any of these technologies is if the necessary hardware is not
+available. In all other cases, the system must at least implement a form of the following
+
+Goals -
+-  Hardware rooted authenticated boot that can establish a Static Root of Trust for Verification (S-RTV) and continue an authenticated chain of verification throughout the boot process.
+-  System measurement capability that allows the firmware to serve as a Static Root of Trust for Measurement (S-RTM).
+-  Protection from Direct Memory Access (DMA) attacks.
 
 
 ---
