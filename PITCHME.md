@@ -4254,13 +4254,10 @@ BoardNotificationInit() <br>
 
 @snap[south-east span-48 fragment]
 <p style="line-height:45%" align="left" ><span style="font-size:0.75em" >
-Create Events:
+Create Events:<br>
+&bull; &nbsp;&nbsp; PCI Enumeration complete<br>
+&bull; &nbsp;&nbsp; DXE SMM ready to Lock
 </span></p>
-<ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" > PCI Enumeration complete</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-  <li><span style="font-size:0.65em" > DXE SMM ready to Lock</span></li>
-</ul>
-<br>
 <br>
 <br>
 <br>
