@@ -3024,7 +3024,7 @@ PciHostBridgeLib
 
 
 
----
+---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 2 ]
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -4199,6 +4199,80 @@ and used in Stage III.
 
 
 
+
+---?image=assets/images/slides/Slide37.JPG
+@title[Platform Initialization Board Hook Modules - Stage 3 DXE]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE</span></p>
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+Platform/Intel/<br>
+MinPlatformPkg/ <br>&nbsp;&nbsp;
+ Include/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](BoardinitLib.h)  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <br>&nbsp;&nbsp;
+ Library/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  . . . <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     PlatformInitPostMem/ 
+</span></p>
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+BoardNotificationInit() <br>
+ <br>
+</span></p>
+
+@snapend
+
+
+
+@snap[south-east span-48 fragment]
+<p style="line-height:45%" align="left" ><span style="font-size:0.75em" >
+Create Events:
+</span></p>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > PCI Enumeration complete</span> </li>
+  <li><span style="font-size:0.65em" > DXE SMM ready to Lock</span></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@snapend
+
+
+Note:
+
+BoardInitLib BoardNotificationInit Platform Board specific initialization hook
+at DXE phase
 
 
 
