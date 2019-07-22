@@ -5808,7 +5808,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot:</span></li>
  <ul style="list-style-type:none; line-height:0.56;">
       <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp;Update <font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar;))</font> to check if a user is 
-      physically present <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to authorize change of authenticated variables.</span></li>
+      physically present <br>&nbsp;&nbsp;&nbsp;&nbsp;to authorize change of authenticated variables.</span></li>
  </ul>
  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
  <ul style="list-style-type:none; line-height:0.56;">
@@ -5844,6 +5844,157 @@ Steps to enable a board for Stage V
 7. Boot, collect log, verify test point results are Correct
 
 
+
+
+
+---?image=assets/images/slides/Slide_TableDHote.JPG
+@title[Staged Approach by Features Section 05 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 1&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Enable Debug &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 2&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Memory Initialization)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 3&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot to UEFI Shell only &nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 4&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 5&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Boot ot OS w/ Security enabled&nbsp;)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Stage 6&nbsp;)</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >@color[yellow](Advanced Feature Selection)</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Stage 7&nbsp;)</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >@color[#808080](Performance Opetimizations &nbsp;)</span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
+
+Note:
+table d’hôte  
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+
+
+---?image=assets/images/slides/Slide101.JPG
+@title[Boot Flow – Stage 6]
+<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+Note:
+
+#### Stage 6 for Advanced Features
+
+Advanced features are non-essential features. Essential features are defined as being
+support required to meet earlier stage boot objectives. An advanced feature must be
+implemented as highly cohesive and stand-alone software to only support a specific feature.
+Modularizing such features, reducing dependencies on other advanced features, and
+eliminating dependencies on specific implementations of other advanced features is critical
+and results in a variety of benefits:
+
+
+
+---
+@title[Add Non-essential Features - Stage 6 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Add Non-essential Features - Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
+@snap[north-west span-49 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
+Examples: Core Features
+</span></p>
+<ul style="list-style-type:none; line-height:0.8;">
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Signed Capsule update</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Signed Recovery</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Source Debug Enable</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;NVMe (secondary storage)</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;eMMC (secondary storage)</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;S3 resume</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Network</span> </li>
+</ul>
+
+@snapend
+
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
+Platform Features
+</span></p>
+<ul style="list-style-type:none; line-height:0.8;">
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management Technology (AMT) </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
+</ul>
+
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
+Board Features
+</span></p>
+<ul style="list-style-type:none; line-height:0.8;">
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Setup (policy) </span> </li>
+</ul>
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Limit to required features to reduce complexity<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+high-level examples of advanced features
+
+The number of "advanced features" in a platform should be limited to what is required and reasonable to reduce the
+required level of design and validation complexity.
 
 ---
 @title[Current Issues ]
