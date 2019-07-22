@@ -5577,7 +5577,7 @@ for a list of more Modules in the FV for stage
 @snapend
 
 
-@snap[north-west span-31 ]
+@snap[north-west span-33 ]
 <br>
 <br>
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> PEI Components </b><br><br>&nbsp;</span></p>)
