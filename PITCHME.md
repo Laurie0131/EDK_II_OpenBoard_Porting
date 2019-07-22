@@ -5402,21 +5402,24 @@ Goals -
 @snap[north-east span-70 ]
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-west span-31 ]
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>TCG trusted boot</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> UEFI Secure Boot</b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b><br>TCG trusted boot</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b><br> UEFI Secure Boot</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
 @snap[north-east span-68 ]
+<br>
 <br>
 <br>
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >TCG measured boot chain of trust is should be enabled in this stage.<br><br></span></p>)
