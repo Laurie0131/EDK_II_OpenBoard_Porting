@@ -6192,6 +6192,85 @@ Note:
 copy and past to readme.md
 
 
+---
+@title[Stage 6 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 6 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >  FvAdvanced&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Advanced feature softwarae stacks&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvAdvancedPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Stage 1 SEC PEI&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvAdvancedPostMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Stage 2 PEI  DXE&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvAdvancedLate&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Stage 3-4 DXE UEFI&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >  NvStorage&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Real NV storage on flash&nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Advanced Features should be modular to these stages of the boot flow
+</span></p>
+
+@snapend
+
+
+
+
+Note:
+The PEI core will create a FV HOB for each child firmware volume such that each DXE
+firmware volume is exposed to the DXE dispatcher
+
+
+---
+@title[Example – Adding Network]
+<p align="right"><span class="gold" >@size[1.1](<b> Example – Adding Network</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
+The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.<br>
+ 1. &nbsp;&nbsp;Set PCDs: <br>
+  <font face="Consolas">&nbsp;&nbsp;&nbsp;
+  @size[.8em](gAdvancedFeaturePkgTokenSpaceGuid.PcdNetworkEnable|TRUE)<br>&nbsp;&nbsp;&nbsp;
+  @size[.8em](gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE)<br>
+  </font>
+ 2. &nbsp;&nbsp;Add the network modules to the board <font face="Consolas">.dsc and .fdf</font> within the Stage 6 FV <br>
+ 3. &nbsp;&nbsp;Common <font face="Consolas">.dsc and .fdf</font> include files found in <font face="Consolas">edk2/NetworkPkg</font><br>
+ <font face="Consolas">&nbsp;&nbsp;&nbsp;
+  @size[.8em](&bull;&nbsp;&nbsp;NetworkDefines.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
+  @size[.8em](&bull;&nbsp;&nbsp;NetworkPcds.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
+  @size[.8em](&bull;&nbsp;&nbsp;NetworkPkg/NetworkLibs.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
+  @size[.8em](&bull;&nbsp;&nbsp;NetworkPkg/NetworkComponents.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
+  @size[.8em](&bull;&nbsp;&nbsp;Network.fdf.inc)<br>
+ </font>
+ 4. &nbsp;&nbsp;Add appropriate <font face="Consolas">!include statements to boardxxx.dsc/.fdf</font
+<br>
+</span></p>
+
+
+Note:
+
+gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
+        This Causes PciBus driver to skip loading network option ROM if set FALSE.
 
 
 
