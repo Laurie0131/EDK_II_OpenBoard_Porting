@@ -5408,39 +5408,39 @@ Goals -
 @snapend
 
 
-@snap[north-west span-31  ]
-<br>
-<br>
-<br>
-@box[bg-green-pp text-white rounded my-box-pad2  fragment](<p style="line-height:60% "><span style="font-size:0.9em;" ><b><br>TCG trusted boot</b><br><br>&nbsp;</span></p>)
-@snapend
-
-
-
-@snap[north-east span-68 ]
-<br>
-<br>
-<br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >TCG measured boot chain of trust should be enabled in this stage.<br><br><br></span></p>)
-@snapend
-
-
-@snap[north-west span-31 ]
+@snap[north-west span-31 fragment ]
 <br>
 <br>
 <br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b><br>TCG trusted boot</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2 fragment  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b><br> UEFI Secure Boot</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
-@snap[north-east span-68 ]
+@snap[north-east span-68 fragment]
 <br>
 <br>
 <br>
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >TCG measured boot chain of trust should be enabled in this stage.<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Authenticated UEFI Variable support must be completely functional. This is a basic requirement for secure authentication and UEFI Secure Boot key management<br><br><br></span></p>)
+@snapend
+
+
+@snap[north-west span-31 fragment]
+<br>
+<br>
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b><br>TCG trusted boot</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b><br> UEFI Secure Boot</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-68 fragment]
+<br>
+<br>
+<br>
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >TCG measured boot chain of trust should be enabled in this stage.<br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Authenticated UEFI Variable support must be completely functional. This is a basic requirement for secure authentication and UEFI Secure Boot key management<br><br><br></span></p>)
 @snapend
 
 
