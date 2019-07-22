@@ -5572,7 +5572,7 @@ for a list of more Modules in the FV for stage
 <br>
 <br>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -5595,13 +5595,14 @@ for a list of more Modules in the FV for stage
 &bull; &nbsp;&nbsp; Tcg2 Pei – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Pei – PlatformPkg<br>
 &bull; &nbsp;&nbsp; Intel Vtd PMR - SiliconPkg
-<br>
+<br><br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &bull; &nbsp;&nbsp; Tcg2 DXE  – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Dxe – PlatformPkg<br>
 &bull; &nbsp;&nbsp; SecureBootConfigDxe -SecurityPkg<br>
 &bull; &nbsp;&nbsp; Intel Vtd Dxe- SiliconPkg<br>
+<br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &bull; &nbsp;&nbsp; Tcg2 SMM  – SecurityPkg<br>
@@ -5632,7 +5633,8 @@ defined in this specification, some are defined in EDK II documentation.
 
 
 @snap[north-west span-100 ]
-<br>
+<p style="line-height:20%" align="left" ><span style="font-size:0.2em;" >&nbsp;
+</span></P>
 <table id="recTable-1">
 	<tr>
 		<td bgcolor="#0070C0" ><p style="line-height:.010%"><span style="font-size:0.5em" ><b>Phase</b></span></p></td>
@@ -5666,8 +5668,8 @@ defined in this specification, some are defined in EDK II documentation.
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > ProcessTcgPp & ProcessTcgMor&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   ProcessTcgPp Process the TPM physical presence (PP) request & memory overwrite request (MOR)&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:22%"><span style="font-size:0.4em; font-family:Consolas;" > ProcessTcgPp & ProcessTcgMor&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:22%"><span style="font-size:0.4em" >   ProcessTcgPp Process the TPM physical presence (PP) request & memory overwrite request (MOR)&nbsp; </span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > SMM&nbsp;  </span></p></td>
