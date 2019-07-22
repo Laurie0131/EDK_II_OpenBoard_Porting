@@ -5519,33 +5519,33 @@ Stage V supports key secutiy features.
 
 <table id="recTable">
 	<tr>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > FvSecurity&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > &nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  &nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of TCG modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List of TCG modules&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  TPM Services, Config, Platform, etc&nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of IntelVTd modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List of IntelVTd modules&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" > IOMMU PEI & DXE Services &nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List Security modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List Security modules&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" > Provide security architecture protocol Secure boot UI config. . . &nbsp;</span></p></td>
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of variable SMM modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List of variable SMM modules&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  Fault-tolerant, Variable,  SMM Services&nbsp;</span></p></td>
 	</tr>
 </table>	
@@ -5571,9 +5571,9 @@ for a list of more Modules in the FV for stage
 @snap[north-east span-70 ]
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -5581,27 +5581,27 @@ for a list of more Modules in the FV for stage
 <br>
 <br>
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> PEI Components </b><br><br>&nbsp;</span></p>)
+<br>
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> DXE Components </b><br><br>&nbsp;</span></p>)
+<br>
 @box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> SMM Components </b><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
-@snap[north-east span-68 ]
+@snap[north-east span-65 ]
 <br>
-<br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>
 &bull; &nbsp;&nbsp; Tcg2 Pei – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Pei – PlatformPkg<br>
 &bull; &nbsp;&nbsp; Intel Vtd PMR - SiliconPkg
-<br><br>
+<br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &bull; &nbsp;&nbsp; Tcg2 DXE  – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Dxe – PlatformPkg<br>
 &bull; &nbsp;&nbsp; SecureBootConfigDxe -SecurityPkg<br>
 &bull; &nbsp;&nbsp; Intel Vtd Dxe- SiliconPkg<br>
-<br><br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &bull; &nbsp;&nbsp; Tcg2 SMM  – SecurityPkg<br>
@@ -5635,49 +5635,49 @@ defined in this specification, some are defined in EDK II documentation.
 <br>
 <table id="recTable-1">
 	<tr>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Phase</b></span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Name</b> &nbsp;</span></p></td>
-		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Purpose</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.010%"><span style="font-size:0.5em" ><b>Phase</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.010%"><span style="font-size:0.5em" ><b>Name</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:.010%"><span style="font-size:0.5em" ><b>Purpose</b> &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > PEI </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  PeimEntryMA ()</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 PEIM</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > PEI </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  PeimEntryMA ()</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 PEIM</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdPmrInitialize ()&nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the VT-d PEIM&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdPmrInitialize ()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the VT-d PEIM&nbsp; </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  DXE&nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  DriverEntry ()&nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the TPM2 DXE module&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  DXE&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  DriverEntry ()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the TPM2 DXE module&nbsp;  </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdInitialize()&nbsp; </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the VT-d DXE module &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdInitialize()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the VT-d DXE module &nbsp; </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > UserPhysicalPresent()&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Indicates whether a physical user is present for UEFI secure boot &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > UserPhysicalPresent()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >  Indicates whether a physical user is present for UEFI secure boot &nbsp; </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > ProcessTcgPp & ProcessTcgMor&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   ProcessTcgPp Process the TPM physical presence (PP) request & memory overwrite request (MOR)&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > ProcessTcgPp & ProcessTcgMor&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   ProcessTcgPp Process the TPM physical presence (PP) request & memory overwrite request (MOR)&nbsp; </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SMM&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > InitializeTcgSmm ()&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 SMM module&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > SMM&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > InitializeTcgSmm ()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 SMM module&nbsp; </span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MemoryClearCallback ()&nbsp;  </span></p></td>
-		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Callback function for setting the MOR variable &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:.01%"><span style="font-size:0.4em; font-family:Consolas;" > MemoryClearCallback ()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="60%"><p style="line-height:01%"><span style="font-size:0.4em" >   Callback function for setting the MOR variable &nbsp; </span></p></td>
 	</tr>
 </table>
 <br>
