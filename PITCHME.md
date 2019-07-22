@@ -6123,26 +6123,26 @@ This template should be included in feature review and placed in the feature roo
 
 @snap[north-west span-49 ]
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.75em;" ><br>
+<p style="line-height:60%" align="left"><span style="font-size:0.65em;" ><br><br>
 @color[yellow](Firmware Volumes) - The binary containers needed for the feature.<br>
 @color[yellow](Modules)  - The EDK II component binaries and static libraries required.<br>
 @color[yellow](Required Functions) - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.<br>
 @color[yellow](Configuration) - The configurable parameters for a given feature.<br>
 @color[yellow](Data Flows) - The architecturally defined data structures and flows for a given feature.<br>
-@spanend
+@snapend
 
 
 
 @snap[north-east span-49 ]
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.75em;" ><br>
+<p style="line-height:60%" align="left"><span style="font-size:0.65em;" ><br><br>
 @color[yellow](Control Flows) - Key control flows for the feature.<br>
 @color[yellow](Build Files) - The DSC/FDF for integrating the feature.<br>
 @color[yellow](Test Point Results) - The test that can verify porting is complete for the feature.<br>
 @color[yellow](Functional Exit Criteria) - The testable functionality for the feature.<br>
 @color[yellow](Feature Enabling Checklist) - The required activities to achieve desired functionality for the feature.<br>
 @color[yellow](Common Optimizations) - Common size or performance tuning options for this feature.<br>
-@spanend
+@snapend
 
 Note:
 Advanced features should be designed such that they are easily portable between minimum platform compliant implementations. In consideration of portability, it is recommended to encapsulate each feature within a dedicated package. Such encapsulation enables rapid integration of the feature and a focused area for feature-related changes. For example, feature declarations for build elements such as GUIDs, PCDs, PPIs, and protocols are scoped within the feature package DEC file. Including the feature and consequently the
