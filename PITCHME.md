@@ -6220,7 +6220,7 @@ copy and past to readme.md
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvAdvancedLate&nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Stage 3-4 DXE UEFI&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Stage 3-4 DXE UEFI / OS&nbsp;</span></p></td>
 	</tr>
 </table>
 <br>
@@ -6242,14 +6242,14 @@ firmware volume is exposed to the DXE dispatcher
 ---
 @title[Example – Adding Network]
 <p align="right"><span class="gold" >@size[1.1](<b> Example – Adding Network</b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left"><span style="font-size:0.75em;" >
-The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.<br>
+<p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
+@size1.2em](The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.)<br><br>
  1. &nbsp;&nbsp;Set PCDs: <br>
   <font face="Consolas">&nbsp;&nbsp;&nbsp;
-  @size[.8em](gAdvancedFeaturePkgTokenSpaceGuid.PcdNetworkEnable|TRUE)<br>&nbsp;&nbsp;&nbsp;
-  @size[.8em](gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE)<br>
+  @size[.78em](gAdvancedFeaturePkgTokenSpaceGuid.PcdNetworkEnable|TRUE)<br>&nbsp;&nbsp;&nbsp;
+  @size[.78em](gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE)<br>
   </font>
- 2. &nbsp;&nbsp;Add the network modules to the board <font face="Consolas">.dsc and .fdf</font> within the<br>&nbsp;&nbsp;&nbsp; Stage 6 FV <br>
+ 2. &nbsp;&nbsp;Add the network modules to the board <font face="Consolas">.dsc and .fdf</font> within the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stage 6 FV <br>
  3. &nbsp;&nbsp;Common <font face="Consolas">.dsc and .fdf</font> include files found in <font face="Consolas">edk2/NetworkPkg</font><br>
  <font face="Consolas">&nbsp;&nbsp;&nbsp;
   @size[.8em](&bull;&nbsp;&nbsp;NetworkDefines.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
@@ -6258,7 +6258,7 @@ The Network stack modules are board and silicon independent thus no porting is n
   @size[.8em](&bull;&nbsp;&nbsp;NetworkPkg/NetworkComponents.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
   @size[.8em](&bull;&nbsp;&nbsp;Network.fdf.inc)<br>
  </font>
- 4. &nbsp;&nbsp;Add appropriate <font face="Consolas">@size[.8em](!include)</font> statements to <font face="Consolas">@size[.8em](BoardXxx.dsc & .fdf)</font>
+ 4. &nbsp;&nbsp;Add appropriate "<font face="Consolas">@size[.8em](!include)</font>" statements to <font face="Consolas">@size[.8em](BoardXxx.dsc & .fdf)</font>
 <br>
 </span></p>
 
