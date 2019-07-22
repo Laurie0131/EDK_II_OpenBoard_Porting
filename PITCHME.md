@@ -305,7 +305,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 ---?image=assets/images/slides/Slide6.JPG
 @title[Analysis OpenBoard Reference Platforms]
-<p align="right"><span class="gold" >@size[1.1](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Analysis OpenBoard Reference Platforms</b>)</span><span style="font-size:0.75em;" ></span></p>
 @snap[north-west span-90 ]
 <br>
 <br>
@@ -330,7 +330,7 @@ This is for steps 1 - 3
 
 ---
 @title[Get the Reference OpenBoard Source ]
-<p align="right"><span class="gold" >@size[1.1](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Get the Reference OpenBoard Source</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -382,7 +382,7 @@ Get the source from the open source repositories to a local workspace directory
 
 ---
 @title[Build the Reference OpenBoard ]
-<p align="right"><span class="gold" >@size[1.1](<b>Build the Reference OpenBoard </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Build the Reference OpenBoard </b>)</span><span style="font-size:0.75em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 Open a Command Window and CD to the workspace directory<br><br>
@@ -417,7 +417,7 @@ Note:
 
 ---
 @title[Use the "Build" Directory as a Reference ]
-<p align="right"><span class="gold" >@size[1.1](<b>Use the "Build" Directory as a Reference</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Use the "Build" Directory as a Reference</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -462,7 +462,7 @@ Note:
 
 ---
 @title[Study the OpenBoard .DSC and .FDF ]
-<p align="right"><span class="gold" >@size[1.1](<b>Study the OpenBoard .DSC and .FDF</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Study the OpenBoard .DSC and .FDF</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -503,7 +503,7 @@ DSC will point to the correct Libraries used in the reference platform
 
 ---
 @title[DSC Files for KabyLakeRvp3 ]
-<p align="right"><span class="gold" >@size[1.1](<b>DSC Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>DSC Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-49 ]
@@ -585,7 +585,7 @@ We see that it will INCLUDE the other core and silicon .dsc files.  Note the ord
 
 ---
 @title[Example: DSC File]
-<p align="right"><span class="gold" >@size[1.1](<b>Example: DSC File</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example: DSC File</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [Defines]
@@ -687,7 +687,7 @@ Click on the link to view the whole .DSC file
 
 ---
 @title[FDF Files for KabyLakeRvp3 ]
-<p align="right"><span class="gold" >@size[1.1](<b>FDF Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FDF Files for KabyLakeRvp3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-47 ]
@@ -765,7 +765,7 @@ This determines where in the flash map FV and Modules will be placed..
 
 ---?image=assets/images/slides/Slide14.JPG
 @title[Flash Layout for Kabylake ]
-<p align="right"><span class="gold" >@size[1.1](<b>Flash Layout for Kabylake</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Flash Layout for Kabylake</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -798,7 +798,7 @@ The mapping closely corresponds to the different FV that get created as part of 
 
 ---
 @title[Example: Kabylake  .FDF file ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example: Kabylake .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example: Kabylake .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [FD.KabylakeRvp3]
@@ -875,7 +875,7 @@ Click on the link to view the whole .FDF file
 
 ---
 @title[Copy a Similar Reference OpenBoard]
-<p align="right"><span class="gold" >@size[1.1](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Copy a Similar Reference OpenBoard</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-50 ]
@@ -957,7 +957,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 ---
 @title[PI Modules – One board, one dir]
-<p align="right"><span class="gold" >@size[1.1](<b>PI Modules – One board, one dir</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>PI Modules – One board, one dir</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -1044,7 +1044,7 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 
 ---
 @title[New OpenBoard Directory]
-<p align="right"><span class="gold" >@size[1.1](<b>New OpenBoard Directory</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>New OpenBoard Directory</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -1180,7 +1180,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
@@ -1288,7 +1288,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Staged Approach by Features Section ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -1364,7 +1364,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide23.JPG
 @title[Boot Flow – Stage 1]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -1375,7 +1375,7 @@ Stage I is contained within SEC and PEI phases. Code must not be compressed and 
 
 ---?image=assets/images/slides/Slide24.JPG
 @title[High Level Control Flow – Stage 1]
-<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>High Level Control Flow – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-50 ]
@@ -1404,7 +1404,7 @@ These activities, contained within SEC and PEI phases, do not map 1:1 to the req
 
 ---?image=assets/images/slides/Slide25.JPG
 @title[Location of Stage 1 Modules]
-<p align="right"><span class="gold" >@size[1.1](<b> Location of Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Location of Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Check the Board/Platform .FDF file layout<br><br>&nbsp;</span></p>)
@@ -1422,7 +1422,7 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 
 ---
 @title[Stage 1 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 1 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -1491,7 +1491,7 @@ A Note that a child FV is a FV embedded within the parent FV. The child FV is id
 
 ---
 @title[Stage 1 FVs Contents]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 1 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -1585,7 +1585,7 @@ As the foundational stage for further functionality, Stage I may include additio
 
 ---
 @title[Stage 1 Modules]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example <font face="Consolas">SecCore.efi</font></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 1 Modules</b>)</span><span style="font-size:0.75em;" ><br> - Example <font face="Consolas">SecCore.efi</font></span></p>
 
 
 @snap[north-west span-100 ]
@@ -1634,7 +1634,7 @@ Board porting will require creation of libraries identified as produced by the B
 
 ---
 @title[Stage 1 Platform Libraries]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 1 Platform Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 1 Platform Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
 
 
 @snap[north-west span-100 ]
@@ -1704,7 +1704,7 @@ Board porting will require creation / porting of libraries identified as produce
 
 ---?image=assets/images/slides/Slide30.JPG
 @title[How to search for Libraries in the Workspace]
-<p align="right"><span class="gold" >@size[1.1](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-67 ]
@@ -1738,7 +1738,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 
 ---?image=assets/images/slides/Slide31.JPG
 @title[Platform SEC Lib - Kabylake ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform SEC Lib - Kabylake </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform SEC Lib - Kabylake </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[south-west span-49 ]
@@ -1860,7 +1860,7 @@ From reset vector to _ModuleEntryPoint
 
 ---?image=assets/images/slides/Slide32.JPG
 @title[Establish Temporary Memory ]
-<p align="right"><span class="gold" >@size[1.1](<b>Establish Temporary Memory </b>)</span><span style="font-size:0.75em;" ><br>Call to FSP API </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Establish Temporary Memory </b>)</span><span style="font-size:0.75em;" ><br>Call to FSP API </span></p>
 
 
 @snap[north-west span-60 ]
@@ -1914,7 +1914,7 @@ If the boot loader wish to reconfigure the MTRRs differently, it can be overridd
 
 ---
 @title[Transition to PEI Entry Point ]
-<p align="right"><span class="gold" >@size[1.1](<b>Transition to PEI Entry Point </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Transition to PEI Entry Point </b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:80%" align="left" ><span style="font-size:0.75em;">
 SecMain calls the entry point into PEI Core
 </span></p>
@@ -1953,7 +1953,7 @@ Same ase slide
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 1 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -2048,7 +2048,7 @@ Because this flow needs to involve the board initialization,  there is a set of 
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Hook - Board Detection ]
-<p align="right"><span class="gold" >@size[1.1](<b>Hook - Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Hook - Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
 
 
 @snap[north-west span-49 ]
@@ -2127,7 +2127,7 @@ Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EF
 
 ---
 @title[Configuration Multi-SKU PCD – Board ID  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -2213,7 +2213,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Board Debug Initialization ]
-<p align="right"><span class="gold" >@size[1.1](<b>Board Debug Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Debug Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -2281,7 +2281,7 @@ Note:
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Board Init Before Memory Init]
-<p align="right"><span class="gold" >@size[1.1](<b>Board Init Before Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Init Before Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-51 ]
@@ -2366,7 +2366,7 @@ If the final BIOS image only needs to support one board, the board code can just
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[GPIOs – Stage 1]
-<p align="right"><span class="gold" >@size[1.1](<b>GPIOs – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>GPIOs – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-51 ]
@@ -2429,7 +2429,7 @@ procedure  GpioConfigurePads calls GpioConfigureSklPch()
 
 ---
 @title[Silicon Policy – Stage 1]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Silicon Policy – Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-51 ]
@@ -2496,7 +2496,7 @@ The output of FSPM UPD data from this API is the final UPD data.
 
 ---
 @title[Debug Configuration - Serial Port]
-<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Debug Configuration - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 Serial port parameters come from the board and are used for debug features, serial input/output devices supporting local or remote consoles, and OS level debuggers<br><br>
@@ -2535,7 +2535,7 @@ The PCH_SERIAL_IO_CONFIG block provides the configurations to set the Serial IO 
 
 ---
 @title[Debug Configuration PCDs - Serial Port]
-<p align="right"><span class="gold" >@size[1.1](<b>Debug Configuration PCDs - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Debug Configuration PCDs - Serial Port</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
@@ -2581,7 +2581,7 @@ also shown are the debug configuration PCDs
 
 ---
 @title[Stage 1 Checklist ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 1 Checklist </b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">Steps to enable a board for Stage 1.
 </span></p>
 
@@ -2646,7 +2646,7 @@ achieve debug output.
 
 ---
 @title[Stage 1 Checklist 02 ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
 <font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))</font>
@@ -2695,7 +2695,7 @@ Test Point section are correct.
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section 02 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -2772,7 +2772,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide46.JPG
 @title[Boot Flow – Stage 2]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -2783,7 +2783,7 @@ Note:
 
 ---?image=assets/images/slides/Slide47.JPG
 @title[High Level Control Flow – Stage 2]
-<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>High Level Control Flow – Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-58 ]
@@ -2816,7 +2816,7 @@ Stage II extends the Stage I control flow by executing the platform and silicon 
 
 ---
 @title[Stage 2 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 2 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -2863,7 +2863,7 @@ Notice FvFspM is in both Stage 1 and stage 2
 
 ---
 @title[Stage 2 FVs Contents]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 2 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -2918,7 +2918,7 @@ Example show Kabylake with FSP wrapper to call the FSP MemoryInit function insid
 
 ---
 @title[Stage 2 Platform Libraries - PEI]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Platform Libraries - PEI</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 2 Platform Libraries - PEI</b>)</span><span style="font-size:0.75em;" ></b></span></p>
 
 
 @snap[north-west span-100 ]
@@ -2984,7 +2984,7 @@ MinPlatformPkg MinPlatformPkg Test point library. It provides helper functionali
 
 ---
 @title[Stage 2 Platform Libraries - DXE]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 2 Platform Libraries - DXE</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 2 Platform Libraries - DXE</b>)</span><span style="font-size:0.75em;" ></b></span></p>
 
 
 @snap[north-west span-100 ]
@@ -3031,7 +3031,7 @@ PciHostBridgeLib
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 2 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules <br>- Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules <br>- Stage 2</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3099,7 +3099,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 ---
 @title[Platform Initialization Memory Init]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Memory Init</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3157,7 +3157,7 @@ Memory Initialization  done using the FSP Memory Init API through the FSP wrappe
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3232,7 +3232,7 @@ With call to: KabylakeRvp3BoardInitBeforeSiliconInit()
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules 02]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3304,7 +3304,7 @@ For Kabylake just returns EFI_SUCCESS
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[FSP Wrapper for Silicon Initialization ]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Wrapper for Silicon Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Wrapper for Silicon Initialization </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3357,7 +3357,7 @@ Note:
 
 ---
 @title[Silicon Policy Update Lib ]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Update Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Silicon Policy Update Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-95 ]
 <br>
@@ -3403,7 +3403,7 @@ http://infodome.wikidot.com/local--files/rules-of-combat-dome/rule_book1.gif
 
 ---
 @title[Silicon Policy APIs ]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy APIs </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Silicon Policy APIs </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-75 ]
 <br>
@@ -3453,7 +3453,7 @@ instead of all fields.
 
 ---?image=assets/images/slides/Slide58.JPG
 @title[FSP Silicon Policy Data Flow ]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Silicon Policy Data Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Silicon Policy Data Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
@@ -3478,7 +3478,7 @@ SiliconPolicyDonePreMemory ()
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Silicon]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3551,7 +3551,7 @@ Platform calls silicon module relying on the FSP code to manage the underling da
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Silicon 02]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3634,7 +3634,7 @@ Performs silicon post-mem policy update.
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Silicon 03]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Silicon</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -3700,7 +3700,7 @@ The silicon post-mem policy is finalized.
  
 ---
 @title[Prepare for Hand-off to DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Prepare for Hand-off to DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Prepare for Hand-off to DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-east span-70 ]
 
@@ -3772,7 +3772,7 @@ package.
 
 ---
 @title[Stage 2 Checklist  ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 2 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 2 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Steps to enable a board for Stage 2.
 </span></p>
@@ -3840,7 +3840,7 @@ BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section 03 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -3917,7 +3917,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide65.JPG
 @title[Boot Flow – Stage 3]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -3943,7 +3943,7 @@ input devices, graphics devices, and other storage devices.
 
 ---?image=assets/images/slides/Slide66.JPG
 @title[High Level Control Flow – Stage 3]
-<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>High Level Control Flow – Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-60 ]
@@ -3987,7 +3987,7 @@ and used in Stage III.
 
 ---
 @title[Stage 3 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 3 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4014,7 +4014,7 @@ and used in Stage III.
 <br>
 <br>
 <br>
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 3 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 <table id="recTable">
 	<tr>
@@ -4053,7 +4053,7 @@ for a list of more Modules in the FV for stage 3
 
 ---
 @title[Stage 3 Platform Libraries - PEI]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 3 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 3 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></b></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4124,7 +4124,7 @@ Serial port is standard EDK II from MdeModulePkg/Library/BaseSerialPortLib16550
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 3 PEI]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:45%" align="left" ><span style="font-size:0.75em;">Silicon Initilization done in Stage 2 for Stage 3</span></p>
 
 @snap[north-west span-49 ]
@@ -4212,7 +4212,7 @@ and used in Stage III.
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 3 DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE</span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -4285,7 +4285,7 @@ at DXE phase
 
 ---?image=assets/images/slides/Slide71.JPG
 @title[Initial Program Load (IPL) PEIM for DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Initial Program Load (IPL) PEIM for DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Initial Program Load (IPL) PEIM for DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 <br>
 <div class="left">
 <span style="font-size:0.8em" > &nbsp;</span>
@@ -4331,7 +4331,7 @@ Characteristics
 
 ---?image=assets/images/slides/Slide72.JPG
 @title[DXE Phase Stage 3]
-<p align="right"><span class="gold" >@size[1.1](<b>DXE Phase Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>DXE Phase Stage 3</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 <div class="left-1">
 <span style="font-size:0.8em" > &nbsp;</span>
@@ -4363,7 +4363,7 @@ Again, the DXE Main core code should not require porting, but  knowing what is d
 
 ---?image=assets/images/slides/Slide73.JPG
 @title[Architectural Protocols for KabyLake]
-<p align="right"><span class="gold" >@size[1.1](<b>Architectural Protocols for KabyLake</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Architectural Protocols for KabyLake</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 
@@ -4403,7 +4403,7 @@ We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the pl
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Platform Initialization Board Hook Modules - Stage 3 DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE - BDS</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ><br>- Stage 3 DXE - BDS</span></p>
 
 @snap[north-west span-52 ]
 <br>
@@ -4483,7 +4483,7 @@ To find the Libraries for the Platform specific code
 
 ---
 @title[Stage 3 Checklist  ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 3 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 3 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Steps to enable a board for Stage 3.
 </span></p>
@@ -4555,7 +4555,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_bo
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section 04 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -4632,7 +4632,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide77.JPG
 @title[Boot Flow – Stage 4]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -4659,7 +4659,7 @@ collectively enabled in Stage VI.
 
 ---?image=assets/images/slides/Slide78.JPG
 @title[High Level Control Flow – Stage 4]
-<p align="right"><span class="gold" >@size[1.1](<b>High Level Control Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>High Level Control Flow – Stage 4</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-57 ]
@@ -4705,7 +4705,7 @@ The green blocks on slide Control Flow are reuse of the existing blocks from Sta
 
 ---
 @title[Stage 4 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 4 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4748,7 +4748,7 @@ dedicated firmware volume.
 
 ---
 @title[Stage 4 Firmware Volumes Contents]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 4 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4803,7 +4803,7 @@ for a list of more Modules in the FV for stage
 
 ---
 @title[Stage 4 Platform Libraries - PEI]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 4 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 4 Platform Architecture Libraries</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -4864,7 +4864,7 @@ important to assess the utility of existing library instances when developing bo
 
 ---
 @title[Tips for Board Specific ACPI  ]
-<p align="right"><span class="gold" >@size[1.1](<b> Tips for Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Tips for Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-70 ]
@@ -4916,7 +4916,7 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Example: Board Specific ACPI ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example: Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example: Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -4985,7 +4985,7 @@ A better way is to keep those board specific SSDT in board directly using a boar
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Required Function Interfaces DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Required Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Required Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-52 ]
 <br>
@@ -5050,7 +5050,7 @@ This routine registers two callbacks to call fsp's notifies
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Required SMM Function Interfaces DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-52 ]
 <br>
@@ -5110,7 +5110,7 @@ This routine registers two callbacks to call fsp's notifies
 
 ---?image=assets/images/slides/Slide37.JPG
 @title[Required SMM Function Interfaces DXE]
-<p align="right"><span class="gold" >@size[1.1](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Required SMM Function Interfaces DXE</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-52 ]
 <br>
@@ -5170,7 +5170,7 @@ This routine registers two callbacks to call fsp's notifies
 
 ---
 @title[Stage 4 Checklist  ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 4 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 4 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
 Steps to enable a board for Stage 4.
 </span></p>
@@ -5221,7 +5221,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_bo
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section 05 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -5298,7 +5298,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide89.JPG
 @title[Boot Flow – Stage 5]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 5</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 5</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -5315,7 +5315,7 @@ should be enabled during standard silicon initialization flows in earlier stages
 
 ---?image=assets/images/slides/Slide90.JPG
 @title[Stage 5 is Focused on Security ]
-<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 is Focused on Security </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stage 5 is Focused on Security </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100]
@@ -5360,7 +5360,7 @@ Once the board porting work is finished, some minimal security checks should be 
 
 ---
 @title[Stage 5 Porting - Goals]
-<p align="right"><span class="gold" >@size[1.1](<b>Stage 5 Porting - Goals</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stage 5 Porting - Goals</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Satisfy industry standard security specifications 
 </span></p>
@@ -5396,7 +5396,7 @@ Goals -
 
 ---
 @title[Stage 5 – Security- Features ]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 – Security- Features </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 5 – Security- Features </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-70  ]
@@ -5457,7 +5457,7 @@ requirement for secure authentication and management of the UEFI Secure Boot key
 
 ---
 @title[Stage 5 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 5 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -5510,7 +5510,7 @@ Stage V supports key secutiy features.
 
 ---
 @title[Stage 5 Firmware Volumes Contents]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 5 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -5565,7 +5565,7 @@ for a list of more Modules in the FV for stage
 
 ---
 @title[Modules – Stage 5 ]
-<p align="right"><span class="gold" >@size[1.1](<b> Modules – Stage 5 </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Modules – Stage 5 </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-70 ]
@@ -5629,7 +5629,7 @@ defined in this specification, some are defined in EDK II documentation.
 
 ---
 @title[Stage 5 Required Functions]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 Required Functions</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 5 Required Functions</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -5702,7 +5702,7 @@ important to assess the utility of existing library instances when developing bo
 
 ---
 @title[Security Related PCDs and Variables ]
-<p align="right"><span class="gold" >@size[1.1](<b>Security Related PCDs and Variables</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Security Related PCDs and Variables</b>)</span><span style="font-size:0.75em;" ></span></p>
 <ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.75em" > Authenticated Variables – UEFI Secure Boot </span> </li>
   <ul style="list-style-type:none; line-height:0.6;">
@@ -5753,7 +5753,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
 
 ---
 @title[Security Feature Related PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>Security Feature Related PCDs</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Security Feature Related PCDs</b>)</span><span style="font-size:0.75em;" ></span></p>
 <br>
 <ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.75em" > Enable SMI handler profile </span> </li>
@@ -5787,7 +5787,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
 
 ---
 @title[Stage 5 Checklist  ]
-<p align="center"><span class="gold" >@size[1.1](<b>Stage 5 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 5 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">Steps to enable a board for Stage 5:</span></p>
 
 @snap[north-east span-13]
@@ -5849,7 +5849,7 @@ Steps to enable a board for Stage V
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features Section 05 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
 @snap[north-west span-50 ]
@@ -5926,7 +5926,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide101.JPG
 @title[Boot Flow – Stage 6]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow – Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow – Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 Note:
@@ -5944,7 +5944,7 @@ and results in a variety of benefits:
 
 ---
 @title[Add Non-essential Features - Stage 6 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Add Non-essential Features - Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Add Non-essential Features - Stage 6</b>)</span><span style="font-size:0.75em;" ></span></p>
 @snap[north-west span-49 ]
 <br>
 <br>
@@ -6000,7 +6000,7 @@ required level of design and validation complexity.
 
 ---?image=assets/images/slides/Slide103.JPG
 @title[Advanced Feature Requirements]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Requirements</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Requirements</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -6050,7 +6050,7 @@ section.
 
 ---
 @title[Advanced Feature Design ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Design</b>)</span><br>
 <span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
 
 
@@ -6115,7 +6115,7 @@ the "Required Functions" section of the advanced feature template. Though not re
 
 +++
 @title[Advanced Feature Design 02 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Design</b>)</span><br>
 <span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
 <p style="line-height:60%" align="left"><span style="font-size:0.7em;" >
 This template should be included in feature review and placed in the feature root directory as README.md
@@ -6155,7 +6155,7 @@ the "Required Functions" section of the advanced feature template. Though not re
 
 +++
 @title[Advanced Feature Design 02 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Design</b>)</span><br>
 <span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
 <p style="line-height:60%" align="left"><span style="font-size:0.7em;" >
 This template should be included in feature review and placed in the feature root directory as README.md - <i>@size[.7em](&nbsp;copy and paste below)</i>
@@ -6194,7 +6194,7 @@ copy and past to readme.md
 
 ---
 @title[Stage 6 Firmware Volumes]
-<p align="right"><span class="gold" >@size[1.1](<b> Stage 6 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Stage 6 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-100 ]
@@ -6241,9 +6241,9 @@ firmware volume is exposed to the DXE dispatcher
 
 ---
 @title[Example – Adding Network]
-<p align="right"><span class="gold" >@size[1.1](<b> Example – Adding Network</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b> Example – Adding Network</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
-@size[1.2em](The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.)<br><br>
+@size[1.1em](The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.)<br><br>
  1. &nbsp;&nbsp;Set PCDs: <br>
   <font face="Consolas">&nbsp;&nbsp;&nbsp;
   @size[.78em](gAdvancedFeaturePkgTokenSpaceGuid.PcdNetworkEnable|TRUE)<br>&nbsp;&nbsp;&nbsp;
@@ -6272,7 +6272,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 
 ---
 @title[Current Issues ]
-<p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
 
 
@@ -6292,7 +6292,7 @@ Note:
 
 ---
 @title[Goals]
-<p align="right"><span class="gold" >@size[1.1](<b>GOALS</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
 <span style="font-size:0.75em;" ></span></p>
 
 
@@ -6330,7 +6330,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 ---?image=assets/images/slides/Slide5.JPG
 @title[Four Focus Areas Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Four Focus Areas</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Four Focus Areas</b>)</span></span></p>
 
 @snap[north-east span-35 fragment]
 <br>
@@ -6383,7 +6383,7 @@ In order to provide suggestions on the problem statements earilier, we need to f
 ---?image=assets/images/slides/Slide6.JPG
 @title[Tree Structure Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Tree Structure</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Tree Structure</b>)</span></span></p>
 
 
 Note:
@@ -6394,7 +6394,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Organization]
-<p align="right"><span class="gold" >@size[1.1](<b>Organization</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Organization</b>)</span></span></p>
 
 
 @snap[north span-50 ]
@@ -6446,7 +6446,7 @@ The architecture makes use of four primary classifications of code that are gene
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Source EDK II Workspace]
-<p align="right"><span class="gold" >@size[1.1](<b>Open Source EDK II Workspace</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Source EDK II Workspace</b>)</span></span></p>
 
 @snap[north-west span-50 ]
 <br>
@@ -6502,7 +6502,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Board Tree Structure]
-<p align="right"><span class="gold" >@size[1.1](<b>Open Board Tree Structure</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Board Tree Structure</b>)</span></span></p>
 
 @snap[north-west span-75 ]
 <br>
@@ -6550,7 +6550,7 @@ Not shown is the edk2 repository since this should always be considered as commo
 
 ---
 @title[Directory Description]
-<p align="right"><span class="gold" >@size[1.1](<b>Directory Description</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Directory Description</b>)</span></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](edk2-platform): </b>EDK II repo includes open source platform code </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
@@ -6590,7 +6590,7 @@ Note:
 
 ---
 @title[FSP Directory Description]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Directory Description</b>)</span></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](FSP): </b>Intel FSP  repo includes FSP binary platform code </span></p>
 
 <ul style="list-style-type:disc; line-height:0.8;">
@@ -6628,7 +6628,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 
 ---
 @title[Board Package Structure ]
-<p align="right"><span class="gold" >@size[1.1](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -6668,7 +6668,7 @@ Note:
 
 ---
 @title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -6702,7 +6702,7 @@ Note:
 
 ---
 @title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -6742,7 +6742,7 @@ Note:
 
 ---
 @title[One Feature, one directory Guideline]
-<p align="right"><span class="gold" >@size[1.1](<b>One Feature, one directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>One Feature, one directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -6827,7 +6827,7 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 
 ---
 @title[Compare to Minnowboard  MAX/Turbot]
-<p align="right"><span class="gold" >@size[1.1](<b>Compare to Minnowboard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Compare to Minnowboard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -6924,7 +6924,7 @@ This introduces issues when the developer wants to find a  particular driver.
 ---?image=assets/images/slides/Slide17.JPG
 @title[Focus - Features Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Features</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Features</b>)</span></span></p>
 
 @snap[north-east span-35 ]
 <br>
@@ -6954,7 +6954,7 @@ In order to provide suggestions on the problem statements above, we would like t
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Feature –BIOS module selection]
-<p align="right"><span class="gold" >@size[1.1](<b>Feature –BIOS module selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Feature –BIOS module selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 <p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Minimum set of features based on Categories </span></p>
 
 @snap[north span-50 ]
@@ -7006,7 +7006,7 @@ Note:
 
 ---?image=assets/images/slides/Slide20.JPG
 @title[Basic Boot Components]
-<p align="right"><span class="gold" >@size[1.1](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 
 
@@ -7024,7 +7024,7 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Features Build Enabled]
-<p align="right"><span class="gold" >@size[1.1](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-85 ]
 <br>
@@ -7091,7 +7091,7 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Example Build config file]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Build config file</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Build config file</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-80 ]
 <br>
@@ -7134,7 +7134,7 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Platform Features Table d’hôte ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -7216,7 +7216,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Platform Features à la cart with PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Features à la cart with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features à la cart with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -7257,7 +7257,7 @@ At the same time, a platform firmware may provide an "à la cart" menu so that a
 
 ---
 @title[Where are the DSC & FDF files? ]
-<p align="right"><span class="gold" >@size[1.1](<b>Where are the DSC & FDF files?</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Where are the DSC & FDF files?</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -7335,7 +7335,7 @@ Note:
 
 ---
 @title[Example Kabylake Configuration .DSC file ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .DSC file</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Kabylake Configuration .DSC file</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [PcdsFixedAtBuild]
@@ -7400,7 +7400,7 @@ Click on link to view the whole .DSC file
 
 ---
 @title[Example Kabylake Configuration .FDF file ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [FD.KabylakeRvp3]
@@ -7478,7 +7478,7 @@ Click on the link to view the whole .FDF file
 ---?image=assets/images/slides/Slide28.JPG
 @title[Focus - Configuration Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Configuration </b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Configuration </b>)</span></span></p>
 
 @snap[south-west span-30 ]
 <br>
@@ -7504,7 +7504,7 @@ there might be many sources of platform configuration data
 
 ---
 @title[Configuration Options ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 There might be many sources of platform configuration data.  </span></p>
@@ -7559,7 +7559,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 02 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 
@@ -7602,7 +7602,7 @@ readiness. If PcdGet is called before UEFI variable services ready, the default 
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 03 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 @color[yellow](Configuration Block) – It is a data structure to put all policy data in a block without any C-language data pointer in a policy data <br><br>
@@ -7635,7 +7635,7 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 
 ---
 @title[Use PCD instead of UEFI Variable  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Use PCD instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Use PCD instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -7778,7 +7778,7 @@ BKM is to set the desired value in the Platform Specific .DSC file
  
 ---?image=/assets/images/slides/Slide34.JPG
 @title[How to Map PCD ]
-<p align="right"><span class="gold" >@size[1.1](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 Using "@color[yellow](Callback)" mechanism to convert PCD to Configuration data
 </span></p>
@@ -7804,7 +7804,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 
 ---
 @title["C" Data Structure as PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>"C" Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>"C" Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -7877,7 +7877,7 @@ typedef struct {
 
 ---
 @title[Example of DSC xRef DEC & .h  files  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef DEC & .h  files </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example of DSC xRef DEC & .h  files </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -7955,7 +7955,7 @@ Note:
 
 ---
 @title[Configuration Multi-SKU PCD – Board ID  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -8035,7 +8035,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 
 ---
 @title[Default Stores PCD – for Configuration   ]
-<p align="right"><span class="gold" >@size[1.1](<b>Default Stores PCD – for Configuration  </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Default Stores PCD – for Configuration  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -8107,7 +8107,7 @@ PcdSet16S (PcdSetNvStoreDefaultId
 
 ---
 @title[Silicon Policy data flow guidelines]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy data flow guidelines</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Silicon Policy data flow guidelines</b>)</span></span></p>
 
 @snap[north-east span-60 ]
 <br>
@@ -8163,7 +8163,7 @@ A board module may refer to another source to get the board specific policy data
 
 ---?image=assets/images/slides/Slide40.JPG
 @title[Example: FSP policy in MinPlatformPkg]
-<p align="right"><span class="gold" >@size[1.1](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
 
 
 Note:
@@ -8180,7 +8180,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 
 ---
 @title[Update Silicon Policy example ]
-<p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -8278,7 +8278,7 @@ Code is in:
 
 ---
 @title[Dynamically set Defaults ]
-<p align="right"><span class="gold" >@size[1.1](<b>Dynamically set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Dynamically set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[west span-100 ]
 <br>
@@ -8320,7 +8320,7 @@ Note:
 ---?image=assets/images/slides/Slide43.JPG
 @title[Board Porting ]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-east span-33 ]
 <br>
@@ -8346,7 +8346,7 @@ Board Specific initialization
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
@@ -8452,7 +8452,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 ---?image=assets/images/slides/Slide45.JPG
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 
@@ -8470,7 +8470,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 02]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -8486,7 +8486,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 03]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -8502,7 +8502,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 04]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -8517,7 +8517,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 05]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -8532,7 +8532,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 06]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -8545,7 +8545,7 @@ Note:
 
 ---?image=assets/images/slides/Slide50.JPG
 @title[Staged Approach by Features]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
 
 @snap[north-east span-60 ]
 <br>
@@ -8568,7 +8568,7 @@ In order to separate modules in different boot stages, the BKM is to Standardize
 
 ---?image=assets/images/slides/Slide51.JPG
 @title[UEFI Firmware Volumes (FV) - Review]
-<p align="right"><span class="gold" >@size[1.1](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-70 ]
 <br>
@@ -8617,7 +8617,7 @@ Platform Initialization - Firmware Volume
 
 ---
 @title[Standardize FV By Stages]
-<p align="right"><span class="gold" >@size[1.1](<b>Standardize FV By Stages</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Standardize FV By Stages</b>)</span></span></p>
 
 
 @snap[north-east span-71 ]
@@ -8678,7 +8678,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 
 ---
 @title[FSP Firmware Volumes ]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Firmware Volumes </b>)<br></span><span style="font-size:0.75em;" >- Created Pre-Build</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Firmware Volumes </b>)<br></span><span style="font-size:0.75em;" >- Created Pre-Build</span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -8769,7 +8769,7 @@ Prior to the EDK II build the Tool RebaseAndPatchFspBinBaseAddress.py will rebas
 
 ---?image=assets/images/slides/Slide54.JPG
 @title[FSP APIs in FSP Binary]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
 <a href="https://firmware.intel.com/sites/default/files/A_Tour_Beyond_BIOS_Using_the_Intel_Firmware_Support_Package_with_the_EFI_Developer_Kit_II_(FSP2.0).pdf">PDF</a>
 </span></p>
 
@@ -8810,7 +8810,7 @@ Another Note: : If FSP returns the reset required status in any of the API, then
 
 ---?image=assets/images/slides/Slide55.JPG
 @title[Boot Flow with FSP API Mode]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow with FSP API Mode</b>)</span><span style="font-size:0.5em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow with FSP API Mode</b>)</span><span style="font-size:0.5em;" ></span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.75em; ">
 5 APIs for FSP
@@ -8834,7 +8834,7 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 
 ---?image=assets/images/slides/Slide56.JPG
 @title[FSP 2.1 Dispatch Mode Boot Flow]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
 <b>`gIntelFsp2WrapperTokenSpaceGuid`.@color[yellow](`PcdFspModeSelection`)</b>	0 - dispatch, 1 – API
@@ -8880,7 +8880,7 @@ How? – by using EDK II Libraries for Platform Hooks
 
 ---?image=assets/images/slides/Slide58.JPG
 @title[EDK II Libraries w/ Platform Hooks]
-<p align="right"><span class="gold" >@size[1.1](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
@@ -8938,7 +8938,7 @@ Search INF for string: LIBRARY_CLASS  =
 
 ---?image=assets/images/slides/Slide59.JPG
 @title[Library Classes Section in DSC]
-<p align="right"><span class="gold" >@size[1.1](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 <p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`DebugLib` class example </span></p>
 <br>
@@ -8994,7 +8994,7 @@ Only one instance of each named library class may be linked to a given module
 
 ---
 @title[Platform Initialization Board hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -9073,7 +9073,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 ---
 @title[Platform Initialization Board hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -9153,7 +9153,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 ---?image=assets/images/slides/Slide5.JPG
 @title[EDK II Open Platform Summary Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
 
 @snap[north-east span-35 ]
 <br>
