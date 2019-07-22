@@ -6005,18 +6005,110 @@ required level of design and validation complexity.
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.85em;" >
 Each advanced feature:
 </span></p>
 <ul style="list-style-type:none; line-height:0.85;">
   <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Has low coupled component interactions</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Complete, mutually independent and only depend on packages in edk2 rep.</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Complete, mutually independent and only depend on packages <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in edk2 repository</span> </li>
   <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Organized as cohesive packages related to the same advanced feature</span> </li>
   <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Support enabling individually as part of porting within stage 6</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Possible to distribute independently in binary form –  add/remove PCD Switch</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Possible to distribute independently in binary form –  add/remove PCD <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch</span> </li>
   <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Self-documenting – contains a ReadMe.md template</span> </li>
 </ul>
 @snapend
+
+
+Note:
+https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/16476/width668/vx477nkd-1350018704.jpg
+
+- Advanced features must be a complete feature.
+  - Fractions of functionality such as libraries that plug into a module defined in another package are not features.
+- Advanced features may only depend on packages in edk2.
+  - DEC files outside edk2 shall not be referenced in an advanced feature.
+- Advanced features shall be organized in cohesive packages related to the feature
+domain.
+      - Informative examples: DebugFeaturePkg, IoFeaturePkg, PowerManagementFeaturePkg
+      - New feature packages must be proposed as an RFC to the community mailing list. The proposal shall include the package name, purpose, maintainers and reviewers, and identify any pre-existing packages that will be moved to the feature. The maintainers of any packages affected by the proposal must be included in the RFC notification list. If the feature proposal is well received, it must be ratified in the TianoCore Design Meeting. If approved, the RFC author should follow through to implement the change.
+
+Advanced features must be mutually independent.
+
+Advanced features must support being enabled on an individual basis when Stage VI is
+enabled.
+
+- Advanced features must be distributed in a binary independent manner such that the
+feature can be added and removed at the binary level (recommendation is with a single
+FeaturePcd).
+- Advanced features must be self-documenting. Each feature must include a ReadMe.md
+in the root directory that describes the feature using the template described in this
+section.
+- Advanced features must fail in a graceful and developer friendly manner
+
+
+
+
+---
+@title[Advanced Feature Design ]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<span style="font-size:0.75em;" >-- Feature Template Readme.md </span></p>
+
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Firmware Volumes<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Modules <br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Required Functions<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Configuration<br>&nbsp;</span></p>)
+@snapend
+
+@snap[north span-30 ]
+<br>
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Data Flows<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Control Flows<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Build Files<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Test Point Results<br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-30 ]
+<br>
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Functional Exit Criteria<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Feature Enabling Checklist<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Common Optimizations<br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+Define an advanced feature using the template as shown on this slide. This template should be included in feature review and placed in the feature root directory as README.md – 
+Next slide has details
+
+
+Advanced features should be designed such that they are easily portable between minimum platform compliant implementations. In consideration of portability, it is recommended to encapsulate each feature within a dedicated package. Such encapsulation enables rapid integration of the feature and a focused area for feature-related changes. For example, feature declarations for build elements such as GUIDs, PCDs, PPIs, and protocols are scoped within the feature package DEC file. Including the feature and consequently the
+package imports the feature tokens within the available namespace and changes affecting the feature are localized to the package which in turn exposes the change to all feature consumers.
+
+
+
+- Firmware Volumes - The binary containers needed for the feature.
+- Modules  - The EDK II component binaries and static libraries required.
+- Required Functions - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.
+- Configuration - The configurable parameters for a given feature.
+- Data Flows - The architecturally defined data structures and flows for a given feature.
+- Control Flows - Key control flows for the feature.
+- Build Files - The DSC/FDF for integrating the feature.
+- Test Point Results - The test that can verify porting is complete for the feature.
+- Functional Exit Criteria - The testable functionality for the feature.
+- Feature Enabling Checklist - The required activities to achieve desired functionality for the feature.
+- Common Optimizations - Common size or performance tuning options for this feature.
+
+
+
+The Advanced Feature template should be used to describe relevant configuration for integrating the feature into a minimum platform compliant system. Any board or silicon specific details should be abstracted such that the information is provided to the feature via "feature APIs". Such dependencies are recommended to be exposed via binary interfaces such as PPIs and protocols and can be considered similar in purpose to the architectural PPIs and Protocols defined in the PI specification. Such requirements must be included in
+the "Required Functions" section of the advanced feature template. Though not required, to increase portability, advanced features should not depend upon deprecated EDK II packages and attempt to reduce exposure to packages other than MdePkg and UefiCpuPkg. In turn, this decreases risk of depending upon deprecated packages in the future 
+
 
 ---
 @title[Current Issues ]
