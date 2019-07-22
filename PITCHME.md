@@ -2034,7 +2034,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 
 
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.75em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.8em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
 @snapend
 
 
@@ -5391,6 +5391,45 @@ Goals -
 -  Hardware rooted authenticated boot that can establish a Static Root of Trust for Verification (S-RTV) and continue an authenticated chain of verification throughout the boot process.
 -  System measurement capability that allows the firmware to serve as a Static Root of Trust for Measurement (S-RTM).
 -  Protection from Direct Memory Access (DMA) attacks.
+
+
+
+---
+@title[Stage 5 – Security- Features ]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 – Security- Features </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-70 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-31 ]
+<br>
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>TCG trusted boot</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> UEFI Secure Boot</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-68 ]
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >TCG measured boot chain of trust is should be enabled in this stage.<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Authenticated UEFI Variable support must be completely functional. This is a basic requirement for secure authentication and UEFI Secure Boot key management<br><br><br></span></p>)
+@snapend
+
+
+Note:
+
+The TCG measured boot chain of trust is should be enabled in this stage. At this point,
+Authenticated UEFI Variable support must be completely functional. This is a basic
+requirement for secure authentication and management of the UEFI Secure Boot keys.
+
 
 
 ---
