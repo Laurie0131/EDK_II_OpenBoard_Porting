@@ -6122,8 +6122,8 @@ This template should be included in feature review and placed in the feature roo
 </span></p>
 
 @snap[north-west span-49 ]
-<br>
-<p style="line-height:60%" align="left"><span style="font-size:0.65em;" ><br><br>
+<br><br>
+<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br>
 @color[yellow](Firmware Volumes) - The binary containers needed for the feature.<br>
 @color[yellow](Modules)  - The EDK II component binaries and static libraries required.<br>
 @color[yellow](Required Functions) - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.<br>
@@ -6134,8 +6134,8 @@ This template should be included in feature review and placed in the feature roo
 
 
 @snap[north-east span-49 ]
-<br>
-<p style="line-height:60%" align="left"><span style="font-size:0.65em;" ><br><br>
+<br><br>
+<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br>
 @color[yellow](Control Flows) - Key control flows for the feature.<br>
 @color[yellow](Build Files) - The DSC/FDF for integrating the feature.<br>
 @color[yellow](Test Point Results) - The test that can verify porting is complete for the feature.<br>
