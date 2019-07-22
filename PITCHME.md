@@ -5972,7 +5972,7 @@ Examples: Core Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
-  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management Technology (AMT) </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
 </ul>
 
@@ -5980,7 +5980,7 @@ Examples: Core Features
 &nbsp;&nbsp;Board Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
-  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Setup (policy) </span> </li>
 </ul>
 @snapend
