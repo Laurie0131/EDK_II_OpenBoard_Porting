@@ -5805,9 +5805,11 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
     <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Configure <font face="Consolas">@size[.8em](@color[yellow](PcdTpmInstanceGuid))</font> to select TPM hardware. 
 	     Default value of <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.8em](@color[yellow](gEfiTpmDeviceInstanceTpm20DtpmGuid))</font> is usually correct.</span> </li>
  </ul>
- <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot: Update 
- <br>&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar;))</font> to check if a user is 
- <br>&nbsp;&nbsp;&nbsp;physically present to authorize change of authenticated variables.</span></li>
+ <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot:</span></li>
+ <ul style="list-style-type:none; line-height:0.46;">
+      <li>&bull;&nbsp;&nbsp;Update <font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar;))</font> to check if a user is 
+      physically present to authorize change of authenticated variables.</span></li>
+ </ul>
  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
  <ul style="list-style-type:none; line-height:0.46;">
     <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May select TPM2 instance <font face="Consolas">@size[.8em](@color[yellow](PcdTpmInstanceGuid))</font>.</span> </li>
