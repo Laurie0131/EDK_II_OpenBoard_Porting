@@ -5972,7 +5972,7 @@ Examples: Core Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
-  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
 </ul>
 
