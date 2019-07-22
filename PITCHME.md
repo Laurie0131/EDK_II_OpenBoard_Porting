@@ -5446,9 +5446,259 @@ Goals -
 
 Note:
 
-The TCG measured boot chain of trust should be enabled in this stage. At this point,
+The TCG measured boot chain of trust should be enabled in this stage. 
+
+
+At this point,
 Authenticated UEFI Variable support must be completely functional. This is a basic
 requirement for secure authentication and management of the UEFI Secure Boot keys.
+
+
+
+---
+@title[Stage 5 Firmware Volumes]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 Firmware Volumes</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Name&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Content</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >  FvSecurity&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Security related modules&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvSecurityPreMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvSecurityPostMemory&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;  FvSecurityLate&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" >  NvStorage&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em" > Real NV storage on flash&nbsp;</span></p></td>
+	</tr>
+</table>
+<br>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Supports key security features
+</span></p>
+
+
+@snapend
+
+
+
+
+Note:
+
+Stage V supports key secutiy features.
+
+
+
+---
+@title[Stage 5 Firmware Volumes Contents]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 FVs Contents</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+
+<table id="recTable">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>FV&nbsp;</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Components</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.65em" ><b>Purpose</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > FvSecurity&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of TCG modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  TPM Services, Config, Platform, etc&nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of IntelVTd modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" > IOMMU PEI & DXE Services &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List Security modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" > Provide security architecture protocol Secure boot UI config. . . &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%><p style="line-height:01%"><span style="font-size:0.4em;" > List of variable SMM modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" >  Fault-tolerant, Variable,  SMM Services&nbsp;</span></p></td>
+	</tr>
+</table>	
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Mapped according to .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+see :
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/72_firmware_volumes.html 
+
+for a list of more Modules in the FV for stage 
+
+---
+@title[Modules – Stage 5 ]
+<p align="right"><span class="gold" >@size[1.1](<b> Tips for Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-east span-70 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-31 ]
+<br>
+<br>
+@box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> PEI Components </b><br><br>&nbsp;</span></p>)
+@box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> DXE Components </b><br><br>&nbsp;</span></p>)
+@box[bg-navy text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b> SMM Components </b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-68 ]
+<br>
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+&bull; &nbsp;&nbsp; Tcg2 Pei – SecurityPkg<br>
+&bull; &nbsp;&nbsp; Tcg2 platform Pei – PlatformPkg<br>
+&bull; &nbsp;&nbsp; Intel Vtd PMR - SiliconPkg
+<br><br>
+</span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+&bull; &nbsp;&nbsp; Tcg2 DXE  – SecurityPkg<br>
+&bull; &nbsp;&nbsp; Tcg2 platform Dxe – PlatformPkg<br>
+&bull; &nbsp;&nbsp; SecureBootConfigDxe -SecurityPkg<br>
+&bull; &nbsp;&nbsp; Intel Vtd Dxe- SiliconPkg<br>
+<br><br>
+</span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+&bull; &nbsp;&nbsp; Tcg2 SMM  – SecurityPkg<br>
+&bull; &nbsp;&nbsp; FaultTolerantWriteSMM<br>
+&bull; &nbsp;&nbsp; VariableSMM<br>
+<br><br>
+</span></p>
+
+@snapend
+
+
+Note:
+
+Only modules in the board package should be modified in the process of board porting. The
+minimum platform package and other common package contents must not be directly
+modified. The board package and silicon package modules may have multiple instances to
+support different boards and different silicon. These components are required. They enable
+orderly board porting and add the support for extensibility in later stages. The libraries
+consumed are the subset of libraries required by this specification. Some libraries are
+defined in this specification, some are defined in EDK II documentation.
+
+
+
+
+---
+@title[Stage 5 Required Functions]
+<p align="right"><span class="gold" >@size[1.1](<b> Stage 5 Required Functions</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<table id="recTable-1">
+	<tr>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Phase</b></span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Name</b> &nbsp;</span></p></td>
+		<td bgcolor="#0070C0" ><p style="line-height:10%"><span style="font-size:0.5em" ><b>Purpose</b> &nbsp;</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > PEI </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  PeimEntryMA ()</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 PEIM</span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdPmrInitialize ()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the VT-d PEIM&nbsp; </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  DXE&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  DriverEntry ()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the TPM2 DXE module&nbsp;  </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  &nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" >  IntelVTdInitialize()&nbsp; </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Entry point for the VT-d DXE module &nbsp; </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > UserPhysicalPresent()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >  Indicates whether a physical user is present for UEFI secure boot &nbsp; </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > ProcessTcgPp & ProcessTcgMor&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   ProcessTcgPp Process the TPM physical presence (PP) request & memory overwrite request (MOR)&nbsp; </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > SMM&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > InitializeTcgSmm ()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Entry point for the TPM2 SMM module&nbsp; </span></p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > &nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.4em; font-family:Consolas;" > MemoryClearCallback ()&nbsp;  </span></p></td>
+		<td bgcolor="#121212" height=".02%" width="50%"><p style="line-height:01%"><span style="font-size:0.4em" >   Callback function for setting the MOR variable &nbsp; </span></p></td>
+	</tr>
+</table>
+<br>
+@snapend
+
+
+
+Note:
+The following functions are required to exist and to execute in the given order. The
+component that provides the function is not specified because it is not required by the
+architecture.
+
+All except ProcessTcgPp & ProcessTcgMor are in the EDK II Common open source code 
+
+
+
+
+Depending on the board, there may be existing libraries that are sufficient for a board, so it is
+important to assess the utility of existing library instances when developing board support.
+
+
 
 
 
