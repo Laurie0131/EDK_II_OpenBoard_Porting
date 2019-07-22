@@ -5972,7 +5972,7 @@ Examples: Core Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
-  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[black](.)<br>&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[black](.)<br>&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
 </ul>
 <br>
@@ -5986,7 +5986,7 @@ Examples: Core Features
 @snapend
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Limit to required features to reduce complexity<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Limit  required features to reduce complexity<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
