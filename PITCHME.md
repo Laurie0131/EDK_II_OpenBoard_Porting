@@ -5341,7 +5341,7 @@ Minimal security checks should be done
   <li><span style="font-size:0.65em" > SMM Memory Attribute Table </span> </li>
   <li><span style="font-size:0.65em" > 3rd party option ROM </span> </li>
   <li><span style="font-size:0.65em" > Trusted Console - Trusted Storage </span> </li>
-  <li><span style="font-size:0.65em" > DMA protection for VT-d/IOMM</span> </li>
+  <li><span style="font-size:0.65em" > DMA protection for Intel® VT-d/IOMM</span> </li>
   <li><span style="font-size:0.65em" > SMI Handler</span> </li>
   <li><span style="font-size:0.65em" > TPM</span> </li>
   <li><span style="font-size:0.65em" > Firmware Update</span> </li>
@@ -5750,6 +5750,34 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
    - PcdVTdPolicyPropertyMask
 
 
+---
+@title[Security Feature Related PCDs ]
+<p align="right"><span class="gold" >@size[1.1](<b>Security Feature Related PCDs</b>)</span><span style="font-size:0.75em;" ></span></p>
+<br>
+<ul style="list-style-type:disc; line-height:0.8;">
+  <li><span style="font-size:0.75em" > Enable SMI handler profile </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" > gMinPlatformModuleTokenSpaceGuid.PcdSmiHandlerProfileEnable </span> </li>
+  </ul>
+  <li><span style="font-size:0.75em" >Enable TPM   </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >  gMinPlatformModuleTokenSpaceGuid.PcdTpm2Enable</span> </li>
+  </ul>
+
+  <li><span style="font-size:0.75em" > Enable UEFI Secure boot </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >  gMinPlatformModuleTokenSpaceGuid.PcdUefiSecureBootEnable</span> </li>
+  </ul>
+
+</ul>
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Enable/Disable in <font face="Consolas">@size[.8em](OpenBoardPkgConfig.dsc)</font <br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html#75-configuration
 
 
 ---
