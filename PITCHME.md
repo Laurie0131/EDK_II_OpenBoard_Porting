@@ -5788,9 +5788,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
 ---
 @title[Stage 5 Checklist  ]
 <p align="center"><span class="gold" >@size[1.1](<b>Stage 5 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
-Steps to enable a board for Stage 5:
-</span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">Steps to enable a board for Stage 5:</span></p>
 
 @snap[north-east span-13]
 ![Porting_task_list.gif](/assets/images/tenor.gif)
@@ -5800,23 +5798,22 @@ Steps to enable a board for Stage 5:
 <br>
 <br>
 <br>
-<br>
-<ul style="list-style-type:None; line-height:0.75;">
- <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Update <font face="Consolas">@size[.8em](@color[yellow](BoardPkg/Board))</font>. </span></li>
- <ul style="list-style-type:none; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; Deploy the UEFI secure boot variables (PK/KEK/db/dbx)</span> </li>
-    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; Configure PcdTpmInstanceGuid to select TPM hardware. Default value of gEfiTpmDeviceInstanceTpm20DtpmGuid is usually correct.</span> </li>
+<ul style="list-style-type:None; line-height:0.65;">
+ <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Update <font face="Consolas">@size[.8em](@color[yellow](BoardPkg/Board)) </font>. </span></li>
+ <ul style="list-style-type:none; line-height:0.46;">
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Deploy the UEFI secure boot variables (PK/KEK/db/dbx)</span> </li>
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Configure PcdTpmInstanceGuid to select TPM hardware. Default value of gEfiTpmDeviceInstanceTpm20DtpmGuid is usually correct.</span> </li>
  </ul>
- <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; UEFI secure boot: Update PlatformSecureLib (UserPhysicalPresent()) to check if a user is physically present to authorize change of authenticated variables.</span></li>
- <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
- <ul style="list-style-type:none; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; May select TPM2 instance PcdTpmInstanceGuid.</span> </li>
-    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; May set PcdFirmwareDebuggerInitialized based on whether or not a Firmware Debugger is attached to platfor</span> </li>
+ <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot: Update PlatformSecureLib (UserPhysicalPresent()) to check if a user is physically present to authorize change of authenticated variables.</span></li>
+ <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
+ <ul style="list-style-type:none; line-height:0.46;">
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May select TPM2 instance PcdTpmInstanceGuid.</span> </li>
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May set PcdFirmwareDebuggerInitialized based on whether or not a Firmware Debugger is attached to platfor</span> </li>
  </ul>
- <li><span style="font-size:0.78em" >4.&nbsp;&nbsp; For DMA Protection: include IOMMU driver for DMA protection, if silicon supports IOMM</span></li>
- <li><span style="font-size:0.78em" >5.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. Set MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5</span></li>
- <li><span style="font-size:0.78em" >6.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
- <li><span style="font-size:0.78em" >7.&nbsp;&nbsp; Boot, collect log, verify test point results are correct.</span></li>
+ <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; For DMA Protection: include IOMMU driver for DMA protection, if silicon supports IOMM</span></li>
+ <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. Set MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5</span></li>
+ <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
+ <li><span style="font-size:0.7em" >7.&nbsp;&nbsp; Boot, collect log, verify test point results are correct.</span></li>
 </ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
