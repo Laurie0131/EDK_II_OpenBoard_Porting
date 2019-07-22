@@ -5535,7 +5535,7 @@ Stage V supports key secutiy features.
 	</tr>
 	<tr>
 		<td bgcolor="#121212" height=".02%"><p style="line-height:01%"><span style="font-size:0.5em; font-family:Consolas;" > &nbsp;</span></p></td>
-		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List of IntelVTd modules&nbsp;</span></p></td>
+		<td bgcolor="#121212" height=".02%" width="35%"><p style="line-height:01%"><span style="font-size:0.4em;" > List of Intel&reg; VT-d modules&nbsp;</span></p></td>
 		<td bgcolor="#121212" height=".02%" width="40%"><p style="line-height:022%"><span style="font-size:0.45em" > IOMMU PEI & DXE Services &nbsp;</span></p></td>
 	</tr>
 	<tr>
@@ -5565,7 +5565,7 @@ for a list of more Modules in the FV for stage
 
 ---
 @title[Modules – Stage 5 ]
-<p align="right"><span class="gold" >@size[1.1](<b> Tips for Board Specific ACPI </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b> Modules – Stage 5 </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-east span-70 ]
@@ -5594,14 +5594,14 @@ for a list of more Modules in the FV for stage
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>
 &bull; &nbsp;&nbsp; Tcg2 Pei – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Pei – PlatformPkg<br>
-&bull; &nbsp;&nbsp; Intel Vtd PMR - SiliconPkg
+&bull; &nbsp;&nbsp; Intel Vt-d PMR - SiliconPkg
 <br><br><br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &bull; &nbsp;&nbsp; Tcg2 DXE  – SecurityPkg<br>
 &bull; &nbsp;&nbsp; Tcg2 platform Dxe – PlatformPkg<br>
 &bull; &nbsp;&nbsp; SecureBootConfigDxe -SecurityPkg<br>
-&bull; &nbsp;&nbsp; Intel Vtd Dxe- SiliconPkg<br>
+&bull; &nbsp;&nbsp; Intel Vt-d Dxe- SiliconPkg<br>
 <br>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
@@ -5700,6 +5700,48 @@ All except ProcessTcgPp & ProcessTcgMor are in the EDK II Common open source cod
 Depending on the board, there may be existing libraries that are sufficient for a board, so it is
 important to assess the utility of existing library instances when developing board support.
 
+---
+@title[Security Related PCDs and Variables ]
+<p align="right"><span class="gold" >@size[1.1](<b>Security Related PCDs and Variables</b>)</span><span style="font-size:0.75em;" ></span></p>
+<ul style="list-style-type:disc; line-height:0.8;">
+  <li><span style="font-size:0.75em" > Authenticated Variables – UEFI Secure Boot </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" > PK, KEK, db and dbx </span> </li>
+  </ul>
+
+  <li><span style="font-size:0.75em" > TPM - Policy: TCG trusted boot </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" > PcdTpmInstanceGuid, PcdTpm2InitializationPolicy, PcdTpm2SelfTestPolicy</span> </li>
+  </ul>
+
+  <li><span style="font-size:0.75em" > Memory Only Reset (MOR)- Policy: TCG MOR</span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" > PRE_MEM_SILICON_POLICY, L"MemoryOverwriteRequestControl"</span> </li>
+  </ul>
+
+  <li><span style="font-size:0.75em" > Intel® VT-d – DMA protection </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" > PcdVTdPolicyPropertyMask</span> </li>
+  </ul>
+
+</ul>
+
+
+Note:
+https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html#75-configuration
+
+- Authenticated Variables – UEFI Secure Boot
+  - PK, 
+  - KEK, 
+  - db and dbx
+- TPM - Policy: TCG trusted boot
+  - PcdTpmInstanceGuid, 
+  - PcdTpm2InitializationPolicy, 
+  - PcdTpm2SelfTestPolicy
+- Memory Only Reset (MOR ) - Policy: TCG MOR
+  - PRE_MEM_SILICON_POLICY, L“MemoryOverwriteRequestControl”
+- Intel® VT-d – DMA protection 
+   - PcdVTdPolicyPropertyMask
 
 
 
