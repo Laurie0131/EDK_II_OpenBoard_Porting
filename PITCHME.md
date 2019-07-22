@@ -6051,7 +6051,7 @@ section.
 ---
 @title[Advanced Feature Design ]
 <p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
-<span style="font-size:0.75em;" >-- Feature Template Readme.md </span></p>
+<span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
 
 
 @snap[north-west span-30 ]
@@ -6111,6 +6111,88 @@ package imports the feature tokens within the available namespace and changes af
 
 The Advanced Feature template should be used to describe relevant configuration for integrating the feature into a minimum platform compliant system. Any board or silicon specific details should be abstracted such that the information is provided to the feature via "feature APIs". Such dependencies are recommended to be exposed via binary interfaces such as PPIs and protocols and can be considered similar in purpose to the architectural PPIs and Protocols defined in the PI specification. Such requirements must be included in
 the "Required Functions" section of the advanced feature template. Though not required, to increase portability, advanced features should not depend upon deprecated EDK II packages and attempt to reduce exposure to packages other than MdePkg and UefiCpuPkg. In turn, this decreases risk of depending upon deprecated packages in the future 
+
+
++++
+@title[Advanced Feature Design 02 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
+<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >
+This template should be included in feature review and placed in the feature root directory as README.md
+</span></p>
+
+@snap[north-west span-49 ]
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" ><br>
+@color[yellow](Firmware Volumes) - The binary containers needed for the feature.<br>
+@color[yellow](Modules)  - The EDK II component binaries and static libraries required.<br>
+@color[yellow](Required Functions) - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.<br>
+@color[yellow](Configuration) - The configurable parameters for a given feature.<br>
+@color[yellow](Data Flows) - The architecturally defined data structures and flows for a given feature.<br>
+@spanend
+
+
+
+@snap[north-east span-49 ]
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.75em;" ><br>
+@color[yellow](Control Flows) - Key control flows for the feature.<br>
+@color[yellow](Build Files) - The DSC/FDF for integrating the feature.<br>
+@color[yellow](Test Point Results) - The test that can verify porting is complete for the feature.<br>
+@color[yellow](Functional Exit Criteria) - The testable functionality for the feature.<br>
+@color[yellow](Feature Enabling Checklist) - The required activities to achieve desired functionality for the feature.<br>
+@color[yellow](Common Optimizations) - Common size or performance tuning options for this feature.<br>
+@spanend
+
+Note:
+Advanced features should be designed such that they are easily portable between minimum platform compliant implementations. In consideration of portability, it is recommended to encapsulate each feature within a dedicated package. Such encapsulation enables rapid integration of the feature and a focused area for feature-related changes. For example, feature declarations for build elements such as GUIDs, PCDs, PPIs, and protocols are scoped within the feature package DEC file. Including the feature and consequently the
+package imports the feature tokens within the available namespace and changes affecting the feature are localized to the package which in turn exposes the change to all feature consumers.
+
+
+The Advanced Feature template should be used to describe relevant configuration for integrating the feature into a minimum platform compliant system. Any board or silicon specific details should be abstracted such that the information is provided to the feature via "feature APIs". Such dependencies are recommended to be exposed via binary interfaces such as PPIs and protocols and can be considered similar in purpose to the architectural PPIs and Protocols defined in the PI specification. Such requirements must be included in
+the "Required Functions" section of the advanced feature template. Though not required, to increase portability, advanced features should not depend upon deprecated EDK II packages and attempt to reduce exposure to packages other than MdePkg and UefiCpuPkg. In turn, this decreases risk of depending upon deprecated packages in the future 
+
+
++++
+@title[Advanced Feature Design 02 ]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
+<span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
+<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >
+This template should be included in feature review and placed in the feature root directory as README.md
+</span></p>
+
+```
+### Firmware Volumes 
+- The binary containers needed for the feature.
+### Modules  
+- The EDK II component binaries and static libraries required.
+### Required Functions 
+- Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.
+### Configuration 
+- The configurable parameters for a given feature.
+### Data Flows 
+- The architecturally defined data structures and flows for a given feature.
+### Control Flows 
+- Key control flows for the feature.
+### Build Files 
+- The DSC/FDF for integrating the feature.
+### Test Point Results 
+- The test that can verify porting is complete for the feature.
+### Functional Exit Criteria 
+- The testable functionality for the feature.
+### Feature Enabling Checklist 
+- The required activities to achieve desired functionality for the feature.
+### Common Optimizations 
+- Common size or performance tuning options for this feature.
+
+```
+
+Note:
+
+copy and past to readme.md
+
+
+
 
 
 ---
