@@ -5970,7 +5970,7 @@ and results in a variety of benefits:
 <p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
 &nbsp;&nbsp;<b>Platform Features</b>
 </span></p>
-<ul style="list-style-type:none; line-height:0.8;">
+<ul style="list-style-type:none; line-height:0.8; text-align: left;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Intel® Active Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color[black](.)<br>&nbsp;&nbsp;&nbsp;&nbsp;Technology (AMT) </span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
@@ -5979,7 +5979,7 @@ and results in a variety of benefits:
 <p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
 &nbsp;&nbsp;<b>Board Features</b>
 </span></p>
-<ul style="list-style-type:none; line-height:0.8;">
+<ul style="list-style-type:none; line-height:0.8; text-align: left;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @color[black](.)</span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Setup (policy) </span> </li>
 </ul>
@@ -5996,6 +5996,27 @@ high-level examples of advanced features
 
 The number of "advanced features" in a platform should be limited to what is required and reasonable to reduce the
 required level of design and validation complexity.
+
+
+---?image=assets/images/slides/Slide103.JPG
+@title[Advanced Feature Requirements]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Requirements</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
+Each advanced feature:
+</span></p>
+<ul style="list-style-type:none; line-height:0.85;">
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Has low coupled component interactions</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Complete, mutually independent and only depend on packages in edk2 rep.</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Organized as cohesive packages related to the same advanced feature</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Support enabling individually as part of porting within stage 6</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Possible to distribute independently in binary form –  add/remove PCD Switch</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >&bull;&nbsp;&nbsp; Self-documenting – contains a ReadMe.md template</span> </li>
+</ul>
+@snapend
 
 ---
 @title[Current Issues ]
