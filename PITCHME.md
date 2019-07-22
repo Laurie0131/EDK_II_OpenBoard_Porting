@@ -5807,7 +5807,7 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
  </ul>
  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot:</span></li>
  <ul style="list-style-type:none; line-height:0.46;">
-      <li>&bull;&nbsp;&nbsp;Update <font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar;))</font> to check if a user is 
+      <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp;Update <font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar;))</font> to check if a user is 
       physically present to authorize change of authenticated variables.</span></li>
  </ul>
  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
