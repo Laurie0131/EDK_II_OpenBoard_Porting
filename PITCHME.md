@@ -5948,8 +5948,8 @@ and results in a variety of benefits:
 @snap[north-west span-49 ]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
-Examples: Core Features
+<p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
+<b>Examples: Core Features</b>
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Signed Capsule update</span> </li>
@@ -5967,8 +5967,8 @@ Examples: Core Features
 @snap[north-east span-53 ]
 <br>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
-&nbsp;&nbsp;Platform Features
+<p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
+&nbsp;&nbsp;<b>Platform Features</b>
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
@@ -5976,8 +5976,8 @@ Examples: Core Features
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Thunderbolt™ </span> </li>
 </ul>
 <br>
-<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
-&nbsp;&nbsp;Board Features
+<p style="line-height:60%" align="left"><span style="font-size:0.8em;" >
+&nbsp;&nbsp;<b>Board Features</b>
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @color[black](.)</span> </li>
@@ -5987,6 +5987,7 @@ Examples: Core Features
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Limit  required features to reduce complexity<br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 Note:
