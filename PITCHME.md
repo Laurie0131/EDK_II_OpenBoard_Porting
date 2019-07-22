@@ -6057,28 +6057,31 @@ section.
 @snap[north-west span-30 ]
 <br>
 <br>
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Firmware Volumes<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Modules <br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Required Functions<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Configuration<br>&nbsp;</span></p>)
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Firmware Volumes<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Modules <br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Required Functions<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Configuration<br>&nbsp;</span></p>)
 @snapend
 
 @snap[north span-30 ]
 <br>
 <br>
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Data Flows<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Control Flows<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Build Files<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Test Point Results<br>&nbsp;</span></p>)
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Data Flows<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Control Flows<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Build Files<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Test Point Results<br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-30 ]
 <br>
 <br>
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Functional Exit Criteria<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Feature Enabling Checklist<br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" >&nbsp;&nbsp; Common Optimizations<br>&nbsp;</span></p>)
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Functional Exit Criteria<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Feature Enabling Checklist<br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2 ](<p style="line-height:60%" ><span style="font-size:0.7em;" >&nbsp;&nbsp; Common Optimizations<br>&nbsp;</span></p>)
 @snapend
 
 Note:
