@@ -6243,7 +6243,7 @@ firmware volume is exposed to the DXE dispatcher
 @title[Example – Adding Network]
 <p align="right"><span class="gold" >@size[1.1](<b> Example – Adding Network</b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
-@size1.2em](The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.)<br><br>
+@size[1.2em](The Network stack modules are board and silicon independent thus no porting is necessary.  Feature is capable with Stage 3-4.)<br><br>
  1. &nbsp;&nbsp;Set PCDs: <br>
   <font face="Consolas">&nbsp;&nbsp;&nbsp;
   @size[.78em](gAdvancedFeaturePkgTokenSpaceGuid.PcdNetworkEnable|TRUE)<br>&nbsp;&nbsp;&nbsp;
