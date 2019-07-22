@@ -5705,29 +5705,30 @@ important to assess the utility of existing library instances when developing bo
 <p align="right"><span class="gold" >@size[1.1](<b>Security Related PCDs and Variables</b>)</span><span style="font-size:0.75em;" ></span></p>
 <ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.75em" > Authenticated Variables – UEFI Secure Boot </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" > PK, KEK, db and dbx </span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; PK, KEK, db and dbx </span> </li>
   </ul>
 
   <li><span style="font-size:0.75em" > TPM - Policy: TCG trusted boot </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" > PcdTpmInstanceGuid, PcdTpm2InitializationPolicy, PcdTpm2SelfTestPolicy</span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; PcdTpmInstanceGuid, PcdTpm2InitializationPolicy, PcdTpm2SelfTestPolicy</span> </li>
   </ul>
 
   <li><span style="font-size:0.75em" > Memory Only Reset (MOR)- Policy: TCG MOR</span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" > PRE_MEM_SILICON_POLICY, L"MemoryOverwriteRequestControl"</span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; PRE_MEM_SILICON_POLICY, L"MemoryOverwriteRequestControl"</span> </li>
   </ul>
 
   <li><span style="font-size:0.75em" > Intel® VT-d – DMA protection </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" > PcdVTdPolicyPropertyMask</span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; PcdVTdPolicyPropertyMask</span> </li>
   </ul>
 
 </ul>
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Definitions may be both source and binary <br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 Note:
@@ -5756,28 +5757,89 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
 <br>
 <ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.75em" > Enable SMI handler profile </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" > gMinPlatformModuleTokenSpaceGuid.PcdSmiHandlerProfileEnable </span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; gMinPlatformModuleTokenSpaceGuid.PcdSmiHandlerProfileEnable </span> </li>
   </ul>
   <li><span style="font-size:0.75em" >Enable TPM   </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" >  gMinPlatformModuleTokenSpaceGuid.PcdTpm2Enable</span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp;  gMinPlatformModuleTokenSpaceGuid.PcdTpm2Enable</span> </li>
   </ul>
 
   <li><span style="font-size:0.75em" > Enable UEFI Secure boot </span> </li>
-  <ul style="list-style-type:disc; line-height:0.6;">
-    <li><span style="font-size:0.55em; font-family:Consolas;" >  gMinPlatformModuleTokenSpaceGuid.PcdUefiSecureBootEnable</span> </li>
+  <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp;  gMinPlatformModuleTokenSpaceGuid.PcdUefiSecureBootEnable</span> </li>
   </ul>
 
 </ul>
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Enable/Disable in <font face="Consolas">@size[.8em](OpenBoardPkgConfig.dsc)</font <br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 Note:
 
 https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html#75-configuration
+
+
+
+
+
+---
+@title[Stage 5 Checklist  ]
+<p align="center"><span class="gold" >@size[1.1](<b>Stage 5 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+Steps to enable a board for Stage 5:
+</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<ul style="list-style-type:None; line-height:0.75;">
+ <li><span style="font-size:0.78em" >1.&nbsp;&nbsp; Update <font face="Consolas">@size[.8em](@color[yellow](BoardPkg/Board))</font>. </span></li>
+ <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; Deploy the UEFI secure boot variables (PK/KEK/db/dbx)</span> </li>
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; Configure PcdTpmInstanceGuid to select TPM hardware. Default value of gEfiTpmDeviceInstanceTpm20DtpmGuid is usually correct.</span> </li>
+ </ul>
+ <li><span style="font-size:0.78em" >2.&nbsp;&nbsp; UEFI secure boot: Update PlatformSecureLib (UserPhysicalPresent()) to check if a user is physically present to authorize change of authenticated variables.</span></li>
+ <li><span style="font-size:0.78em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
+ <ul style="list-style-type:none; line-height:0.6;">
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; May select TPM2 instance PcdTpmInstanceGuid.</span> </li>
+    <li><span style="font-size:0.55em; font-family:Consolas;" >&bull;&nbsp;&nbsp; May set PcdFirmwareDebuggerInitialized based on whether or not a Firmware Debugger is attached to platfor</span> </li>
+ </ul>
+ <li><span style="font-size:0.78em" >4.&nbsp;&nbsp; For DMA Protection: include IOMMU driver for DMA protection, if silicon supports IOMM</span></li>
+ <li><span style="font-size:0.78em" >5.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. Set MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5</span></li>
+ <li><span style="font-size:0.78em" >6.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
+ <li><span style="font-size:0.78em" >7.&nbsp;&nbsp; Boot, collect log, verify test point results are correct.</span></li>
+</ul>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em; ">
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/79_test_point_results.html">EDK II Open Platform Spec Test points Stage 5</a>
+</span></p>
+
+@snapend
+
+
+Note:
+Steps to enable a board for Stage V
+1. Update BoardPkg/Board. 
+  - Deploy the UEFI secure boot variables (PK/KEK/db/dbx)
+  - Configure PcdTpmInstanceGuid to select TPM hardware. Default of gEfiTpmDeviceInstanceTpm20DtpmGuid value is usually correct.
+2. UEFI secure boot -  Update PlatformSecureLib : UserPhysicalPresent () , to check if a user is physically present to authorize change of authenticated variables
+3. For TCG trusted boot
+  - May select TPM2 instance PcdTpmInstanceGuid .
+  - May set PcdFirmwareDebuggerInitialized based on whether or not a Firmware Debugger is attached to the platform
+4. For DMA Protection -  May include IOMMU driver to do DMA protection, if the silicon supports IOMMU.
+5. Ensure all PCDs in the configuration section (DSC files) are correct for your board. - Set MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5
+6. Ensure all required binaries in the flash file (FDF files) are correct for your board.
+7. Boot, collect log, verify test point results are Correct
+
 
 
 ---
