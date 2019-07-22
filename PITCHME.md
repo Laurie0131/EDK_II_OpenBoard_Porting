@@ -6123,7 +6123,7 @@ This template should be included in feature review and placed in the feature roo
 
 @snap[north-west span-49 ]
 <br><br>
-<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br>
+<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br><br>
 @color[yellow](Firmware Volumes) - The binary containers needed for the feature.<br>
 @color[yellow](Modules)  - The EDK II component binaries and static libraries required.<br>
 @color[yellow](Required Functions) - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.<br>
@@ -6135,7 +6135,7 @@ This template should be included in feature review and placed in the feature roo
 
 @snap[north-east span-49 ]
 <br><br>
-<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br>
+<p style="line-height:50%" align="left"><span style="font-size:0.56em;" ><br><br><br>
 @color[yellow](Control Flows) - Key control flows for the feature.<br>
 @color[yellow](Build Files) - The DSC/FDF for integrating the feature.<br>
 @color[yellow](Test Point Results) - The test that can verify porting is complete for the feature.<br>
@@ -6158,7 +6158,7 @@ the "Required Functions" section of the advanced feature template. Though not re
 <p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Design</b>)</span><br>
 <span style="font-size:0.75em;" >- Feature Template Readme.md </span></p>
 <p style="line-height:60%" align="left"><span style="font-size:0.7em;" >
-This template should be included in feature review and placed in the feature root directory as README.md
+This template should be included in feature review and placed in the feature root directory as README.md - <i>@size[.7em](&nbsp;copy and paste below)</i>
 </span></p>
 
 ```
