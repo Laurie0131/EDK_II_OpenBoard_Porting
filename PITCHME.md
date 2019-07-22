@@ -5799,19 +5799,20 @@ https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_se
 <br>
 <br>
 <ul style="list-style-type:None; line-height:0.65;">
- <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Update <font face="Consolas">@size[.8em](@color[yellow](BoardPkg/Board)) </font>. </span></li>
+ <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Update <font face="Consolas">@size[.8em](@color[yellow](BoardPkg/Board))</font>. </span></li>
  <ul style="list-style-type:none; line-height:0.46;">
     <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Deploy the UEFI secure boot variables (PK/KEK/db/dbx)</span> </li>
-    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Configure PcdTpmInstanceGuid to select TPM hardware. Default value of gEfiTpmDeviceInstanceTpm20DtpmGuid is usually correct.</span> </li>
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; Configure <font face="Consolas">@size[.8em](@color[yellow](PcdTpmInstanceGuid))</font> to select TPM hardware. 
+	     Default value of <font face="Consolas">@size[.8em](@color[yellow](gEfiTpmDeviceInstanceTpm20DtpmGuid))</font> is usually correct.</span> </li>
  </ul>
- <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot: Update PlatformSecureLib (UserPhysicalPresent()) to check if a user is physically present to authorize change of authenticated variables.</span></li>
+ <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; UEFI secure boot: Update <font face="Consolas">@size[.8em](PlatformSecureLib : @color[yellow](UserPhysicalPresent&lpar;&rpar))</font> to check if a user is physically present to authorize change of authenticated variables.</span></li>
  <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; For TCG Trusted Boot:</span></li>
  <ul style="list-style-type:none; line-height:0.46;">
-    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May select TPM2 instance PcdTpmInstanceGuid.</span> </li>
-    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May set PcdFirmwareDebuggerInitialized based on whether or not a Firmware Debugger is attached to platfor</span> </li>
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May select TPM2 instance <font face="Consolas">@size[.8em](@color[yellow](PcdTpmInstanceGuid))</font>.</span> </li>
+    <li><span style="font-size:0.55em; " >&bull;&nbsp;&nbsp; May set <font face="Consolas">@size[.8em](@color[yellow](PcdFirmwareDebuggerInitialized))</font> based on whether or not a Firmware Debugger is attached to platfor</span> </li>
  </ul>
  <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; For DMA Protection: include IOMMU driver for DMA protection, if silicon supports IOMM</span></li>
- <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. Set MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5</span></li>
+ <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Ensure all PCDs in the configuration section (DSC files) are correct for your board. Set <font face="Consolas">@size[.8em](@color[yellow](MinPlatformPkgTokenSpaceGuid.PcdBootStage = 5))</font></span></li>
  <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Ensure all required binaries in the flash file (FDF files) are correct for your board.</span></li>
  <li><span style="font-size:0.7em" >7.&nbsp;&nbsp; Boot, collect log, verify test point results are correct.</span></li>
 </ul>
