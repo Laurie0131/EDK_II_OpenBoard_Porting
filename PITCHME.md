@@ -5964,11 +5964,11 @@ Examples: Core Features
 @snapend
 
 
-@snap[north-east span-49 ]
+@snap[north-east span-55 ]
 <br>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
-Platform Features
+&nbsp;&nbsp;Platform Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;SMBIOS </span> </li>
@@ -5977,10 +5977,10 @@ Platform Features
 </ul>
 
 <p style="line-height:60%" align="left"><span style="font-size:0.75em;" >
-Board Features
+&nbsp;&nbsp;Board Features
 </span></p>
 <ul style="list-style-type:none; line-height:0.8;">
-  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller </span> </li>
+  <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Embedded Controller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</span> </li>
   <li><span style="font-size:0.75em" >&bull;&nbsp;&nbsp;Setup (policy) </span> </li>
 </ul>
 @snapend
