@@ -5726,8 +5726,14 @@ important to assess the utility of existing library instances when developing bo
 
 </ul>
 
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Definitions may be both source and binary <br><br>&nbsp;</span></p>)
+@snapend
 
 Note:
+
+These definitions may be both source and binary in nature.
+
 https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html#75-configuration
 
 - Authenticated Variables – UEFI Secure Boot
