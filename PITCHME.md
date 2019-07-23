@@ -1287,7 +1287,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
-@title[Staged Approach by Features Section ]
+@title[Staged Approach by Features Section 01]
 <p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 
 
@@ -1334,6 +1334,16 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 <p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
 PCD Is tested within .FDF to see which modules to include 
 </span></p>
+@snapend
+
+
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+1
+<br><br>
+</span></p>
+<br><br>
 @snapend
 
 Note:
@@ -2743,6 +2753,16 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+2
+<br><br>
+</span></p>
+<br><br>
+@snapend
+
 Note:
 table d’hôte  
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
@@ -3888,6 +3908,16 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+3
+<br><br>
+</span></p>
+<br><br>
+@snapend
+
+
 Note:
 table d’hôte  
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
@@ -4603,6 +4633,16 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+4
+<br><br>
+</span></p>
+<br><br>
+@snapend
+
 Note:
 table d’hôte  
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
@@ -5269,6 +5309,16 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+5
+<br><br>
+</span></p>
+<br><br>
+@snapend
+
 Note:
 table d’hôte  
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
@@ -5895,6 +5945,16 @@ Steps to enable a board for Stage V
 <p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
 PCD Is tested within .FDF to see which modules to include 
 </span></p>
+@snapend
+
+
+
+@snap[south-east span-13 ]
+<p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
+6
+<br><br>
+</span></p>
+<br><br>
 @snapend
 
 Note:
@@ -6632,7 +6692,7 @@ PCD Is tested within .FDF to see which modules to include
 
 @snap[south-east span-13 ]
 <p style="line-height:20%" align="left" ><span style="font-size:02.1em;" >
-7.
+7
 <br><br>
 </span></p>
 <br><br>
