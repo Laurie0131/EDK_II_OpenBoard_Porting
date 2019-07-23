@@ -6278,6 +6278,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 <br>
 <br>
 <br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -6319,6 +6320,7 @@ Add the NetworkPkg !include statements in the sections shown of the OpenBoardPkg
 <p align="right"><span class="gold" >@size[1.1em](<b>Example Include Network in Board .FDF</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-95 ]
+<br>
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -6387,13 +6389,13 @@ FvAdvancedLate for the Stage 3-4 (DXE)
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-<font face="Arial">@size[1.3em](Remove IPv4 in )</font> @size[1.1em](OpenBoardPkg.dsc)<br><br>
+<font face="Arial">@size[1.3em](Remove IPv4 in )</font> @size[1.2em](OpenBoardPkg.dsc)<br><br>
  . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](DEFINE NETWORK_IP4_ENABLE = FALSE)<br><br>
 <br>
-<font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.1em](OpenBoardPkg.dsc)<br><br>
+<font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.2em](OpenBoardPkg.dsc)<br><br>
  . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
