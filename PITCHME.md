@@ -6271,6 +6271,44 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 
 
 ---
+@title[Example Include Network in Board .DSC]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Include Network in Board .DSC</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-95 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<font face="Arial">BoardXxx.dsc</font><br>
+ . . .<br>
+[Defines]<br>
+@color[cyan](!include NetworkPkg/NetworkDefines.dsc.inc)<br>
+. . .<br>
+<br>
+[LibraryClasses.common]<br>
+@color[cyan](!include NetworkPkg/NetworkLibs.dsc.inc)<br>
+<br>
+. . .<br>
+<br>
+[Components.X64]<br>
+@color[cyan](!include NetworkPkg/NetworkComponents.dsc.inc)<br>
+</span></p>
+@snapend
+
+
+Note:
+
+Add the NetworkPkg !include statements in the sections shown of the BoardXxx.dsc file
+
+
+---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
