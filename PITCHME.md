@@ -6353,7 +6353,7 @@ FILE FV_IMAGE = 07FC4960-5322-4DDC-A6A4-A17DE492DFE3 &lbrace;<br> &nbsp;&nbsp;&n
 <br>
 
 <p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
-Add the NetworkPkg "<font face="Consolas">!include</font>" file statements in the sections shown 
+Add the NetworkPkg "<font face="Consolas">!include</font>" file statements in the section shown 
 </span></p>
 
 @snapend
@@ -6363,11 +6363,55 @@ Note:
 
 
 
-Add the NetworkPkg !include statements in the sections shown of the BoardXxx.fdf file
+Add the NetworkPkg !include statements in the FV section,FvAdvancedLate, as  shown of the BoardXxx.fdf file
 
 FvAdvancedLate for the Stage 3-4 (DXE)
 
 
+---
+@title[Example – Disable Some Network Features]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example – Disable Some Network Features</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-95 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+
+@snapend
+
+
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<font face="Arial">@size[1.1em](Remove IPv4 in )</font> BoardXxx.dsc<br>
+ . . .<br>
+[Defines]<br>&nbsp;&nbsp;
+!include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](DEFINE NETWORK_IP4_ENABLE = FALSE)<br><br>
+
+<font face="Arial">@size[1.1em](Remove ISCSI in )</font>BoardXxx.dsc<br>
+[Defines]<br>&nbsp;&nbsp;
+!include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](DEFINE NETWORK_ISCSI_ENABLE = FALSE)
+<br><br> 
+</span></p>
+
+<p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
+The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE
+</span></p>
+
+@snapend
+
+
+Note:
+
+The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they are included in the various sections of the BoardXxx.dsc as on the previous slide
 
 
 
