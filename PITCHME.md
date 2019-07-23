@@ -6629,6 +6629,13 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+
+@snap[south-east span-10 ]
+<p style="line-height:50%" align="left" ><span style="font-size:02.5em;" >
+7
+</span></p>
+@snapend
+
 Note:
 table d’hôte  
 Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
@@ -6657,8 +6664,8 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 
 ---
-@title[Tuning for Performance]
-<p align="right"><span class="gold" >@size[1.1em](<b>Tuning for Performance</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Stage 7 - Tuning for Performance]
+<p align="right"><span class="gold" >@size[1.1em](<b>Stage 7 - Tuning for Performance</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north span-80 ]
 <br>
