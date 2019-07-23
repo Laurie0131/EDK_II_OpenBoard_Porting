@@ -6658,17 +6658,15 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---
 @title[Tuning for Performance]
-<p align="right"><span class="gold" >@size[1.1em](<b>Tuning for Performance/b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Tuning for Performance</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-85 ]
-<br>
+@snap[north span-80 ]
 <br>
 <br>
 <br>
 @box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;  Check which features are needed and disable unsupported features<br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;  Removed unused components from the defined FV<br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;  Removed unused components from the defined Firmware Volumes<br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" ><span style="font-size:0.75em;" >&nbsp;&nbsp;  Use available tools to perform detailed analysis of performance and size<br>&nbsp;</span></p>)
-<br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.5em; ">See EDK II Open Platform Spec <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/9_stage_7_tuning/">Stage 7: Tuning</a> </span></p>
 
