@@ -6378,7 +6378,6 @@ FvAdvancedLate for the Stage 3-4 (DXE)
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
 <br>
-<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
 
 @snapend
@@ -6401,7 +6400,7 @@ FvAdvancedLate for the Stage 3-4 (DXE)
   @color[cyan](DEFINE NETWORK_ISCSI_ENABLE = FALSE)
 <br><br> 
 </span></p>
-
+<br>
 <p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
 The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE
 </span></p>
