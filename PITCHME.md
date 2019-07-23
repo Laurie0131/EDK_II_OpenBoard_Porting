@@ -3044,8 +3044,8 @@ ResetSystemLibSilicon/ Intel /KabylakeSiliconPkg/Pch/Library/DxeRuntimeResetSyst
 PciHostBridgeLib
 
 - Kabylake:
-   - MinPlatformPkg\Pci\Library\PciHostBridgeLibSimple\PciHostBridgeLibSimple
-  used in \MdeModulePkg\Bus\Pci\PciHostBridgeDxe\PciHostBridgeDxe
+   - MinPlatformPkg/Pci/Library/PciHostBridgeLibSimple/PciHostBridgeLibSimple
+  used in /MdeModulePkg/Bus/Pci/PciHostBridgeDxe/PciHostBridgeDxe
 
 
 
@@ -3221,7 +3221,7 @@ KabylakeOpenBoardPkg/ <br>&nbsp;&nbsp;
   Library/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    BoardInitLib/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      PeiKabylakeRvp3InitPostMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        @color[cyan](KabylakeRvp3)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @color[cyan](KabylakeRvp3)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         @color[cyan](BoardInitBeforeSiliconInit&lpar;&rpar;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		  ConfigureGpio() <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		    . . . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3243,8 +3243,8 @@ From the Kabylake FDF PlatformInitPostMem module has
     PlatformInitEndOfPei()
      BoardInitAfterSiliconInit()
 
-And the Platform Libs to go with this are in edk2-platforms\Platform\Intel\
-KabylakeOpenBoardPkg\KabylakeRvp3\Library\BoardInitLib\PeiKabylakeRvp3InitPostMemLib.c
+And the Platform Libs to go with this are in edk2-platforms/Platform/Intel/
+KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiKabylakeRvp3InitPostMemLib.c
 
 With call to: KabylakeRvp3BoardInitBeforeSiliconInit()
 
@@ -3315,8 +3315,8 @@ From the Kabylake FDF PlatformInitPostMem module has
     PlatformInitEndOfPei()
      BoardInitAfterSiliconInit()
 
-And the Platform Libs to go with this are in edk2-platforms\Platform\Intel\
-KabylakeOpenBoardPkg\KabylakeRvp3\Library\BoardInitLib\PeiBoardInitPostMemLib.c
+And the Platform Libs to go with this are in edk2-platforms/Platform/Intel/
+KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/PeiBoardInitPostMemLib.c
 
 For Kabylake just returns EFI_SUCCESS
 
@@ -4408,7 +4408,7 @@ Search the workspace for all .inf files with the string: gEfiTimerArchProtocolGu
 Notice there are 2 where this protocol is gEfiTimerArchProtocolGuid                     ## PRODUCES
 Next search the board/platform .dsc file for which .inf file is included.
 
-We find that  PcAtChipsetPkg\HpetTimerDxe/HpetTimerDxe.inf is included in the platform .dsc file
+We find that  PcAtChipsetPkg/HpetTimerDxe/HpetTimerDxe.inf is included in the platform .dsc file
 
 
 - gEfiBdsArchProtocolGuid 	`MdeModulePkg/Universal/BdsDxe/ `
@@ -4535,7 +4535,7 @@ Steps to enable a board for Stage 3.
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; Update post-memory policy configuration by using PCD.</span><li>
   </ul> 
  <li><span style="font-size:0.65em" >2.&nbsp;&nbsp; Add board policy update code in <font face="Consolas">@size[.8em](SiliconPolicyUpdatePostMemory &lpar;&rpar;)</font> ,
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.)</font></span> </li>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">@size[.7em](BoardPkg/PeiSiliconPolicyUpdateLib /PeiBoardXxxInitLib.c.)</font></span> </li>
   <ul style="list-style-type:none; line-height:0.5;">
      <li><span style="font-size:0.5em" >&bull; &nbsp;&nbsp; The PCD updated in <font face="Consolas">@size[.9em](BoardInitBeforeSiliconInit &lpar;&rpar;)</font> might be used here.</span><li>
   </ul> 
@@ -4567,7 +4567,7 @@ BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c.
 i. Initialize board-specific hardware device, such as GPIO.
 ii. Update post-memory policy configuration by using PCD.
 2. Add board policy update code in SiliconPolicyUpdatePostMemory () ,
-BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.
+BoardPkg/PeiSiliconPolicyUpdateLib /PeiBoardXxxInitLib.c.
 i. The PCD updated in BoardInitBeforeSiliconInit () might be used here.
 3. Add board initialization DXE code in BoardInitAfterPciEnumeration () ,
 BoardInitReadyToBoot () , BoardInitEndOfFirmware () .
@@ -5011,10 +5011,10 @@ BKM is to define a board-neutral name for the branch condition
 If this device is a silicon device and it might be enabled/disabled by policy, BKM recommended is using the this mechanism. 
 
 Protocol from 
-KabylakeOpenBoardPkg\Include\Protocol\GlobalNvsArea.h
+KabylakeOpenBoardPkg/Include/Protocol/GlobalNvsArea.h
 
 Data structure typedef:
-KabylakeOpenBoardPkg\Include\Acpi\GlobalNvsAreaDef.h
+KabylakeOpenBoardPkg/Include/Acpi/GlobalNvsAreaDef.h
 
 
 The other way to resolve above issue is to move the board specific ACPI Secondary System Description Table (SSDT) to the board specific directory and let it be installed by a board specific ACPI driver. The basic platform ACPI driver should only handle generic ACPI tables, like FADT, MCFG, HPET, MCFG, and etc. 
