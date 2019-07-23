@@ -6277,7 +6277,8 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 @snap[north-west span-95 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -6286,7 +6287,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-<font face="Arial">BoardXxx.dsc</font><br>
+@color[yellow](BoardXxx.dsc)<br>
  . . .<br>
 [Defines]<br>
 @color[cyan](!include NetworkPkg/NetworkDefines.dsc.inc)<br>
@@ -6300,6 +6301,12 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 [Components.X64]<br>
 @color[cyan](!include NetworkPkg/NetworkComponents.dsc.inc)<br>
 </span></p>
+<br>
+
+<p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
+Add the NetworkPkg <font face="Consolas">!include</font> file statements in the sections shown 
+</span></p>
+
 @snapend
 
 
