@@ -6633,7 +6633,7 @@ PCD Is tested within .FDF to see which modules to include
 @snap[south-east span-12 ]
 <p style="line-height:50%" align="left" ><span style="font-size:02.1em;" >
 7
-<br>
+<br><br>
 </span></p>
 <br><br>
 @snapend
