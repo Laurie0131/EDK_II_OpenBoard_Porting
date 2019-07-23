@@ -6376,11 +6376,10 @@ FvAdvancedLate for the Stage 3-4 (DXE)
 <br>
 <br>
 <br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
 <br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
 
 @snapend
 
@@ -6396,6 +6395,7 @@ FvAdvancedLate for the Stage 3-4 (DXE)
   @color[cyan](DEFINE NETWORK_IP4_ENABLE = FALSE)<br><br>
 <br>
 <font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.1em](BoardXxx.dsc)<br><br>
+ . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](DEFINE NETWORK_ISCSI_ENABLE = FALSE)
