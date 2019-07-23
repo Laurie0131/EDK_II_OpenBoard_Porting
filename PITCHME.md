@@ -172,7 +172,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font> )
 <br><br><br>&nbsp;
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -196,7 +196,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -218,7 +218,7 @@ Note:
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[white](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[white](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font> )
+<br><br><br>&nbsp;@color[white](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font> )
 <br><br><br>&nbsp;@color[white](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[white](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -281,7 +281,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[yellow](<b>Get the EDK II packages to a local workspace</b>)
 <br><br><br>&nbsp;@color[yellow](<b>Select the Ref and correct Intel® FSP Package</b>)
-<br><br><br>&nbsp;@color[yellow](<b>Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font></b> )
+<br><br><br>&nbsp;@color[yellow](<b>Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font></b> )
 <br><br><br>&nbsp;@color[#808080](Use feature stages to port all required project  modules )
 <br><br><br>&nbsp;@color[#808080](Validate each stage test points defined w/ each stage)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -298,7 +298,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 1. Get the EDK II packages to a local workspace
 2. Select the Ref and correct Intel® FSP Package
-3. Copy a reference OpenBoardPkg/BoardXXX 
+3. Copy a reference OpenBoardPkg/BoardXxx 
 4. Use feature stages to port all required project  modules
 5. Validate each stage test point results defined with each stage 
 
@@ -318,7 +318,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font>  to a new name (@size[.8em](i.e <font face="Consolas">NewOpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font>  to a new name (@size[.8em](i.e <font face="Consolas">NewOpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
 
@@ -1150,7 +1150,7 @@ Also rename the board to a meaningful name, this case “BoardXxx”
 <p style="line-height:60%" align="left"><span style="font-size:0.85em" >
 <br>&nbsp;        @color[#808080](Get the EDK II packages to a local workspace)
 <br><br><br>&nbsp;@color[#808080](Select the Ref and correct Intel® FSP Package)
-<br><br><br>&nbsp;@color[#808080](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXXX</font>)
+<br><br><br>&nbsp;@color[#808080](Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font>)
 <br><br><br>&nbsp;@color[yellow](<b>Use feature stages to port all required project  modules</b> )
 <br><br><br>&nbsp;@color[yellow](<b>Validate each stage test points defined w/ each stage</b>)
 <br><br>&nbsp;<br><br>&nbsp;  </font></span></p>
@@ -1167,7 +1167,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
 
 1. Get the EDK II packages to a local workspace
 2. Select the Ref and correct Intel® FSP Package
-3. Copy a reference OpenBoardPkg/BoardXXX 
+3. Copy a reference OpenBoardPkg/BoardXxx
 4. Use feature stages to port all required project  modules
 5. Validate each stage test point results defined with each stage 
 
@@ -3788,7 +3788,7 @@ Steps to enable a board for Stage 2.
 <ul style="list-style-type:None; line-height:0.7;">
   <li><span style="font-size:0.65em" >1. Update <font face="Consolas"><i>@color[cyan](NewOpenBoardPkg/BoardXxx) </i></font></span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
-      <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , <font face="Consolas">@color[yellow](BoardXXX/BoardInitLib/PeiBoardXxxInitPreMemoryLib.c.)</font> </span> </li>
+      <li><span style="font-size:0.55em" > Add Board boot mode detection code in BoardBootModeDetect () , <font face="Consolas">@color[yellow](BoardXxx/BoardInitLib/PeiBoardXxxInitPreMemoryLib.c.)</font> </span> </li>
       <ul style="list-style-type:none; line-height:0.5;">
         <li><span style="font-size:0.5em" > - The boot mode can be hardcoded. It should reflect actual functionality based upon<br>&nbsp;&nbsp;&nbsp;
              the feature, such as S3 (silicon register), Capsule (variable), Recovery(GPIO). </span> </li>
@@ -3821,15 +3821,15 @@ Steps to enable a board for Stage 2.
 Note:
 
 Steps to enable a board for Stage II
-1.  Update the NewOpenBoardPkg/BoardXXX
-  i. Add Board boot mode detection code in BoardBootModeDetect () ,    BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c.
+1.  Update the NewOpenBoardPkg/BoardXxx
+  i. Add Board boot mode detection code in BoardBootModeDetect () ,    BoardXxx/BoardInitLib/PeiBoardXxxInitPreMemoryLib.c.
      i. The boot mode can be hardcoded. It should reflect actual functionality based upon the feature, such as S3 (silicon register), Capsule (variable), Recovery (GPIO).
-  ii. Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXXX/BoardInitLib/PeiBoardXXXInitPreMemLib.c.
+  ii. Add Board pre-memory initialization code in BoardInitBeforeMemoryInit () and BoardInitAfterMemoryInit () , BoardXxx/BoardInitLib/PeiBoardXxxInitPreMemLib.c.
   i. It initializes board specific hardware devices, such as GPIO.
   ii. It also updates pre-memory policy configuration by using PCD
   iii. Add Board policy update code in SiliconPolicyUpdatePreMemory () ,
 
-BoardXXX/PeiSiliconPolicyUpdateLib/PeiBoardXXXInitPreMemoryLib.c.
+BoardXxx/PeiSiliconPolicyUpdateLib/PeiBoardXxxInitPreMemoryLib.c.
   i. The PCD updated in BoardInitBeforeMemoryInit () might be used here.
 2. Ensure all PCDs in the configuration section (DSC files) are correct for your board.
   i. Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 2
@@ -4533,11 +4533,11 @@ Note:
 Steps to enable a board for Stage III
 Add board post-memory initialization code in BoardInitBeforeSiliconInit () and
 BoardInitAfterSiliconInit () ,
-BoardPkg/BoardInitLib/PeiBoardXXXInitPostMemoryLib.c.
+BoardPkg/BoardInitLib/PeiBoardXxxInitPostMemoryLib.c.
 i. Initialize board-specific hardware device, such as GPIO.
 ii. Update post-memory policy configuration by using PCD.
 2. Add board policy update code in SiliconPolicyUpdatePostMemory () ,
-BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXXXInitLib.c.
+BoardPkg\PeiSiliconPolicyUpdateLib \PeiBoardXxxInitLib.c.
 i. The PCD updated in BoardInitBeforeSiliconInit () might be used here.
 3. Add board initialization DXE code in BoardInitAfterPciEnumeration () ,
 BoardInitReadyToBoot () , BoardInitEndOfFirmware () .
@@ -6258,7 +6258,7 @@ firmware volume is exposed to the DXE dispatcher
   @size[.8em](&bull;&nbsp;&nbsp;NetworkPkg/NetworkComponents.dsc.inc)<br>&nbsp;&nbsp;&nbsp;
   @size[.8em](&bull;&nbsp;&nbsp;Network.fdf.inc)<br>
  </font>
- 4. &nbsp;&nbsp;Add appropriate "<font face="Consolas">@size[.8em](!include)</font>" statements to <font face="Consolas">@size[.8em](BoardXxx.dsc & .fdf)</font>
+ 4. &nbsp;&nbsp;Add appropriate "<font face="Consolas">@size[.8em](!include)</font>" statements to <font face="Consolas">@size[.8em](OpenBoardPkg.dsc & .fdf)</font>
 <br>
 </span></p>
 
@@ -6287,7 +6287,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 <br>
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-@color[yellow](BoardXxx.dsc)<br>
+@color[yellow](OpenBoardPkg.dsc)<br>
  . . .<br>
 [Defines]<br>
 @color[cyan](!include NetworkPkg/NetworkDefines.dsc.inc)<br>
@@ -6312,7 +6312,7 @@ Add the NetworkPkg "<font face="Consolas">!include</font>" file statements in th
 
 Note:
 
-Add the NetworkPkg !include statements in the sections shown of the BoardXxx.dsc file
+Add the NetworkPkg !include statements in the sections shown of the OpenBoardPkg.dsc file
 
 ---
 @title[Example Include Network in Board .FDF]
@@ -6329,7 +6329,7 @@ Add the NetworkPkg !include statements in the sections shown of the BoardXxx.dsc
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-@color[yellow](BoardXxx.fdf)<br>
+@color[yellow](OpenBoardPkg.fdf)<br>
  . . .<br>
 [FV.@color[yellow](FvAdvancedLate)]<br>
 . . .<br>
@@ -6363,7 +6363,7 @@ Note:
 
 
 
-Add the NetworkPkg !include statements in the FV section,FvAdvancedLate, as  shown of the BoardXxx.fdf file
+Add the NetworkPkg !include statements in the FV section,FvAdvancedLate, as  shown of the OpenBoardPkg.fdf file
 
 FvAdvancedLate for the Stage 3-4 (DXE)
 
@@ -6387,13 +6387,13 @@ FvAdvancedLate for the Stage 3-4 (DXE)
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-<font face="Arial">@size[1.3em](Remove IPv4 in )</font> @size[1.1em](BoardXxx.dsc)<br><br>
+<font face="Arial">@size[1.3em](Remove IPv4 in )</font> @size[1.1em](OpenBoardPkg.dsc)<br><br>
  . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](DEFINE NETWORK_IP4_ENABLE = FALSE)<br><br>
 <br>
-<font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.1em](BoardXxx.dsc)<br><br>
+<font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.1em](OpenBoardPkg.dsc)<br><br>
  . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6410,60 +6410,84 @@ The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE
 
 Note:
 
-The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they are included in the various sections of the BoardXxx.dsc as on the previous slide
+The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they are included in the various sections of the OpenBoardPkg.dsc as on the previous slide
 
 
 ---
 @title[Example – Adding Thunderbolt™]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example – Adding Thunderbolt™</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-100 ]
+@snap[north-west span-49 ]
 <br>
 <br>
-<br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 
 @snapend
 
+@snap[north-east span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+
+@snapend
 
 
 @snap[north-east span-98 ]
 <br>
-<p style="line-height:65%" align="left"><span style="font-size:0.67em;" >
-Thunderbolt is a specific feature for the Kabylake
-</span></p>
-
 <p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;">
-<font face="Arial">@size[1.3em](Set )</font> @size[1.1em](@color[yellow](gBoardModuleTokenSpaceGuid.PcdTbtEnable|TRUE) in OpenBoardPkgConfig.dsc)<br><br>
-@size[1.1em](BoardXxx.dsc)<br><br>
-@color[yellow](!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE)<br>
-&num; Enable For Thunderbolt(TM) <br>
-[LibraryClasses.common]<br>&nbsp;&nbsp;
-  TbtCommonLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiDxeSmmTbtCommonLib/TbtCommonLib.inf<br>&nbsp;&nbsp;
-  DxeTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/DxeTbtPolicyLib/DxeTbtPolicyLib.inf<br>
+@size[1.1em](OpenBoardPkg.dsc)<br><br>
+. . .<br>
+[FV.@color[yellow](FvAdvancedPreMem)]<br>
+. . .<br>
+FvNameGuid = 6053D78A-457E-4490-A237-31D0FBE2F305<br>
 <br>
-[LibraryClasses.IA32]<br>&nbsp;&nbsp;
-  PeiTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiTbtPolicyLib/PeiTbtPolicyLib.inf<br>&nbsp;&nbsp;
-  PeiDTbtInitLib|KabylakeOpenBoardPkg/Features/Tbt/Library/Private/PeiDTbtInitLib/PeiDTbtInitLib.inf<br>
+!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Pei/PeiTbtInit.inf)<br>
+!endif<br>
 <br>
-[Components.IA32]<br>&nbsp;&nbsp;
-  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Pei/PeiTbtInit.inf<br>
+. . .<br>
 <br>
-[Components.X64]<br>&nbsp;&nbsp;
-  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Smm/TbtSmm.inf<br>&nbsp;&nbsp;
-  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Dxe/TbtDxe.inf<br>&nbsp;&nbsp;
-  KabylakeOpenBoardPkg/Features/PciHotPlug/PciHotPlug.inf<br>
-@color[yellow](!endif)
+[FV.@color[yellow](FvAdvancedLate)]<br>
+. . .<br>
+FvNameGuid = 6053D78A-457E-4490-A237-31D0FBE2F305<br>
+<br>
+!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Dxe/TbtDxeinf)<br>
+@color[cyan](INF. . ./Features/PciHotPlug/PciHotPlug.inf)<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Smm/TbtSmm.inf)<br>
+!endif
 </span></p>
 @snapend
 
 
+@snap[north-east span-47 ]
+<br>
+<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br><br>
+[FV.FvAdvanced]<br>
+. . .<br>
+FvNameGuid         = B23E7388-9953-45C7- . . .<br>
+FILE FV_IMAGE = 35E7406A-5842-4F2B . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION FV_IMAGE = @color[yellow](FvAdvancedPreMem)<br>&nbsp;
+     &rbrace;<br>
+<br>
+FILE FV_IMAGE = F5DCB34F-27EA-48AC . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION FV_IMAGE = FvAdvancedPostMem<br>&nbsp;
+     &rbrace;<br>
+<br>
+FILE FV_IMAGE = 07FC4960-5322-4DDC- . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION GUIDED EE4E5898-3914-425 . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+           PROCESSING_REQUIRED = TRUE &lbrace;<br>&nbsp;&nbsp;&nbsp;
+         SECTION FV_IMAGE = @color[yellow](FvAdvancedLate)<br>&nbsp;&nbsp;
+       &rbrace;<br>&nbsp;
+     &rbrace;
+</span></p>
+@snapend
+
+
+
 Note:
 
-Add the Tbt libraries and modules within the “if” as shown.
-
-This could be done at the end of the .dsc file 
+Add the Tbt modules within the “if” as shown within the sections of the FV 
 
 
 ---
