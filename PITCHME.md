@@ -6412,22 +6412,69 @@ Note:
 
 The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they are included in the various sections of the OpenBoardPkg.dsc as on the previous slide
 
+---
+@title[Example – Adding Thunderbolt™]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example – Adding Thunderbolt™</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:65%" align="left"><span style="font-size:0.67em;" >
+Thunderbolt is a specific feature for the Kabylake
+</span></p>
+<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;">
+<font face="Arial">@size[1.3em](Set )</font> @size[1.1em](@color[yellow](gBoardModuleTokenSpaceGuid.PcdTbtEnable|TRUE) in OpenBoardPkgConfig.dsc)<br><br>
+@size[1.1em](OpenBoardPkg.dsc)<br><br>
+@color[yellow](!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE)<br>
+@num; Enable For Thunderbolt(TM) <br>
+[LibraryClasses.common]<br>&nbsp;&nbsp;
+  TbtCommonLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiDxeSmmTbtCommonLib/TbtCommonLib.inf<br>&nbsp;&nbsp;
+  DxeTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/DxeTbtPolicyLib/DxeTbtPolicyLib.inf<br>
+<br>
+[LibraryClasses.IA32]<br>&nbsp;&nbsp;
+  PeiTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiTbtPolicyLib/PeiTbtPolicyLib.inf<br>&nbsp;&nbsp;
+  PeiDTbtInitLib|KabylakeOpenBoardPkg/Features/Tbt/Library/Private/PeiDTbtInitLib/PeiDTbtInitLib.inf<br>
+<br>
+[Components.IA32]<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Pei/PeiTbtInit.inf<br>
+<br>
+[Components.X64]<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Smm/TbtSmm.inf<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Dxe/TbtDxe.inf<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/PciHotPlug/PciHotPlug.inf<br>
+@color[yellow](!endif)
+</span></p>
+@snapend
+
+
+Note:
+Add the Tbt libraries and modules within the “if” as shown.
+This could be done at the end of the .dsc file 
 
 ---
 @title[Example – Adding Thunderbolt™]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example – Adding Thunderbolt™</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-49 ]
+@snap[north-west span-51 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 
 @snapend
 
-@snap[north-east span-49 ]
+@snap[north-east span-48 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 
 @snapend
 
@@ -6435,7 +6482,7 @@ The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they a
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;">
-@size[1.1em](OpenBoardPkg.dsc)<br><br>
+@size[1.3em](OpenBoardPkg.dsc)<br><br><br>
 . . .<br>
 [FV.@color[yellow](FvAdvancedPreMem)]<br>
 . . .<br>
@@ -6460,9 +6507,86 @@ FvNameGuid = 6053D78A-457E-4490-A237-31D0FBE2F305<br>
 @snapend
 
 
-@snap[north-east span-47 ]
+@snap[north-east span-45 ]
 <br>
-<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br><br>
+<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br><br><br>
+[FV.FvAdvanced]<br>
+. . .<br>
+FvNameGuid         = B23E7388-9953-45C7- . . .<br>
+FILE FV_IMAGE = 35E7406A-5842-4F2B . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION FV_IMAGE = @color[yellow](FvAdvancedPreMem)<br>&nbsp;
+     &rbrace;<br>
+<br>
+FILE FV_IMAGE = F5DCB34F-27EA-48AC . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION FV_IMAGE = FvAdvancedPostMem<br>&nbsp;
+     &rbrace;<br>
+<br>
+FILE FV_IMAGE = 07FC4960-5322-4DDC- . . . &lbrace;<br>&nbsp;&nbsp;
+       SECTION GUIDED EE4E5898-3914-425 . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+           PROCESSING_REQUIRED = TRUE &lbrace;<br>&nbsp;&nbsp;&nbsp;
+         SECTION FV_IMAGE = @color[yellow](FvAdvancedLate)<br>&nbsp;&nbsp;
+       &rbrace;<br>&nbsp;
+     &rbrace;
+</span></p>
+@snapend
+
+
+
+Note:
+
+
+---
+@title[Example – Adding Thunderbolt™]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example – Adding Thunderbolt™</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-51 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+
+@snapend
+
+@snap[north-east span-48 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;">
+@size[1.3em](OpenBoardPkg.dsc)<br><br><br>
+. . .<br>
+[FV.@color[yellow](FvAdvancedPreMem)]<br>
+. . .<br>
+FvNameGuid = 6053D78A-457E-4490-A237-31D0FBE2F305<br>
+<br>
+!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Pei/PeiTbtInit.inf)<br>
+!endif<br>
+<br>
+. . .<br>
+<br>
+[FV.@color[yellow](FvAdvancedLate)]<br>
+. . .<br>
+FvNameGuid = 6053D78A-457E-4490-A237-31D0FBE2F305<br>
+<br>
+!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Dxe/TbtDxeinf)<br>
+@color[cyan](INF. . ./Features/PciHotPlug/PciHotPlug.inf)<br>
+@color[cyan](INF. . ./Features/Tbt/TbtInit/Smm/TbtSmm.inf)<br>
+!endif
+</span></p>
+@snapend
+
+
+@snap[north-east span-45 ]
+<br>
+<p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br><br><br>
 [FV.FvAdvanced]<br>
 . . .<br>
 FvNameGuid         = B23E7388-9953-45C7- . . .<br>
