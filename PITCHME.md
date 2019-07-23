@@ -6330,8 +6330,8 @@ Add the NetworkPkg !include statements in the sections shown of the OpenBoardPkg
 
 @snap[north-east span-98 ]
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;">
-@size[1.4em](OpenBoardPkg.fdf)<br><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+@size[1.4em](OpenBoardPkg.fdf)<br>
  . . .<br>
 [FV.@color[yellow](FvAdvancedLate)]<br>
 . . .<br>
@@ -6539,6 +6539,42 @@ Note:
 
 
 Add the Tbt modules within the “if” as shown within the sections of the FV 
+
+
+
+---
+@title[Stage 6 Checklist  ]
+<p align="center"><span class="gold" >@size[1.1em](<b>Stage 6 Checklist</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">Steps to enable a board for Stage 6:</span></p>
+
+@snap[north-east span-13]
+![Porting_task_list.gif](/assets/images/tenor.gif)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:None; line-height:0.65;">
+ <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Set <font face="Consolas">@color[yellow](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 6)</font></span></li>
+ <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; If required, create board specific Library class instance for feature.</span></li>
+ <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Add appropriate updates to PCDs and Library class implementations  to BoardXxx .dsc files</span></li>
+ <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Add required modules to appropriate FV sections in OpenBoardPkg.fdf</span></li>
+ <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Verify Feature enabled is added to build (check Build Directory)</span></li>
+ <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Verify the feature added functionally works.  <br>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; This may require several tests depending on the added feature.</span></li>
+</ul>
+<br>
+
+@snapend
+
+
+Note:
+Steps to enable a board for Stage VI
+1. Depends on the features being added.
+2. Basically make sure it builds then check if the added feature functionally works.
+
+
+
 
 
 ---
