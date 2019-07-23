@@ -6304,7 +6304,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 <br>
 
 <p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
-Add the NetworkPkg <font face="Consolas">!include</font> file statements in the sections shown 
+Add the NetworkPkg "<font face="Consolas">!include</font>" file statements in the sections shown 
 </span></p>
 
 @snapend
@@ -6313,6 +6313,64 @@ Add the NetworkPkg <font face="Consolas">!include</font> file statements in the 
 Note:
 
 Add the NetworkPkg !include statements in the sections shown of the BoardXxx.dsc file
+
+---
+@title[Example Include Network in Board .FDF]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Include Network in Board .FDF</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-95 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+@color[yellow](BoardXxx.fdf)<br>
+ . . .<br>
+[FV.@color[yellow](FvAdvancedLate)]<br>
+. . .<br>
+FvNameGuid         = 05411CAD-6C35-4675-B6CA-8748032144B4<br>
+@color[cyan](!include NetworkPkg/Network.fdf.inc)<br>
+<br>
+. . .<br>
+<br>
+[FV.FvAdvanced]<br>
+. . .<br>
+FvNameGuid         = B23E7388-9953-45C7-9201-0473DDE5487A<br>
+. . .<br>
+FILE FV_IMAGE = 07FC4960-5322-4DDC-A6A4-A17DE492DFE3 &lbrace;<br> &nbsp;&nbsp;&nbsp;&nbsp;
+       SECTION GUIDED EE4E5898-3914-4259-9D6E-DC7BD79403CF <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           PROCESSING_REQUIRED = TRUE &lbrace;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         SECTION FV_IMAGE = @color[yellow](FvAdvancedLate)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+       &rbrace;<br>&nbsp;&nbsp;
+     &rbrace;<br>
+
+
+
+</span></p>
+<br>
+
+<p style="line-height:65%" align="left"><span style="font-size:0.7em;" >
+Add the NetworkPkg "<font face="Consolas">!include</font>" file statements in the sections shown 
+</span></p>
+
+@snapend
+
+
+Note:
+
+
+
+Add the NetworkPkg !include statements in the sections shown of the BoardXxx.fdf file
+
+FvAdvancedLate for the Stage 3-4 (DXE)
+
+
+
 
 
 ---
