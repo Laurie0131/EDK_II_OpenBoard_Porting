@@ -6278,7 +6278,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -6286,8 +6286,8 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdEfiNetworkSupport|TRUE
 @snap[north-east span-98 ]
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-@color[yellow](OpenBoardPkg.dsc)<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;">
+@size[1.4em](OpenBoardPkg.dsc)<br><br>
  . . .<br>
 [Defines]<br>
 @color[cyan](!include NetworkPkg/NetworkDefines.dsc.inc)<br>
@@ -6321,15 +6321,15 @@ Add the NetworkPkg !include statements in the sections shown of the OpenBoardPkg
 @snap[north-west span-95 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
 @snap[north-east span-98 ]
 <br>
-<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-@color[yellow](OpenBoardPkg.fdf)<br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;">
+@size[1.4em](OpenBoardPkg.fdf)<br><br>
  . . .<br>
 [FV.@color[yellow](FvAdvancedLate)]<br>
 . . .<br>
@@ -6432,7 +6432,7 @@ Thunderbolt is a specific feature for the Kabylake
 </span></p>
 <p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;">
 <font face="Arial">@size[1.3em](Set )</font> @size[1.2em](@color[yellow](gBoardModuleTokenSpaceGuid.PcdTbtEnable|TRUE) in OpenBoardPkgConfig.dsc)<br><br>
-@size[1.3em](OpenBoardPkg.dsc)<br><br><br>
+@size[1.4em](OpenBoardPkg.dsc)<br><br><br>
 @color[yellow](!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE)<br>
 &num; Enable For Thunderbolt(TM) <br>
 [LibraryClasses.common]<br>&nbsp;&nbsp;
@@ -6483,7 +6483,7 @@ This could be done at the end of the .dsc file
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:30%" align="left" ><span style="font-size:0.4em; font-family:Consolas;"><br>
-@size[1.3em](OpenBoardPkg.dsc)<br><br>
+@size[1.4em](OpenBoardPkg.fdf)<br><br>
 . . .<br>
 [FV.@color[yellow](FvAdvancedPreMem)]<br>
 . . .<br>
