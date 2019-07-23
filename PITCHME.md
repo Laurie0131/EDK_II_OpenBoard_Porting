@@ -6555,13 +6555,14 @@ Add the Tbt modules within the “if” as shown within the sections of the FV
 <br>
 <br>
 <br>
-<ul style="list-style-type:None; line-height:0.65;">
+<br>
+<ul style="list-style-type:None; line-height:0.7;">
  <li><span style="font-size:0.7em" >1.&nbsp;&nbsp; Set <font face="Consolas">@color[yellow](gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 6)</font></span></li>
  <li><span style="font-size:0.7em" >2.&nbsp;&nbsp; If required, create board specific Library class instance for feature.</span></li>
- <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Add appropriate updates to PCDs and Library class implementations  to BoardXxx .dsc files</span></li>
- <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Add required modules to appropriate FV sections in OpenBoardPkg.fdf</span></li>
+ <li><span style="font-size:0.7em" >3.&nbsp;&nbsp; Add appropriate updates to PCDs and Library class implementations  to<br>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Consolas">BoardXxx .dsc</font> files</span></li>
+ <li><span style="font-size:0.7em" >4.&nbsp;&nbsp; Add required modules to appropriate FV sections in <br>&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">OpenBoardPkg.fdf</font></span></li>
  <li><span style="font-size:0.7em" >5.&nbsp;&nbsp; Verify Feature enabled is added to build (check Build Directory)</span></li>
- <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Verify the feature added functionally works.  <br>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; This may require several tests depending on the added feature.</span></li>
+ <li><span style="font-size:0.7em" >6.&nbsp;&nbsp; Verify the feature added functionally works.  <br>&nbsp;&nbsp;&nbsp;&nbsp; This may require several tests depending on the added feature.</span></li>
 </ul>
 <br>
 
