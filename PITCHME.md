@@ -6413,6 +6413,58 @@ Note:
 The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they are included in the various sections of the BoardXxx.dsc as on the previous slide
 
 
+---
+@title[Example – Adding Thunderbolt™]
+<p align="right"><span class="gold" >@size[1.1em](<b>Example – Adding Thunderbolt™</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+
+@snapend
+
+
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:65%" align="left"><span style="font-size:0.67em;" >
+Thunderbolt is a specific feature for the Kabylake
+</span></p>
+
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<font face="Arial">@size[1.3em](Set )</font> @size[1.1em](@color[yellow](gBoardModuleTokenSpaceGuid.PcdTbtEnable|TRUE) in OpenBoardPkgConfig.dsc)<br><br>
+BoardXxx.dsc<br>
+@color[yellow](!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE)<br>
+# Enable For Thunderbolt(TM) <br>
+[LibraryClasses.common]<br>&nbsp;&nbsp;
+  TbtCommonLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiDxeSmmTbtCommonLib/TbtCommonLib.inf<br>&nbsp;&nbsp;
+  DxeTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/DxeTbtPolicyLib/DxeTbtPolicyLib.inf<br>
+<br>
+[LibraryClasses.IA32]<br>&nbsp;&nbsp;
+  PeiTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiTbtPolicyLib/PeiTbtPolicyLib.inf<br>&nbsp;&nbsp;
+  PeiDTbtInitLib|KabylakeOpenBoardPkg/Features/Tbt/Library/Private/PeiDTbtInitLib/PeiDTbtInitLib.inf<br>
+<br>
+[Components.IA32]<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Pei/PeiTbtInit.inf<br>
+<br>
+[Components.X64]<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Smm/TbtSmm.inf<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/Tbt/TbtInit/Dxe/TbtDxe.inf<br>&nbsp;&nbsp;
+  KabylakeOpenBoardPkg/Features/PciHotPlug/PciHotPlug.inf<br>
+@color[yellow](!endif)
+</span></p>
+@snapend
+
+
+Note:
+
+Add the Tbt libraries and modules within the “if” as shown.
+
+This could be done at the end of the .dsc file 
+
 
 ---
 @title[Current Issues ]
