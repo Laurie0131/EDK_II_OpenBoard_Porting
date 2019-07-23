@@ -6389,13 +6389,13 @@ FvAdvancedLate for the Stage 3-4 (DXE)
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
-<font face="Arial">@size[1.1em](Remove IPv4 in )</font> BoardXxx.dsc<br>
+<font face="Arial">@size[1.3em](Remove IPv4 in )</font> @size[1.1em](BoardXxx.dsc)<br><br>
  . . .<br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](DEFINE NETWORK_IP4_ENABLE = FALSE)<br><br>
-
-<font face="Arial">@size[1.1em](Remove ISCSI in )</font>BoardXxx.dsc<br>
+<br>
+<font face="Arial">@size[1.3em](Remove ISCSI in )</font>@size[1.1em](BoardXxx.dsc)<br><br>
 [Defines]<br>&nbsp;&nbsp;
 !include NetworkPkg/NetworkDefines.dsc.inc<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](DEFINE NETWORK_ISCSI_ENABLE = FALSE)
