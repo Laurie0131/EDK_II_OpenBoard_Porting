@@ -317,7 +317,7 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
   <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and DSC files </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and .DSC files </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font>  to a new name (@size[.8em](i.e <font face="Consolas">NewOpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)) </span> </li>
 </ul>
 @snapend
