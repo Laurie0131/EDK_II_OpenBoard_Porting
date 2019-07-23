@@ -6328,16 +6328,14 @@ Add the NetworkPkg !include statements in the sections shown of the BoardXxx.dsc
 
 @snap[north-east span-98 ]
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
 @color[yellow](BoardXxx.fdf)<br>
  . . .<br>
 [FV.@color[yellow](FvAdvancedLate)]<br>
 . . .<br>
 FvNameGuid         = 05411CAD-6C35-4675-B6CA-8748032144B4<br>
 @color[cyan](!include NetworkPkg/Network.fdf.inc)<br>
-<br>
 . . .<br>
-<br>
 [FV.FvAdvanced]<br>
 . . .<br>
 FvNameGuid         = B23E7388-9953-45C7-9201-0473DDE5487A<br>
