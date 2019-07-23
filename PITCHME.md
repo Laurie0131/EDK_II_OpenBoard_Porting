@@ -6434,11 +6434,11 @@ The NetworkPkg/NetworkDefines.dsc.inc will set these defines to TRUE when they a
 Thunderbolt is a specific feature for the Kabylake
 </span></p>
 
-<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;"><br>
+<p style="line-height:40%" align="left" ><span style="font-size:0.45em; font-family:Consolas;">
 <font face="Arial">@size[1.3em](Set )</font> @size[1.1em](@color[yellow](gBoardModuleTokenSpaceGuid.PcdTbtEnable|TRUE) in OpenBoardPkgConfig.dsc)<br><br>
-BoardXxx.dsc<br>
+BoardXxx.dsc<br><br>
 @color[yellow](!if gBoardModuleTokenSpaceGuid.PcdTbtEnable == TRUE)<br>
-# Enable For Thunderbolt(TM) <br>
+&num; Enable For Thunderbolt(TM) <br>
 [LibraryClasses.common]<br>&nbsp;&nbsp;
   TbtCommonLib|KabylakeOpenBoardPkg/Features/Tbt/Library/PeiDxeSmmTbtCommonLib/TbtCommonLib.inf<br>&nbsp;&nbsp;
   DxeTbtPolicyLib|KabylakeOpenBoardPkg/Features/Tbt/Library/DxeTbtPolicyLib/DxeTbtPolicyLib.inf<br>
