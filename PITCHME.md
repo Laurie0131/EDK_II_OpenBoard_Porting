@@ -1438,11 +1438,11 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 @title[Investigate the FDF File then DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b> Investigate the FDF File then DSC</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-70 ]
+@snap[north-west span-68 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; ">
-<b>Porting Process per Stage Find and update platform hooks
+<b>Porting Process per Stage Find and update platform hooks</b>
 </span></p>
 
 <ul style="list-style-type:none; line-height:0.7;">
@@ -1463,8 +1463,8 @@ Once the library hook is found, update that platform hook function for the board
 ### Porting Process per Stage Find: 
 1. Locate FVs for each stage in the FDF file
 2. find Modules for each FV contents in the FDF
-3. Find Module Locations in the platform DSC file
-4. Find Platform Porting Libraries per Module in th DSC
+3. Find Module Locations in the platform DSC file - Should point to an inf file that is probably in the Common i.e. MinplatformPkg or edk2 modules
+4. Find Platform Porting Libraries per Module in th DSC - library could be in minPlatform with hook into the platform specific code.
 5. Update the Hook Function for Board,  should be in a .c file coorsponding to the library
 
 
