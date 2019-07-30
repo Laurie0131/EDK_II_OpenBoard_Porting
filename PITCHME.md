@@ -1438,19 +1438,19 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 @title[Investigate the FDF File then DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b> Investigate the FDF File then DSC</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-68 ]
+@snap[north-west span-66 ]
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; ">
-<b>Porting Process per Stage Find and update platform hooks</b>
+<b>Porting process per stage find and update platform hooks</b>
 </span></p>
 
 <ul style="list-style-type:none; line-height:0.7;">
-  <li class="fragment"><span style="font-size:0.7em" >1. Locate FVs for each stage</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >2. Modules for each FV contents</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >3. Module Locations</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >4. Platform Porting Libraries per Module</span> </li>
-  <li class="fragment"><span style="font-size:0.7em" >5. Update the Hook Function for Board</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10102;)&nbsp;Locate FVs for each stage</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10103;)&nbsp;Modules for each FV contents</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10104;)&nbsp;Module Locations</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10105;)&nbsp;Platform Porting Libraries per Module</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10106;)&nbsp;Update the Hook Function for Board</span> </li>
 </ul>
 
 @snapend
