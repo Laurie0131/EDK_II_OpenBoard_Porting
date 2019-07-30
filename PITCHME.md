@@ -1439,17 +1439,19 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 <p align="right"><span class="gold" >@size[1.1em](<b> Investigate the FDF File then DSC</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-70 ]
+<br>
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em; ">
-<b>Porting Process per Stage Find:
+<b>Porting Process per Stage Find and update platform hooks
 </span></p>
 
-<p style="line-height:70%" align="left" ><span style="font-size:0.65em; ">
- 1.&nbsp;Locate FVs for each stage<br>
- 2.&nbsp;Modules for each FV contents <br>
- 3.&nbsp;Module Locations<br>
- 4.&nbsp;Platform Porting Libraries per Module <br>
- 5.&nbsp;Update the Hook Function for Board<br>
-</span></p>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li class="fragment"><span style="font-size:0.7em" >1. Locate FVs for each stage</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >2. Modules for each FV contents</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >3. Module Locations</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >4. Platform Porting Libraries per Module</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >5. Update the Hook Function for Board</span> </li>
+</ul>
 
 @snapend
 
