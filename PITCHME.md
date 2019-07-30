@@ -1441,11 +1441,11 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 @snap[north-west span-66 ]
 <br>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.85em; ">
+<p style="line-height:80%" align="left" ><span style="font-size:0.85em; ">
 <b>Porting process per stage find and update platform hooks</b>
 </span></p>
 
-<ul style="list-style-type:none; line-height:0.7;">
+<ul style="list-style-type:none; line-height:0.75;">
   <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10102;)&nbsp;Locate FVs for each stage</span> </li>
   <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10103;)&nbsp;Modules for each FV contents</span> </li>
   <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10104;)&nbsp;Module Locations</span> </li>
