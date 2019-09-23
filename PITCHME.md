@@ -1928,7 +1928,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
-Search the board platform .DSC file for where the @color[#A8ff60](<font face="Consolas">PlatformSecLib</font>) is in the Platform-Board Tree
+Search the board platform .DSC file for where the <br>@color[#A8ff60](<font face="Consolas">PlatformSecLib</font>) is in the Platform-Board Tree
 </span></p>
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;">
 DSC FILE:<br>
