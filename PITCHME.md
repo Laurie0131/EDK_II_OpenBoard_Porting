@@ -1150,7 +1150,7 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 
 ---
 @title[New OpenBoard Directory]
-<p align="right"><span class="gold" >@size[1.1em](<b>New OpenBoard Directory</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>If a New OpenBoard Package</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-49 ]
@@ -1168,14 +1168,14 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 @snap[north-east span-98 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-@color[yellow](NwqOpenBoardPkg)<br>&nbsp;&nbsp;
+@color[yellow](NewOpenBoardPkg)<br>&nbsp;&nbsp;
   Acpi<br>&nbsp;&nbsp;
   FspWrapper<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;
   Include<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;
-   @color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](BoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
        . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1188,7 +1188,7 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-@color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;
+@color[yellow](BoardXxx )<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
     BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
