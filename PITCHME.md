@@ -1791,7 +1791,7 @@ As the foundational stage for further functionality, Stage I may include additio
 @snap[north-east span-10 ]
 <br>
 <br>
-<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10104;)</span></p>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" ><br>@color[yellow](&#10104;)</span></p>
 @snapend
 
 Note:
