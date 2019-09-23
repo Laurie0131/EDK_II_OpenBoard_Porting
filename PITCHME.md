@@ -439,8 +439,8 @@ Note:
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 After the Build is completed the Build directory will be a mirror of all the sources used to build the reference OpenBoard.<br><br>
 This can serve as a cross reference to determine what sources are used in the chosen reference OpenBoard.<br>
-@size[.8em](&hyphen;Library references for the library class implementation instance)<br>
-@size[.8em](&hyphen;Report file <font face="Consolas">@color[yellow](BuildReport.log)</font> for PCDs and LIBRARY instances   )
+&nbsp;&nbsp;@size[.8em](&hyphen;&nbsp;Library references for the library class implementation instance)<br>
+&nbsp;&nbsp;@size[.8em](&hyphen;&nbsp;Report file <font face="Consolas">@color[yellow](BuildReport.log)</font> for PCDs and LIBRARY instances   )
 </span></p>
 @snapend
 
@@ -452,14 +452,14 @@ This can serve as a cross reference to determine what sources are used in the ch
 <br>
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br><br>
 &lt;workspace&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Build /KabylakeOpenBoardPkg /KabylakeRvp3 /DEBUG_&lt;BuildTag&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     FV /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     IA32 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &lt;Dirs built for SEC and PEI&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     X64 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  &lt;Dirs built for DXE – BDS – Boot&gt; / <br>&nbsp;&nbsp;
+	  &lt;Dirs built for DXE – BDS – Boot&gt; / <br>&nbsp;&nbsp;&nbsp;&nbsp;
    BuildReport.log &lt; report file for PCDs, Libraries, Build flags,. . .&gt;
 </span></p>
 @snapend
