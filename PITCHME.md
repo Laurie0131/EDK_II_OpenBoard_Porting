@@ -983,7 +983,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 @snap[north-west span-50 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-98 ]
@@ -997,7 +997,7 @@ edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       &ltpGeneration&gt;OpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &lt;Generation&gt;OpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	       @color[yellow](BoardXxx)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            @color[yellow](NewBoardXxx)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1033,7 +1033,8 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
   <li><span style="font-size:0.65em" > Copy a reference board <font face="Consolas">&lt;Generation&gt;OpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
 </ul>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.7em; "><br>
 Copy <font face="Consolas">@color[yellow](BoardXxx) to @color[yellow](NewBoardXxx)</font>
 </span></p>
 <br>
