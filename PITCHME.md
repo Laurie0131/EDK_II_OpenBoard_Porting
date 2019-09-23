@@ -2833,9 +2833,9 @@ achieve debug output.
 ---
 @title[Stage 1 Checklist 02 ]
 <p align="center"><span class="gold" >@size[1.1em](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
+<p style="line-height:55%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
-<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib) to) 
+<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib)) 
 @size[.7em](KabylakeOpenBoardPkg/@color[cyan](NewBoardXxx)/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))
 </font>
 </span></p>
@@ -2845,6 +2845,7 @@ Kabylake -<br>
 @snapend
 
 @snap[north-east span-98 ]
+<br>
 <br>
 <br>
 <br>
