@@ -5146,7 +5146,7 @@ The Global NVS ASL definition (such as https://github.com/tianocore/edk2-platfor
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em" ><br><br>
 &bull; &nbsp;&nbsp;Tip: Board specific device selection - define a board-neutral name<br>
 &bull; &nbsp;&nbsp;Data structure is board neutral <font face="Consolas">@size[.8em](@color[yellow]( .../Include/Acpi/GlobalNvsAreaDef.h ))</font><br>
-&bull; &nbsp;&nbsp;File:&nbsp; <font face="Consolas">@size[.75em](@color[yellow](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @size[.75em](@color[yellow](DxeKabylakeRvp3AcpiTableLib.c))</font>
+&bull; &nbsp;&nbsp;File:&nbsp; <font face="Consolas">@size[.75em](@color[yellow](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @size[.75em](@color[yellow](DxeKabylakeRvp3AcpiTableLib.c) - <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardAcpiLib/DxeKabylakeRvp3AcpiTableLib.c">link</a>)</font>
 </span></p>
 
 @snapend
