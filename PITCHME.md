@@ -1561,6 +1561,9 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 
 @snapend
 
+@snap[south span-90 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Also check the reference platform BUILD directory <br>&nbsp;</span></p>)
+@snapend
 
 Note:
 The process for porting each stage will be to investigate the FDF and the DSC files to locate FVs, Modules and Libraries associated with each stage.
