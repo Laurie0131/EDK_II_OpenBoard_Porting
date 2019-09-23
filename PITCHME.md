@@ -1042,7 +1042,7 @@ Copy <font face="Consolas">@color[yellow](BoardXxx) to @color[yellow](NewBoardXx
 @snapend
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewOpenBoardPkg)</font>"<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewBoardXxx)</font>"<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1175,7 +1175,7 @@ produces these PCDs and Kabylake common board code consumes these PCDs
       PeiFspPolicyUpdateLib<br>&nbsp;&nbsp;
   Include<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;
-   @color[yellow](BoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   @color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
        . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1188,7 +1188,7 @@ produces these PCDs and Kabylake common board code consumes these PCDs
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-@color[yellow](BoardXxx )<br>&nbsp;&nbsp;
+@color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
     BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1211,7 +1211,7 @@ This example we are coping the KabylakeOpenBoardPkg to the NewOpenBoardPkg since
 
 Example the flash layout is too different to use the same platform common board.
 
-Also rename the board to a meaningful name, this case “BoardXxx”
+Also rename the board to a meaningful name, this case “NewBoardXxx”
 
 
 
@@ -2832,7 +2832,7 @@ achieve debug output.
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
 <font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib) to) 
-@size[.7em](KabylakeOpenBoardPkg/@color[cyan](BoardXxx)/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))
+@size[.7em](KabylakeOpenBoardPkg/@color[cyan](NewBoardXxx)/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))
 </font>
 </span></p>
 
@@ -2862,10 +2862,10 @@ Kabylake -<br>
 @snapend
 
 Note:
-BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c`
+BoardPkg/BoardInitLib/PeiNewBoardXxxInitPreMemoryLib.c`
 
 1. If the project only supports one board, this function can return directly.
-2.  Add Board pre-memory debug initialization code in BoardDebugInit () , BoardPkg/BoardInitLib/PeiBoardXXXInitPreMemoryLib.c. - This is for debug channel related initialization.
+2.  Add Board pre-memory debug initialization code in BoardDebugInit () , BoardPkg/BoardInitLib/PeiNewBoardXxxInitPreMemoryLib.c. - This is for debug channel related initialization.
 3.  Audit BoardPkg/Stage1.dsc, ensure all PCDs in the Configuration section are correct for
 your board. - Set gMinPlatformPkgTokenSpaceGuid.PcdBootStage = 1 and  Follow "Debug Lib Selection" to enable serial debug capability.
 4. Audit all other PCD settings in the board DSC file to verify the values are correct for
