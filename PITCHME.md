@@ -316,9 +316,9 @@ Find a similar package or platform from the Open Board edk-platforms  that meets
   <li class=fragment><span style="font-size:0.8em" >Find a similar OpenBoard EDK II Platform in Github <font face="Consolas">edk2_platforms</font> </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Get the reference OpenBoard EDK II Platform from Github </span> </li>
   <li class=fragment><span style="font-size:0.8em" >Build the chosen reference OpenBoard EDK II Platform </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Study the Build directory of the reference OpenBoard </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Study the reference OpenBoard .FDF and .DSC files </span> </li>
-  <li class=fragment><span style="font-size:0.8em" >Copy a reference <font face="Consolas">OpenBoardPkg/BoardXxx</font>  to a new name (@size[.8em](i.e <font face="Consolas">NewOpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)) </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Study the Build directory,OpenBoard .FDF and .DSC files </span> </li>
+  <li class=fragment><span style="font-size:0.8em" >Copy  a reference board directory to a new name (i.e<font face="Consolas"> &lt;Generation&gt;OpenBoardPkg/NewBoardX</font> where string "@color[#A8ff60](<font face="Consolas">New</font>)" is meaningful to the project.)</span> </li>
+  <li class=fragment><span style="font-size:0.8em" >if it is a NEW Open Platform, Copy a reference <font face="Consolas"> &lt;Generation&gt;OpenBoardPkg/BoardXxx</font>  to a new name (e.g. <font face="Consolas">NewOpenBoardPkg/NewBoardX</font>)</span> </li>
 </ul>
 @snapend
 
@@ -368,7 +368,7 @@ git clone –recursive https://github.com/tianocore/edk2.git<br>
 git clone https://github.com/tianocore/edk2-platforms.git<br>
 <br>
 <font face="Arial">edk2-non-osi repository</font><br>
-git clone https://github.com/tianocore/edk2-non-osi.git -b devel-MinPlatform<br>
+git clone https://github.com/tianocore/edk2-non-osi.git <br>
 <br>
 <font face="Arial">FSP repository</font><br>
 git clone https://github.com/IntelFsp/FSP.git<br>
@@ -436,7 +436,9 @@ Note:
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;">
 After the Build is completed the Build directory will be a mirror of all the sources used to build the reference OpenBoard.<br><br>
-This can serve as a cross reference to determine what sources are used in the chosen reference OpenBoard.
+This can serve as a cross reference to determine what sources are used in the chosen reference OpenBoard.<br>
+@size[.8em](&hyphen;Library references for the library class implementation instance)<br>
+@size[.8em](&hyphen;Report file <font face="Consolas">@color[yellow](BuildReport.log)</font> for PCDs and LIBRARY instances   )
 </span></p>
 @snapend
 
@@ -455,6 +457,7 @@ This can serve as a cross reference to determine what sources are used in the ch
       &lt;Dirs built for SEC and PEI&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     X64 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  &lt;Dirs built for DXE – BDS – Boot&gt; / <br>&nbsp;&nbsp;
+   BuildReport.log &lt; report file for PCDs, Libraries, Build flags,. . .&gt;
 </span></p>
 @snapend
 
@@ -673,10 +676,16 @@ We see that it will INCLUDE the other core and silicon .dsc files.  Note the ord
 
 ```
 
+@snap[south-west span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.dsc"> Kabylake .DSC </a>
+file
+</span></p>
+@snapend
 
 @snap[south-east span-45 ]
 <p style="line-height:40% " align="right"><span style="font-size:0.55em;">
-Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.dsc"> Kabylake .DSC </a>
+Link to <a href="https://edk2-docs.gitbooks.io/edk-ii-dsc-specification/content/v/release/1.28/"> Link to EDK II DSC Spec </a>
 file
 </span></p>
 @snapend
@@ -861,9 +870,17 @@ INF  $(PLATFORM_PACKAGE)/Test/TestPointStubDxe/TestPointStubDxe.inf
 ```
 
 
+@snap[south-west span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.fdf"> Kabylake .FDF </a>
+file
+</span></p>
+@snapend
+
+
 @snap[south-east span-45 ]
 <p style="line-height:40% " align="right"><span style="font-size:0.55em;">
-Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.fdf"> Kabylake .FDF </a>
+Link to <a href="https://edk2-docs.gitbooks.io/edk-ii-fdf-specification/content/v/release/1.28/"> EDK II FDF Spec </a>
 file
 </span></p>
 @snapend
@@ -893,7 +910,7 @@ edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
 edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/ "@color[#FFC000](Board common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ "@color[#FFC000](Platform common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[yellow](NewOpenBoardPkg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            @color[yellow](BoardXxx)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -927,11 +944,94 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > @color[gray](Get the EDK II packages locally to the workspace)</span> </li>
   <li><span style="font-size:0.65em" > @color[gray](Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution)</span> </li>
-  <li class=fragment><span style="font-size:0.65em" > Copy a reference - <font face="Consolas">GenerationOpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
+  <li class=fragment><span style="font-size:0.65em" > Copy a reference open platform board <font face="Consolas">&lt;Generation&gt;OpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
 </ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
 <font face="Consolas">@color[yellow](NewOpenBoardPkg) & @color[yellow](BoardXxx)</font>
+</span></p>
+<br>
+<br>
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only make changes in the "<font face="Consolas">@color[yellow](NewOpenBoardPkg)</font>"<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+
+The build process creates this directory - Build/
+
+MyWorkSpace – directory from the “git” of repositories
+
+Build –p .dsc from the BOARD Directory
+
+The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
+  (see https://github.com/tianocore/tianocore.github.io/wiki/EDK-II-Development-Process)
+
+
+---
+@title[Copy a New Board]
+<p align="right"><span class="gold" >@size[1.1em](<b>Copy a New Board Only</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-50 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-98 ]
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MyWorkSpace/<br>&nbsp;&nbsp;
+edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
+  - "@color[#FFC000](edk2 Common)"<br>&nbsp;&nbsp;
+edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ "@color[#FFC000](Platform common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &ltpGeneration&gt;OpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	       @color[yellow](BoardXxx)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           @color[yellow](NewBoardXxx)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabyLakeSilconPkg/"@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;
+edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabyLakeFspBinPkg<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north span-5 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[gray]( 1. )<br><br></span> </li>
+  <li><span style="font-size:0.65em" >@color[gray]( 2. )<br><br> </span> </li>
+  <li><span style="font-size:0.65em" > 3. </span> </li>
+</ul>
+@snapend
+
+
+@snap[north-east span-48 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.65em" > @color[gray](Get the EDK II packages locally to the workspace)</span> </li>
+  <li><span style="font-size:0.65em" > @color[gray](Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution)</span> </li>
+  <li class=fragment><span style="font-size:0.65em" > Copy a reference board <font face="Consolas">&lt;Generation&gt;OpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
+</ul>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
+Copy <font face="Consolas">@color[yellow](BoardXxx) to @color[yellow](NewBoardXxx)</font>
 </span></p>
 <br>
 <br>
@@ -1032,6 +1132,8 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 
 Note:
+
+#### Platform Initialization Modules – One Board – One Directory
 
 This example KabylakeRvp3 and KabylakeRvp7 are very similar but different enough to make a new directory for KabylakeRvp7
 
@@ -1434,7 +1536,7 @@ The Stage I modules will be combined into FVs to make up the Stage I components
 
 
 
----?image=assets/images/slides/Slide26_1.JPG
+---?image=assets/images/slides/Slide26.JPG
 @title[Investigate the FDF then DSC files]
 <p align="right"><span class="gold" >@size[1.1em](<b> Investigate the FDF  then DSC Files</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -1514,7 +1616,10 @@ Once the library hook is found, update that platform hook function for the board
 <br>
 @snapend
 
-
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10102;)</span></p>
+@snapend
 
 Note:
 
@@ -1589,6 +1694,13 @@ A Note that a child FV is a FV embedded within the parent FV. The child FV is id
 </table>
 <br>
 @snapend
+
+
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10103;)</span></p>
+@snapend
+
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Mapped according to .FDF file layout<br><br>&nbsp;</span></p>)
@@ -1669,7 +1781,10 @@ As the foundational stage for further functionality, Stage I may include additio
 @snapend
 
 
-
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10104;)</span></p>
+@snapend
 
 Note:
 
@@ -1767,11 +1882,15 @@ Board porting will require creation / porting of libraries identified as produce
   <li><span style="font-size:0.7em" >3. Determine which Library is used and that <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;should have the build path in the workspace<br></span> </li><br>
   <li><span style="font-size:0.7em" >4. DSC file will have similar to:</span> </li>
   <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf</span> </li>
+  <li><span style="font-size:0.7em" >5. Verify the instance used from the <font face="Consolas">Build</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory:</span> </li>
 </ul>
 
 @snapend
 
-
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10105;)</span></p>
+@snapend
 
 Note:
 http://sustituciondepuestosclaves.wikispaces.com/Metodo+de+Sustitucion+de+Puestos+Claves 
@@ -1945,19 +2064,25 @@ Note:
 The Temp memory is set up through the FSP TempRamInit API
 
 Call to the TempRamInit API is made that is located in the FSP Binary module
+
 The  FSP binary is rebased for the FvFspT Firmware Volume.
 
 Boot Loader must pass valid CAR region for FSP stack use through FSPM_UPD.FspmArchUpd.StackBase and
 FSPM_UPD.FspmArchUpd.StackSize UPDs.
+
 The minimum FSP stack size required for this revision of FSP is 160KB, stack base is 0xFEF17F00 by default. (from KabyLake FSP integraton Guide (KBLK IG)
 
 At the end of TempRamExit the original code and data caching are disabled. FSP will reconfigure all MTRRs as
 described in the table below for performance optimization.
-Memory range Cache Attribute
-0x00000000 - 0x0009FFFF Write back
-0x000C0000 - Top of Low Memory Write back
-0xFF800000 - 0xFFFFFFFF (Flash region) Write protect
-0x1000000000 - Top of High Memory Write back
+
+<pre>
+ Memory range Cache Attribute
+ 0x00000000 - 0x0009FFFF Write back
+ 0x000C0000 - Top of Low Memory Write back
+ 0xFF800000 - 0xFFFFFFFF (Flash region) Write protect
+ 0x1000000000 - Top of High Memory Write back
+</pre>
+
 If the boot loader wish to reconfigure the MTRRs differently, it can be overridden immediately after this API call.
 
 
@@ -2080,6 +2205,10 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 @snapend
 
 
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10106;)</span></p>
+@snapend
 
 
 @snap[south span-95 fragment]
@@ -2153,25 +2282,25 @@ Note:
 
 
 
-In order to determine which board specific driver needs to run and which does not need to run, there must be some code to detect the board type. 
-The board detection code is board specific. It should be under the board specific directory 
+- In order to determine which board specific driver needs to run and which does not need to run, there must be some code to detect the board type. 
+- The board detection code is board specific. It should be under the board specific directory 
 
-Uses PCD calls to set / get Board Sku for Storing Board ID
+- Uses PCD calls to set / get Board Sku for Storing Board ID
 	LibPcdGetSku() & LibPcdSetSku()
 
-For the Kabylake example the lower function KabylakeRvp3BoardDetect() will read the ID from the EC using the LPC bus. 
-Then is updates LibPcdSetSku() with the Board ID
-LibPcdGetSku() can then be used elsewhere
+- For the Kabylake example the lower function KabylakeRvp3BoardDetect() will read the ID from the EC using the LPC bus. 
+- Then is updates LibPcdSetSku() with the Board ID
+- LibPcdGetSku() can then be used elsewhere
 
-The EC implements an embedded controller interface at ports 0x60/0x64 and a ACPI compliant
+- The EC implements an embedded controller interface at ports 0x60/0x64 and a ACPI compliant
 system management controller at ports 0x62/0x66. Port 0x66 is the command and status port,
 port 0x62 is the data port.
 
-Another NOTE: The SKU ID check should only happen in board specific drivers. The SKU ID check is NOT allowed in any common board code or common platform code. 
+- Another NOTE: The SKU ID check should only happen in board specific drivers. The SKU ID check is NOT allowed in any common board code or common platform code. 
 
 
-SkuIds is a special usage of PCD. It can support multiple configurations generated at build time, and it supports runtime selection to make one configuration take effect finally. 
-Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku () 
+- SkuIds is a special usage of PCD. It can support multiple configurations generated at build time, and it supports runtime selection to make one configuration take effect finally. 
+- Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku () 
 
 
 ---
@@ -2457,7 +2586,7 @@ Silicon/Intel/KabylakeSiliconPkg/<br>&nbsp;
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
 If GPIOs need to be Initialized pre-memory then the hook <font face="Consolas">GpioInitPreMem()</font> calls the silicon library for GPIOs<br><br>
 Example for Kabylake PCH GPIO pins
-Table: <font face="Consolas">KabylakeRvp3GpioTable.c</font>
+Table: <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/KabylakeRvp3GpioTable.c"><font face="Consolas">KabylakeRvp3GpioTable.c</font></a>
 </span></p>
 @snapend
 
@@ -2643,8 +2772,8 @@ also shown are the debug configuration PCDs
 <p style="line-height:70%" align="left" ><span style="font-size:0.7em; "> <br><br>
  1. Copy the EDK II packages to a local workspace  <br>
  2. Select the correct Intel® FSP & review requirements  <br>
- 3. Get silicon initialization requirements for the given board. <br>
- 4. Customize the silicon initialization solution to the board-specific <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements. <br>
+ 3. Get silicon initialization policy for the given board. <br>
+ 4. Customize the silicon initialization policy to the board-specific <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements. <br>
  5. Determine other firmware and software components <br>
  6. Determine board-specific information required to fetch code and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show debug output. <br>
  7. Copy a reference <font face="Consolas">@size[.8em](GenerationOpenBoardPkg/BoardXxx)</font> and update the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board interfaces in Required Functions. <br>
@@ -2698,7 +2827,9 @@ achieve debug output.
 <p align="center"><span class="gold" >@size[1.1em](<b>Stage 1 Checklist<br>- Board Pre-mem Lib </b>)</span><span style="font-size:0.75em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; ">
 Kabylake -<br>
-<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))</font>
+<font face="Consolas">@size[.7em](KabylakeOpenBoardPkg/KabylakeRvp3/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib) to) 
+@size[.7em](KabylakeOpenBoardPkg/@color[cyan](BoardXxx)/Library/BoardInitLib/@color[yellow](PeiBoardInitPreMemLib))
+</font>
 </span></p>
 
 @snap[north-east span-13]
