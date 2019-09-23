@@ -428,6 +428,8 @@ Note:
 <br>
 <br>
 <br>
+<br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -449,7 +451,8 @@ This can serve as a cross reference to determine what sources are used in the ch
 <br>
 <br>
 <br>
-<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br><br>
 &lt;workspace&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Build /KabylakeOpenBoardPkg /KabylakeRvp3 /DEBUG_&lt;BuildTag&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     FV /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
