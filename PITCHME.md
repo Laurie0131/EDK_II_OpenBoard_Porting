@@ -1088,7 +1088,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
   Library<br>&nbsp;&nbsp;
   @color[yellow](KabylakeRvp3)<br>&nbsp;&nbsp;
    . . .<br>&nbsp;&nbsp;
-  @color[yellow](KabylakeRvp7 )<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
        . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1101,7 +1101,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
-@color[yellow](KabylakeRvp7 )<br>&nbsp;&nbsp;
+@color[yellow](NewBoardXxx )<br>&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
     BoardInitLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PeiBoardInitPreMemLib<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1139,9 +1139,9 @@ Note:
 
 #### Platform Initialization Modules – One Board – One Directory
 
-This example KabylakeRvp3 and KabylakeRvp7 are very similar but different enough to make a new directory for KabylakeRvp7
+This example KabylakeRvp3 and NewBoardXxx are very similar but different enough to make a new directory for NewBoardXxx
 
-If we need to add a new board, such as Rvp7, we can copy the KabylakeRv3 folder to KabylakeRvp7 folder, and update all the modules in this KabylakeRvp7. 
+If we need to add a new board, such as Rvp7, we can copy the KabylakeRv3 folder to NewBoardXxx folder, and update all the modules in this NewBoardXxx. 
 Once we move the board specific code to the board specific directory, the generic board code should not contain any board specific code. For example, we do not put PeiFspPolicyUpdateLib 
 into KabylakeRvp3, because this code only consumes a set of PCDs, such as PcdMrcRcompResistor, PcdSpecificLpHsioPtssTable1, PcdHdaVerbTable, etc. A KabylakeRvp3 board specific code BoardInitLib 
 produces these PCDs and Kabylake common board code consumes these PCDs 
