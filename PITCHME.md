@@ -913,7 +913,7 @@ edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
 edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/ "@color[#FFC000](Platform common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        @color[yellow](NewOpenBoardPkg)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            @color[yellow](BoardXxx)/ "@color[#FFC000](Board)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -995,7 +995,7 @@ edk2/<br>&nbsp;&nbsp; &nbsp;&nbsp;
 edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/ "@color[#FFC000](Platform common)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        &ltpGeneration&gt;OpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	       @color[yellow](BoardXxx)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1030,7 +1030,7 @@ FSP/"Silicon"<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.65em" > @color[gray](Get the EDK II packages locally to the workspace)</span> </li>
   <li><span style="font-size:0.65em" > @color[gray](Select the Ref  OpenBoard and correct Intel® FSP silicon initialization solution)</span> </li>
-  <li class=fragment><span style="font-size:0.65em" > Copy a reference board <font face="Consolas">&lt;Generation&gt;OpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
+  <li><span style="font-size:0.65em" > Copy a reference board <font face="Consolas">&lt;Generation&gt;OpenBoardPkg/BoardXxx</font> to a new directory  </span> </li>
 </ul>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em; "><br>
