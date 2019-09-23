@@ -1883,13 +1883,12 @@ Board porting will require creation / porting of libraries identified as produce
 <br>
 <br>
 <br>
-<br>
 <ul style="list-style-type:none; line-height:0.7;">
   <li><span style="font-size:0.7em" >1. Search the workspace .DSC files for the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string of the library<br></span> </li><br>
   <li><span style="font-size:0.7em" >2. Open the .DSC files associated with the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open board platform project<br></span> </li><br>
   <li><span style="font-size:0.7em" >3. Determine which Library is used and that <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;should have the build path in the workspace<br></span> </li><br>
   <li><span style="font-size:0.7em" >4. DSC file will have similar to:</span> </li>
-  <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf</span> </li>
+  <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf<br></span> </li>
   <li><span style="font-size:0.7em" >5. Verify the instance used from the <font face="Consolas">Build</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory:</span> </li>
 </ul>
 
@@ -1897,7 +1896,7 @@ Board porting will require creation / porting of libraries identified as produce
 
 @snap[north-east span-10 ]
 <br>
-<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10105;)</span></p>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" ><br>@color[yellow](&#10105;)</span></p>
 @snapend
 
 Note:
