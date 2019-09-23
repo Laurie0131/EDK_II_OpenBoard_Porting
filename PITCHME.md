@@ -2214,7 +2214,8 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 
 @snap[north-east span-10 ]
 <br>
-<p style="line-height:45%" align="right" ><span style="font-size:0.8em" >@color[yellow](&#10106;)</span></p>
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" ><br>@color[yellow](&#10106;)</span></p>
 @snapend
 
 
