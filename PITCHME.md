@@ -1888,7 +1888,7 @@ Board porting will require creation / porting of libraries identified as produce
   <li><span style="font-size:0.7em" >2. Open the .DSC files associated with the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open board platform project<br></span> </li><br>
   <li><span style="font-size:0.7em" >3. Determine which Library is used and that <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;should have the build path in the workspace<br></span> </li><br>
   <li><span style="font-size:0.7em" >4. DSC file will have similar to:</span> </li>
-  <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf<br></span> </li>
+  <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf<br></span> </li><br>
   <li><span style="font-size:0.7em" >5. Verify the instance used from the <font face="Consolas">Build</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory:</span> </li>
 </ul>
 
